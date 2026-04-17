@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔥 热点监控看板 · 含下周预测</title>
+<title>🔥 热点监控看板 · 早报</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#0f1117;--card:#1a1d28;--card2:#232635;--accent:#6c5ce7;--accent2:#a29bfe;--s-color:#ff4757;--a-color:#ff9f43;--b-color:#feca57;--text:#e8e8e8;--text2:#a0a0b0;--border:#2d3045;--green:#2ed573;--shadow:0 4px 20px rgba(0,0,0,0.3)}
@@ -76,6 +76,10 @@ header .meta span{background:var(--card);padding:4px 12px;border-radius:20px;bor
 footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 .expand-all{background:var(--card);border:1px solid var(--border);color:var(--text);padding:8px 20px;border-radius:8px;cursor:pointer;font-size:13px;margin:10px auto;display:block}
 .expand-all:hover{background:var(--card2)}
+.rhino{background:linear-gradient(135deg,rgba(255,71,87,0.08),rgba(255,159,67,0.05));border:1px solid rgba(255,71,87,0.3);border-radius:14px;padding:20px;margin:16px 0}
+.rhino h3{color:var(--s-color);font-size:16px;margin-bottom:12px}
+.rhino-item{padding:8px 0;border-bottom:1px solid var(--border);font-size:13px}
+.rhino-item:last-child{border-bottom:none}
 @media(max-width:600px){
   .container{padding:10px}
   header h1{font-size:22px}
@@ -91,28 +95,27 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 <header>
   <h1>🔥 热点事件监控看板</h1>
   <div class="meta">
-    <span>⏰ 2026-04-17 20:00 更新</span>
+    <span>⏰ 2026-04-18 07:00 更新</span>
     <span>📡 20+ 平台监控</span>
     <span>🔍 12大垂类全覆盖</span>
-    <span>🔮 含下周预测周报</span>
     <a href="archives/" style="color:var(--accent2);text-decoration:none"><span style="background:var(--accent);color:#fff;border-color:var(--accent)">📚 历史存档</span></a>
   </div>
 </header>
 
 <div class="stats-bar">
   <div class="stat-item stat-s"><div class="num">3</div><div class="label">🔴 S级事件</div></div>
-  <div class="stat-item stat-a"><div class="num">5</div><div class="label">🟠 A级事件</div></div>
+  <div class="stat-item stat-a"><div class="num">3</div><div class="label">🟠 A级事件</div></div>
   <div class="stat-item stat-b"><div class="num">4</div><div class="label">🟡 B级事件</div></div>
 </div>
 
 <button class="expand-all" onclick="toggleAll()">📋 展开/收起全部</button>
 
-<!-- S级事件1：一季度GDP 5.0% -->
+<!-- S级事件1：霍尔木兹海峡开放+油价暴跌 -->
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-s">S级</span>
-    <span class="event-title">一季度GDP同比增长5.0%·十五五首季超预期·四关键词读懂经济一季报</span>
-    <span class="update-badge">🆕 20:00</span>
+    <span class="event-title">伊朗宣布开放霍尔木兹海峡·黎以停火·国际油价暴跌超10%</span>
+    <span class="update-badge">🆕 07:00</span>
     <span class="event-heat">⭐⭐⭐⭐⭐</span>
     <span class="event-window window-gold">🟢 黄金期</span>
     <span class="toggle-arrow">›</span>
@@ -121,120 +124,98 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
     <div class="section">
       <div class="section-title">📅 事件时间线</div>
       <div class="timeline">
-        <div class="timeline-item"><strong>4月16日</strong> 国家统计局发布一季度经济数据，GDP 334193亿元</div>
-        <div class="timeline-item"><strong>4月16日</strong> 同比+5.0%，环比+1.4%，比上年四季度加快0.5个百分点</div>
-        <div class="timeline-item hot"><strong>4月17日🔥</strong> 人民日报头版刊发"四关键词读懂一季报"，全网热议"体感温差"</div>
+        <div class="timeline-item"><strong>4月7日</strong> 美伊达成两周停火协议（巴基斯坦斡旋）</div>
+        <div class="timeline-item"><strong>4月11日</strong> 伊斯兰堡谈判21小时无果，Vance空手而归</div>
+        <div class="timeline-item"><strong>4月13日</strong> 特朗普宣布封锁伊朗港口，海峡通行完全中断</div>
+        <div class="timeline-item"><strong>4月15日</strong> 封锁超48h，1万+美军部署</div>
+        <div class="timeline-item"><strong>4月17日</strong> 40+国线上峰会讨论霍尔木兹航行自由</div>
+        <div class="timeline-item hot"><strong>4月17日🔥</strong> 伊朗外长宣布：停火期间对所有商船开放霍尔木兹海峡</div>
+        <div class="timeline-item hot"><strong>4月17日🔥</strong> 特朗普确认，但称"协议未100%达成前美军继续封锁"</div>
+        <div class="timeline-item hot"><strong>4月17日🔥</strong> 油价暴跌：WTI跌超12%，布伦特跌超11%</div>
       </div>
     </div>
     <div class="section">
       <div class="section-title">🔥 各平台热评 TOP5</div>
       <div class="hot-comments">
-        <div class="hot-comment top3"><span class="hc-rank">1</span><div class="hc-body">"十五五开门红"——这门是真的红，我用6个红包钱验证的<span class="hc-source">📍 微博</span></div><span class="hc-likes">👍 2.8万</span></div>
-        <div class="hot-comment top3"><span class="hc-rank">2</span><div class="hc-body">GDP涨5%，我涨5斤，我们都有光明的未来<span class="hc-source">📍 抖音</span></div><span class="hc-likes">👍 1.5万</span></div>
-        <div class="hot-comment top3"><span class="hc-rank">3</span><div class="hc-body">一边打关税仗一边GDP还涨5%，看看隔壁日本0.7%德国-0.2%压压惊<span class="hc-source">📍 知乎</span></div><span class="hc-likes">👍 9200</span></div>
-        <div class="hot-comment"><span class="hc-rank">4</span><div class="hc-body">334193亿，按汇率折差不多4.6万亿美元，一个季度。稳<span class="hc-source">📍 雪球</span></div><span class="hc-likes">👍 3100</span></div>
-        <div class="hot-comment"><span class="hc-rank">5</span><div class="hc-body">作为一个小店主 今年春天确实比去年旺 不知道能不能持续<span class="hc-source">📍 小红书</span></div><span class="hc-likes">👍 1800</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">1</span><div class="hc-body">通过封锁敌方的封锁来打破敌方对封锁的封锁——懂王<span class="hc-source">📍 微博</span></div><span class="hc-likes">👍 8.2万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">2</span><div class="hc-body">伊朗说开了 美国说没完全开 薛定谔的海峡<span class="hc-source">📍 抖音</span></div><span class="hc-likes">👍 5.1万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">3</span><div class="hc-body">油价一天跌10%，做空的直接财务自由，做多的在找搬砖的活<span class="hc-source">📍 雪球</span></div><span class="hc-likes">👍 2.3万</span></div>
+        <div class="hot-comment"><span class="hc-rank">4</span><div class="hc-body">这海峡开了关关了开 跟我家WiFi一样不稳定<span class="hc-source">📍 B站</span></div><span class="hc-likes">👍 1.8万</span></div>
+        <div class="hot-comment"><span class="hc-rank">5</span><div class="hc-body">国际油价跌10%≈国内油价跌3毛 别问为什么 问就是保护定价<span class="hc-source">📍 知乎</span></div><span class="hc-likes">👍 9600</span></div>
       </div>
     </div>
     <div class="section">
       <div class="section-title">🔮 走向预判</div>
-      <div class="prediction"><span class="prob">45%</span>走向1：十五五开门红，二季度政策加码（降准降息升温）</div>
-      <div class="prediction"><span class="prob">35%</span>走向2：数据亮眼但体感温差大，结构性问题仍突出</div>
-      <div class="prediction"><span class="prob">20%</span>走向3：全球碎片化下中国韧性突出，5.0%一骑绝尘</div>
+      <div class="prediction"><span class="prob">45%</span>走向A：停火延续+海峡逐步恢复通航，油价回落至65-75美元</div>
+      <div class="prediction"><span class="prob">35%</span>走向B：停火4/21到期不续约，海峡再次关闭，油价反弹至100+</div>
+      <div class="prediction"><span class="prob">20%</span>走向C：美伊达成更广泛协议（含核问题），中东格局重塑</div>
     </div>
     <div class="section">
       <div class="section-title">💬 评论运营</div>
       <div class="direction-block">
-        <div class="direction-header">📍 走向1（45%）：十五五开门红，二季度加速</div>
+        <div class="direction-header">📍 走向A（45%）：停火延续+油价回落</div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度A：情感共鸣/普通人体感</div>
-          <div class="comment-item">5%是挺好看的，但我工资也没涨5%啊，谁拖后腿了😭<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">说实话看到这个数据我是开心的，至少方向是对的，慢慢来吧<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">去年秋招差点没找到工作，今年春招明显好多了，数据是有体感支撑的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">我做外贸的，一季度订单确实比去年好，尤其东南亚线<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">刚毕业那会儿以为6%是常态，现在看5%真的挺难得了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度1：能源市场/油价暴跌冲击</div>
+          <div class="comment-item god">通过封锁敌方的封锁来打破敌方对封锁的封锁——懂王这操作我反复读了三遍才懂<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">油价一天跌10%？我加满一箱油能省四十块？什么神仙剧本<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">布伦特暴跌11%，我昨天刚抄底的原油基金又要躺几个月了😭<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">中东打仗油价涨，停火还跌？反正韭菜两头割就对了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">伊朗说开放，美国说没完全开放，这海峡薛定谔了属于是<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度B：理性分析/数据拆解</div>
-          <div class="comment-item">比上年四季度加快0.5个百分点这个数据量很关键，代表趋势向上<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">有人说注水，那你告诉我哪个分项注水了？一个个摊开算<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">制造业PMI连续3个月扩张区间了 这才是最实打实的先行指标<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">房地产投资降幅收窄但没转正，这是唯一的短板<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">334193亿，按现在汇率折美元差不多4.6万亿，一个季度。稳<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度2：地缘政治博弈</div>
+          <div class="comment-item god">用封锁反封锁来解除封锁——外交辞令的尽头是绕口令<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">特朗普回了个"谢谢"——这可能是他说过最短最客气的话了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">40多个国家开线上峰会讨论一条海峡，霍尔木兹：我承受了不该有的关注度<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">Vance谈了21个小时没谈成 这效率还不如我跟房东砍价<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">停火两周快到期了 续不续约比我的年租房还悬<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度C：幽默金句</div>
-          <div class="comment-item god">什么叫大力出奇迹？一边打关税仗一边GDP还涨5%，这就是<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">国家统计局：我们增长5%。网友：那我呢？统计局：你被平均了🤷<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">四个关键词读懂一季报：稳、进、好、难——稳是主旋律难是真难<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">经济就像我的体重 一直在"稳步增长"🫠<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">每次看GDP数据就像看体检报告 总体健康 个别指标需要注意<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-      </div>
-      <div class="direction-block">
-        <div class="direction-header">📍 走向2（35%）：体感温差大，结构性问题</div>
-        <div class="angle-group">
-          <div class="angle-title">💬 角度A：民生/共情</div>
-          <div class="comment-item">坐标三线城市，房价还在跌，GDP涨了我的资产没涨…<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">消费数据好看是因为我在拼多多上买得更多了吧哈哈哈<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">希望二季度降息落地 房贷能少还点 比啥数据都强<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">5%是挺好 但我身边做实体的朋友十个有八个在叫苦<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">这个5%含金量很高的 全球哪个大经济体有这速度？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-        <div class="angle-group">
-          <div class="angle-title">💬 角度B：理性/结构分析</div>
-          <div class="comment-item">看细项：社零+6.2%，固投+4.5%，出口+13%，组合挺均衡<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">出口13%增长说明中国制造的竞争力没有因为关税被打下去<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">不看增速看结构：新能源车、光伏出口继续暴涨，新旧动能切换加速<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">一句话总结：外贸超预期、消费稳住了、投资还在蓄力<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">环比1.4%才是关键，说明经济在加速不是在减速，拐点确认了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-        <div class="angle-group">
-          <div class="angle-title">💬 角度C：幽默/自嘲</div>
-          <div class="comment-item god">GDP涨5%，我涨5斤，我们都有光明的未来<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">有人涨薪有人失业 GDP5%是个平均数 就像我和马化腾平均身家千亿<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">看到有人说5%不够，建议去看看隔壁日本0.7%德国-0.2%压压惊<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">"十五五开门红"——这门是真的红，我用6个红包钱验证的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">全世界都在问中国经济行不行，结果季报一出：不好意思，又行了😏<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度3：普通人影响</div>
+          <div class="comment-item">终于不用担心油价破8了 虽然我骑电动车<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">坐标义乌 这几天询单明显多了 中东客户又开始下单了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">海峡通了国际物流费该降了吧？我等的海淘包裹能不能发了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">这波油价跳水 做化工的朋友说原材料成本一夜降了15%<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">油价暴跌能不能传导到菜价上 每天买菜真的肉痛<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
       </div>
       <div class="direction-block">
-        <div class="direction-header">📍 走向3（20%）：国际视角·全球碎片化下中国韧性</div>
+        <div class="direction-header">📍 走向B（35%）：停火到期·再次升级</div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度A：情感共鸣</div>
-          <div class="comment-item">说实话看到这个数据我是开心的，全少方向是对的，慢慢来吧<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">这个5%含金量很高 全球大环境这么差还能保住 真不容易<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">作为一个小店主 今年春天确实比去年旺 不知道能不能持续<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">坐标深圳 科技企业招聘确实在回暖 身边人心态好了不少<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">8%是不敢想了 但5%稳住了就是胜利 毕竟外部环境太乱<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度1：停火到期风险</div>
+          <div class="comment-item god">经历了这一个多月我总结出一个规律：中东的和平保质期不超过14天<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">4月21号到期 这几天的油价降幅怕是要全吐回去<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">停火协议就像打折券——有效期太短了兄弟<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">伊朗这属于先免费试用再收费的商业模式<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">现在加油算抄底吗？万一过两天海峡又关了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度B：理性分析</div>
-          <div class="comment-item">全球碎片化趋势下 中国供应链韧性是最大的竞争力<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">美欧日全在衰退边缘 中国5%是灯塔级别的存在<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">消博会、广交会同期进行 外商投资信心在恢复<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">如果美伊达成协议油价回落 中国制造业成本端还有利好<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">RCEP红利+一带一路 中国的贸易朋友圈越来越大<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度2：局势再升级可能</div>
+          <div class="comment-item">特朗普说"没100%达成就继续封锁"——所以到底开没开？<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">五大问题悬而未决 核问题就够谈十年的<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">耶金说恢复需要数年 那我这个基金要套几年？<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">下周最大悬念不是NBA是停火续不续<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">海峡的开关掌握在特朗普发推的速度上——一条推文涨跌10%<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度C：幽默金句</div>
-          <div class="comment-item god">一边打关税仗一边GDP还涨5%——这就像一边跑马拉松一边还能做数学题 中国经济体质真好<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">别人家经济靠印钱 中国靠制造 这才叫硬核增长<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">美国：我制裁你！中国：谢谢，我GDP涨了5%<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">全球化不是结束了 是换了一种形式 从"全球一体"变成"谁更能扛"<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">十五五第一年交卷：语文满分作文 数学差两分满分 体育及格——总分还行<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度3：投资/市场影响</div>
+          <div class="comment-item">昨晚做空原油的已经在三亚订房了 做多的在找搬砖的活<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">散户定律：你买了它就停火 你卖了它就开战<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">A股周一开盘中石油大概率低开 但别急着抄底 还有变数<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">原油期货这波行情教做人——永远不要跟中东对赌<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">理性分析：短期油价回调空间有限 因为供给端缺口不是一天能补的<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- S级事件2：苏林访华结束 -->
+<!-- S级事件2：密集元首外交周 -->
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-s">S级</span>
-    <span class="event-title">苏林访华4天圆满结束·两度乘高铁·签署多项合作协议·经凭祥返越</span>
-    <span class="update-badge">🆕 20:00</span>
+    <span class="event-title">密集元首外交周·苏林访华·四国政要两天密集会见</span>
+    <span class="update-badge">🆕 07:00</span>
     <span class="event-heat">⭐⭐⭐⭐⭐</span>
     <span class="event-window window-gold">🟢 黄金期</span>
     <span class="toggle-arrow">›</span>
@@ -243,122 +224,96 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
     <div class="section">
       <div class="section-title">📅 事件时间线</div>
       <div class="timeline">
-        <div class="timeline-item"><strong>4月7日</strong> 苏林当选越南国家主席</div>
-        <div class="timeline-item"><strong>4月14日</strong> 抵京，乘高铁赴雄安新区参观</div>
-        <div class="timeline-item"><strong>4月15日</strong> 正式会谈，签署多项合作协议，达成南海共识</div>
-        <div class="timeline-item"><strong>4月16日</strong> 在广西参观中越铁路项目，再度乘坐复兴号</div>
-        <div class="timeline-item hot"><strong>4月17日🔥</strong> 经广西凭祥乘专列返越，欢送现场响起广西民歌。两次首访都是中国！</div>
+        <div class="timeline-item"><strong>4月14日</strong> 习近平会见阿联酋阿布扎比王储哈立德</div>
+        <div class="timeline-item"><strong>4月14日</strong> 习近平会见西班牙首相桑切斯（4年内第4次访华）</div>
+        <div class="timeline-item"><strong>4月15日</strong> 习近平会见俄罗斯外长拉夫罗夫</div>
+        <div class="timeline-item hot"><strong>4月15日🔥</strong> 习近平同越共中央总书记、国家主席苏林举行会谈</div>
+        <div class="timeline-item"><strong>4月14-17日</strong> 苏林对华国事访问（当选一周即"首访"来华）</div>
+        <div class="timeline-item"><strong>4月16-22日</strong> 莫桑比克总统查波对华国事访问（进行中）</div>
       </div>
     </div>
     <div class="section">
       <div class="section-title">🔥 各平台热评 TOP5</div>
       <div class="hot-comments">
-        <div class="hot-comment top3"><span class="hc-rank">1</span><div class="hc-body">一句话总结苏林访华：来了 看了 坐了 签了 满意了 走了 还会再来的<span class="hc-source">📍 微博</span></div><span class="hc-likes">👍 3.2万</span></div>
-        <div class="hot-comment top3"><span class="hc-rank">2</span><div class="hc-body">苏林两次首访中国——这不叫外交这叫回老铁家串门<span class="hc-source">📍 抖音</span></div><span class="hc-likes">👍 2.1万</span></div>
-        <div class="hot-comment top3"><span class="hc-rank">3</span><div class="hc-body">说实话 一个国家领导人愿意坐你的高铁坐10小时 这是最好的信任投票<span class="hc-source">📍 知乎</span></div><span class="hc-likes">👍 8900</span></div>
-        <div class="hot-comment"><span class="hc-rank">4</span><div class="hc-body">苏林从凭祥坐专列回越南那段视频好温馨 广西民歌响起来的时候我鼻子酸了<span class="hc-source">📍 B站</span></div><span class="hc-likes">👍 4200</span></div>
-        <div class="hot-comment"><span class="hc-rank">5</span><div class="hc-body">通过坐高铁来打破外交的常规——懂坐<span class="hc-source">📍 微博</span></div><span class="hc-likes">👍 2800</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">1</span><div class="hc-body">两天接见四国政要 这工作强度我老板看了都得自愧不如<span class="hc-source">📍 微博</span></div><span class="hc-likes">👍 4.2万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">2</span><div class="hc-body">美国在中东打仗 中国在北京会客 画面对比太强了<span class="hc-source">📍 知乎</span></div><span class="hc-likes">👍 2.8万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">3</span><div class="hc-body">当选一周就来中国 这"首访"含金量够高的<span class="hc-source">📍 抖音</span></div><span class="hc-likes">👍 1.6万</span></div>
+        <div class="hot-comment"><span class="hc-rank">4</span><div class="hc-body">所有人都在搞混乱 你稳如泰山就是最大的吸引力<span class="hc-source">📍 B站</span></div><span class="hc-likes">👍 8900</span></div>
+        <div class="hot-comment"><span class="hc-rank">5</span><div class="hc-body">外交部发言人这几天的工作量相当于双十一客服<span class="hc-source">📍 小红书</span></div><span class="hc-likes">👍 5200</span></div>
       </div>
     </div>
     <div class="section">
       <div class="section-title">🔮 走向预判</div>
-      <div class="prediction"><span class="prob">40%</span>走向1：中越关系新篇章——命运共同体加速落地</div>
-      <div class="prediction"><span class="prob">35%</span>走向2：高铁外交的"现场教学"——中国基建名片</div>
-      <div class="prediction"><span class="prob">25%</span>走向3：越南"竹子外交"走向——战略选择还是策略平衡</div>
+      <div class="prediction"><span class="prob">50%</span>走向A：中越合作深化（铁路+研学），示范效应带动更多访华</div>
+      <div class="prediction"><span class="prob">35%</span>走向B：元首外交转化为经贸成果，十五五开局外交开门红</div>
+      <div class="prediction"><span class="prob">15%</span>走向C：中东局势升级考验中国外交斡旋能力</div>
     </div>
     <div class="section">
       <div class="section-title">💬 评论运营</div>
       <div class="direction-block">
-        <div class="direction-header">📍 走向1（40%）：命运共同体加速落地</div>
+        <div class="direction-header">📍 走向A（50%）：中越合作深化+访华潮</div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度A：情感共鸣/民间温度</div>
-          <div class="comment-item">苏林从凭祥坐专列回越南那段视频好温馨 广西民歌响起来的时候我鼻子酸了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">两次当一把手两次首访都来中国 这就是实打实的铁关系<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">我在越南做生意五年了 中越关系好对我们这些小商人太重要了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">邻居好 赚钱饱——老话诚不欺我<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">我爸是铁路工程师 参与过中越铁路勘测 看到签约新闻激动得给我打电话了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度1：中越关系</div>
+          <div class="comment-item god">从"同志加兄弟"到"命运共同体"——中越关系的迭代速度比app更新还快<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">当选一周就来中国 这"首访"含金量够高的<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">中越铁路合作终于要搞了？从南宁坐高铁到河内的日子不远了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">红色研学之旅让年轻人来串门比什么外交辞令都管用<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">越南最近跟美国走得近 但苏林第一站来中国 说明什么不用我多说吧<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度B：战略分析</div>
-          <div class="comment-item">苏林身兼总书记+国家主席两职后首访中国 规格之高已经说明一切<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">铁路互联互通是关键：中越铁路一通 整个中南半岛的物流版图就变了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">南海共识才是最大成果 双边管控分歧的能力在加强<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">中越贸易额已破2000亿美元 铁路通了之后3000亿不是梦<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">数字经济合作协议是亮点——越南年轻人口多 电商潜力巨大<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度2：大国外交格局</div>
+          <div class="comment-item god">中国外交的核心竞争力：你乱你的 我干我的<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">阿联酋、西班牙、俄罗斯、越南——四个国家四个方向全覆盖<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">"西方之乱"映衬"中国之治"——不是我们多好 是对比太明显<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">莫桑比克总统正在路上了 这接待排班表比医院号都满<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">在中东打成一锅粥的时候来中国谈合作——这是用脚投票<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度C：幽默金句</div>
-          <div class="comment-item god">一句话总结苏林访华：来了 看了 坐了 签了 满意了 走了 还会再来的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">别人就任国家主席先休息几天 苏林直接打飞的来北京 这叫卷不叫卷？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">苏林两次首访中国——这不叫外交这叫回老铁家串门<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">高铁坐了10小时 比我五一出行堵在路上的时间还长 但人家签了几十亿的单😅<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">通过坐高铁来打破外交的常规——懂坐<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-      </div>
-      <div class="direction-block">
-        <div class="direction-header">📍 走向2（35%）：高铁外交·中国基建名片</div>
-        <div class="angle-group">
-          <div class="angle-title">💬 角度A：民间温度</div>
-          <div class="comment-item">4天行程跑了北京雄安广西 这工作强度不比打工人差<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">一周前当选一周后就来了 这效率比我处理工作邮件快多了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">看到欢送现场的视频 想起在南宁读书那几年 中越友谊真的很暖<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">评论区有越南网友说谢谢中国大哥 绷不住了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">说实话 一个国家领导人愿意坐你的高铁坐10小时 这是最好的信任投票<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-        <div class="angle-group">
-          <div class="angle-title">💬 角度B：产业分析</div>
-          <div class="comment-item">越南2025年GDP增速8%+ 这个时候深度绑定中国供应链是非常聪明的选择<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">雄安+广西两个考察点选择很有深意：一个看未来城市一个看跨境合作<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">中越命运共同体如果做成标杆 对整个东盟的示范效应不可估量<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">"竹子外交"本质是小国在大国间寻找最大利益 苏林选了最实际的路<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">对比日本对我驻日使馆的态度 再看越南领导人的诚意 高下立判<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-        <div class="angle-group">
-          <div class="angle-title">💬 角度C：幽默</div>
-          <div class="comment-item god">苏林：你们的高铁太快了。中国：要不再坐一圈？苏林：好的回头再来😂<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">全程高铁体验官·苏林 建议颁个"最佳测评师"奖<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">广西民歌欢送→凭祥专列→越南 这条线路可以出个"友谊号"旅游套餐了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">苏林：两次首访都来中国。记者：为什么？苏林：因为第一次体验太好了（不是<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">从当选到访华用了一周 我申请护照都要两周 🤦<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度3：民间视角</div>
+          <div class="comment-item">高铁修到东南亚 让越南人来广西吃螺蛳粉 这才是真正的文化输出<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">免签国又要增加了吗？我一个旅游博主好兴奋<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">北京人民大会堂这几天比机场还忙<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">我一个做外贸的 每多一个访华元首=多一条潜在生意线<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">朋友圈的翻译同行最近加班到飞起 四种语言轮着来<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
       </div>
       <div class="direction-block">
-        <div class="direction-header">📍 走向3（25%）：竹子外交走向何方</div>
+        <div class="direction-header">📍 走向B（35%）：经贸成果转化</div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度A：情感</div>
-          <div class="comment-item">不管外交怎么博弈 中越民间友谊是真实的 旅游签都免了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">越南网友评论"中国大哥" 虽然外交上有博弈 但民间好感是真的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">作为海外华人看到这个新闻挺开心的 周边国家关系好大家出行都方便<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">两个社会主义国家 有共同语言 合作空间大得很<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">坐标南宁 越南留学生越来越多 文化交流是最好的外交<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度1：经贸合作</div>
+          <div class="comment-item">外交搭台 经济唱戏 十五五开局这波操作教科书级别<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">越南+阿联酋+西班牙 制造业+能源+欧洲市场 一条龙了属于是<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">西班牙首相四年来第四次访华 来的频率比我回老家还勤<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">元首外交→经贸协议→企业订单 传导链条越来越短<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">消博会+元首外交 双重buff叠满 海南这波赢麻了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度B：地缘分析</div>
-          <div class="comment-item">竹子在风中左右摆但不倒——越南外交哲学的精髓<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">苏林选中国不只是友谊 更是经济理性——中国是越南最大贸易伙伴<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">美国还在越南搞供应链转移的叙事 结果越南领导人跑去中国坐高铁了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">南海问题不可能一次解决 但管控分歧的共识比解决分歧更重要<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">东盟国家看越南：如果越南都选中国 其他国家还犹豫什么<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度2：全球格局</div>
+          <div class="comment-item god">这不是中国在拉拢谁 是全世界在"跑步进京"<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">欧洲政要访华频率↑ = 对美国依赖度↓ 这个趋势很明确了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">70年来罕见的密集访华 说明我们的国际地位到了新阶段<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">当你的邻居都在吵架 保持安静的那一家就变成了调解中心<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">"中国之治"不是口号 是别人拿真金白银来投票的结果<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度C：段子</div>
-          <div class="comment-item god">美国：越南是我们供应链转移的战略伙伴。苏林：*坐着中国高铁飞奔而过*<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">竹子外交：两边都不得罪 但这次竹子明显往中国方向弯了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">苏林这次访华 美国国务院的加班费怕是要报销了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">一边跟中国签铁路协议 一边跟美国谈芯片工厂——这叫左右逢源不叫选边站<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">建议把"高铁外交"写进外交学教材 第一章：如何用350km/h拉近两国距离<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度3：网友调侃</div>
+          <div class="comment-item">以后高考地理题可能会考：列举2026年4月密集访华的国家<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">新闻联播这几天应该可以播30分钟的外交板块<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">翻译官：我太累了 大会堂：我太忙了 记者：我太兴奋了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">当年被围堵的东方大国 现在变成了全球社交中心 剧本太燃<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">建议出个"元首访华纪念版"冰箱贴 旅游周边又多一项<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- S级事件3：美伊接近框架协议 -->
+<!-- S级事件3：消博会闭幕 -->
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-s">S级</span>
-    <span class="event-title">美伊"非常接近"框架协议·停火4/22到期·周末或举行会晤</span>
-    <span class="update-badge">🆕 20:00</span>
+    <span class="event-title">第六届消博会今日闭幕·海南自贸港封关后"首秀"收官·60国3400+品牌</span>
+    <span class="update-badge">🆕 07:00</span>
     <span class="event-heat">⭐⭐⭐⭐⭐</span>
     <span class="event-window window-gold">🟢 黄金期</span>
     <span class="toggle-arrow">›</span>
@@ -367,122 +322,209 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
     <div class="section">
       <div class="section-title">📅 事件时间线</div>
       <div class="timeline">
-        <div class="timeline-item"><strong>4月8日</strong> 美伊在巴基斯坦达成两周临时停火</div>
-        <div class="timeline-item"><strong>4月11日</strong> 伊斯兰堡面对面谈判21小时后破裂</div>
-        <div class="timeline-item"><strong>4月13日</strong> 美宣布封锁霍尔木兹海峡"fully implemented"</div>
-        <div class="timeline-item"><strong>4月16日</strong> 美方称"非常接近"达成框架协议</div>
-        <div class="timeline-item hot"><strong>4月17日🔥</strong> 周末或举行新一轮会晤，停火4/22到期为硬性deadline。美财政部启动"经济狂怒"制裁</div>
+        <div class="timeline-item"><strong>4月13日</strong> 第六届消博会开幕，海南自贸港封关后首展</div>
+        <div class="timeline-item"><strong>4月13-15日</strong> 专业展期，60多国超3400品牌参展</div>
+        <div class="timeline-item"><strong>4月16-18日</strong> 公众开放日，阿姨批发模式扫货奶粉</div>
+        <div class="timeline-item hot"><strong>4月18日🔥</strong> 消博会闭幕日——14.3万㎡展面/国际占比65%/200+新品首发</div>
       </div>
     </div>
     <div class="section">
       <div class="section-title">🔥 各平台热评 TOP5</div>
       <div class="hot-comments">
-        <div class="hot-comment top3"><span class="hc-rank">1</span><div class="hc-body">通过封锁来反封锁来结束对封锁的封锁——懂王<span class="hc-source">📍 微博 @蜗牛小姐</span></div><span class="hc-likes">👍 34赞</span></div>
-        <div class="hot-comment top3"><span class="hc-rank">2</span><div class="hc-body">一边制裁叫"经济狂怒"一边说很接近协议 这剧本编剧都不敢写<span class="hc-source">📍 知乎</span></div><span class="hc-likes">👍 1.6万</span></div>
-        <div class="hot-comment top3"><span class="hc-rank">3</span><div class="hc-body">停火还剩5天了 这5天比考试倒计时还紧张<span class="hc-source">📍 抖音</span></div><span class="hc-likes">👍 7800</span></div>
-        <div class="hot-comment"><span class="hc-rank">4</span><div class="hc-body">每次说"接近"我就买石油空单 每次说"分歧"我就买多单 这个月赚翻了（bushi<span class="hc-source">📍 雪球</span></div><span class="hc-likes">👍 3400</span></div>
-        <div class="hot-comment"><span class="hc-rank">5</span><div class="hc-body">和平两个字 说出来容易 谈下来要命<span class="hc-source">📍 观察者网</span></div><span class="hc-likes">👍 2100</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">1</span><div class="hc-body">封关后"首秀"就这么炸裂 14.3万平方米60多国3400+品牌<span class="hc-source">📍 微博</span></div><span class="hc-likes">👍 3.5万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">2</span><div class="hc-body">加拿大带了养10年的野生海参 阿姨们带了10万的预算<span class="hc-source">📍 抖音</span></div><span class="hc-likes">👍 2.1万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">3</span><div class="hc-body">60多个国家排着队来中国摆摊 这是什么级别的"赶集"<span class="hc-source">📍 B站</span></div><span class="hc-likes">👍 1.2万</span></div>
+        <div class="hot-comment"><span class="hc-rank">4</span><div class="hc-body">逆全球化浪潮里搞"超级全球化" 这对比太猛了<span class="hc-source">📍 知乎</span></div><span class="hc-likes">👍 7800</span></div>
+        <div class="hot-comment"><span class="hc-rank">5</span><div class="hc-body">消博会=全球最大种草现场 我的钱包瑟瑟发抖<span class="hc-source">📍 小红书</span></div><span class="hc-likes">👍 5100</span></div>
       </div>
     </div>
     <div class="section">
       <div class="section-title">🔮 走向预判</div>
-      <div class="prediction"><span class="prob">40%</span>走向1：周末达成框架协议·油价暴跌·全球松口气</div>
-      <div class="prediction"><span class="prob">35%</span>走向2：有限框架+延长停火·细节留后续谈判</div>
-      <div class="prediction"><span class="prob">25%</span>走向3：谈崩·停火到期·霍尔木兹海峡重燃战火</div>
+      <div class="prediction"><span class="prob">50%</span>走向A：消博会签约额创新高，海南自贸港封关红利释放</div>
+      <div class="prediction"><span class="prob">35%</span>走向B：消博会热度带动五一消费，封关政策惠及消费者</div>
+      <div class="prediction"><span class="prob">15%</span>走向C：封关运作暴露制度衔接问题，后续需微调</div>
     </div>
     <div class="section">
       <div class="section-title">💬 评论运营</div>
       <div class="direction-block">
-        <div class="direction-header">📍 走向1（40%）：达成框架·油价暴跌</div>
+        <div class="direction-header">📍 走向A（50%）：封关红利释放</div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度A：和平渴望</div>
-          <div class="comment-item">作为一个能源行业的人 每天提心吊胆看霍尔木兹的新闻 真心希望能谈成<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">油价要是能跌回70 我加油就不用心疼了😢<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">我做代购的 中东航线全停了 生意黄了两个月 求求谈成吧<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">不管谁赢谁输 死的都是普通人 快结束吧<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">伊朗人民值得和平 这不应该是一个选项 这应该是唯一的答案<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度1：自贸港/封关</div>
+          <div class="comment-item god">封关后第一场大秀 比得上当年深圳画那个圈<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">国际展品占比65% 比上届涨了20个百分点 这开放力度实打实<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">海南自贸港封关=全岛免税店模式上线<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">3400个品牌在一个岛上battle 消费者赢麻了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">十五五开局首展选在海南 这信号再明显不过了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度B：博弈推演</div>
-          <div class="comment-item">一边封锁一边谈 一边制裁一边说接近——美式"极限施压+谈判"教科书<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">三大分歧看优先级：海峡控制权>核项目>赔偿。赔偿最容易让步<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">油价已经price in了乐观预期 如果谈崩 反弹幅度会非常恐怖<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">巴基斯坦穿梭外交很关键——同时和美伊都有独特关系<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">如果达成协议 最大赢家是全球股市和中国制造业——成本端利好<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度2：消费趋势</div>
+          <div class="comment-item">超200件新品首发？消博会比苹果发布会还卷<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">"陆地航母"和AI眼镜都来了 科技消费真的起来了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">阿姨开启批发模式扫货奶粉 这才是真实的消费力<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">消博会的意义：让世界知道中国不只是生产大国还是消费大国<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">片仔癀200㎡展位 老字号走国际化这条路走对了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度C：幽默金句</div>
-          <div class="comment-item god">通过封锁来反封锁来结束对封锁的封锁——懂王<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">美伊谈判：我们很接近了。观众：你们上次也这么说的🙃<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">停火还剩5天 建议双方打德州扑克决定 反正都在bluff<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">一边制裁叫"经济狂怒"一边说很接近协议 这剧本编剧都不敢写<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">霍尔木兹海峡现在是全世界最贵的收费站——通行费是世界和平<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-      </div>
-      <div class="direction-block">
-        <div class="direction-header">📍 走向2（35%）：有限框架+延长停火</div>
-        <div class="angle-group">
-          <div class="angle-title">💬 角度A：民生情绪</div>
-          <div class="comment-item">停火就停火呗 别又搞什么限定版停火 能不能一次到位啊<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">每次看到"接近协议"又看到"分歧很大"就像坐过山车🎢<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">全世界都在看这5天 比世界杯决赛还刺激 但没人想要这种刺激<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">和平好啊 但这和平是用多少人的命换的 有些代价算了就不敢看<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">停火5天了 这5天比等高考成绩还煎熬<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-        <div class="angle-group">
-          <div class="angle-title">💬 角度B：分析</div>
-          <div class="comment-item">最可能结果是先延长停火两周 框架签个意向性的 细节慢慢扯<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">"经济狂怒"制裁和谈判同步进行 说明美方策略是软硬两手<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">伊朗国内反战压力增大 给伊方谈判团队施加了和谈动力<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">不管结果如何 霍尔木兹海峡的"定价权"已经永久改变了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">22日是硬deadline 如果21日前没有实质进展 市场会提前反应<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-        <div class="angle-group">
-          <div class="angle-title">💬 角度C：段子</div>
-          <div class="comment-item god">美伊谈判：谈了21小时等于没谈，停火14天等于没停，封锁5天等于没封——薛定谔的中东和平🐱<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">两周停火 就是给双方各自回家充个电 然后再来谈😂<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">2700亿赔偿——伊朗开价脸不红心不跳 美国听到脸绿了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">全球吃瓜群众：你俩要么打要么谈 别天天反复横跳了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">如果按谈判小时数算 美伊已经创了吉尼斯纪录 建议颁奖<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度3：经济信心</div>
+          <div class="comment-item">专业采购商6.5万人 同比增长10% 说明全球采购商看好中国市场<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">作为一个海南本地人 终于理解了封关的意义——全岛都是免税区啊！<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">消博会闭幕了 但海南的故事才刚开始<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">国际品牌扎堆来华参展 这是用行动投票了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">十五五开局：GDP 5.0%+消博会首秀+元首外交 组合拳打得太溜<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
       </div>
       <div class="direction-block">
-        <div class="direction-header">📍 走向3（25%）：谈崩·重燃战火</div>
+        <div class="direction-header">📍 走向B（35%）：五一消费传导</div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度A：恐惧/民生</div>
-          <div class="comment-item">不敢想 如果真打起来 航班全停 物价飞涨 世界经济直接崩盘<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">我家孩子刚出生 每次看到战争新闻我都在想 这个世界以后会好吗<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">2万海员！一个月了！能不能先把人救出来再打你们的仗！！<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">囤粮囤油的不是段子 是真有人开始做了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">130美元一桶？？加满一箱油要600了吧 这还让不让人活了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度1：五一预热</div>
+          <div class="comment-item">消博会带动五一消费？海南机票已经涨了30%了亲<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">封关免税+消博会+五一黄金周 三重buff 海南旅游股明天能涨停吗<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">消博会种的草 五一去拔 这波消费传导链条太清晰了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">我妈已经在做五一海南购物清单了 比我做PPT还认真<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">今年五一海南预计接待游客数创新高 封关buff太猛了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度B：深度分析</div>
-          <div class="comment-item">130美元只是开始 如果伊朗真启动反封锁 沙特出口也断 那就是200+<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">全球航空已经乱了 中东航线全取消 绕非洲多飞5小时<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">消耗战对美国是烧钱 对伊朗是断血 对全世界是涨价——唯一的共输<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">联合国都说了过境量从每日130艘降到6艘 降了95%<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">中国外交部说得对：根源在于伊朗核问题始终没被正视<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度2：制度探索</div>
+          <div class="comment-item god">全球品牌：你可以不卖给中国 但你不能不来中国卖<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">65%国际展品占比 说明全球品牌还是认中国这个市场<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">海南模式成功→可能复制到其他自贸区→全国开放水平升级<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">中国最大的底牌：超大规模市场 任何关税都挡不住<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">消博会是中国对外说"我们还在买"的最好证明<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度C：讽刺</div>
-          <div class="comment-item god">封锁产生了反封锁，反封锁证明了封锁，封锁的封锁的封锁——套娃套到最后谁都出不去🪆<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">油价130了 建议直接骑自行车上班 环保又省钱🚲<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">战争升级利好：新能源股 自行车股 方便面股 全都起飞了（苦笑）<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">特朗普的和平方案：先打 再谈 谈崩 再打——死循环<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">油价：听说要和平了 跌！又听说要打了 涨！我好累😫<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度3：调侃</div>
+          <div class="comment-item">看完消博会我总结一个字：贵。两个字：想买。三个字：下次再来<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">加拿大海参养了10年 我的花呗也分了10期 很般配<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">消博会最大的bug：看了全球好物 但工资没跟着全球化<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">展会的尽头是带货 消博会=全球最大种草现场<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">什么时候海南买iPhone也免税？在线等 急<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- A级事件1：黄仁勋"芯片不是浓缩铀" -->
+<!-- A级事件1：航天日 -->
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-a">A级</span>
-    <span class="event-title">黄仁勋怒斥"芯片不是浓缩铀"·公开反驳美对华芯片出口限制</span>
-    <span class="update-badge">🆕 20:00</span>
+    <span class="event-title">中国航天日·神舟二十一号第三次出舱5.5h·嫦娥七号运抵文昌</span>
+    <span class="update-badge">🆕 07:00</span>
+    <span class="event-heat">⭐⭐⭐⭐</span>
+    <span class="event-window window-fade">🟠 衰退期</span>
+    <span class="toggle-arrow">›</span>
+  </div>
+  <div class="event-body">
+    <div class="section">
+      <div class="section-title">📅 事件时间线</div>
+      <div class="timeline">
+        <div class="timeline-item hot"><strong>4月17日 01:36🔥</strong> 神舟二十一号乘组完成第三次出舱活动（约5.5小时）</div>
+        <div class="timeline-item"><strong>4月17日</strong> 国家航天局发布2026年重点任务</div>
+        <div class="timeline-item"><strong>4月9日</strong> 嫦娥七号探测器全部运抵文昌航天发射场</div>
+        <div class="timeline-item"><strong>2026年计划</strong> 天舟十号、神舟二十二号、神舟二十三号、梦舟一号4次飞行任务</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">🔮 走向预判</div>
+      <div class="prediction"><span class="prob">55%</span>走向A：航天任务按计划推进，梦舟首飞+嫦娥七号成为年度高光</div>
+      <div class="prediction"><span class="prob">30%</span>走向B：载人登月准备加速，文昌设施建设提前</div>
+      <div class="prediction"><span class="prob">15%</span>走向C：中美太空竞赛升温，引发新一轮科技博弈</div>
+    </div>
+    <div class="section">
+      <div class="section-title">💬 评论运营</div>
+      <div class="direction-block">
+        <div class="direction-header">📍 走向A（55%）：航天高光</div>
+        <div class="angle-group">
+          <div class="angle-title">💬 角度1：航天成就</div>
+          <div class="comment-item god">别人在地球上打仗 我们在太空搞建设 格局差距<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">嫦娥七号到文昌 天问二号去小行星 梦舟要首飞 2026航天太猛了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">从神舟到天宫到嫦娥到天问到梦舟 名字一个比一个浪漫<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">凌晨1:36出舱 航天员的作息比我还离谱（我也是这个点不睡）<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">从被拒绝进国际空间站到自己建一个 这剧本比电影还燃<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">💬 角度2：科技竞争</div>
+          <div class="comment-item">NASA的阿尔忒弥斯一直延期 中国的嫦娥按时到位 差距在拉大<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">嫦娥七号去月球南极 那里有水冰 这是在下一盘大棋<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">航天强国不是说的 是飞出来的<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">文昌发射场正在变成中国的卡纳维拉尔角 海南又赢了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">中美太空竞赛2.0已经开始了 但这次我们不是追赶者<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">💬 角度3：调侃</div>
+          <div class="comment-item">航天员出舱5.5小时 我出门买个菜也得5.5小时 但含金量不同<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">请问嫦娥七号需要程序员吗 我C语言很好（不是<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">等载人登月那天 建议全国放假一天 不接受反驳<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">张陆这个名字就注定要上天——张·陆地已经装不下·陆<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">做航天的朋友说加班不叫996 叫7×24×365 但人家是真的在创造历史<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- A级事件2：Meta裁员 -->
+<div class="event-card">
+  <div class="event-header" onclick="toggleEvent(this)">
+    <span class="event-badge badge-a">A级</span>
+    <span class="event-title">Meta酝酿史上最大裁员20%·全球科技Q1裁员近8万人·AI替代加速</span>
+    <span class="event-heat">⭐⭐⭐⭐</span>
+    <span class="event-window window-fade">🟠 持续关注</span>
+    <span class="toggle-arrow">›</span>
+  </div>
+  <div class="event-body">
+    <div class="section">
+      <div class="section-title">📅 事件时间线</div>
+      <div class="timeline">
+        <div class="timeline-item"><strong>3月14日</strong> 路透社曝Meta计划裁员20%（约1.6万人）</div>
+        <div class="timeline-item"><strong>3月16日</strong> Meta "牛油果"AI模型推迟至5月发布</div>
+        <div class="timeline-item hot"><strong>4月中旬🔥</strong> 全球科技Q1裁员近8万人，近半与AI替代相关</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">🔮 走向预判</div>
+      <div class="prediction"><span class="prob">45%</span>走向A：AI取代加速，白领岗位首当其冲</div>
+      <div class="prediction"><span class="prob">35%</span>走向B：Meta裁员后效率提升，AI投资回报显现</div>
+      <div class="prediction"><span class="prob">20%</span>走向C：裁员潮蔓延至中国科技公司</div>
+    </div>
+    <div class="section">
+      <div class="section-title">💬 评论运营</div>
+      <div class="direction-block">
+        <div class="direction-header">📍 走向A（45%）：AI替代加速</div>
+        <div class="angle-group">
+          <div class="angle-title">💬 角度1：AI替代冲击</div>
+          <div class="comment-item god">"用AI的钱裁用AI的人"——2026年最讽刺的商业逻辑<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">AI裁人效率第一：先帮你提高效率 然后证明不需要你了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">GLM-5.1能独立工作8小时 比新来的实习生还靠谱 难怪要裁<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">被AI替代的人最后能做什么？训练AI。闭环了属于是<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">讽刺的是 最先被AI影响的不是蓝领 是写AI代码的白领<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">💬 角度2：企业/行业</div>
+          <div class="comment-item">扎克伯格：AI太贵了所以裁人省钱→用省下来的钱买GPU→继续裁人<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">牛油果模型推迟到5月 这名字取得就很"熟了但还没完全熟"<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">谷歌阿里腾讯都在动 这波不是个别现象是行业重构<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">从2022年的"大裁员"到2026年的"AI裁员" 理由变了规模没变<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">科技公司正在变成"AI+少量人"的模式 传统岗位没有未来<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">💬 角度3：打工人</div>
+          <div class="comment-item god">硅谷定律2026版：越会裁人的公司股价越高<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">我在这担心裁员 AI在那学我的工作 我们都有光明的未来<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">突然理解了为什么我司开始推全员学AI——不学的就是下一个被裁的<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">AI不会取代你 但会用AI的老板会取代你 2024年就有人说 2026年验证了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">全球8万人被裁 如果组建一家新公司都能上市了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- A级事件3：美伊停火谈判僵局 -->
+<div class="event-card">
+  <div class="event-header" onclick="toggleEvent(this)">
+    <span class="event-badge badge-a">A级</span>
+    <span class="event-title">美伊停火谈判僵局·两周停火4/21即将到期·五大问题悬而未决</span>
     <span class="event-heat">⭐⭐⭐⭐</span>
     <span class="event-window window-gold">🟢 黄金期</span>
     <span class="toggle-arrow">›</span>
@@ -491,222 +533,117 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
     <div class="section">
       <div class="section-title">📅 事件时间线</div>
       <div class="timeline">
-        <div class="timeline-item"><strong>4月15-16日</strong> 黄仁勋在Dwarkesh Podcast访谈："芯片不是浓缩铀，卖给中国怎么了？"</div>
-        <div class="timeline-item hot"><strong>4月17日🔥</strong> 全网热议。英伟达正重启面向中国客户的H200芯片出口方案</div>
+        <div class="timeline-item"><strong>4月7日</strong> 美伊达成两周停火（巴基斯坦斡旋）</div>
+        <div class="timeline-item"><strong>4月11日</strong> 伊斯兰堡面对面谈判21小时无果</div>
+        <div class="timeline-item"><strong>4月12日</strong> 谈判破裂，美宣布封锁伊朗港口</div>
+        <div class="timeline-item hot"><strong>4月17日🔥</strong> 伊朗有条件开放海峡，黎以达成停火</div>
+        <div class="timeline-item"><strong>⏰ 4月21日</strong> 两周停火即将到期——关键节点</div>
       </div>
     </div>
     <div class="section">
       <div class="section-title">🔮 走向预判</div>
-      <div class="prediction"><span class="prob">40%</span>科技界力挺——芯片禁令伤敌一千自损八百</div>
-      <div class="prediction"><span class="prob">35%</span>安全鹰派反驳——AI芯片就是"数字军火"</div>
-      <div class="prediction"><span class="prob">25%</span>中国自研加速——华为昇腾等替代方案崛起</div>
+      <div class="prediction"><span class="prob">40%</span>走向A：停火延期，继续谈判，逐步降温</div>
+      <div class="prediction"><span class="prob">40%</span>走向B：停火到期不续，军事对峙升级</div>
+      <div class="prediction"><span class="prob">20%</span>走向C：第三方介入推动更广泛和平框架</div>
     </div>
     <div class="section">
       <div class="section-title">💬 评论运营</div>
       <div class="direction-block">
-        <div class="direction-header">📍 评论精选</div>
+        <div class="direction-header">📍 走向A（40%）：停火延期</div>
         <div class="angle-group">
-          <div class="angle-title">💬 观点碰撞</div>
-          <div class="comment-item god">不卖芯片给中国→中国自研→华为崛起→英伟达市场萎缩→黄仁勋急了→"芯片不是浓缩铀" 完美闭环<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">黄仁勋说了句大实话：你不卖给中国 中国就自己造 你还亏了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">限制的结果：英伟达没卖出去 华为卖出去了 搬起石头砸自己的脚<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">特朗普想卖 黄仁勋想卖 美国官僚不让卖 → 最经典的内部打架<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">黄老板穿着皮衣发言 比穿西装的政客有说服力多了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度1：外交博弈</div>
+          <div class="comment-item god">停火协议的保质期比冰淇淋还短<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">21小时谈判无果 这效率跟联合国开会有一拼<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">巴基斯坦当调解人还挺有意思的——第三方中立国少见<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">伊朗要收"过路费" 美国说不行——这不就是物业费争端嘛<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">美伊谈判的本质：一个想要面子一个想要里子 都不想让步<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 幽默金句</div>
-          <div class="comment-item god">限制芯片出口的后果就像限制奶茶出口——你不卖 人家自己开店 还比你好喝<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">黄仁勋的意思翻译成人话就是：别耽误我赚钱<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">美国限制AI芯片出口中国 结果中国搞出了deepseek 最大赢家竟是全人类😂<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">芯片≠浓缩铀 但黄仁勋说这话的时候 语气跟浓缩铀一样炸<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">英伟达CEO公开教美国政府做事 这集我爱看<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- A级事件2：驻日使馆遭威胁 -->
-<div class="event-card">
-  <div class="event-header" onclick="toggleEvent(this)">
-    <span class="event-badge badge-a">A级</span>
-    <span class="event-title">中国驻日大使馆接连遭恐怖威胁·交涉近30次无进展</span>
-    <span class="update-badge">🆕 20:00</span>
-    <span class="event-heat">⭐⭐⭐⭐</span>
-    <span class="event-window window-gold">🟢 黄金期</span>
-    <span class="toggle-arrow">›</span>
-  </div>
-  <div class="event-body">
-    <div class="section">
-      <div class="section-title">📅 事件概述</div>
-      <div class="timeline">
-        <div class="timeline-item"><strong>3月5日起</strong> 40天内连续3次恐怖威胁：恐吓信、现役自卫队官员持刀闯入、网络炸弹威胁</div>
-        <div class="timeline-item hot"><strong>4月16日🔥</strong> 使馆发布会：交涉近30次无进展，外交部敦促日方依法严惩</div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="section-title">💬 评论运营</div>
-      <div class="direction-block">
-        <div class="direction-header">📍 评论精选</div>
-        <div class="angle-group">
-          <div class="angle-title">💬 情感共鸣</div>
-          <div class="comment-item god">交涉30次=被忽视30次 日方的态度比恐怖威胁本身更让人寒心<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">交涉近30次没进展？？要是反过来 日本使馆在中国被威胁 你看中国警方几小时破案<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">现役自卫队员持刀闯入大使馆 这不是恐怖威胁这是恐怖行动了吧？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">外交人员的安全是底线中的底线 这都保护不了吗<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">作为海外华人 看到使馆被威胁真的很愤怒<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度2：军事/安全</div>
+          <div class="comment-item">美军1万人十余艘军舰数十架战机——这排场够打一场小型战争了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">海峡封锁本质上是经济战 比热战更致命<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">布列塔尼百科已经开了"2026 Iran war"词条 历史正在被写入<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">4月21日停火到期 接下来三天是最关键的窗口期<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">从2月28日开战到现在49天 这个时间线比想象中长<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 理性分析</div>
-          <div class="comment-item">"前自卫队""现役自卫队"的标签说明右翼渗透很深<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">30次交涉无果：日本警方不是查不了 是选择性执法<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">国际法角度 接受国有义务保护外交使团 日本如果继续不作为可以上国际法院<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">中国使馆选择公开发布会而不是私下交涉 说明已经忍到极限了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">自卫队成员参与威胁外国使馆 放在任何国家都是重大事件<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💬 角度3：民间影响</div>
+          <div class="comment-item">全球20%石油走霍尔木兹 你封一天全世界跟着抖一天<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">做外贸的朋友说中东航线保险费翻了5倍 还不一定保得了<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">停火到期倒计时 建议所有做期货的系好安全带<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">和平最大的阻碍从来不是技术而是利益<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
+          <div class="comment-item">最讽刺的是：战争双方都说自己在追求和平<button class="copy-btn" onclick="copyComment(this)">📋复制</button></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- A级事件3：140年最强厄尔尼诺 -->
-<div class="event-card">
-  <div class="event-header" onclick="toggleEvent(this)">
-    <span class="event-badge badge-a">A级</span>
-    <span class="event-title">140年来最强厄尔尼诺正在酝酿·地球或冲击高温极限</span>
-    <span class="event-heat">⭐⭐⭐⭐</span>
-    <span class="event-window window-gold">🟢 灰犀牛⚠️</span>
-    <span class="toggle-arrow">›</span>
-  </div>
-  <div class="event-body">
-    <div class="section">
-      <div class="section-title">📅 概述</div>
-      <div class="timeline">
-        <div class="timeline-item hot"><strong>2026年4月🔥</strong> 多国气象机构联合预警，太平洋正酝酿140年来最强厄尔尼诺。2026-2027年全球气温或再创极值</div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="section-title">⚠️ 影响预判</div>
-      <div class="prediction"><span class="prob">农业</span>粮食减产→粮价上涨→CPI压力</div>
-      <div class="prediction"><span class="prob">能源</span>高温→用电高峰→煤电需求→碳排放压力</div>
-      <div class="prediction"><span class="prob">保险</span>极端天气→巨灾赔付→保险股承压</div>
-    </div>
-  </div>
-</div>
-
-<!-- A级事件4：茅台双降+A股 -->
-<div class="event-card">
-  <div class="event-header" onclick="toggleEvent(this)">
-    <span class="event-badge badge-a">A级</span>
-    <span class="event-title">贵州茅台上市来首次营收净利双降·纳指12连涨·创业板续创11年新高</span>
-    <span class="event-heat">⭐⭐⭐⭐</span>
-    <span class="event-window window-gold">🟢 黄金期</span>
-    <span class="toggle-arrow">›</span>
-  </div>
-  <div class="event-body">
-    <div class="section">
-      <div class="section-title">📅 概述</div>
-      <div class="timeline">
-        <div class="timeline-item"><strong>茅台</strong> 2025年报营收1688亿同比-1.21%，上市以来首次双降</div>
-        <div class="timeline-item"><strong>美股</strong> 纳指12连涨创收盘新高</div>
-        <div class="timeline-item hot"><strong>A股4/17🔥</strong> 沪指微跌0.1%报4051，深成指+0.6%，创业板+1.43%续创近11年新高，北证50涨4.77%</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- A级事件5：OpenAI新品 -->
-<div class="event-card">
-  <div class="event-header" onclick="toggleEvent(this)">
-    <span class="event-badge badge-a">A级</span>
-    <span class="event-title">OpenAI发布药物研发模型GPT-Rosalind+Codex·正面挑战谷歌</span>
-    <span class="event-heat">⭐⭐⭐⭐</span>
-    <span class="event-window window-fade">🟡 衰减期</span>
-    <span class="toggle-arrow">›</span>
-  </div>
-  <div class="event-body">
-    <div class="section">
-      <div class="section-title">📅 概述</div>
-      <div class="timeline">
-        <div class="timeline-item hot"><strong>4月17日🔥</strong> GPT-Rosalind面向药物研发，挑战AlphaFold。Codex代码助手升级。GPT-6发布3天后进入"产品矩阵狂飙"模式</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- B级事件区 -->
+<!-- B级事件 -->
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-b">B级</span>
-    <span class="event-title">四川资中1小时连发3次地震（4.4/4.0/3.3级）</span>
+    <span class="event-title">IMF下调全球经济预期·中东冲突加剧多重危机担忧</span>
     <span class="event-heat">⭐⭐⭐</span>
-    <span class="event-window window-fade">🟡 衰减期</span>
     <span class="toggle-arrow">›</span>
   </div>
   <div class="event-body">
-    <div class="section"><div class="section-title">📅 概述</div><div class="timeline"><div class="timeline-item">四川内江资中县1小时内连发3次地震，最大4.4级，震源深度7千米，无重大伤亡报告</div></div></div>
+    <div class="section"><div class="section-title">📌 要点</div><p style="font-size:13px;color:var(--text2)">IMF分析称全球经济遭受冲击的程度取决于冲突持续时间和规模，以及能源生产和运输恢复的速度。中东战事加剧全球能源和发展压力。</p></div>
   </div>
 </div>
 
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-b">B级</span>
-    <span class="event-title">丝芭传媒创始人王子杰突发心源性疾病去世·享年63岁</span>
+    <span class="event-title">恒安集团创始人许连捷逝世·享年73岁·曾上榜胡润富豪榜</span>
     <span class="event-heat">⭐⭐⭐</span>
-    <span class="event-window window-fade">🟡 衰减期</span>
     <span class="toggle-arrow">›</span>
   </div>
   <div class="event-body">
-    <div class="section"><div class="section-title">📅 概述</div><div class="timeline"><div class="timeline-item">SNH48之父、丝芭传媒创始人王子杰因心源性疾病突然去世</div></div></div>
+    <div class="section"><div class="section-title">📌 要点</div><p style="font-size:13px;color:var(--text2)">4月18日凌晨恒安集团发布讣告，创始人许连捷因病于4月17日16:50逝世。泉州晋江安海人，曾捐赠达数十亿，身家95亿元。短短3天内5位名人相继去世。</p></div>
   </div>
 </div>
 
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-b">B级</span>
-    <span class="event-title">约20名中国学者赴美参会被拒入境·中美学术交流受阻</span>
+    <span class="event-title">NBA季后赛开打·CBA常规赛收官·2026超级赛事年</span>
     <span class="event-heat">⭐⭐⭐</span>
-    <span class="event-window window-fade">🟡 衰减期</span>
     <span class="toggle-arrow">›</span>
   </div>
   <div class="event-body">
-    <div class="section"><div class="section-title">📅 概述</div><div class="timeline"><div class="timeline-item">约20名中国学者赴美参加学术会议时被拒入境，中美学术交流进一步受阻</div></div></div>
+    <div class="section"><div class="section-title">📌 要点</div><p style="font-size:13px;color:var(--text2)">2026年是体育"大年"：足球世界杯、冬奥会、亚运会、青奥会扎堆。NBA常规赛收官，库里复出难救主，勇士体系危机。CBA赛季进行中。</p></div>
   </div>
 </div>
 
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-b">B级</span>
-    <span class="event-title">第六届消博会进入倒数第二天·60国3400品牌</span>
+    <span class="event-title">欧盟CBAM碳关税正式征收期启动·对中国出口企业冲击持续</span>
     <span class="event-heat">⭐⭐⭐</span>
-    <span class="event-window window-fade">🟡 衰减期</span>
     <span class="toggle-arrow">›</span>
   </div>
   <div class="event-body">
-    <div class="section"><div class="section-title">📅 概述</div><div class="timeline"><div class="timeline-item">第六届消博会4月18日闭幕，60国3400品牌参展，封关后首展</div></div></div>
+    <div class="section"><div class="section-title">📌 要点</div><p style="font-size:13px;color:var(--text2)">2026年1月起CBAM由"过渡期"进入"征收期"，明确碳排放核算方法、含"惩罚性溢价"的缺省值机制。对中国钢铁、铝材等出口企业冲击正在显现。</p></div>
   </div>
 </div>
 
-<!-- 持续追踪 -->
-<div class="tracking">
-  <h3>📡 持续追踪</h3>
-  <div class="track-item">🔴 <strong>美伊停火倒计时</strong> <span class="status status-warn">⚠️ 4/22到期</span><br><span style="color:var(--text2);font-size:12px">非常接近框架协议，周末或新一轮会晤。封锁第5天，2万海员滞留</span></div>
-  <div class="track-item">🔴 <strong>一季度GDP后续</strong> <span class="status status-ongoing">🟢 发酵中</span><br><span style="color:var(--text2);font-size:12px">5.0%超预期，关注二季度政策加码（降准降息）</span></div>
-  <div class="track-item">🟠 <strong>AI军备竞赛</strong> <span class="status status-ongoing">🟢 持续升级</span><br><span style="color:var(--text2);font-size:12px">GPT-Rosalind+Codex发布，OpenAI产品矩阵狂飙</span></div>
-  <div class="track-item">🟠 <strong>普京访华</strong> <span class="status status-ongoing">🟢 预热中</span><br><span style="color:var(--text2);font-size:12px">拉夫罗夫确认2026上半年，能源合作重头戏</span></div>
-  <div class="track-item">📊 <strong>灰犀牛</strong> <span class="status status-warn">⚠️</span><br><span style="color:var(--text2);font-size:12px">①140年最强厄尔尼诺酝酿 ②4/22美伊停火到期 ③美制定对伊"最后一击"方案</span></div>
-</div>
-
-<div style="text-align:center;margin:20px 0">
-  <a href="archives/" style="display:inline-block;background:linear-gradient(135deg,#6c5ce7,#a29bfe);color:#fff;padding:12px 28px;border-radius:10px;text-decoration:none;font-size:15px;font-weight:600;box-shadow:0 4px 15px rgba(108,92,231,0.3);transition:all .2s">📚 查看历史存档 →</a>
-  <p style="color:var(--text2);font-size:12px;margin-top:8px">每轮更新自动存档 · 便于预测验证与回溯分析</p>
+<!-- 灰犀牛扫描 -->
+<div class="rhino">
+  <h3>🦏 灰犀牛扫描</h3>
+  <div class="rhino-item">⚠️ <strong>美伊停火4月21日到期</strong>——续约谈判尚未启动，是否延期是未来72h最大变量</div>
+  <div class="rhino-item">⚠️ <strong>欧盟CBAM碳关税征收期</strong>——对中国出口企业冲击持续显现</div>
+  <div class="rhino-item">⚠️ <strong>嫦娥七号发射窗口</strong>——今年下半年发射，文昌已就绪</div>
+  <div class="rhino-item">⚠️ <strong>梦舟飞船首飞</strong>——2026年新一代载人飞船首次亮相</div>
+  <div class="rhino-item">⚠️ <strong>Meta 5月新模型发布</strong>——Avocado/Llama 5推迟后的关键节点</div>
 </div>
 
 <footer>
-  <p>🔥 热点事件监控看板 · 含下周预测周报版</p>
-  <p style="margin-top:4px">更新时间：2026-04-17 20:00 · 数据来源：20+平台中英文双语信源</p>
-  <p style="margin-top:4px;color:var(--accent2)">⚠️ 下周重点：①4/22美伊停火到期 ②二季度降准降息预期 ③普京访华时间确认 ④消博会闭幕 ⑤广交会二期 ⑥英王4/27访美</p>
+  <p>📡 热点监控看板 · 12大垂类全覆盖 · 每日7/9/12/15/18/21点更新</p>
+  <p style="margin-top:4px">更新时间：2026-04-18 07:00 | 数据来源：20+平台交叉验证</p>
+  <p style="margin-top:8px"><a href="archives/" style="color:var(--accent2)">📚 查看历史存档</a></p>
 </footer>
+
 </div>
 
 <script>
@@ -720,22 +657,13 @@ function toggleAll(){
   const bodies=document.querySelectorAll('.event-body');
   const arrows=document.querySelectorAll('.toggle-arrow');
   const anyOpen=[...bodies].some(b=>b.classList.contains('active'));
-  bodies.forEach(b=>{if(anyOpen)b.classList.remove('active');else b.classList.add('active')});
-  arrows.forEach(a=>{if(anyOpen)a.classList.remove('open');else a.classList.add('open')});
+  bodies.forEach(b=>{anyOpen?b.classList.remove('active'):b.classList.add('active')});
+  arrows.forEach(a=>{anyOpen?a.classList.remove('open'):a.classList.add('open')});
 }
 function copyComment(btn){
   const text=btn.parentElement.childNodes[0].textContent.trim();
-  navigator.clipboard.writeText(text).then(()=>{
-    btn.textContent='已复制✓';btn.style.background='#2ed573';
-    setTimeout(()=>{btn.textContent='复制';btn.style.background=''},1500);
-  }).catch(()=>{
-    const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);
-    btn.textContent='已复制✓';btn.style.background='#2ed573';
-    setTimeout(()=>{btn.textContent='复制';btn.style.background=''},1500);
-  });
+  navigator.clipboard.writeText(text).then(()=>{btn.textContent='✅已复制';setTimeout(()=>{btn.textContent='📋复制'},1500)});
 }
-document.querySelector('.event-body').classList.add('active');
-document.querySelector('.toggle-arrow').classList.add('open');
 </script>
 </body>
 </html>
