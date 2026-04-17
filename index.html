@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔥 热点监控看板</title>
+<title>🔥 热点监控看板 · 含下周预测</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#0f1117;--card:#1a1d28;--card2:#232635;--accent:#6c5ce7;--accent2:#a29bfe;--s-color:#ff4757;--a-color:#ff9f43;--b-color:#feca57;--text:#e8e8e8;--text2:#a0a0b0;--border:#2d3045;--green:#2ed573;--shadow:0 4px 20px rgba(0,0,0,0.3)}
@@ -42,8 +42,6 @@ header .meta span{background:var(--card);padding:4px 12px;border-radius:20px;bor
 .timeline-item::before{content:'';position:absolute;left:-17px;top:7px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
 .timeline-item strong{color:var(--text)}
 .timeline-item.hot::before{background:var(--s-color);box-shadow:0 0 8px var(--s-color)}
-.views-grid{display:grid;gap:8px}
-.view-item{background:var(--card2);border-radius:8px;padding:10px 14px;font-size:13px;border-left:3px solid var(--accent)}
 .prediction{background:var(--card2);border-radius:8px;padding:10px 14px;margin:6px 0;font-size:13px}
 .prediction .prob{font-weight:700;color:var(--accent2);margin-right:6px}
 .direction-block{margin:16px 0;padding:14px;background:rgba(108,92,231,0.05);border-radius:12px;border:1px solid var(--border)}
@@ -86,26 +84,27 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 <header>
   <h1>🔥 热点事件监控看板</h1>
   <div class="meta">
-    <span>⏰ 2026-04-16 18:00 更新</span>
+    <span>⏰ 2026-04-17 11:30 更新</span>
     <span>📡 20+ 平台监控</span>
     <span>🔍 12大垂类全覆盖</span>
+    <span>🔮 含下周预测周报</span>
   </div>
 </header>
 
 <div class="stats-bar">
   <div class="stat-item stat-s"><div class="num">3</div><div class="label">🔴 S级事件</div></div>
-  <div class="stat-item stat-a"><div class="num">5</div><div class="label">🟠 A级事件</div></div>
-  <div class="stat-item stat-b"><div class="num">3</div><div class="label">🟡 B级事件</div></div>
+  <div class="stat-item stat-a"><div class="num">3</div><div class="label">🟠 A级事件</div></div>
+  <div class="stat-item stat-b"><div class="num">2</div><div class="label">🟡 B级事件</div></div>
 </div>
 
 <button class="expand-all" onclick="toggleAll()">📋 展开/收起全部</button>
 
-<!-- S级事件1：美伊局势重大转折 -->
+<!-- S级事件1：美伊和谈+以黎停火 -->
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-s">S级</span>
-    <span class="event-title">美伊接近框架协议·10艘船被拦截·特朗普称4月下旬前可达成</span>
-    <span class="update-badge">🆕 重大转折</span>
+    <span class="event-title">美伊本周末面对面谈判·以黎10天停火·特朗普称"非常接近协议"</span>
+    <span class="update-badge">🆕 重大突破</span>
     <span class="event-heat">⭐⭐⭐⭐⭐</span>
     <span class="event-window window-gold">🟢 黄金期</span>
     <span class="toggle-arrow">›</span>
@@ -115,108 +114,108 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
       <div class="section-title">📅 事件时间线</div>
       <div class="timeline">
         <div class="timeline-item"><strong>4月8日</strong> 美伊在巴基斯坦达成两周临时停火协议</div>
-        <div class="timeline-item"><strong>4月12日</strong> 美伊伊斯兰堡谈判破裂，21小时马拉松谈判无果</div>
+        <div class="timeline-item"><strong>4月12日</strong> 伊斯兰堡谈判破裂，21小时马拉松谈判无果</div>
         <div class="timeline-item"><strong>4月13日</strong> 特朗普宣布封锁霍尔木兹海峡</div>
-        <div class="timeline-item"><strong>4月14日</strong> 美伊代表继续通话交换协议草案，取得进展</div>
-        <div class="timeline-item"><strong>4月15日</strong> 美军宣布封锁"fully implemented"，10艘伊朗船只被拦截</div>
-        <div class="timeline-item hot"><strong>4月16日🔥</strong> 美伊正逐步接近"结束战争的框架协议"，三大分歧浮现</div>
-        <div class="timeline-item hot"><strong>4月16日🔥</strong> 特朗普称4月下旬英王访美前"很有可能"达成协议</div>
+        <div class="timeline-item"><strong>4月15日</strong> 美军封锁"fully implemented"，10艘伊朗船只被拦截</div>
+        <div class="timeline-item"><strong>4月16日</strong> 美伊逐步接近框架协议，油价大跌</div>
+        <div class="timeline-item hot"><strong>4月16日21时🔥</strong> 特朗普宣布以黎10天停火协议，邀双方领导人赴白宫</div>
+        <div class="timeline-item hot"><strong>4月17日🔥</strong> 特朗普称本周末与伊朗面对面谈判，"非常接近达成协议"，伊朗同意交出浓缩铀</div>
       </div>
     </div>
     <div class="section">
-      <div class="section-title">📝 18:00最新动态</div>
-      <p style="font-size:13px;color:var(--text2)">重大转折！美伊从封锁对峙走向接近框架协议。美官员确认14日磋商取得进展，三大核心分歧：①霍尔木兹海峡控制权 ②伊朗核项目 ③2700亿美元战争赔偿。巴基斯坦、埃及、土耳其穿梭斡旋。停火4月22日到期，油价因和谈希望大跌8%。伊朗外交部警告封锁属"挑衅行为"。</p>
+      <div class="section-title">📝 21:00最新动态</div>
+      <p style="font-size:13px;color:var(--text2)">多重突破！①特朗普4月16日宣布本周末可能与伊朗再次面对面谈判，称"非常接近达成协议"，如达成将赴巴基斯坦签署。②伊朗已同意交出浓缩铀、不拥有核武器。③以色列与黎巴嫩达成10天停火协议，34年来首次直接谈判。④特朗普称和平协议将为美国带来"免费的石油和霍尔木兹海峡"。⑤五角大楼同时加速古巴军事行动计划。4月22日停火到期倒计时5天。</p>
     </div>
     <div class="section">
-      <div class="section-title">🔮 走向预判（18:00更新）</div>
-      <div class="prediction"><span class="prob">45%</span>走向A：4月下旬达成框架协议，停火延长，逐步解除封锁</div>
-      <div class="prediction"><span class="prob">35%</span>走向B：谈判拖延，停火4/22到期后局势再度紧张</div>
-      <div class="prediction"><span class="prob">20%</span>走向C：伊朗强硬派否决协议，不对称反击引发更大冲突</div>
+      <div class="section-title">🔮 走向预判（21:00更新）</div>
+      <div class="prediction"><span class="prob">50%</span>走向A：本周末谈判达成框架协议，停火延长，中东迎来转折</div>
+      <div class="prediction"><span class="prob">30%</span>走向B：谈判取得进展但未最终达成，4/22停火到期后局势不确定</div>
+      <div class="prediction"><span class="prob">20%</span>走向C：伊朗强硬派否决关键条款，谈判破裂冲突升级</div>
     </div>
     <div class="section">
       <div class="section-title">💬 基于不同走向的评论运营</div>
 
       <div class="direction-block">
-        <div class="direction-header">📍 走向A（45%）：4月下旬达成框架协议，停火延长</div>
+        <div class="direction-header">📍 走向A（50%）：本周末达成框架协议，中东迎来转折</div>
         <div class="angle-group">
           <div class="angle-title">🎯 角度1：讽刺型/结构性幽默</div>
-          <div class="comment-item god">先封锁再谈判，先打你一拳再握手言和——这叫什么？美式外交按摩🤣<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">特朗普："我们很有可能达成协议" 翻译：油价该降了，我选票需要<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">通过封锁敌方的封锁来打破敌人的封锁，现在又通过解除封锁来证明封锁有用——懂王永远在赢<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">三大分歧：海峡控制权、核项目、2700亿赔偿。翻译成人话就是——你的命门归谁管、你能不能造核弹、你得赔多少钱<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item god">封锁海峡让油价涨8%，和谈消息让油价跌8%——原来全球油价的遥控器在白宫<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item god">先封锁再谈判，先打你一拳再说"咱握手吧"——特朗普把外交玩成了先撩者贱的PUA话术<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">"免费的石油和海峡"——翻译一下就是"我封了你的路，现在你把路和路上的东西都给我"，这叫和平？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item god">通过封锁逼你谈判，通过谈判解除封锁，通过解除封锁证明封锁有用——这个逻辑闭环能申请诺贝尔和平奖<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">以黎34年来首次直接谈判，感动吗？是的。代价呢？一场战争。这就好比把房子烧了再夸消防队效率高<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">特朗普说要亲自去巴基斯坦签字，上次这么积极还是签自己的商业合同吧<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
           <div class="angle-title">💗 角度2：民生关切/情感共鸣</div>
-          <div class="comment-item">油价跌了8%！！！加油站的朋友们冲啊！虽然不知道能维持多久😂<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">如果真达成协议，油价回到85左右是有可能的，那我今年加油能省不少<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">和平是最大的利好。管它是封锁还是谈判，只要别打仗，打工人就谢天谢地了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">4月22日停火到期是关键节点，这几天多留点油钱吧万一又变卦了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">做外贸的终于能松口气了吗？航运成本如果跟着油价降那就太好了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">油价终于有盼头了！加油站的朋友们再忍忍，说不定下周就降价了😂<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">做外贸的终于能松口气了吧？航运保险费涨了三倍快把人逼疯了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">中东的华人朋友们终于能安心了！希望这次是真的和平不是又来一轮反复<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">和平比什么都重要。管它过程多荒谬，只要别打仗，普通人就谢天谢地了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">4月22日停火到期还剩5天，这几天别乱动仓位，等消息明确了再说<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
           <div class="angle-title">📊 角度3：理性分析/知识科普</div>
-          <div class="comment-item">框架协议≠最终协议，中间还有大量细节要谈。历史上伊核协议谈了10年才落地<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">三大分歧中最难的是核项目——伊朗说和平利用不可剥夺，美国要求全面限缩。鸿沟巨大<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">关键节点：4月22日停火到期、4月21日沃什确认听证、4月27日英王访美。这一周是超级决策周<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">高盛分析：霍尔木兹海峡石油流通受限但实际中断没最初担心严重，市场已部分Price in<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">国际能源署指出：恢复霍尔木兹海峡石油流通是缓解全球能源压力的关键<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">伊朗同意交出浓缩铀是重大让步，但执行细节才是关键——IAEA监督机制怎么安排？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">以黎10天停火协议的全文已公开，核心是双方在美国调停下启动直接谈判，34年来首次<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">关键日程：本周末美伊面对面→4/21沃什听证→4/22停火到期。超级决策周<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">中国40%石油进口经霍尔木兹海峡，如果真解除封锁对我们能源安全意义重大<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">五角大楼同时在加速古巴军事计划——特朗普一手和谈一手备战，对冲策略很明显<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
       </div>
 
       <div class="direction-block">
-        <div class="direction-header">📍 走向B（35%）：谈判拖延，停火4/22到期后局势再度紧张</div>
+        <div class="direction-header">📍 走向B（30%）：谈判有进展但未最终达成</div>
         <div class="angle-group">
           <div class="angle-title">🎯 角度1：讽刺型/结构性幽默</div>
-          <div class="comment-item god">美伊谈判的固定流程：见面→谈崩→放狠话→再见面→再谈崩——和平在这个循环里找不到出口<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">上次谈了21小时崩了，这次交换了草案还是分歧巨大。外交官的加班费谁出？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">特朗普一边说"即将结束"一边不撤封锁——嘴上和平手上施压，属于量子外交了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">4月22日倒计时6天，到时候停火到期看谁先眨眼<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">伊朗说不能"全盘接受"美国方案，翻译：可以谈但你别太过分<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item god">美伊谈判：见面→取得进展→未达成协议→下次再见。和相亲一样，感觉不错但就是不结婚<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">特朗普每次都说"非常接近"，上次谈了21小时也说接近，结果第22小时崩了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">"伊朗同意不拥核"和"伊朗交出浓缩铀"之间差了十个联合国决议的距离<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">以黎停火10天就10天吧，比起不停火好多了，虽然10天后又是一轮新剧情<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">4月22号倒计时5天，到时候谈成了叫和平，谈不成叫"战略耐心"<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
           <div class="angle-title">💗 角度2：民生关切/情感共鸣</div>
-          <div class="comment-item">好不容易看到和谈希望油价跌了，如果又崩了那不是白欢喜一场😭<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">做海运的朋友说现在保险费涨了三倍，如果谈判再崩估计没人敢走那条线了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">求求了别再反复了，油价一涨一跌普通人跟着心脏一颤一颤的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">现在最焦虑的是中东做工程的华人，走还是不走要看22号<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">军工股又要起飞了是吧？每次中东一紧张就军工起飞，规律太明显了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">好不容易油价跌了点，如果谈判又崩了那不是白高兴一场😭<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">做海运的朋友说现在保险费涨三倍还得续约，因为谁都不知道下周啥情况<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">求求了别再拉扯了，普通人的心脏受不了油价一天涨一天跌的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">A股军工股要不要提前埋伏？万一谈崩了又是一波<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">最焦虑的是中东打工人，走不走要等22号结果<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
           <div class="angle-title">📊 角度3：理性分析/知识科普</div>
-          <div class="comment-item">2700亿美元赔偿是最大障碍——伊朗GDP才4000多亿，赔2700亿等于让它破产，不可能接受<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">如果停火到期谈判未果，油价大概率反弹到100以上。提前锁定航运合同可能是外贸企业的保命操作<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">伊朗提议霍尔木兹海峡阿曼一侧自由通行——这是妥协信号但美国可能不买账<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">巴基斯坦两路穿梭斡旋——总理夏巴兹和陆军参谋长分头行动，说明斡旋方也很着急<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">中国40%石油进口经霍尔木兹海峡，战略石油储备和替代路线的重要性不言而喻<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">霍尔木兹海峡日均通过石油约2000万桶占全球20%，封锁每多一天全球经济损失就指数级上升<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">如果停火到期未谈妥，油价大概率反弹到100以上，外贸企业提前锁价是保命操作<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">澳大利亚刚宣布大幅增加军费，就是因为伊朗战争改变了全球战略格局<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">以黎首次直接谈判的意义被低估了——黎巴嫩40年来不承认以色列，现在坐下来了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">美国同时在伊朗谈和在古巴备战——两线操作说明华盛顿在布一盘更大的棋<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
       </div>
 
       <div class="direction-block">
-        <div class="direction-header">📍 走向C（20%）：伊朗强硬派否决协议，不对称反击</div>
+        <div class="direction-header">📍 走向C（20%）：谈判破裂冲突升级</div>
         <div class="angle-group">
           <div class="angle-title">🎯 角度1：讽刺型/结构性幽默</div>
-          <div class="comment-item god">美军拦了10艘船觉得封锁成功了，伊朗数千万人准备为国捐躯——谁给你的自信以为封锁就能赢？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">特朗普说"不费一枪"，伊朗革命卫队：那我帮你费<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">封锁第四天特朗普就被上了一课——预想中的闪电胜利变成了骑虎难下的烂摊子<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">伊朗说要用替代港口绕开封锁——通过绕开封锁来打败封锁，你封你的我走我的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">当年萨达姆也被封锁过，结果你们都知道。历史不会重复但会押韵<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item god">"非常接近达成协议"→"如果达不成冲突将重新爆发"——特朗普把威胁和安抚写在同一句话里，量子外交石锤了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">伊朗口头说交浓缩铀，手底下革命卫队还在磨刀——嘴上和平手上备战是传统艺能了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">10天停火协议就像给爆炸现场贴了一张创可贴——聊胜于无<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">特朗普那句"如果达不成协议冲突就重新爆发"翻译成人话就是：签不签都是我赢<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">每次中东快和平了就出个黑天鹅——这次轮到谁搅局？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
           <div class="angle-title">💗 角度2：民生关切/情感共鸣</div>
-          <div class="comment-item">如果真打起来油价奔150去了……房贷车贷加油费，普通人真扛不住😭<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">在中东做工程的表哥说公司已经启动撤侨预案了，希望别走到那一步<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">我就想安安静静上班，你们别打了行吗？油价别涨就是最大的幸福<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">每次中东出事A股军工板块就涨停，这算什么？战争财？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">家里老人看新闻说要打仗了，我说没那么严重但心里也没底<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">如果真打起来油价奔150，房贷车贷加油费……普通人真扛不住😭<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">在中东的朋友说公司已经在准备撤侨方案了，希望别走到那一步<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">我就想安安静静上班，你们别打了行吗？油价别涨就是幸福<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">家里老人看新闻又开始焦虑了，一边劝他们一边自己也没底<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">军工股又要起飞了？每次中东一紧张规律太明显了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
           <div class="angle-title">📊 角度3：理性分析/知识科普</div>
-          <div class="comment-item">伊朗不对称反击能力：反舰导弹、水雷封锁、无人机蜂群。美军航母在狭窄海峡很脆弱<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">革命卫队最可能的方式是布雷+袭击油轮，成本低效果大且难追溯<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">一旦升级为热战，油价不是破100的问题了，2008年147美元纪录可能被打破<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">伊朗反击未必正面军事对抗，更可能在伊拉克、也门、黎巴嫩开辟新战线<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">伊朗武装部队已表态"准备好采取必要行动"——这不是虚张声势，是在预留升级空间<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">伊朗的不对称反击能力：反舰导弹+水雷封锁+无人机蜂群，美军在狭窄海峡很脆弱<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">一旦升级热战油价不是破100而是冲2008年的147美元纪录<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">伊朗反击未必正面军事对抗，更可能在伊拉克/也门/黎巴嫩开辟新战线<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">五角大楼同时推进古巴方案，如果伊朗谈崩特朗普可能转移注意力到加勒比<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">全球供应链已经在为最坏情况做准备——航运保险费飙升、战略石油储备释放<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
       </div>
 
@@ -224,167 +223,83 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
   </div>
 </div>
 
-<!-- S级事件2：苏林访华 -->
+<!-- S级事件2：GDP+茅台双降 -->
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-s">S级</span>
-    <span class="event-title">苏林访华达成南海共识·签署多项合作协议·圆满成功</span>
-    <span class="update-badge">🆕 南海共识</span>
+    <span class="event-title">一季度GDP增5%超预期·茅台上市以来首次营收净利双降·纳指12连涨</span>
+    <span class="update-badge">🆕 震撼</span>
     <span class="event-heat">⭐⭐⭐⭐⭐</span>
     <span class="event-window window-gold">🟢 黄金期</span>
     <span class="toggle-arrow">›</span>
   </div>
   <div class="event-body">
     <div class="section">
-      <div class="section-title">📝 18:00最新动态</div>
-      <p style="font-size:13px;color:var(--text2)">苏林访华取得圆满成功！4月15日在人民大会堂会谈+签字仪式。中越达成南海问题重大共识：推动双边方式+《南海行为准则》和平解决机制。4月16日习近平夫妇同苏林夫妇亲切话别，苏林称"迄今为止已取得圆满成功"。签署铁路、经贸、科技、人文等多领域合作协议。</p>
+      <div class="section-title">📝 21:00最新动态</div>
+      <p style="font-size:13px;color:var(--text2)">4月17日超级数据日！①一季度GDP同比增长5%，超市场预期，比去年四季度加快0.5个百分点。②贵州茅台上市20多年来首次年度营收（-2.4%）、净利润双双下滑！全年现金分红将超650亿。③纳指12连涨创新高！标普7041点。④中际旭创Q1净利暴增262%至57.35亿。⑤3月14城新房价格上涨，一线二手房全面回暖。⑥DeepSeek创始研究员郭达雅传闻被字节亿元年薪挖角。</p>
     </div>
     <div class="section">
       <div class="section-title">🔮 走向预判</div>
-      <div class="prediction"><span class="prob">55%</span>走向A：中越关系进入历史最好时期，经贸科技全面深化</div>
-      <div class="prediction"><span class="prob">30%</span>走向B：合作成果落地推进中面临实际困难</div>
-      <div class="prediction"><span class="prob">15%</span>走向C：域外势力施压，南海共识执行面临挑战</div>
+      <div class="prediction"><span class="prob">45%</span>走向A：GDP超预期+美股新高共振，全球风险偏好继续上升</div>
+      <div class="prediction"><span class="prob">35%</span>走向B：茅台带崩白酒板块，A股结构分化加剧</div>
+      <div class="prediction"><span class="prob">20%</span>走向C：获利回吐+美伊变数引发全球回调</div>
     </div>
     <div class="section">
       <div class="section-title">💬 基于不同走向的评论运营</div>
 
       <div class="direction-block">
-        <div class="direction-header">📍 走向A（55%）：中越关系历史最好时期，全面深化</div>
-        <div class="angle-group">
-          <div class="angle-title">🌍 角度1：外交解读/大国视野</div>
-          <div class="comment-item god">7天当选，7天访华，不是在赶时间，是在赶时代<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">中越达成南海共识这个含金量太高了——双边+行为准则双轨制，既务实又有框架<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">美国在封海峡的时候中越在签合作协议。一个在搞破坏一个在搞建设，对比太鲜明了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">苏林说"正处于历史上最好时期"，这个定调就是告诉全世界：中越关系没有天花板<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">南海行为准则最终文本接近完成了！二十多年啊，这一步迈出来意义重大<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-        <div class="angle-group">
-          <div class="angle-title">💰 角度2：经贸合作/投资机会</div>
-          <div class="comment-item">中越铁路、跨境电商、稀土合作……每条合作协议都是实打实的利好<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">做越南市场的朋友们注意了，中越框架协议签完跨境电商政策大概率松绑<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">越南制造+中国技术，东南亚供应链又要大洗牌了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">云南广西的朋友们，中越铁路+跨境经济区，你们可能是最大赢家<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">对消费者最直接的好处：越南咖啡、水果、水产品进口更便宜更快<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-        <div class="angle-group">
-          <div class="angle-title">😄 角度3：轻松幽默/网友视角</div>
-          <div class="comment-item god">美国在封锁贸易的时候，我们在签贸易协议——这就是最好的回应<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">以后去越南旅游能坐高铁了？南宁出发的朋友期待一下<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">越南河粉和螺蛳粉的跨国联动什么时候安排上？我迫不及待了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">跟邻居搞好关系永远没错，何况是一个一亿人口的大市场<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">比起某些国家到处搞封锁的，还是交朋友的路走得远<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-      </div>
-
-      <div class="direction-block">
-        <div class="direction-header">📍 走向B（30%）：合作成果落地面临实际困难</div>
-        <div class="angle-group">
-          <div class="angle-title">🤔 角度1：理性分析/外交观察</div>
-          <div class="comment-item">签协议容易落地难，中越铁路的资金、技术、征地问题不是一纸协议能解决的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">越南的营商环境比中国还是有差距，企业出海东南亚要做好心理准备<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">南海共识的"双边方式"怎么落地？菲律宾不会坐视不管的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">合作框架是好的，但执行层面的摩擦在所难免。外交看大局，商业看细节<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">两国之间的历史包袱不是一次访问能卸完的，长期看好但短期别太乐观<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-        <div class="angle-group">
-          <div class="angle-title">💼 角度2：企业视角/实操建议</div>
-          <div class="comment-item">在越南开过厂的告诉你，越南工人效率比国内低不少，管理成本也不低<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">跨境电商到越南不难，难的是本地化运营。语言、文化、法规都是坑<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">协议签了是利好但别盲目跟风，先做市场调研再决定要不要布局越南<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">稀土合作最实际，中国技术+越南资源的组合拳，对全球供应链影响大<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">数字经济框架落地还要看配套政策，跨境支付和数据合规是关键<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-        <div class="angle-group">
-          <div class="angle-title">💬 角度3：网友热议</div>
-          <div class="comment-item">国与国之间哪有100%的事？能合作的先合作着比整天吵架强<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">做生意的都知道先交朋友再谈条件，国家之间也是一样<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">之前去越南旅游感觉就跟回了90年代的中国，现在发展越来越快了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">管他困难不困难，方向对了就行。罗马也不是一天建成的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">和平与发展永远是主旋律，其他的都是花絮<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- S级事件3：标普7000点 -->
-<div class="event-card">
-  <div class="event-header" onclick="toggleEvent(this)">
-    <span class="event-badge badge-s">S级</span>
-    <span class="event-title">标普500首次站上7000点·纳指11连涨·全球股市狂欢</span>
-    <span class="update-badge">🆕 历史性</span>
-    <span class="event-heat">⭐⭐⭐⭐⭐</span>
-    <span class="event-window window-gold">🟢 黄金期</span>
-    <span class="toggle-arrow">›</span>
-  </div>
-  <div class="event-body">
-    <div class="section">
-      <div class="section-title">📝 事件概述</div>
-      <p style="font-size:13px;color:var(--text2)">美伊和谈希望+银行财报强劲，标普500指数历史性首次收盘站上7000点（涨0.8%），纳指连续第11个交易日上涨创历史新高，英伟达11连涨，特斯拉暴涨超7%。亚太股市跟涨，日经225刷新纪录。A股沪指涨0.7%报4055，创业板指涨3.17%续刷近11年新高。</p>
-    </div>
-    <div class="section">
-      <div class="section-title">🔮 走向预判</div>
-      <div class="prediction"><span class="prob">50%</span>走向A：和谈+AI景气延续，全球牛市继续</div>
-      <div class="prediction"><span class="prob">30%</span>走向B：获利回吐+黑天鹅引发回调</div>
-      <div class="prediction"><span class="prob">20%</span>走向C：美伊谈判破裂，油价反弹打压风险偏好</div>
-    </div>
-    <div class="section">
-      <div class="section-title">💬 基于不同走向的评论运营</div>
-
-      <div class="direction-block">
-        <div class="direction-header">📍 走向A（50%）：全球牛市继续</div>
+        <div class="direction-header">📍 走向A（45%）：全球风险偏好继续上升</div>
         <div class="angle-group">
           <div class="angle-title">🎯 角度1：震撼/历史性时刻</div>
-          <div class="comment-item god">标普7000、纳指11连涨、英伟达11连涨、特斯拉+7%——这不是股市，这是印钞机集体开机<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">标普500首次站上7000点！还记得3000点的时候吗？那是2019年。7年翻了一倍多<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">纳指11连涨是什么概念？上一次这么猛还是2021年那波……难道历史要重演？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">特斯拉一天涨7%就是马斯克一天多赚了几十亿美元。贫穷限制了我的想象力<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">A股创业板也续刷11年新高了！宁德时代市值逼近2万亿！中国资产也在狂欢<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item god">GDP增5%叫超预期，茅台首降叫暴雷，纳指12连涨叫疯狂——同一天三个极端并存，这世界疯了还是我疯了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">纳指12连涨是什么概念？上一次这么猛的连涨还得翻历史书<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">中际旭创Q1净利暴增262%到57亿……光通信赛道是在印钞吗<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">GDP增5%说明经济基本面没问题，茅台降了说明消费结构在变。一升一降看的是时代变迁<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">3月一线二手房全面上涨！楼市回暖的信号越来越明确了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💰 角度2：投资分析/策略</div>
-          <div class="comment-item">双重利好共振：美伊和谈降低风险溢价 + AI业绩兑现推动科技股。牛市根基很扎实<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">银行财报超预期是隐藏大利好——说明美国经济基本面没问题，不只是AI在撑<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">日经225也刷新纪录了，全球同步牛市的势头。亚太资产不要忽视<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">追高有风险但趋势明确。仓位管理比方向判断更重要<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">英伟达11连涨，AI算力需求才刚起步。长期看这只是开始<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💰 角度2：投资策略/分析</div>
+          <div class="comment-item">GDP超预期+美股创新高=双重利好共振。科技成长股继续持有是目前最优策略<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">中际旭创262%增长验证了AI算力需求的确定性，光通信赛道还有空间<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">房价数据回暖+GDP超预期，地产链和消费可以开始关注了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">字节亿元年薪抢DeepSeek人才，AI人才争夺战比想象中激烈得多<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">本周末美伊谈判是最大变量，如果成了全球股市继续狂欢<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
           <div class="angle-title">😅 角度3：散户视角/自嘲</div>
-          <div class="comment-item">别人11连涨我11连亏，差距就是这么大🤡<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">标普7000点了我的基金还是绿的……大盘涨了跟我有什么关系<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">每次看到这种新闻我就问自己：当初为什么不买英伟达？为什么？？？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">全世界都在赚钱就我在亏，原来我才是那个对冲基金<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">老婆问我今天赚了多少，我说大盘涨了。她问那你呢，我沉默了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">纳指12连涨跟我有什么关系？我的基金还是绿的🤡<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">GDP增5%我工资没增5%，茅台降了我也没钱买茅台。跟我有关系吗？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">别人赚了262%我亏了26.2%，反向翻十倍，我也不容易<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">全世界都在赚钱就我在亏，原来我才是市场的对冲工具<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">老婆问GDP增了我们家收入增了吗，我沉默了三秒说"宏观意义上是的"<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
       </div>
 
       <div class="direction-block">
-        <div class="direction-header">📍 走向B（30%）：获利回吐引发回调</div>
+        <div class="direction-header">📍 走向B（35%）：茅台带崩白酒板块，A股结构分化</div>
         <div class="angle-group">
-          <div class="angle-title">⚠️ 角度1：风险提示</div>
-          <div class="comment-item god">11连涨之后不是12连涨就是暴跌——历史告诉我们极端连涨后必有回调，问题是什么时候<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">恐惧和贪婪是投资的大敌，当所有人都在狂欢的时候，该想想风控了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">特斯拉一天涨7%是好事也是坏事——涨得越猛跌起来越狠，这是铁律<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">美联储交接混乱、美伊谈判不确定性、AI估值过高——黑天鹅不是没有<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">别人贪婪我恐惧。7000点我选择减仓锁利润<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">🎯 角度1：讽刺/行业洞察</div>
+          <div class="comment-item god">茅台上市25年来首次双降，翻译成人话：中国人终于开始少喝贵酒了。但到底是消费降级还是理性回归？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">茅台年赚823亿还分红650亿——虽然降了但人家一年赚的比你十辈子还多<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">白酒的神话不是不会破，只是晚破了几年。茅台都降了其他白酒还能撑多久<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">科技股在飞白酒股在跌，时代的车轮碾过传统行业的声音清晰可闻<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">GDP增5%靠的是新能源+AI+出口，白酒已经不在增长引擎名单上了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">📊 角度2：技术分析/理性讨论</div>
-          <div class="comment-item">RSI指标已经超买了，技术面看回调概率在增加。但牛市里超买可以持续很久<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">标普7000是重要心理关口，突破后需要确认支撑。如果站不稳就是假突破<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">4月21日沃什听证+4月22日美伊停火到期=本周末是潜在变盘窗口<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">VIX恐慌指数已经很低了，市场过于乐观的时候往往是风险积累的时候<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">回调5-8%在牛市里很正常，不代表趋势逆转。关键看回调后能否再创新高<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💰 角度2：投资策略</div>
+          <div class="comment-item">茅台今天大跌超4%，白酒板块恐慌情绪蔓延。但茅台的分红率依然有吸引力<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">结构分化的核心逻辑：科技→继续超配，消费→精选龙头，白酒→减仓观望<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">茅台首降不是终点，后面还有Q1报要看。如果一季度也降了就真的是趋势性的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">白酒行业拐点来了？不急着抄底，等季报确认后再说<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">650亿分红对应市值不到1.8万亿，股息率接近3.6%。价值投资者可能觉得够了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">😅 角度3：散户心理/吐槽</div>
-          <div class="comment-item">每次我一追高就是顶，一割肉就是底。我大概是被市场反向盯上了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">我宣布：从今天起只看不买。说完明天涨了我又忍不住了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">A股创业板11年新高，然后呢？我上一次听到新高还是4年前，后来跌了30%<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">做了这么多年韭菜终于学会一件事：大涨的时候不追，大跌的时候不割。说起来容易做起来太难<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">止盈永远比止损难。赚了总觉得还能再赚，结果从赚变亏一气呵成<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">😅 角度3：网友吐槽</div>
+          <div class="comment-item">茅台终于降了，我还是买不起。它降不降跟我一分钱关系都没有<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">年赚823亿叫"暴雷"？那我亏了800块算啥？"人间蒸发"？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">有人说茅台是消费降级的信号。哥们，我从来就没升过级你说啥降级<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">茅台跌了4%我的酱香拿铁也没便宜啊……这连锁反应呢<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">上次买茅台股票的同事今天脸色不太好看，中午没点猪脚饭改成泡面了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
       </div>
 
@@ -392,65 +307,96 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
   </div>
 </div>
 
-<!-- A级事件1：宁德时代 -->
+<!-- S级事件3：AI大模型竞争白热化 -->
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
-    <span class="event-badge badge-a">A级</span>
-    <span class="event-title">宁德时代Q1日赚2.3亿·市值逼近2万亿·300亿布局上游</span>
-    <span class="update-badge">🆕 新增</span>
-    <span class="event-heat">⭐⭐⭐⭐</span>
+    <span class="event-badge badge-s">S级</span>
+    <span class="event-title">DeepSeek V4灰度上线·阿里腾讯同日发世界模型·英伟达量子AI开源</span>
+    <span class="update-badge">🆕 集中爆发</span>
+    <span class="event-heat">⭐⭐⭐⭐⭐</span>
     <span class="event-window window-gold">🟢 黄金期</span>
     <span class="toggle-arrow">›</span>
   </div>
   <div class="event-body">
     <div class="section">
-      <div class="section-title">📝 事件概述</div>
-      <p style="font-size:13px;color:var(--text2)">宁德时代Q1营收1291.31亿（+52.45%），归母净利207.38亿（+48.52%），日赚约2.3亿。2025年度分红每10股派69.57元总额超300亿。拟出资300亿元成立上游资源公司布局新能源矿产。4月16日股价创历史新高，市值超2.08万亿。</p>
+      <div class="section-title">📝 21:00最新动态</div>
+      <p style="font-size:13px;color:var(--text2)">AI行业一天内集中爆发！①DeepSeek V4在App端正式灰度上线，万亿参数MoE架构，支持FP4+华为昇腾优化，推理成本降97%。Github仓库更新重大变化，4月下旬正式发布。②4月16日阿里发布世界模型Happy Oyster（原生多模态，支持实时3D环境生成），腾讯开源混元3D世界模型2.0（HY-World 2.0），同日竞技。③英伟达GTC发布全球首个量子AI模型Ising并开源。④字节传闻亿元年薪挖角DeepSeek研究员郭达雅。⑤中国大模型周调用量连续5周领先美国4.27倍。</p>
     </div>
     <div class="section">
       <div class="section-title">🔮 走向预判</div>
-      <div class="prediction"><span class="prob">55%</span>走向A：市值突破2万亿，引领新能源板块持续走强</div>
-      <div class="prediction"><span class="prob">30%</span>走向B：短期获利回吐后横盘整固</div>
+      <div class="prediction"><span class="prob">50%</span>走向A：DeepSeek V4正式发布引爆行业，中国AI弯道超车加速</div>
+      <div class="prediction"><span class="prob">30%</span>走向B：巨头混战加剧但短期难分胜负，资本市场情绪波动</div>
+      <div class="prediction"><span class="prob">20%</span>走向C：NeurIPS抵制事件扩大化，中美AI脱钩风险上升</div>
     </div>
     <div class="section">
       <div class="section-title">💬 基于不同走向的评论运营</div>
+
       <div class="direction-block">
-        <div class="direction-header">📍 走向A（55%）：市值突破2万亿，引领新能源板块走强</div>
+        <div class="direction-header">📍 走向A（50%）：DeepSeek V4引爆行业，中国AI加速</div>
         <div class="angle-group">
           <div class="angle-title">🎯 角度1：震撼/行业解读</div>
-          <div class="comment-item god">日赚2.3亿是什么概念？你每呼吸一次宁德时代就赚了2600多块——呼吸都在给你制造焦虑<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">营收涨52%净利涨48%市值破2万亿，宁德时代这是要把"宁王"坐实了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">300亿分红+300亿布局上游，一手给股东发钱一手扩大版图。这格局不是一般公司能有的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">全球能源安全背景下宁德时代的电池就是新时代的石油。谁掌握电池谁就掌握未来<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">中东在打仗油价在飙，宁德时代在闷声发大财——新能源才是终极答案<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item god">推理成本砍97%是什么概念？就好比外卖从30块变成9毛——AI从奢侈品变成自来水，DeepSeek干的就是这事<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">一天之内阿里腾讯同日发世界模型，英伟达发量子AI，DeepSeek更新——4月16日就是AI的双十一<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">DeepSeek V4支持华为昇腾芯片，这个信号的意义比性能暴涨还大——中国AI不怕卡脖子了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">字节亿元年薪挖人，说明顶级AI人才现在就是战略资源。人比芯片贵<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">中国大模型调用量连续5周领先美国4.27倍！应用生态才是真正的护城河<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💰 角度2：投资视角</div>
-          <div class="comment-item">分红率太香了！每10股69.57元，按现在股价算股息率也不低<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">300亿布局上游资源是战略性投资，控制锂矿钴矿就是控制成本端<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">2万亿市值贵不贵？看增速的话PEG其实还行，毕竟增长近50%<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">当初100块不敢买300块后悔没买，现在破500了更不敢买。宁德时代永远涨<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">新能源赛道长坡厚雪，宁德时代就是那个最大的雪球<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💰 角度2：投资/商业视角</div>
+          <div class="comment-item">中际旭创Q1暴增262%就是AI算力需求的最佳证明，光通信和AI算力链还有大空间<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">阿里Happy Oyster+腾讯HY-World 2.0，游戏和影视行业的制作成本要大幅下降了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">量子AI模型开源意味着量子计算商用化元年到了，这个赛道要关注<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">"一人公司"爆发式增长——AI让个人创业门槛降到史无前例的低<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">DeepSeek推理成本降97%+华为适配，对标英伟达的中国AI基础设施正在成形<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">😅 角度3：散户/打工人视角</div>
-          <div class="comment-item">我一年赚的钱还不够宁德时代1秒钟赚的……人与公司的差距比人与狗还大<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">日赚2.3亿，我日赚230都费劲。这大概就是普通人和资本的距离<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">同事三年前买的宁德时代今天看收益笑出声了，我三年前买的XX至今在坑里<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">以后别问我投资什么了，直接买宁德时代然后睡觉就行了（非投资建议）<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">一季度赚了207亿，这是什么概念？大概相当于我们全公司人干4000年<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">😄 角度3：网友视角/轻松幽默</div>
+          <div class="comment-item god">GPT-6刚发布一周DeepSeek V4就灰度上线了——你发你的土豆我烤我的红薯，各做各的饭<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">阿里腾讯同一天发世界模型，这是约好了对打还是撞车了？反正看热闹不嫌事大<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">一人公司靠AI年赚几百万，打工人还在卷996。时代抛弃你连声招呼都不打<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">以前是人工智能，现在是智能替人工。程序员：我们还有多少年？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">字节亿元年薪挖人……我看到亿元先激动了一下，然后看到"年薪"就冷静了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
       </div>
+
+      <div class="direction-block">
+        <div class="direction-header">📍 走向B（30%）：巨头混战短期难分胜负</div>
+        <div class="angle-group">
+          <div class="angle-title">🤔 角度1：理性分析</div>
+          <div class="comment-item">DeepSeek V4灰度上线≠正式发布，万亿参数模型的稳定性和实际体验还需要验证<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">世界模型虽然酷炫但商业化路径不清晰，游戏/影视能落地多少还是问号<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">AI公司都在烧钱抢人抢算力，但真正赚到钱的还是卖铲子的中际旭创们<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">中美AI调用量差4倍但收入差距没那么大——说明中国AI还在to低价阶段<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">NeurIPS抵制事件是信号——学术交流受阻对长期创新是负面的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">💼 角度2：从业者/企业视角</div>
+          <div class="comment-item">做AI应用的朋友说：模型迭代太快了，去年接的API今年全废了，成本翻倍<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">AI创业最大的风险不是技术而是生态——今天用DeepSeek明天可能得换GPT后天又换回来<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">亿元年薪抢人说明人才极度稀缺，普通程序员转AI现在还来得及吗？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">一人公司听着美好，但真正赚到钱的永远是少数。大部分人还是打工命<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">量子AI开源是好事但真正能用起来的团队全球不超过100个<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">😅 角度3：网友吐槽</div>
+          <div class="comment-item">各大厂同一天发新模型，感觉像高考出分那天——几家欢喜几家愁<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">AI行业现在就是军备竞赛，今天你比我多1万亿参数明天我就加2万亿<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">说好的AI替代重复劳动呢？我的996一点没少啊<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">前几天用GPT-6感觉很牛了，今天看到DeepSeek V4觉得又不够了。我到底该用啥<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">新闻看多了感觉AI马上统治世界，合上手机发现生活一切照旧<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
 
-<!-- A级事件2：余金生被执行死刑 -->
+<!-- A级事件1：吴昕郑凯 -->
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-a">A级</span>
-    <span class="event-title">杀害网红"罗大美"主犯余金生被执行死刑</span>
-    <span class="update-badge">🆕 新增</span>
+    <span class="event-title">吴昕郑凯七年恋情曝光·热搜第一·何炅李维嘉深夜聚餐视频曝光</span>
+    <span class="update-badge">🆕 热搜爆</span>
     <span class="event-heat">⭐⭐⭐⭐</span>
     <span class="event-window window-gold">🟢 黄金期</span>
     <span class="toggle-arrow">›</span>
@@ -458,52 +404,52 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
   <div class="event-body">
     <div class="section">
       <div class="section-title">📝 事件概述</div>
-      <p style="font-size:13px;color:var(--text2)">4月16日，河南南阳中院遵照最高法死刑执行命令，对余金生执行死刑。2025年10月一审判决。余金生索要200多万后仍将网红"罗大美"杀害，将遗体推入红薯窖掩埋。罗大美妹妹发声："告慰逝者，我们终于能开启新生活。"微博热搜TOP。</p>
+      <p style="font-size:13px;color:var(--text2)">4月16日晚，娱记拍到吴昕携郑凯与何炅、李维嘉在北京深夜聚餐，四人有说有笑气氛温馨。#吴昕郑凯在一起七年了#冲上热搜第一。两人感情线始于2019年8月被拍同回家中，七年间低调未官宣。吴昕从"大龄剩女"标签到"闷声发大财"，网友：姐活明白了。</p>
     </div>
     <div class="section">
       <div class="section-title">🔮 走向预判</div>
-      <div class="prediction"><span class="prob">60%</span>走向A：案件终结，公众关注网红安全保护议题</div>
-      <div class="prediction"><span class="prob">40%</span>走向B：引发"网红经济风险""直播行业安全"讨论</div>
+      <div class="prediction"><span class="prob">55%</span>走向A：双方工作室回应确认恋情，大方官宣</div>
+      <div class="prediction"><span class="prob">45%</span>走向B：继续保持沉默，热度自然消退</div>
     </div>
     <div class="section">
       <div class="section-title">💬 基于不同走向的评论运营</div>
       <div class="direction-block">
-        <div class="direction-header">📍 走向A（60%）：案件终结，关注网红安全保护</div>
+        <div class="direction-header">📍 走向A（55%）：确认恋情，大方官宣</div>
         <div class="angle-group">
-          <div class="angle-title">⚖️ 角度1：正义/法治</div>
-          <div class="comment-item god">索要200万还杀人灭口推入红薯窖——恶到这种程度，死刑是唯一正确的判决<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">正义可能会迟到但不会缺席。罗大美安息，家人终于可以向前走了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">妹妹那句"终于能开启新生活"看得人泪目……这一年多她和家人得多难熬<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">最高法核准死刑→执行，这个速度说明对恶性暴力犯罪零容忍<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">不敢想象罗大美最后的时刻有多绝望……希望天堂没有恶人<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💕 角度1：祝福/情感</div>
+          <div class="comment-item god">七年没官宣却比大多数官宣情侣都稳——沉默才是最深情的告白<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">吴昕终于不用被催婚了！七年啊姐你藏得也太好了吧😭<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">何炅李维嘉都知道的秘密全网现在才知道，快乐家族保密工作一流<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">从《快乐大本营》到《跑男》的联姻，这才是综艺宇宙的真正联动<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">不炒CP不卖恋爱脑不秀恩爱，安安静静谈了七年。教科书级别的恋爱方式<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">🛡️ 角度2：网红安全/行业反思</div>
-          <div class="comment-item">网红经济越来越大，但从业者的人身安全保障几乎是空白。罗大美案应该成为转折点<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">做直播的朋友们注意安全啊，暴露个人信息、线下交易都要小心<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">MCN机构该承担更多安全保障责任，不能只管赚钱不管人命<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">希望相关部门出台网红从业者安全保护规范，别让悲剧重演<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">网红看起来光鲜，背后的风险外人根本想不到。这行真不容易<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">🤔 角度2：理性分析/行业视角</div>
+          <div class="comment-item">七年不官宣在娱乐圈太罕见了，说明两个人把事业和感情的边界划得很清楚<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">吴昕这几年事业稳步上升，郑凯也有自己的戏，互不影响才是长久之道<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">娱乐圈恋爱公开=分手倒计时，不公开反而活得更久。这个规律太准了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">从"被催婚的大龄女青年"到"低调七年的赢家"，吴昕的故事值得所有被催婚的人看看<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">现在曝光是意外还是有意？快本停播后吴昕需要新的话题度也不好说<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度3：网友情感/共鸣</div>
-          <div class="comment-item">看到"红薯窖"三个字我整个人都不好了……这种丧心病狂的事竟然发生在现实中<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">希望罗大美妹妹和家人真的能走出来，这个噩梦终于结束了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">作为一个看过罗大美视频的人，真的很难过。她的视频很温暖的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">死刑执行了，但一条鲜活的生命回不来了。愿所有人都被温柔以待<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">善恶终有报。余金生你走好吧（反义）<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">😄 角度3：搞笑/吃瓜</div>
+          <div class="comment-item">所以这七年吴昕上节目被催婚的时候都是在演戏？影后级别的表演<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">郑凯戴帽子戴口罩遮了半张脸还是被认出来了……这就是娱乐圈防不胜防<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">何炅：我知道 李维嘉：我也知道 全网：就我不知道？？？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">吴昕郑凯七年了我跟我对象才三个月……emo了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">快乐大本营虽然停了但快乐家族的瓜永远新鲜🍉<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- A级事件3：特朗普威胁鲍威尔 -->
+<!-- A级事件2：国办药品价格9号文 -->
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-a">A级</span>
-    <span class="event-title">特朗普再威胁解雇鲍威尔·美联储主席交接危机</span>
-    <span class="update-badge">🆕 新增</span>
+    <span class="event-title">国办9号文健全药品价格机制·创新药自主定价·14条举措重塑药价</span>
+    <span class="update-badge">🆕 重磅政策</span>
     <span class="event-heat">⭐⭐⭐⭐</span>
     <span class="event-window window-gold">🟢 黄金期</span>
     <span class="toggle-arrow">›</span>
@@ -511,81 +457,96 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
   <div class="event-body">
     <div class="section">
       <div class="section-title">📝 事件概述</div>
-      <p style="font-size:13px;color:var(--text2)">特朗普强硬表态：如鲍威尔5月15日主席期满后不辞去理事职务将"强行解雇"，不撤销对鲍威尔的刑事调查。已提名沃什接任，参议院4月21日听证。关键阻碍：共和党参议员蒂利斯要求先解决鲍威尔刑事调查问题才批准沃什。</p>
+      <p style="font-size:13px;color:var(--text2)">4月14日，国务院办公厅印发《关于健全药品价格形成机制的若干意见》（国办发〔2026〕9号），从4个方面提出14条举措。核心亮点：①创新药首发价格机制优化，支持高水平新药自主定价。②发挥医保支付标准对药价引导作用。③引导药店合理定价。④全周期全渠道全领域药品价格监管。这是2015年药价改革以来最重大的顶层设计更新。4月15日国新办举行政策吹风会。</p>
     </div>
     <div class="section">
       <div class="section-title">🔮 走向预判</div>
-      <div class="prediction"><span class="prob">50%</span>走向A：鲍威尔5月期满离任，沃什顺利接任</div>
-      <div class="prediction"><span class="prob">35%</span>走向B：参议院拖延沃什确认，出现美联储主席"真空期"</div>
+      <div class="prediction"><span class="prob">55%</span>走向A：创新药企业迎政策春天，医药板块走强</div>
+      <div class="prediction"><span class="prob">45%</span>走向B：政策落地需要时间，短期对药价影响有限</div>
     </div>
     <div class="section">
       <div class="section-title">💬 基于不同走向的评论运营</div>
       <div class="direction-block">
-        <div class="direction-header">📍 走向A（50%）：鲍威尔期满离任，沃什顺利接任</div>
+        <div class="direction-header">📍 走向A（55%）：创新药迎春天，医药板块走强</div>
         <div class="angle-group">
-          <div class="angle-title">🎯 角度1：讽刺/政治评论</div>
-          <div class="comment-item god">特朗普：鲍威尔你走不走？鲍威尔：我任期到了自然走。特朗普：那你现在走！——美联储独立性.exe已崩溃<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">对鲍威尔搞刑事调查就为了翻修工程？这理由比"莫须有"还离谱<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">共和党内部都拦不住特朗普了，蒂利斯要求先查清鲍威尔的事——自己人打自己人<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">5月15日鲍威尔走人然后沃什上任降息——特朗普的如意算盘谁都看得出来<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">美联储主席换人等于全球货币政策换挡，影响的不只是美国是全世界<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">🏥 角度1：政策解读/行业影响</div>
+          <div class="comment-item god">2015年放开药价→2026年重建药价机制。先放再收再规范，这11年就是中国药改的完整闭环<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">创新药自主定价是最大亮点——以前创新药定价被集采压得喘不过气，现在终于松绑了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">国办9号文信号很明确：鼓励创新、保障供应、合理定价。医药股可以抄底了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">同步出了分级诊疗新措施，基层医疗+创新药双轮驱动的逻辑越来越清晰<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">药企最开心的一天：终于不用把创新药卖成白菜价了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💰 角度2：市场影响/投资</div>
-          <div class="comment-item">沃什上任后大概率降息，对股市是利好，但通胀可能反弹<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">美联储主席交接对美元走势影响巨大，人民币汇率也会跟着波动<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">鲍威尔在任期间加息+缩表，沃什上来后可能反向操作。风格切换要关注<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">4月21日听证是关键，如果沃什通过确认市场会提前定价降息<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">做外汇的朋友要小心，美联储主席交接期间美元波动会加大<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💊 角度2：患者/民生视角</div>
+          <div class="comment-item">支持创新药自主定价，但老百姓更关心的是：吃不起药的问题解决了吗？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">药店合理定价这条最实在——感冒药在不同药店能差三倍，早该管了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">医保支付标准引导定价是双赢——药企有合理利润，患者有兜底保障<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">分级诊疗+药价改革一起推，在家门口看病拿便宜药的日子不远了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">慢性病患者最期待：长期用药的价格能不能再降一降？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
         <div class="angle-group">
-          <div class="angle-title">💬 角度3：吃瓜/政治八卦</div>
-          <div class="comment-item">特朗普vs鲍威尔这部连续剧演了好几年了，终于要大结局了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">鲍威尔：我只是做好我的工作 特朗普：你的工作就是听我的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">刑事调查翻修工程这个理由笑死我了，美国政治真是什么招都使得出来<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">全球最有权力的央行行长被总统威胁解雇——在任何其他国家这都是大新闻<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-          <div class="comment-item">美联储独立性？在特朗普字典里不存在的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="angle-title">💰 角度3：投资视角</div>
+          <div class="comment-item">创新药+CXO板块后面有一波行情，9号文就是发令枪<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">恒瑞、百济这些创新药龙头直接受益，研发投入终于能得到合理回报了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">医药ETF可以开始定投了，政策底已经非常明确<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">集采灵魂砍价的时代可能要翻篇了，创新药回归价值定价<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">注意：自主定价不等于随便涨价，医保支付标准是天花板<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- A级事件4：GPT-6 -->
+<!-- A级事件3：五角大楼古巴 -->
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-a">A级</span>
-    <span class="event-title">GPT-6"土豆"发布48小时·Anthropic反超OpenAI·AI竞争白热化</span>
+    <span class="event-title">五角大楼加速古巴军事行动计划·特朗普称"伊朗战后可能顺便去古巴"</span>
+    <span class="update-badge">🆕 灰犀牛</span>
     <span class="event-heat">⭐⭐⭐⭐</span>
-    <span class="event-window window-fade">🟡 衰减期（仍高热）</span>
+    <span class="event-window window-gold">🟢 酝酿期</span>
     <span class="toggle-arrow">›</span>
   </div>
   <div class="event-body">
     <div class="section">
       <div class="section-title">📝 事件概述</div>
-      <p style="font-size:13px;color:var(--text2)">GPT-6（代号Spud/土豆）发布48小时，5-6万亿参数、200万Token上下文、性能暴涨40%，AGI完成度70-80%。Anthropic年化收入300亿美元反超OpenAI的250亿。AI竞争格局剧变。</p>
+      <p style="font-size:13px;color:var(--text2)">据USA TODAY 4月15日报道，五角大楼正在加速古巴军事行动计划，为特朗普可能下达的直接干预命令做准备。本周早些时候特朗普称"解决完伊朗问题后我们可能去古巴看看"。这是典型的"灰犀牛"事件——正在酝酿但尚未公开发生，一旦触发将影响加勒比地区格局和中美关系。同时澳大利亚因伊朗战争宣布大幅增加军费。</p>
     </div>
     <div class="section">
-      <div class="section-title">📌 详细评论见16:00版本（内容不变，此处精简展示）</div>
-      <p style="font-size:12px;color:var(--text2)">该事件评论在16:00看板中已有完整三走向×三角度×每角度5条评论，此处不再重复。</p>
+      <div class="section-title">🔮 走向预判</div>
+      <div class="prediction"><span class="prob">50%</span>走向A：仅为施压手段，不会实际执行</div>
+      <div class="prediction"><span class="prob">30%</span>走向B：低烈度行动（制裁/海上封锁），不构成入侵</div>
+      <div class="prediction"><span class="prob">20%</span>走向C：伊朗战后真的对古巴采取军事行动</div>
     </div>
-  </div>
-</div>
-
-<!-- A级事件5：A股 -->
-<div class="event-card">
-  <div class="event-header" onclick="toggleEvent(this)">
-    <span class="event-badge badge-a">A级</span>
-    <span class="event-title">A股沪指涨0.7%报4055·创业板指涨3.17%续刷11年新高</span>
-    <span class="update-badge">🆕 新增</span>
-    <span class="event-heat">⭐⭐⭐⭐</span>
-    <span class="event-window window-fade">🟡 衰减期</span>
-    <span class="toggle-arrow">›</span>
-  </div>
-  <div class="event-body">
     <div class="section">
-      <div class="section-title">📝 事件概述</div>
-      <p style="font-size:13px;color:var(--text2)">受美伊和谈希望+美股创新高传导，A股三大指数全天震荡走高。沪指涨0.7%报4055.55点，深成指涨2.05%报14796.33点，创业板指涨3.17%续刷近11年新高。科技股、新能源板块领涨。宁德时代创历史新高市值超2.08万亿。</p>
+      <div class="section-title">💬 基于不同走向的评论运营</div>
+      <div class="direction-block">
+        <div class="direction-header">📍 走向A（50%）：仅为施压手段</div>
+        <div class="angle-group">
+          <div class="angle-title">🎯 角度1：讽刺/地缘分析</div>
+          <div class="comment-item god">伊朗还没打完就惦记古巴了——特朗普的外交风格就是：嘴里吃着碗里的，眼睛看着锅里的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">"顺便去古巴看看"这个措辞太经典了——像是商务出差路过一个城市加个旅游景点<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">五角大楼：我们在制定古巴方案。翻译：给特朗普准备几个PPT先<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">美国外交政策：先吓你→你怕了→我不打了→你感谢我没打你。完美闭环<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">1961年猪湾事件的教训还不够？古巴不是谁想动就动的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">🌍 角度2：国际格局/影响</div>
+          <div class="comment-item">如果真动古巴，那就是美国后院起火了。中俄不可能坐视不管<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">澳大利亚大幅增加军费就是因为全球安全格局被伊朗战争改变了——蝴蝶效应太大了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">古巴距美国只有150公里，动古巴等于在自家门口放火。这点常识五角大楼应该有<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">特朗普的逻辑：伊朗→古巴→还有谁？全球都在猜下一个目标<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">这件事要持续关注，现在是灰犀牛阶段，一旦变成黑天鹅影响巨大<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">😅 角度3：网友视角</div>
+          <div class="comment-item">特朗普：解决完伊朗去古巴。网友：然后呢？委内瑞拉？朝鲜？火星？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">古巴人民：我们就想安静地抽个雪茄你别来<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">世界地图上被特朗普画圈的地方越来越多了，这是在玩Risk棋盘游戏吗<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">2026年国际形势总结：每天都觉得要打仗，每天都在谈判。累了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">我就不明白了，美国自己国内一堆问题不解决，天天想着打别人<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -594,7 +555,23 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-b">B级</span>
-    <span class="event-title">第六届消博会·封关后"首展"·60国3400品牌·国际展品65%</span>
+    <span class="event-title">黄晓明90.67分再进上戏博士复试·报考艺术管理专业</span>
+    <span class="event-heat">⭐⭐⭐</span>
+    <span class="event-window window-fade">🟡 衰减期</span>
+    <span class="toggle-arrow">›</span>
+  </div>
+  <div class="event-body">
+    <div class="section">
+      <div class="section-title">📝 事件概述</div>
+      <p style="font-size:13px;color:var(--text2)">黄晓明继2025年首战失利后，以90.67分再次出现在2026年上海戏剧学院博士研究生复试名单上，报考方向为艺术管理/戏剧策划专业学位。此事引发"明星读博"话题热议。</p>
+    </div>
+  </div>
+</div>
+
+<div class="event-card">
+  <div class="event-header" onclick="toggleEvent(this)">
+    <span class="event-badge badge-b">B级</span>
+    <span class="event-title">零跑D19上市21.98万起·增程纯电续航500km·旗舰平权</span>
     <span class="event-heat">⭐⭐⭐</span>
     <span class="event-window window-gold">🟢 持续中</span>
     <span class="toggle-arrow">›</span>
@@ -602,57 +579,378 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
   <div class="event-body">
     <div class="section">
       <div class="section-title">📝 事件概述</div>
-      <p style="font-size:13px;color:var(--text2)">4月13日-18日在海南举行，十五五开局之年"首展"+海南封关后"首秀"。60+国家3400+品牌参展，国际展品占比65%。封关政策红利持续释放，国际人士点赞中国消费市场潜力。</p>
+      <p style="font-size:13px;color:var(--text2)">4月16日，零跑D19正式上市，售价21.98-26.98万元。D平台首款旗舰SUV，增程版纯电续航500km为全球首款，安兔兔跑分突破200万为行业首次。双8797芯片+激光雷达+空气悬架+CDC，对标理想L9和问界M9。费翔任品牌代言人。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ 下周预测专区 ═══════════════ -->
+<div style="margin:30px 0 20px;text-align:center">
+  <h2 style="font-size:22px;background:linear-gradient(135deg,#a29bfe,#6c5ce7,#5f27cd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px">🔮 下周热点预测周报</h2>
+  <p style="font-size:13px;color:var(--text2)">预测覆盖：4月20日（周一）~ 4月26日（周日） · 12大垂类维度 + 灰犀牛扫描</p>
+</div>
+
+<div class="stats-bar">
+  <div class="stat-item stat-s"><div class="num">3</div><div class="label">🔴 S级预测</div></div>
+  <div class="stat-item stat-a"><div class="num">5</div><div class="label">🟠 A级预测</div></div>
+  <div class="stat-item stat-b"><div class="num">3</div><div class="label">🟡 B级预测</div></div>
+</div>
+
+<!-- S级预测1：美伊停火到期 -->
+<div class="event-card">
+  <div class="event-header" onclick="toggleEvent(this)">
+    <span class="event-badge badge-s">S级预测</span>
+    <span class="event-title">🔮 美伊停火4月22日到期——"超级决策周"来临</span>
+    <span class="event-window window-gold">📅 4月22日</span>
+    <span style="font-size:11px;padding:3px 8px;border-radius:10px;background:var(--green);color:#000;white-space:nowrap">🟢 置信度：高</span>
+    <span class="toggle-arrow">›</span>
+  </div>
+  <div class="event-body">
+    <div class="section">
+      <div class="section-title">📝 预测背景</div>
+      <p style="font-size:13px;color:var(--text2)">4月8日美伊在巴基斯坦达成两周临时停火协议，停火将于4月22日到期。截至4月16日，美伊正逐步接近"结束战争的框架协议"，但三大核心分歧未解决：①霍尔木兹海峡控制权 ②伊朗核项目 ③2700亿美元战争赔偿。特朗普称4月下旬英王访美前"很有可能"达成协议，但伊朗表态不能"全盘接受"美国方案。4/22是硬性时间节点。</p>
+    </div>
+    <div class="section">
+      <div class="section-title">🔮 走向预判</div>
+      <div class="prediction"><span class="prob">45%</span>走向A：停火延长+框架协议初步达成，油价大跌，全球风险偏好飙升</div>
+      <div class="prediction"><span class="prob">35%</span>走向B：谈判拖延，停火到期后局势紧张但不立即升级</div>
+      <div class="prediction"><span class="prob">20%</span>走向C：谈判破裂，伊朗强硬派否决协议，油价暴涨冲击全球</div>
+    </div>
+    <div class="section">
+      <div class="section-title">📊 预判依据</div>
+      <div class="views-grid">
+        <div class="view-item">⏰ 4月22日停火到期是硬性时间节点，必须做出决定</div>
+        <div class="view-item">💣 三大分歧（海峡/核/赔偿）核心矛盾尚未解决，谈判结果高度不确定</div>
+        <div class="view-item">📈 油价、全球航运、军工板块将随谈判结果剧烈波动</div>
+        <div class="view-item">👑 英王4月27日访美形成政治压力，推动美方加速谈判</div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">💬 评论运营储备</div>
+      <div class="direction-block">
+        <div class="direction-header">📍 走向A（45%）：停火延长+框架协议初步达成</div>
+        <div class="angle-group">
+          <div class="angle-title">🎯 角度1：讽刺型/结构性幽默</div>
+          <div class="comment-item god">封锁海峡→停火→续停火→框架协议——原来和平的流程是先打一架再握手，美式外交SOP<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">通过制造战争威胁来签订和平协议，通过制造和平协议来赢得选票——懂王闭环<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">特朗普赶在英王来之前搞定伊朗，面子工程拉满。查尔斯：朕来美国是度假的不是催作业的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item god">2700亿赔偿降到多少算成功？答：降到伊朗能认且美国能吹的那个数——外交就是找这个平衡点<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">油价跌→加油站老板哭，油价涨→开车的人哭。不管谁赢全球打工人都在输<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">💗 角度2：民生关切/情感共鸣</div>
+          <div class="comment-item">真的达成协议的话油价能降回去吗？？？我每月油费都快破两千了😭<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">做外贸的终于能松口气了，航运保险费涨三倍真的扛不住<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">和平最好了别打了，管你框架不框架只要不打仗就行<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">中东的华人朋友终于不用天天盯撤侨消息了吧？祝平安<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">股市今天要是因为停火续签涨了，我就当提前过五一了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">📊 角度3：理性分析/知识科普</div>
+          <div class="comment-item">框架协议≠最终协议。伊核协议历史上谈了10年才落地，别太乐观<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">关键看赔偿金额和核项目限制条款。伊朗GDP才4000多亿，赔2700亿等于破产不可能接受<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">停火延长+继续谈判是最可能的结果，双方都不想背"破坏和平"的锅<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">中国40%石油进口经霍尔木兹海峡，和谈成功对中国能源安全是大利好<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">高盛预测：若达成框架协议，油价将在3个月内回落至75-80美元区间<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+      </div>
+      <div class="direction-block">
+        <div class="direction-header">📍 走向B（35%）：谈判拖延，停火到期后局势紧张</div>
+        <div class="angle-group">
+          <div class="angle-title">🎯 角度1：讽刺型/结构性幽默</div>
+          <div class="comment-item god">停火到期→延长停火→再到期→再延长——美伊谈判就是中东版的"下周一定"<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">三大分歧一个没解决就指望两周搞定？你装修找个靠谱师傅都不止两周<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">特朗普说"非常接近"已经说了十次了，这词在他嘴里和"明天再说"一个意思<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">量子态和谈：同时非常接近和非常遥远，取决于你观测的时间点<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">4月22号到期是吧？我赌1块钱他们会"临时"延长48小时然后继续拖<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">💗 角度2：民生关切/情感共鸣</div>
+          <div class="comment-item">又是空欢喜一场是吧？油价反弹的话我上班改骑车了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">每次满怀希望每次失望，中东和平遥遥无期普通人只能干等<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">做海运的朋友说现在已经不走霍尔木兹了绕好望角，成本高但命重要<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">求求了别反复了行吗，股市一天涨一天跌心脏受不了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">军工股又要起飞了？上次我追高买的军工ETF还套着呢😂<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">📊 角度3：理性分析/知识科普</div>
+          <div class="comment-item">停火不续签≠立即开战，更可能是继续谈判+局部紧张。不必恐慌<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">历史规律：中东谈判拖延是常态。奥斯陆协议、伊核JCPOA都是拖了好几年<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">关注巴基斯坦和土耳其的斡旋动向，他们是关键中间人<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">如果停火到期不续签，油价大概率反弹到100+，能源股短线受益<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">投资策略：保持灵活仓位，4/22前减少重仓单边押注<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+      </div>
+      <div class="direction-block">
+        <div class="direction-header">📍 走向C（20%）：谈判破裂，冲突升级</div>
+        <div class="angle-group">
+          <div class="angle-title">🎯 角度1：讽刺型/结构性幽默</div>
+          <div class="comment-item god">停火两周然后继续打——原来这不是和谈，是中场休息<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">伊朗强硬派：谈什么谈，2700亿赔偿你给我我还不一定要呢<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">当年2008油价147美元的纪录瑟瑟发抖中，如果真打起来它可能要被打破了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">全球经济：我以为疫情是最后一只黑天鹅。中东：你好，我是最新一只<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">和平这东西，失去了才知道贵。油价这东西，涨了才知道痛<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">💗 角度2：民生关切/情感共鸣</div>
+          <div class="comment-item">如果真升级了油价奔150，我的外卖配送费是不是也要翻倍😱<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">在中东做工程的表哥说公司撤侨预案又启动了，希望用不上<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">每次看到这种消息就焦虑，普通人啥也做不了只能祈祷和平<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">油价涨→物流涨→物价涨→工资不涨。通胀传导链条清晰得让人绝望<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">家里老人又开始囤米囤面了，说怕打仗。我说不至于但心里也虚<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">📊 角度3：理性分析/知识科普</div>
+          <div class="comment-item">伊朗不对称反击能力：反舰导弹/水雷/无人机蜂群，美军航母在狭窄海峡很脆弱<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">最可能方式：伊朗在也门/伊拉克/黎巴嫩开辟新战线，避免正面硬刚<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">中国战略石油储备+替代能源路线的重要性不言而喻。国家早有布局<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">一旦热战，全球供应链中断风险飙升，半导体/汽车/化工都会受冲击<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">概率虽低但不可忽视。配置避险资产（黄金/国债）是理性选择<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S级预测2：沃什听证 -->
+<div class="event-card">
+  <div class="event-header" onclick="toggleEvent(this)">
+    <span class="event-badge badge-s">S级预测</span>
+    <span class="event-title">🔮 沃什美联储主席确认听证——全球货币政策换挡</span>
+    <span class="event-window window-gold">📅 4月21日</span>
+    <span style="font-size:11px;padding:3px 8px;border-radius:10px;background:var(--green);color:#000;white-space:nowrap">🟢 置信度：高</span>
+    <span class="toggle-arrow">›</span>
+  </div>
+  <div class="event-body">
+    <div class="section">
+      <div class="section-title">📝 预测背景</div>
+      <p style="font-size:13px;color:var(--text2)">参议院银行委员会4月14日正式安排4月21日10:00AM举行沃什（Kevin Warsh）美联储主席确认听证。沃什披露资产1.31-2.09亿美元。共和党参议员蒂利斯要求先解决鲍威尔刑事调查问题才批准沃什。鲍威尔5月15日主席期满，时间紧迫。若沃什获确认，预计转向降息，全球货币政策面临重大转向。</p>
+    </div>
+    <div class="section">
+      <div class="section-title">🔮 走向预判</div>
+      <div class="prediction"><span class="prob">50%</span>走向A：听证顺利，沃什获推荐通过，市场提前定价降息</div>
+      <div class="prediction"><span class="prob">35%</span>走向B：听证遭遇阻力，确认投票延迟，市场波动</div>
+      <div class="prediction"><span class="prob">15%</span>走向C：蒂利斯阻挡成功，美联储主席出现"真空期"</div>
+    </div>
+    <div class="section">
+      <div class="section-title">💬 评论运营储备</div>
+      <div class="direction-block">
+        <div class="direction-header">📍 走向A（50%）：听证顺利，市场定价降息</div>
+        <div class="angle-group">
+          <div class="angle-title">🎯 角度1：讽刺型/结构性幽默</div>
+          <div class="comment-item god">一个身家2亿美元的人来当央行行长决定利率走向——让富人决定穷人的借贷成本，这就是资本主义<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">特朗普选沃什的理由：会降息。选美联储主席就像选外卖——谁便宜选谁<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">鲍威尔被刑事调查翻修工程的理由赶走，沃什靠2亿身家上位——美联储独立性.exe已卸载<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">全世界的央行行长都在看：如果美联储都不独立了，谁还能独立？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item god">降息→房贷便宜→房价涨→买不起房→继续打工→这就是央行主席换人对你的全部影响<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">💰 角度2：投资影响/市场分析</div>
+          <div class="comment-item">沃什上任=降息预期=美元走弱=人民币走强=A股外资流入。逻辑链条很清晰<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">做外汇的朋友注意了，听证一过美元可能开始走弱周期<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">降息利好：科技股、成长股、房地产。利空：银行存款、美元多头<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">黄金要不要加仓？降息周期金价一般走牛，但已经涨了不少了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">沃什5月上任的话，6月FOMC就可能释放降息信号了。时间节点要记住<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">😅 角度3：吃瓜/打工人视角</div>
+          <div class="comment-item">美联储换主席跟我有啥关系？有关系：你的房贷利率、理财收益率、物价全都会变<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">特朗普VS鲍威尔连续剧终于要大结局了！下一季：特朗普VS沃什？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">看了下沃什身家2亿美元，好吧央行行长比我有钱也很正常…等等2亿？？？<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">美国换央行行长=全球金融板块地震。我一个月薪5000的还得关心美联储人事<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">降息了房贷能便宜点吗？在线等急<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+      </div>
+      <div class="direction-block">
+        <div class="direction-header">📍 走向B（35%）：听证遭遇阻力，确认延迟</div>
+        <div class="angle-group">
+          <div class="angle-title">🎯 角度1：讽刺型/结构性幽默</div>
+          <div class="comment-item god">共和党自己提名的人自己卡住了——蒂利斯：先查清楚鲍威尔的事再说。特朗普：你tm是哪边的<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">美联储主席这个位置：想上的上不去，想走的赶不走，在位的被调查——三方都不满意<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">参议院拖延投票是老传统了，华盛顿的日常就是：今天拖明天，明天拖后天<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">沃什2亿身家利益冲突被质疑——美国政治：有钱是优势也是靶子<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">全球最重要的央行人事任命卡在一个参议员手里——美式民主的效率<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">💰 角度2：市场影响</div>
+          <div class="comment-item">确认延迟=政策不确定性增加=市场波动加大。VIX恐慌指数大概率反弹<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">如果真出现美联储主席真空期，那就是史无前例了。金融市场会很紧张<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">稳妥起见4/21前减仓观望是比较理性的选择<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">美元走势将取决于听证结果：顺利=弱美元，受阻=不确定性溢价推高美元<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">现在做任何大的投资决策都要等4/21听证结果出来再说<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">💬 角度3：网友热议</div>
+          <div class="comment-item">我就说嘛特朗普做事从来不顺利，他想干的事总有人拦着<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">鲍威尔心里话：让我走可以，但你找的人也没能上来哈哈<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">美国政治就是一出闹剧，我已经不意外了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">拖就拖呗，反正地球不会因为美联储没主席就不转了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">希望不要搞出什么幺蛾子影响全球市场，打工人经不起折腾了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- S级预测3：上海车展 -->
+<div class="event-card">
+  <div class="event-header" onclick="toggleEvent(this)">
+    <span class="event-badge badge-s">S级预测</span>
+    <span class="event-title">🔮 上海车展公众日+车企发布密集周——智能驾驶引爆</span>
+    <span class="event-window window-gold">📅 4月20-26日</span>
+    <span style="font-size:11px;padding:3px 8px;border-radius:10px;background:var(--green);color:#000;white-space:nowrap">🟢 置信度：高</span>
+    <span class="toggle-arrow">›</span>
+  </div>
+  <div class="event-body">
+    <div class="section">
+      <div class="section-title">📝 预测背景</div>
+      <p style="font-size:13px;color:var(--text2)">2026上海国际车展4月18日开幕，主题"智领未来，绿动出行"。下周进入公众开放日+车企密集发布期，超100款新车首发，新能源占比首超50%。比亚迪/特斯拉/小米/华为系/蔚小理等集中发布。固态电池、L3+智驾、飞行汽车等技术将集中展示，社交媒体传播势能巨大。</p>
+    </div>
+    <div class="section">
+      <div class="section-title">🔮 走向预判</div>
+      <div class="prediction"><span class="prob">55%</span>走向A：多款明星车型引爆社交媒体，新能源/智驾板块大涨</div>
+      <div class="prediction"><span class="prob">30%</span>走向B：价格战升级，车企内卷加剧引发行业焦虑</div>
+      <div class="prediction"><span class="prob">15%</span>走向C：某车企翻车/安全事故引发负面舆情</div>
+    </div>
+    <div class="section">
+      <div class="section-title">💬 评论运营储备</div>
+      <div class="direction-block">
+        <div class="direction-header">📍 走向A（55%）：明星车型引爆，板块大涨</div>
+        <div class="angle-group">
+          <div class="angle-title">🎯 角度1：震撼/行业解读</div>
+          <div class="comment-item god">100款新车首发新能源过半——不是车展，是油车的集体葬礼🪦<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">固态电池+L3智驾+飞行汽车，这哪是车展这分明是科幻片发布会<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">比亚迪华为小米蔚小理集体上新，BBA坐在角落瑟瑟发抖<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">两年前上海车展还有人问"新能源靠谱吗"，今年没人问了因为答案太明显了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item god">中国车企在上海车展卷价格，外国车企在上海车展卷PPT——差距就是这么大<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">💰 角度2：消费者视角/选车</div>
+          <div class="comment-item">看了一圈下来：20万以下随便买都不错，30万以上选择困难症犯了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">等车展价出来再下单，现在的车不是买不起是怕买贵了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">小米汽车展台人山人海，比春运还热闹。雷军流量恐怖如斯<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">固态电池真的量产了？续航1000+我就换车，说到做到<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">被新车毒到了但钱包拒绝了，只能拍照片过过眼瘾<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+        <div class="angle-group">
+          <div class="angle-title">😄 角度3：轻松幽默/吐槽</div>
+          <div class="comment-item">今年车模没有去年好看但车比去年好看，这说明什么？说明科技进步了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">老婆：你去车展看车还是看车模？我：我去看科技趋势🤓（实际看车模）<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">飞行汽车都出来了我驾照还没考……是不是该直接考飞行执照了<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">智能驾驶L3了我还在L0——手动挡老司机表示不服<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+          <div class="comment-item">逛了一天车展最大收获：发现自己买不起的车又多了好几款<button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- A级预测卡片（简洁版） -->
+<div class="event-card">
+  <div class="event-header" onclick="toggleEvent(this)">
+    <span class="event-badge badge-a">A级预测</span>
+    <span class="event-title">🔮 英王查尔斯三世访美——美英"特殊关系"大戏</span>
+    <span class="event-window window-gold">📅 4月27-30日预热</span>
+    <span style="font-size:11px;padding:3px 8px;border-radius:10px;background:var(--a-color);color:#000;white-space:nowrap">🟢 高</span>
+    <span class="toggle-arrow">›</span>
+  </div>
+  <div class="event-body">
+    <div class="section">
+      <div class="section-title">📝 预测背景</div>
+      <p style="font-size:13px;color:var(--text2)">英国国王查尔斯三世与卡米拉王后4月27-30日对美国事访问，纪念美国独立250周年。4月28日在国会两院演讲（英国君主史上第二次）。与特朗普白宫私人会面+国宴。预计下周末预热报道密集。</p>
     </div>
   </div>
 </div>
 
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
-    <span class="event-badge badge-b">B级</span>
-    <span class="event-title">孙怡cos黎璃·乘风2026回忆杀刷屏·十年冻龄</span>
-    <span class="event-heat">⭐⭐⭐</span>
-    <span class="event-window window-fade">🟡 衰减期</span>
+    <span class="event-badge badge-a">A级预测</span>
+    <span class="event-title">🔮 广交会第二期开幕——全球贸易风向标</span>
+    <span class="event-window window-gold">📅 4月23-27日</span>
+    <span style="font-size:11px;padding:3px 8px;border-radius:10px;background:var(--a-color);color:#000;white-space:nowrap">🟢 高</span>
     <span class="toggle-arrow">›</span>
   </div>
   <div class="event-body">
     <div class="section">
-      <div class="section-title">📝 事件概述</div>
-      <p style="font-size:13px;color:var(--text2)">孙怡在《乘风2026》舞台上身着校服还原《十五年等待候鸟》中黎璃造型，弹幕被"DNA动了""我的青春回来了"刷屏。抖音相关视频5.4万赞。十年冻龄引爆全网回忆杀。</p>
+      <div class="section-title">📝 预测背景</div>
+      <p style="font-size:13px;color:var(--text2)">第139届广交会第二期4月23日开幕（换展期4月20-22日），展品涵盖建材、五金、电子等。在当前全球贸易紧张局势（中美暂缓关税11月到期前）下，广交会成交数据是中国外贸晴雨表。60+国家3400+品牌参展。</p>
     </div>
   </div>
 </div>
 
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
-    <span class="event-badge badge-b">B级</span>
-    <span class="event-title">家长做饭太难吃孩子吃到呕吐就医·医生：吃药解决不了</span>
-    <span class="event-heat">⭐⭐⭐</span>
-    <span class="event-window window-fade">🟡 衰减期</span>
+    <span class="event-badge badge-a">A级预测</span>
+    <span class="event-title">🔮 药品价格新规落地效应+各省细则出台</span>
+    <span class="event-window window-gold">📅 4月21-25日</span>
+    <span style="font-size:11px;padding:3px 8px;border-radius:10px;background:var(--a-color);color:#000;white-space:nowrap">🟡 中</span>
     <span class="toggle-arrow">›</span>
   </div>
   <div class="event-body">
     <div class="section">
-      <div class="section-title">📝 事件概述</div>
-      <p style="font-size:13px;color:var(--text2)">4月14日，广东江门男孩肚痛呕吐就医，孩子对医生哭诉："太难吃了，吃都吃不下，吃了就想吐！"原来是爸爸做的饭太难吃导致。医生表示"这事吃药解决不了"。微博热搜，引发网友共鸣。</p>
+      <div class="section-title">📝 预测背景</div>
+      <p style="font-size:13px;color:var(--text2)">国办4月14日发布《关于健全药品价格形成机制的若干意见》（国办发〔2026〕9号），14条举措，时隔11年药品价格顶层设计回归。支持创新药自主定价、防范非理性竞价中标、严惩"以缺逼涨"。下周各省市将出台配套细则，医药板块大幅波动。</p>
     </div>
   </div>
 </div>
+
+<div class="event-card">
+  <div class="event-header" onclick="toggleEvent(this)">
+    <span class="event-badge badge-a">A级预测</span>
+    <span class="event-title">🔮 GPT-6生态爆发+AI竞争白热化（Anthropic反超）</span>
+    <span class="event-window window-fade">📅 整周持续</span>
+    <span style="font-size:11px;padding:3px 8px;border-radius:10px;background:var(--a-color);color:#000;white-space:nowrap">🟡 中</span>
+    <span class="toggle-arrow">›</span>
+  </div>
+  <div class="event-body">
+    <div class="section">
+      <div class="section-title">📝 预测背景</div>
+      <p style="font-size:13px;color:var(--text2)">GPT-6发布后生态效应持续发酵，200万Token上下文正在重塑AI应用。Anthropic年化收入300亿美元反超OpenAI的250亿。DeepSeek V4即将正式发布。下周可能有更多企业宣布接入/竞品发布。</p>
+    </div>
+  </div>
+</div>
+
+<div class="event-card">
+  <div class="event-header" onclick="toggleEvent(this)">
+    <span class="event-badge badge-a">A级预测</span>
+    <span class="event-title">🔮 A股一季报密集披露周+解禁潮来袭</span>
+    <span class="event-window window-gold">📅 4月21-25日</span>
+    <span style="font-size:11px;padding:3px 8px;border-radius:10px;background:var(--green);color:#000;white-space:nowrap">🟢 高</span>
+    <span class="toggle-arrow">›</span>
+  </div>
+  <div class="event-body">
+    <div class="section">
+      <div class="section-title">📝 预测背景</div>
+      <p style="font-size:13px;color:var(--text2)">A股一季报披露进入高峰期，超八成公司预喜。多只股票面临限售股解禁。在标普7000+创业板11年新高的背景下，业绩兑现/不及预期都将引发个股剧烈波动。关注宁德时代等权重股后续表现。</p>
+    </div>
+  </div>
+</div>
+
+<!-- 灰犀牛预警 -->
+<div class="tracking">
+  <h3>🦏 灰犀牛预警（下周）</h3>
+  <div class="track-item">🔴 <strong>美联储主席"真空期"风险</strong> <span class="status status-warn">⚠️ 灰犀牛</span><br><span style="color:var(--text2);font-size:12px">若4/21沃什听证不顺利+鲍威尔5/15离任，可能出现史无前例的美联储无主席局面</span></div>
+  <div class="track-item">🔴 <strong>A股连涨后回调风险</strong> <span class="status status-warn">⚠️ 技术面</span><br><span style="color:var(--text2);font-size:12px">标普7000+创业板11年新高，RSI超买信号积累，一季报披露可能成为获利了结窗口</span></div>
+  <div class="track-item">🟠 <strong>五角大楼古巴军事计划</strong> <span class="status status-warn">⚠️ 酝酿中</span><br><span style="color:var(--text2);font-size:12px">特朗普称伊朗后"可能去古巴"，五角大楼加速军事行动计划。若美伊和谈成功可能加速</span></div>
+  <div class="track-item">⚡ <strong>DeepSeek V4正式发布窗口</strong> <span class="status status-ongoing">即将发布</span><br><span style="color:var(--text2);font-size:12px">已灰度上线App端，Github仓库重大更新，4月下旬正式发布。可能重塑AI竞争格局</span></div>
+</div>
+<!-- ═══════════════ 下周预测专区结束 ═══════════════ -->
 
 <!-- 持续追踪 -->
 <div class="tracking">
   <h3>📌 持续追踪事件</h3>
-  <div class="track-item">🔴 <strong>美伊冲突</strong> <span class="status status-turn">🔄 重大转折</span><br><span style="color:var(--text2);font-size:12px">从封锁对峙→接近框架协议。4月22日停火到期是关键节点。三大分歧：海峡控制权/核项目/2700亿赔偿</span></div>
-  <div class="track-item">🟢 <strong>苏林访华（圆满成功）</strong> <span class="status status-ongoing">进行中至17日</span><br><span style="color:var(--text2);font-size:12px">达成南海共识+签署多项合作协议。16日话别，17日结束访问</span></div>
-  <div class="track-item">⚠️ <strong>美联储交接</strong> <span class="status status-warn">⚠️ 灰犀牛</span><br><span style="color:var(--text2);font-size:12px">鲍威尔5月15日期满，沃什4月21日听证。可能出现主席"真空期"</span></div>
-  <div class="track-item">⚡ <strong>AI竞争格局</strong> <span class="status status-warn">⚠️ 洗牌中</span><br><span style="color:var(--text2);font-size:12px">GPT-6发布48h vs Anthropic300亿反超 vs 中国AI监管新规</span></div>
-  <div class="track-item">🟢 <strong>第六届消博会</strong> <span class="status status-ongoing">进行中至18日</span><br><span style="color:var(--text2);font-size:12px">60+国家3400+品牌，封关后首展政策红利持续释放</span></div>
+  <div class="track-item">🔴 <strong>美伊和谈</strong> <span class="status status-turn">🔄 本周末面对面</span><br><span style="color:var(--text2);font-size:12px">特朗普称"非常接近协议"，本周末可能再次面对面谈判。4月22日停火到期倒计时5天</span></div>
+  <div class="track-item">🟢 <strong>以黎10天停火</strong> <span class="status status-ongoing">NEW</span><br><span style="color:var(--text2);font-size:12px">34年来首次直接谈判，10天停火协议生效。双方领导人将赴白宫</span></div>
+  <div class="track-item">⚠️ <strong>美联储交接</strong> <span class="status status-warn">⚠️ 4/21听证</span><br><span style="color:var(--text2);font-size:12px">沃什4月21日参议院听证。鲍威尔5月15日期满</span></div>
+  <div class="track-item">⚡ <strong>DeepSeek V4</strong> <span class="status status-warn">⚠️ 即将发布</span><br><span style="color:var(--text2);font-size:12px">已灰度上线App端，Github仓库重大更新，4月下旬正式发布。支持华为昇腾</span></div>
+  <div class="track-item">🔴 <strong>五角大楼古巴计划</strong> <span class="status status-warn">⚠️ 灰犀牛</span><br><span style="color:var(--text2);font-size:12px">五角大楼加速古巴军事行动计划，特朗普称伊朗后"可能去古巴"</span></div>
+  <div class="track-item">📊 <strong>贵州茅台首降</strong> <span class="status status-turn">🔄 市场消化中</span><br><span style="color:var(--text2);font-size:12px">上市25年来首次营收净利双降。4月17日盘中跌超4%。年分红650亿</span></div>
 </div>
 
 <footer>
-  <p>🔥 热点事件监控看板 · 18:00版</p>
-  <p style="margin-top:4px">下次更新：2026-04-16 21:00 · 数据来源：20+平台中英文双语信源</p>
-  <p style="margin-top:4px;color:var(--accent2)">⚠️ 重点关注：①4/22美伊停火到期倒计时 ②4/21沃什确认听证 ③苏林4/17结束访华</p>
+  <p>🔥 热点事件监控看板 · 含下周预测周报版</p>
+  <p style="margin-top:4px">更新时间：2026-04-17 11:30 · 数据来源：20+平台中英文双语信源</p>
+  <p style="margin-top:4px;color:var(--accent2)">⚠️ 下周重点：①4/22美伊停火到期 ②4/21沃什听证 ③上海车展公众日 ④广交会二期 ⑤英王4/27访美</p>
 </footer>
 </div>
 
