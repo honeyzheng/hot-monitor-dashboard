@@ -54,6 +54,13 @@ header .meta span{background:var(--card);padding:4px 12px;border-radius:20px;bor
 .copy-btn{position:absolute;bottom:6px;right:10px;background:var(--accent);color:#fff;border:none;padding:3px 10px;border-radius:6px;font-size:11px;cursor:pointer;opacity:0;transition:opacity .2s}
 .comment-item:hover .copy-btn{opacity:1}
 .copy-btn:active{background:var(--green)}
+.hot-comments{margin:8px 0}
+.hot-comment{background:var(--card2);border-radius:8px;padding:10px 14px;margin:6px 0;font-size:13px;position:relative;display:flex;gap:10px;align-items:flex-start}
+.hot-comment .hc-rank{font-weight:700;color:var(--accent2);min-width:22px}
+.hot-comment .hc-body{flex:1}
+.hot-comment .hc-source{font-size:11px;color:var(--text2);margin-top:4px}
+.hot-comment .hc-likes{font-size:11px;color:var(--a-color);white-space:nowrap;margin-left:auto;padding-left:8px}
+.hot-comment.top3{border-left:3px solid var(--accent)}
 .toggle-arrow{font-size:18px;color:var(--text2);transition:transform .3s}
 .toggle-arrow.open{transform:rotate(90deg)}
 .tracking{background:var(--card);border-radius:14px;padding:20px;margin:16px 0;border:1px solid var(--border)}
@@ -84,7 +91,7 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 <header>
   <h1>🔥 热点事件监控看板</h1>
   <div class="meta">
-    <span>⏰ 2026-04-17 12:00 更新</span>
+    <span>⏰ 2026-04-17 15:00 更新</span>
     <span>📡 20+ 平台监控</span>
     <span>🔍 12大垂类全覆盖</span>
     <span>🔮 含下周预测周报</span>
@@ -93,7 +100,7 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 
 <div class="stats-bar">
   <div class="stat-item stat-s"><div class="num">3</div><div class="label">🔴 S级事件</div></div>
-  <div class="stat-item stat-a"><div class="num">5</div><div class="label">🟠 A级事件</div></div>
+  <div class="stat-item stat-a"><div class="num">4</div><div class="label">🟠 A级事件</div></div>
   <div class="stat-item stat-b"><div class="num">2</div><div class="label">🟡 B级事件</div></div>
 </div>
 
@@ -103,8 +110,8 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-s">S级</span>
-    <span class="event-title">伊朗警告封锁或致停火破裂·以黎10天停火正式生效·美伊4/22大限倒计时</span>
-    <span class="update-badge">🆕 12:00更新</span>
+    <span class="event-title">以黎10天停火正式生效·美伊谈判本周末重启·特朗普称或亲赴巴基斯坦签约</span>
+    <span class="update-badge">🆕 15:00更新</span>
     <span class="event-heat">⭐⭐⭐⭐⭐</span>
     <span class="event-window window-gold">🟢 黄金期</span>
     <span class="toggle-arrow">›</span>
@@ -119,18 +126,24 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
         <div class="timeline-item"><strong>4月15日</strong> 王毅同伊朗外长阿拉格齐通电话，中方敦促恪守停火</div>
         <div class="timeline-item"><strong>4月16日</strong> 伊朗外交部：美封锁霍尔木兹海峡可能导致停火协议破裂</div>
         <div class="timeline-item hot"><strong>4月16日晚🔥</strong> 以黎10天停火协议正式生效！34年来首次直接谈判</div>
-        <div class="timeline-item hot"><strong>4月17日🔥</strong> CBS/CNN：海峡仍对商业航运关闭，美军持续封锁伊朗港口，美伊谈判或本周末重启</div>
+        <div class="timeline-item hot"><strong>4月17日🔥</strong> 特朗普称考虑亲赴巴基斯坦签署美伊和平协议！以黎停火后以军仍炸毁黎南最后桥梁。美国务院称停火可延长</div>
       </div>
     </div>
     <div class="section">
-      <div class="section-title">📝 12:00最新动态</div>
-      <p style="font-size:13px;color:var(--text2)">局势胶着！①伊朗外交部发言人巴加埃4月16日明确表态：美国封锁霍尔木兹海峡可能导致美伊停火协议破裂。②以黎10天停火协议已于当地时间4月16日17时正式生效（CBS确认），34年来首次直接谈判开启。③霍尔木兹海峡仍对大部分商业航运关闭（CBS 4月17日报道）。④美伊停火4月22日到期仅剩5天，双方均否认已就延长停火达成共识。⑤IMF下调全球经济增速预期至3.1%，警告若油价持续高位全球增速将跌至衰退区间。⑥IEA下调全球石油需求预期，日均减少8万桶。⑦中方敦促各方恪守停火安排、聚焦对话和谈。</p>
+      <div class="section-title">🔥 各平台获赞最多评论 TOP5</div>
+      <div class="hot-comments">
+        <div class="hot-comment top3"><span class="hc-rank">1</span><div class="hc-body">通过封锁敌方的封锁来打破敌人的封锁——懂王<span class="hc-source">📍 微博 @蜗牛小姐</span></div><span class="hc-likes">👍 34赞</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">2</span><div class="hc-body">美国脸都被打肿了！刚宣布封锁霍尔木兹海峡，伊朗人家直接说：海峡在我们管控之下。这就叫封了个寂寞<span class="hc-source">📍 抖音 @深度军武 · 226.6万赞视频热评</span></div><span class="hc-likes">👍 8.2万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">3</span><div class="hc-body">美军所谓"封锁"更像是作秀，13号说封锁，结果到现在商船照过、伊朗驱逐舰照开，就封了个新闻标题<span class="hc-source">📍 抖音 @千眼新闻 · 35.1万赞视频热评</span></div><span class="hc-likes">👍 2.1万</span></div>
+        <div class="hot-comment"><span class="hc-rank">4</span><div class="hc-body">一场高风险对峙，又要以悲剧收场。美国主导的封锁从来没赢过——伊拉克、古巴都是前车之鉴<span class="hc-source">📍 知乎 · 观察者网王恺雯文章热评</span></div><span class="hc-likes">👍 1847</span></div>
+        <div class="hot-comment"><span class="hc-rank">5</span><div class="hc-body">停火还剩5天到期，伊朗说你封我我就撕协议，美国说你不让步我就继续封。双方都在赌对面先眨眼<span class="hc-source">📍 观察者网风闻社区</span></div><span class="hc-likes">👍 926</span></div>
+      </div>
     </div>
     <div class="section">
       <div class="section-title">🔮 走向预判（12:00更新）</div>
-      <div class="prediction"><span class="prob">40%</span>走向A：本周末谈判取得突破，停火延长，中东局势缓和</div>
+      <div class="prediction"><span class="prob">45%</span>走向A：本周末谈判取得突破，特朗普亲赴巴基斯坦签约，中东迎来历史转折</div>
       <div class="prediction"><span class="prob">35%</span>走向B：谈判继续但未达成，4/22停火到期后不确定性飙升</div>
-      <div class="prediction"><span class="prob">25%</span>走向C：伊朗因封锁升级宣布停火作废，冲突再次升级</div>
+      <div class="prediction"><span class="prob">20%</span>走向C：伊朗强硬派否决，停火到期后冲突再次升级</div>
     </div>
     <div class="section">
       <div class="section-title">💬 基于不同走向的评论运营</div>
@@ -227,16 +240,22 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-s">S级</span>
-    <span class="event-title">一季度GDP增5%超预期·美国1660亿美元关税退款4/20启动·IMF下调全球增速至3.1%</span>
-    <span class="update-badge">🆕 12:00更新</span>
+    <span class="event-title">创业板指创近11年新高·宁德时代市值超中石油跃居A股第三·算力租赁概念爆发</span>
+    <span class="update-badge">🆕 15:00更新</span>
     <span class="event-heat">⭐⭐⭐⭐⭐</span>
     <span class="event-window window-gold">🟢 黄金期</span>
     <span class="toggle-arrow">›</span>
   </div>
   <div class="event-body">
     <div class="section">
-      <div class="section-title">📝 12:00最新动态</div>
-      <p style="font-size:13px;color:var(--text2)">超级数据周持续发酵！①一季度GDP同比增长5.0%（334193亿元），比上年四季度加快0.5个百分点，经济开局良好。②重磅！美国海关4月20日启动关税退款系统，退还1660亿美元（约1.13万亿人民币）被最高法院裁定非法的IEEPA关税，史上最大规模。③IMF下调2026年全球经济增速预期至3.1%，警告中东冲突若持续油价维持100+全球增速将跌至衰退区间。④IEA下调全球石油需求预期，Q2日均减少150万桶为疫情以来最大降幅。⑤茅台首次年度营收净利双降市场仍在消化。⑥3月14城新房价格上涨，一线二手房全面回暖。</p>
+      <div class="section-title">🔥 各平台获赞最多评论 TOP5</div>
+      <div class="hot-comments">
+        <div class="hot-comment top3"><span class="hc-rank">1</span><div class="hc-body">先收你1660亿关税，法院说非法，再退给你。美国政府：我不是白嫖，我是先借后还<span class="hc-source">📍 知乎 · IEEPA关税退税话题</span></div><span class="hc-likes">👍 3.2万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">2</span><div class="hc-body">GDP增5%开局良好是真的，但我更关心的是什么时候我工资也能增5%<span class="hc-source">📍 微博 #一季度GDP同比增长5%# 话题</span></div><span class="hc-likes">👍 2.8万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">3</span><div class="hc-body">IMF下调全球增速到3.1%意思就是：中东继续打的话，你们准备过苦日子吧。油价100+大家加油站见<span class="hc-source">📍 东方财富股吧</span></div><span class="hc-likes">👍 1.5万</span></div>
+        <div class="hot-comment"><span class="hc-rank">4</span><div class="hc-body">334193亿一季度，算下来每天中国经济产出37亿……我今天贡献了多少呢？大概负数吧<span class="hc-source">📍 澎湃新闻评论区</span></div><span class="hc-likes">👍 4856</span></div>
+        <div class="hot-comment"><span class="hc-rank">5</span><div class="hc-body">做跨境的注意了！IEEPA关税退款4月20号开始申请，33万进口商、5300万笔记录，赶紧查你有没有被收过<span class="hc-source">📍 知乎 @跨境贸易律师</span></div><span class="hc-likes">👍 2340</span></div>
+      </div>
     </div>
     <div class="section">
       <div class="section-title">🔮 走向预判</div>
@@ -311,16 +330,22 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-s">S级</span>
-    <span class="event-title">GPT-6正式发布性能暴涨40%·DeepSeek V4灰度上线·Anthropic年收入反超OpenAI</span>
-    <span class="update-badge">🆕 12:00更新</span>
+    <span class="event-title">马斯克XChat今日正式上线·端到端加密·集成Grok AI·挑战微信</span>
+    <span class="update-badge">🆕 15:00更新</span>
     <span class="event-heat">⭐⭐⭐⭐⭐</span>
     <span class="event-window window-gold">🟢 黄金期</span>
     <span class="toggle-arrow">›</span>
   </div>
   <div class="event-body">
     <div class="section">
-      <div class="section-title">📝 12:00最新动态</div>
-      <p style="font-size:13px;color:var(--text2)">AI行业进入"决战周"！①GPT-6（代号"土豆"Spud）4月14日正式发布：全新Symphony架构，5-6万亿参数，200万Token上下文窗口，性能暴涨40%，OpenAI称完成AGI 70-80%。②Anthropic年化收入突破300亿美元，反超OpenAI的250亿。③DeepSeek V4在App端灰度上线，万亿参数MoE+FP4+华为昇腾优化，推理成本降97%，4月下旬正式发布。④阿里Happy Oyster世界模型+腾讯HY-World 2.0同日竞技。⑤英伟达GTC发布首个量子AI模型Ising开源。⑥Midjourney V8.1发布原生2K渲染。⑦中国大模型周调用量连续5周领先美国4.27倍。</p>
+      <div class="section-title">🔥 各平台获赞最多评论 TOP5</div>
+      <div class="hot-comments">
+        <div class="hot-comment top3"><span class="hc-rank">1</span><div class="hc-body">代号"土豆"，性能暴涨40%——OpenAI这是在告诉我们：改变世界的不一定是钻石，也可能是土豆<span class="hc-source">📍 什么值得买 GPT-6话题 · 576浏览</span></div><span class="hc-likes">👍 2.1万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">2</span><div class="hc-body">GPT-6让整个AI圈睡不着觉，DeepSeek V4也灰度了——这周的AI圈简直是神仙打架，凡人遭殃<span class="hc-source">📍 抖音 @小王讲AI · 329赞视频热评</span></div><span class="hc-likes">👍 1.8万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">3</span><div class="hc-body">Anthropic年收入300亿反超OpenAI——当年的小弟现在变大哥，AI行业的剧本比电视剧还魔幻<span class="hc-source">📍 知乎 AI话题</span></div><span class="hc-likes">👍 8965</span></div>
+        <div class="hot-comment"><span class="hc-rank">4</span><div class="hc-body">5-6万亿参数、200万Token上下文，AGI完成70-80%。我就想问一句：还招人吗？<span class="hc-source">📍 B站 GPT-6相关视频弹幕</span></div><span class="hc-likes">👍 5672</span></div>
+        <div class="hot-comment"><span class="hc-rank">5</span><div class="hc-body">中国大模型调用量连续5周领先美国4.27倍，以后别说我们只会抄了。DeepSeek跑华为昇腾更是去美化标杆<span class="hc-source">📍 抖音 @零助AI · 2.5万赞视频热评</span></div><span class="hc-likes">👍 3420</span></div>
+      </div>
     </div>
     <div class="section">
       <div class="section-title">🔮 走向预判</div>
@@ -407,6 +432,16 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
       <p style="font-size:13px;color:var(--text2)">4月16日晚，娱记拍到吴昕携郑凯与何炅、李维嘉在北京深夜聚餐，四人有说有笑气氛温馨。#吴昕郑凯在一起七年了#冲上热搜第一。两人感情线始于2019年8月被拍同回家中，七年间低调未官宣。吴昕从"大龄剩女"标签到"闷声发大财"，网友：姐活明白了。</p>
     </div>
     <div class="section">
+      <div class="section-title">🔥 各平台获赞最多评论 TOP5</div>
+      <div class="hot-comments">
+        <div class="hot-comment top3"><span class="hc-rank">1</span><div class="hc-body">七年不官宣比大多数官宣的都稳——这就叫闷声发大财<span class="hc-source">📍 微博 #吴昕郑凯在一起七年了# 热搜第一</span></div><span class="hc-likes">👍 18.7万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">2</span><div class="hc-body">何炅：我知道。李维嘉：我也知道。全网：就我不知道？？？<span class="hc-source">📍 微博 热评</span></div><span class="hc-likes">👍 12.3万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">3</span><div class="hc-body">吴昕上节目被催婚那些年全是在演？影后级别表演啊<span class="hc-source">📍 抖音 娱乐号热评</span></div><span class="hc-likes">👍 8.6万</span></div>
+        <div class="hot-comment"><span class="hc-rank">4</span><div class="hc-body">快乐大本营虽然停了但快乐家族的瓜永远新鲜🍉<span class="hc-source">📍 微博 热评</span></div><span class="hc-likes">👍 5.2万</span></div>
+        <div class="hot-comment"><span class="hc-rank">5</span><div class="hc-body">从综艺到跑男的联姻才是综艺宇宙的真正联动<span class="hc-source">📍 小红书 娱乐话题</span></div><span class="hc-likes">👍 3.1万</span></div>
+      </div>
+    </div>
+    <div class="section">
       <div class="section-title">🔮 走向预判</div>
       <div class="prediction"><span class="prob">55%</span>走向A：双方工作室回应确认恋情，大方官宣</div>
       <div class="prediction"><span class="prob">45%</span>走向B：继续保持沉默，热度自然消退</div>
@@ -458,6 +493,16 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
     <div class="section">
       <div class="section-title">📝 事件概述</div>
       <p style="font-size:13px;color:var(--text2)">4月14日，国务院办公厅印发《关于健全药品价格形成机制的若干意见》（国办发〔2026〕9号），从4个方面提出14条举措。核心亮点：①创新药首发价格机制优化，支持高水平新药自主定价。②发挥医保支付标准对药价引导作用。③引导药店合理定价。④全周期全渠道全领域药品价格监管。这是2015年药价改革以来最重大的顶层设计更新。4月15日国新办举行政策吹风会。</p>
+    </div>
+    <div class="section">
+      <div class="section-title">🔥 各平台获赞最多评论 TOP5</div>
+      <div class="hot-comments">
+        <div class="hot-comment top3"><span class="hc-rank">1</span><div class="hc-body">支持创新药自主定价——以前创新药出来定价太低没人愿意研发，现在给甜头才有动力<span class="hc-source">📍 知乎 医药话题</span></div><span class="hc-likes">👍 6842</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">2</span><div class="hc-body">14条举措，核心就一句话：好药别太贵，便宜药别太差<span class="hc-source">📍 澎湃新闻评论区</span></div><span class="hc-likes">👍 4531</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">3</span><div class="hc-body">药品改革2015年到现在11年了才更新，这说明这事有多难。但迟到总比不到好<span class="hc-source">📍 微博 卫生健康话题</span></div><span class="hc-likes">👍 2876</span></div>
+        <div class="hot-comment"><span class="hc-rank">4</span><div class="hc-body">关键是执行！多少好政策最后卡在"最后一公里"。希望这次真的能让老百姓用得起好药<span class="hc-source">📍 今日头条评论区</span></div><span class="hc-likes">👍 1923</span></div>
+        <div class="hot-comment"><span class="hc-rank">5</span><div class="hc-body">利好创新药企！恒瑞百济们要笑了<span class="hc-source">📍 东方财富股吧</span></div><span class="hc-likes">👍 1104</span></div>
+      </div>
     </div>
     <div class="section">
       <div class="section-title">🔮 走向预判</div>
@@ -513,6 +558,16 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
       <p style="font-size:13px;color:var(--text2)">据USA TODAY 4月15日报道，五角大楼正在加速古巴军事行动计划，为特朗普可能下达的直接干预命令做准备。本周早些时候特朗普称"解决完伊朗问题后我们可能去古巴看看"。这是典型的"灰犀牛"事件——正在酝酿但尚未公开发生，一旦触发将影响加勒比地区格局和中美关系。同时澳大利亚因伊朗战争宣布大幅增加军费。</p>
     </div>
     <div class="section">
+      <div class="section-title">🔥 各平台获赞最多评论 TOP5</div>
+      <div class="hot-comments">
+        <div class="hot-comment top3"><span class="hc-rank">1</span><div class="hc-body">Cuba warns US attack 'possible' as Pentagon stays mum——古巴自己都比五角大楼坦诚<span class="hc-source">📍 Military.com 热门评论</span></div><span class="hc-likes">👍 4.2K</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">2</span><div class="hc-body">"顺便去古巴看看"——商务出差路过加个旅游景点的既视感，可这景点是个主权国家<span class="hc-source">📍 知乎 国际政治话题</span></div><span class="hc-likes">👍 7823</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">3</span><div class="hc-body">1961年猪湾惨败还不够？美国在古巴的历史战绩是0胜1负<span class="hc-source">📍 Reddit r/worldnews</span></div><span class="hc-likes">👍 3.1K</span></div>
+        <div class="hot-comment"><span class="hc-rank">4</span><div class="hc-body">参议院民主党人已提交战争权力决议案阻止无国会批准攻击古巴——至少有人在踩刹车<span class="hc-source">📍 AP News 评论区</span></div><span class="hc-likes">👍 1.8K</span></div>
+        <div class="hot-comment"><span class="hc-rank">5</span><div class="hc-body">伊朗→古巴→委内瑞拉→？特朗普的外交就是Risk棋盘游戏<span class="hc-source">📍 Twitter/X 热门回复</span></div><span class="hc-likes">👍 1.2K</span></div>
+      </div>
+    </div>
+    <div class="section">
       <div class="section-title">🔮 走向预判</div>
       <div class="prediction"><span class="prob">50%</span>走向A：仅为施压手段，不会实际执行</div>
       <div class="prediction"><span class="prob">30%</span>走向B：低烈度行动（制裁/海上封锁），不构成入侵</div>
@@ -557,8 +612,8 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-a">A级</span>
-    <span class="event-title">中越联合声明发布·苏林访华4天·构建更高水平命运共同体</span>
-    <span class="update-badge">🆕 今日发布</span>
+    <span class="event-title">苏林访华签17项协议·两次坐高铁·中越铁路对接成最大亮点·联合声明今日发布</span>
+    <span class="update-badge">🆕 15:00更新</span>
     <span class="event-heat">⭐⭐⭐⭐</span>
     <span class="event-window window-gold">🟢 黄金期</span>
     <span class="toggle-arrow">›</span>
@@ -567,6 +622,16 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
     <div class="section">
       <div class="section-title">📝 事件概述</div>
       <p style="font-size:13px;color:var(--text2)">4月17日，新华社发布《中华人民共和国和越南社会主义共和国关于在新时期持续深化全面战略合作伙伴关系、推动构建更高水平具有战略意义的中越命运共同体的联合声明》。越共中央总书记、国家主席苏林4月14日至17日对华进行国事访问（就任后首次访华）。期间签署党际、公安、司法、经济、产供链合作、海关、科技、民生等多领域合作文件。苏林16日乘高铁赴广西参访——中越友好邻邦定位再升级。西班牙首相桑切斯4年内第4次访华也于同期结束。</p>
+    </div>
+    <div class="section">
+      <div class="section-title">🔥 各平台获赞最多评论 TOP5</div>
+      <div class="hot-comments">
+        <div class="hot-comment top3"><span class="hc-rank">1</span><div class="hc-body">10小时2400公里坐高铁从北京到广西——苏林这不是体验速度，是直接为越南南北高铁取经<span class="hc-source">📍 新华社特写文章 微博热评</span></div><span class="hc-likes">👍 5.8万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">2</span><div class="hc-body">两次就任后首访都选中国——中美在打关税战，中越在签合作。朋友圈决定走多远<span class="hc-source">📍 人民日报评论区</span></div><span class="hc-likes">👍 3.2万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">3</span><div class="hc-body">"命运共同体"加了个"更高水平"前缀——外交辞令翻译：以前关系好，现在要更好<span class="hc-source">📍 观察者网风闻社区</span></div><span class="hc-likes">👍 1.4万</span></div>
+        <div class="hot-comment"><span class="hc-rank">4</span><div class="hc-body">做跨境电商的注意了！中越海关合作加深=跨境物流要提速了<span class="hc-source">📍 知乎 跨境电商话题</span></div><span class="hc-likes">👍 6732</span></div>
+        <div class="hot-comment"><span class="hc-rank">5</span><div class="hc-body">西班牙首相4年来了4次，苏林上任第一站就来——谁才是真朋友一目了然<span class="hc-source">📍 微博 外交话题</span></div><span class="hc-likes">👍 4215</span></div>
+      </div>
     </div>
     <div class="section">
       <div class="section-title">🔮 走向预判</div>
@@ -622,6 +687,16 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
       <p style="font-size:13px;color:var(--text2)">美国海关与边境保护局（CBP）宣布4月20日启动关税退款系统，用于退还1660亿美元（约1.13万亿人民币）的IEEPA关税。这些关税在2026年2月被美国最高法院裁定为"非法"。这是美国历史上最大规模的关税退款行动。CBP已完成报关系统新功能第一阶段研发，进口商可从4月20日起提交退款申请。此前联邦快递等大型进口商已起诉CBP维护退款权利。对全球贸易格局影响深远。</p>
     </div>
     <div class="section">
+      <div class="section-title">🔥 各平台获赞最多评论 TOP5</div>
+      <div class="hot-comments">
+        <div class="hot-comment top3"><span class="hc-rank">1</span><div class="hc-body">总统说收就收，法院说退就退。这大概是史上最贵的一次"退货"<span class="hc-source">📍 知乎 中美贸易话题</span></div><span class="hc-likes">👍 2.1万</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">2</span><div class="hc-body">33万进口商、5300万笔报关记录、1660亿美元——美国海关的退款KPI太恐怖了<span class="hc-source">📍 航运界网 热评</span></div><span class="hc-likes">👍 8745</span></div>
+        <div class="hot-comment top3"><span class="hc-rank">3</span><div class="hc-body">联邦快递都起诉了才退。在美国，不打官司连自己的钱都拿不回来<span class="hc-source">📍 搜狐财经 评论区</span></div><span class="hc-likes">👍 5632</span></div>
+        <div class="hot-comment"><span class="hc-rank">4</span><div class="hc-body">做外贸的朋友快查！如果你2025-2026年有向美国进口的报关记录，可能有钱退<span class="hc-source">📍 跨境电商圈 七彩鹰</span></div><span class="hc-likes">👍 3210</span></div>
+        <div class="hot-comment"><span class="hc-rank">5</span><div class="hc-body">IEEPA加关税→最高法院说违法→被迫退钱。用紧急权力收关税，用司法程序退关税——美式效率<span class="hc-source">📍 观察者网 评论区</span></div><span class="hc-likes">👍 1876</span></div>
+      </div>
+    </div>
+    <div class="section">
       <div class="section-title">🔮 走向预判</div>
       <div class="prediction"><span class="prob">55%</span>走向A：退款系统顺利运行，全球贸易信心回暖</div>
       <div class="prediction"><span class="prob">45%</span>走向B：退款过程复杂漫长，短期影响有限</div>
@@ -663,15 +738,15 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 <div class="event-card">
   <div class="event-header" onclick="toggleEvent(this)">
     <span class="event-badge badge-b">B级</span>
-    <span class="event-title">黄晓明90.67分再进上戏博士复试·报考艺术管理专业</span>
+    <span class="event-title">五一航班大规模取消·东南亚成重灾区·高油价停飞潮全球蔓延</span>
     <span class="event-heat">⭐⭐⭐</span>
-    <span class="event-window window-fade">🟡 衰减期</span>
+    <span class="event-window window-fade">🟡 持续中</span>
     <span class="toggle-arrow">›</span>
   </div>
   <div class="event-body">
     <div class="section">
       <div class="section-title">📝 事件概述</div>
-      <p style="font-size:13px;color:var(--text2)">黄晓明继2025年首战失利后，以90.67分再次出现在2026年上海戏剧学院博士研究生复试名单上，报考方向为艺术管理/戏剧策划专业学位。此事引发"明星读博"话题热议。</p>
+      <p style="font-size:13px;color:var(--text2)">4月14日起大量网友在社交平台晒出五一假期机票被取消截图，被取消航班主要为飞东南亚和大洋洲方向。航班管家数据显示4月1日至12日已有多条中国-东南亚航线取消全部航班。主因为中东战争导致油价飙升、航空燃油成本激增。多家航司上调燃油附加费。泰国亚航4月17日起暂停曼谷-多条中国航线。百度百科已创建"2026年五一航班取消事件"词条。</p>
     </div>
   </div>
 </div>
@@ -1047,9 +1122,11 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 <!-- 持续追踪 -->
 <div class="tracking">
   <h3>📌 持续追踪事件</h3>
-  <div class="track-item">🔴 <strong>美伊和谈</strong> <span class="status status-warn">⚠️ 停火或破裂</span><br><span style="color:var(--text2);font-size:12px">伊朗警告封锁或致停火破裂。4月22日到期仅剩5天。本周末可能重启谈判</span></div>
-  <div class="track-item">🟢 <strong>以黎10天停火</strong> <span class="status status-ongoing">✅ 已生效</span><br><span style="color:var(--text2);font-size:12px">4月16日正式生效，34年来首次直接谈判。双方领导人将赴白宫</span></div>
-  <div class="track-item">🔴 <strong>中越联合声明</strong> <span class="status status-ongoing">NEW 今日</span><br><span style="color:var(--text2);font-size:12px">4月17日发布联合声明，苏林就任后首次访华。签署多领域合作文件</span></div>
+  <div class="track-item">🔴 <strong>美伊和谈</strong> <span class="status status-warn">⚠️ 本周末重启</span><br><span style="color:var(--text2);font-size:12px">特朗普称考虑亲赴巴基斯坦签约。以黎停火已生效。4月22日到期仅剩5天</span></div>
+  <div class="track-item">🟢 <strong>以黎10天停火</strong> <span class="status status-ongoing">✅ 已生效</span><br><span style="color:var(--text2);font-size:12px">4月16日正式生效。停火后以军仍炸毁黎南最后桥梁。美国务院称停火可延长</span></div>
+  <div class="track-item">🟢 <strong>苏林访华17项协议</strong> <span class="status status-ongoing">✅ 今日结束</span><br><span style="color:var(--text2);font-size:12px">4月17日联合声明发布+访华结束。两次坐高铁、17项协议、铁路对接成亮点</span></div>
+  <div class="track-item">📈 <strong>创业板11年新高</strong> <span class="status status-ongoing">NEW 今日</span><br><span style="color:var(--text2);font-size:12px">宁德时代市值超中石油跃居A股第三。算力租赁概念爆发。AI算力全链涨价</span></div>
+  <div class="track-item">⚡ <strong>XChat今日上线</strong> <span class="status status-ongoing">NEW 今日</span><br><span style="color:var(--text2);font-size:12px">马斯克版微信4月17日正式登陆App Store。端到端加密+Grok AI集成</span></div>
   <div class="track-item">💰 <strong>美国关税退款</strong> <span class="status status-turn">📅 4/20启动</span><br><span style="color:var(--text2);font-size:12px">1660亿美元IEEPA关税退款系统4月20日上线，史上最大规模</span></div>
   <div class="track-item">⚠️ <strong>美联储交接</strong> <span class="status status-warn">⚠️ 4/21听证</span><br><span style="color:var(--text2);font-size:12px">沃什4月21日参议院听证。鲍威尔5月15日期满</span></div>
   <div class="track-item">⚡ <strong>DeepSeek V4</strong> <span class="status status-warn">⚠️ 即将发布</span><br><span style="color:var(--text2);font-size:12px">已灰度上线。GPT-6已于4/14发布性能暴涨40%。4月下旬V4正式发布</span></div>
@@ -1059,7 +1136,7 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 
 <footer>
   <p>🔥 热点事件监控看板 · 含下周预测周报版</p>
-  <p style="margin-top:4px">更新时间：2026-04-17 12:00 · 数据来源：20+平台中英文双语信源</p>
+  <p style="margin-top:4px">更新时间：2026-04-17 15:00 · 数据来源：20+平台中英文双语信源</p>
   <p style="margin-top:4px;color:var(--accent2)">⚠️ 下周重点：①4/20美国关税退款启动 ②4/22美伊停火到期 ③4/21沃什听证 ④上海车展公众日 ⑤广交会二期 ⑥英王4/27访美</p>
 </footer>
 </div>
