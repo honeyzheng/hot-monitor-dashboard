@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔥 热点监控看板 · 早报</title>
+<title>🔥 热点监控看板 · 晚报</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#0f1117;--card:#1a1d28;--card2:#232635;--accent:#6c5ce7;--accent2:#a29bfe;--s-color:#ff4757;--a-color:#ff9f43;--b-color:#feca57;--text:#e8e8e8;--text2:#a0a0b0;--border:#2d3045;--green:#2ed573;--shadow:0 4px 20px rgba(0,0,0,0.3)}
@@ -67,432 +67,464 @@ footer a{color:var(--accent2);text-decoration:none}
 <h1>🔥 互联网热点监控看板</h1>
 <div class="meta">
 <span>📅 2026-04-19 周日</span>
-<span>⏰ 2026-04-19 07:00 更新</span>
-<span>📡 早报</span>
-<span>🔍 12维度+热榜+灰犀牛</span>
+<span>⏰ 2026-04-19 18:00 更新</span>
+<span>📡 晚报</span>
+<span>🔍 12维度+热榜+灰犀牛 14项全覆盖</span>
 </div>
 </header>
 
 <div class="stats-bar">
-<div class="stat-item stat-s"><div class="num">3</div><div class="label">🔴 S级事件</div></div>
+<div class="stat-item stat-s"><div class="num">2</div><div class="label">🔴 S级事件</div></div>
 <div class="stat-item stat-a"><div class="num">3</div><div class="label">🟠 A级事件</div></div>
 <div class="stat-item stat-b"><div class="num">4</div><div class="label">🟡 B级事件</div></div>
 </div>
 
-<!-- S级事件1: 伊朗重新关闭霍尔木兹海峡+炮击油轮 -->
+<!-- S级事件1 -->
 <div class="event-card">
 <div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-s">S级</span>
-<span class="event-title">伊朗重新关闭霍尔木兹海峡+炮击油轮——全球能源命脉告急</span>
+<span class="event-title">霍尔木兹海峡"开了又关"·伊朗向商船开火·油价暴涨9%</span>
 <span class="event-heat">🔥🔥🔥🔥🔥</span>
-<span class="event-window window-gold">⚡4月22日停火到期</span>
+<span class="event-window window-gold">⚡停火仅剩3天</span>
 </div>
 <div class="event-body active">
 <div class="section">
 <div class="section-title">📋 事件背景</div>
-<p style="font-size:13px;color:var(--text2)">4月17日伊朗宣布对商船开放海峡，仅隔一天（4月18日）急剧反转——伊朗军方宣布恢复军事管制，革命卫队海军向试图通行的印度油轮开火。伊朗指控美国"违背承诺"（承诺解除封锁未兑现），宣称"关闭直至美国解除封锁"。美军宣布封锁"已完全实施"，切断伊朗90%海上贸易（年1097亿美元）。消息称美国拟解冻200亿美元换铀。</p>
+<p style="font-size:13px;color:var(--text2)">4月17日伊朗宣布因黎以停火开放海峡，特朗普"感谢"后立即表示封锁继续。不到24小时伊朗态度反转，4月18日革命卫队海军向两艘试图通行的印度油轮开火逼退，宣布海峡恢复"先前状态"。油价暴涨9%。美伊两周停火仅剩3天，多条战线同时出现裂痕。英法组织多国护航联盟但伊朗不认。以色列同日空袭黎巴嫩南部。</p>
 </div>
 <div class="section">
 <div class="section-title">⏱ 事件时间线</div>
 <div class="timeline">
 <div class="timeline-item">4月7日 美伊达成两周临时停火</div>
-<div class="timeline-item">4月11-12日 伊斯兰堡谈判21小时无果而终</div>
-<div class="timeline-item">4月14日 美国正式启动海上封锁令</div>
-<div class="timeline-item">4月15日 美军宣布封锁fully implemented</div>
-<div class="timeline-item">4月17日 伊朗宣布对商船开放海峡（黎以停火相关）</div>
-<div class="timeline-item hot"><strong>4月18日 伊朗反转！重新关闭海峡+炮击印度油轮+恢复军事管制</strong></div>
-<div class="timeline-item hot"><strong>4月19日 伊朗革命卫队：关闭直至美国解除封锁</strong></div>
-<div class="timeline-item"><strong>⏰ 4月22日 两周临时停火到期（关键节点！）</strong></div>
+<div class="timeline-item">4月12日 伊斯兰堡谈判21小时无果而终</div>
+<div class="timeline-item">4月15日 美国宣布封锁"全面实施"，切断伊朗90%海运贸易</div>
+<div class="timeline-item">4月17日 伊朗宣布开放海峡，特朗普表示"感谢"但称封锁继续</div>
+<div class="timeline-item hot">4月18日 ⚡伊朗反转！革命卫队向商船开火，重新关闭海峡</div>
+<div class="timeline-item hot">4月18日 以色列空袭黎巴嫩南部，停火濒临崩盘</div>
+<div class="timeline-item">4月19日 新华社发文"开了又关"全面解读，国际油价暴涨9%</div>
 </div>
 </div>
 <div class="section">
-<div class="section-title">🔮 走向预判</div>
-<div class="prediction"><span class="prob">30%</span>走向A：4月22日前达成新停火协议，海峡有条件开放，200亿解冻换铀方案落地</div>
-<div class="prediction"><span class="prob">45%</span>走向B：停火到期未续，全面对抗升级，油价飙至120美元+，全球供应链三次震荡</div>
-<div class="prediction"><span class="prob">25%</span>走向C：僵持延续——双方不想全面开战但互不让步，"不战不和"持续数周</div>
+<div class="section-title">🎯 走向预判</div>
+<div class="prediction"><span class="prob">45%</span>走向A：最后72小时美伊达成框架协议，海峡有条件开放</div>
+<div class="prediction"><span class="prob">35%</span>走向B：停火到期无果，局势失控，美军强行登临伊朗关联油轮</div>
+<div class="prediction"><span class="prob">20%</span>走向C：第三方（巴基斯坦/中国）斡旋成功，延长停火并启动新谈判</div>
 </div>
-<div class="section">
-<div class="section-title">💬 精选评论运营</div>
+
 <div class="direction-block">
-<div class="direction-header">📌 走向A 评论（30%达成新停火协议）</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：国际博弈棋局</div>
-<div class="comment hot">① 通过封锁敌方的封锁来打破敌人的封锁——懂王 🤡</div>
-<div class="comment">② 伊朗：我开了。美国：但我没解封啊。伊朗：那我关了。全世界：？？？</div>
-<div class="comment">③ 200亿解冻换全部浓缩铀？这交易伊朗不可能答应 等于交出核底牌</div>
-<div class="comment">④ "一两天内达成协议"我就想笑 这句话特朗普说了不下20次了</div>
-<div class="comment">⑤ 感觉整个中东就是一盘狼人杀 美国天天报警但自己才是狼</div>
+<div class="direction-header">📌 走向A（45%）停火前达成框架协议 — 评论储备</div>
+<div class="angle-group"><div class="angle-title">💬 角度1：地缘博弈的本质</div>
+<div class="comment">① 说白了就是讨价还价嘛，开门关门都是筹码，伊朗这操作我在菜市场见过👀</div>
+<div class="comment">② 所谓谈判就是：你让一步我退一步，海峡就是那个门把手，谁也不想松</div>
+<div class="comment">③ 巴基斯坦这个中间人也不容易，两边脸色都要看，夹在中间当人肉缓冲区</div>
+<div class="comment">④ 框架协议？说难听点就是先签个"暂时别打了"的条子，管不管用另说</div>
+<div class="comment">⑤ 72小时够干啥的？上次21小时谈判都没谈拢，这次3天就能搞定？做梦呢</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2：油价与普通人的关系</div>
+<div class="comment">① 海峡一关油价就飙，我这92号都快加不起了😭谁来管管啊</div>
+<div class="comment">② 咱老百姓看不懂什么地缘政治，就知道加油站的数字又变了</div>
+<div class="comment">③ 前两天刚降价，这一关门又涨回去了，跟坐过山车似的</div>
+<div class="comment">④ 全球化就是这样，两个国家吵架，全世界的车主买单</div>
+<div class="comment">⑤ 现在才理解为啥要发展新能源了…被一条海峡卡脖子的感觉太难受</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度3：对伊朗策略的评价</div>
+<div class="comment">① 开了又关，关了又开——伊朗把海峡玩成了水龙头🚰</div>
+<div class="comment">② 不得不说伊朗这招挺聪明的，开一下试探反应，不满意就关上</div>
+<div class="comment">③ 美国说"封锁继续"的时候伊朗肯定气炸了：我都开门了你还堵？</div>
+<div class="comment">④ 向商船开火这个操作真的很刚，但代价也很大，国际舆论要翻车的</div>
+<div class="comment hot-comment">⑤ 🏆"开门是谈判，关门是底线，开火是最后通牒——伊朗用一条海峡教美国什么叫'此路是我开'" ——懂王</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：能源市场冲击</div>
-<div class="comment">① 开盘前看到这消息的基金经理现在血压比油价还高</div>
-<div class="comment">② 海峡一天开一天关 油价跟坐过山车 做期货的不得疯了</div>
-<div class="comment">③ 真服了 刚加满油说开放了 刚心疼完又关了 我的92号啊😭</div>
-<div class="comment">④ 全球1/5石油运输走这条海峡 关一天全世界都跟着抖</div>
-<div class="comment">⑤ 做空原油的被摆一道 做多的也被摆一道 赢家只有波动率</div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：军事冲突风险</div>
-<div class="comment">① 向油轮开火是危险信号 离擦枪走火就差一步了</div>
-<div class="comment">② 美军说封锁切断90%贸易 这不就是经济绞杀 没有硝烟的战争</div>
-<div class="comment">③ 美以12000人入侵伊朗应急计划曝光了 灰犀牛在跑</div>
-<div class="comment">④ 印度油轮挨炮了也不吭声 心里在骂：我惹谁了我就路过的啊</div>
-<div class="comment">⑤ 4月22日就是deadline 要么协议要么真打 全球屏息</div>
-</div>
-</div>
+
 <div class="direction-block">
-<div class="direction-header">📌 走向B 评论（45%停火到期全面对抗升级）</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：冲突升级</div>
-<div class="comment">① 停火到期不续？上次也是说停火然后以色列直接轰黎巴嫩 历史押韵了</div>
-<div class="comment">② 油价120的话今年冬天暖气费都得涨 北方人又要哭了</div>
-<div class="comment">③ 伊朗90%海上贸易走霍尔木兹 封锁=经济窒息 换你也要拼命</div>
-<div class="comment">④ 三次震荡了！封锁涨→停火跌→又涨 谁受得了这波动</div>
-<div class="comment">⑤ 美国打阿富汗打伊拉克打叙利亚现在又要打伊朗 中东有什么魔力</div>
+<div class="direction-header">📌 走向B（35%）停火到期局势失控 — 评论储备</div>
+<div class="angle-group"><div class="angle-title">💬 角度1：军事冲突升级的风险</div>
+<div class="comment">① 美军真要强行登临伊朗油轮？那可不是小打小闹了，直接开战的节奏</div>
+<div class="comment">② 停火到期的最后一天才是最危险的，双方都会"最后一搏"</div>
+<div class="comment">③ 别忘了以色列还在黎巴嫩搞事，多线开战的剧本已经写好了</div>
+<div class="comment">④ 一旦美军动手，中俄不可能坐视不管，世界大战的味道有了</div>
+<div class="comment">⑤ 军事博主天天"局势紧张"，这次是真紧张了，不是标题党</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2：全球经济冲击</div>
+<div class="comment">① 油价突破100刀那天我就说过，200不是梦——现在看来真不是开玩笑</div>
+<div class="comment">② 全球航运成本又要暴涨了，到时候啥都涨价，就工资不涨😅</div>
+<div class="comment">③ 供应链刚从疫情恢复，又被地缘政治砸了，这日子没法过了</div>
+<div class="comment">④ 印度已经慌了，伊朗油进不来，能源缺口拿啥补？</div>
+<div class="comment hot-comment">⑤ 🏆"用封锁来反封锁，用开火来灭火——中东的和平，是打出来的和平" ——懂王</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度3：各方立场的矛盾</div>
+<div class="comment">① 美国：我封锁你的封锁。伊朗：我关闭你解封的开放。越来越绕了</div>
+<div class="comment">② 英法组织护航联盟的消息一出，伊朗秒关海峡——时机把握得太精准了</div>
+<div class="comment">③ 特朗普嘴上说感谢，转头就说封锁继续，这叫什么？叫翻脸比翻书快</div>
+<div class="comment">④ 巴基斯坦：你们在我地盘谈的，能不能给我个面子别搞这么大？</div>
+<div class="comment">⑤ 联合国：我呼吁了，你们听不听我也管不了反正我说了</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：民生影响</div>
-<div class="comment">① 一个海峡的开关决定我加油站价格 说出来谁信😮‍💨</div>
-<div class="comment">② 超市进口食品悄悄涨了一波 供应链传导比想象的快</div>
-<div class="comment">③ 我打工人为啥要关心霍尔木兹？因为它影响我通勤成本啊！</div>
-<div class="comment">④ 外卖费又要涨 油价涨→配送涨→外卖涨→钱包瘪 完美闭环</div>
-<div class="comment">⑤ 魔幻 在北京刷手机 伊朗一个决定就能让我生活成本涨10%</div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：地缘重塑</div>
-<div class="comment hot">① 封锁对封锁 关闭对关闭 以其人之道还治其人之身的地缘版——懂王</div>
-<div class="comment">② 伊朗直接炮击油轮 在给全世界画红线</div>
-<div class="comment">③ 查尔斯国王月底访美 特朗普想搞定协议 面子工程deadline</div>
-<div class="comment">④ 中东棋局越下越大 从美伊到黎巴嫩以色列巴基斯坦全卷进来</div>
-<div class="comment">⑤ 美国用封锁逼投降 伊朗用关闭反将 两败俱伤谁先撑不住？</div>
-</div>
-</div>
+
 <div class="direction-block">
-<div class="direction-header">📌 走向C 评论（25%僵持不战不和）</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：僵局消耗</div>
-<div class="comment">① 不战不和最折磨人 全世界等结果但谁也不给</div>
-<div class="comment">② 海峡名义开放实际受限 薛定谔的通航 说开了又没完全开</div>
-<div class="comment">③ 僵持对伊朗杀伤力更大 被封锁的是他们经济命脉</div>
-<div class="comment">④ 美国在玩"温水煮青蛙" 不掀翻桌子 让伊朗慢慢窒息</div>
-<div class="comment">⑤ 两边都不想全面开战但也不认怂 典型囚徒困境</div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：市场博弈</div>
-<div class="comment">① 僵持最烦不确定性 做投资最怕悬而未决</div>
-<div class="comment">② 油价90-100震荡就是僵持标志 不涨破也不跌穿</div>
-<div class="comment">③ 航运公司头最大 走不走 绕不绕 费用全是成本</div>
-<div class="comment">④ 保险费暴涨！霍尔木兹战争险翻好几倍 保险公司赢麻了</div>
-<div class="comment">⑤ 僵持看似平静 一条推特就能打破平衡——特朗普最擅长的</div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：后续走向</div>
-<div class="comment">① 4月22日分水岭 过了不续就翻脸 续了就新一轮博弈</div>
-<div class="comment">② 灰犀牛：美以12000人地面入侵预案在抽屉里 随时拿出来</div>
-<div class="comment">③ 英国查尔斯访美是变量 特朗普在乎面子可能突然做交易</div>
-<div class="comment">④ 伊朗国内经济压力巨大 僵持能撑多久是关键</div>
-<div class="comment">⑤ 中国巴基斯坦调停角色重要 但目前看效果有限</div>
-</div>
-</div>
+<div class="direction-header">📌 走向C（20%）第三方斡旋成功 — 评论储备</div>
+<div class="angle-group"><div class="angle-title">💬 角度1：中国调停的可能性</div>
+<div class="comment">① 中国调停俄乌都敢试，调停美伊也不是不可能，但这个难度系数……</div>
+<div class="comment">② 中方说了"海峡通航受阻根源在于美方"，这话很有立场很有方向</div>
+<div class="comment">③ 中国在中东的影响力越来越大了，沙伊复交就是例子，美伊也可以试试</div>
+<div class="comment">④ 要我说还是得中国出面，美国说话不算数已经被证明了</div>
+<div class="comment">⑤ 但是中国要调停得有个前提：美国不能一边谈一边封锁，否则谁信你</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2：巴基斯坦斡旋角色</div>
+<div class="comment">① 巴基斯坦这波外交操作确实可以的，成了就是国际调停大功一件</div>
+<div class="comment">② 伊朗说"只在伊斯兰堡谈"，说明巴铁确实是被信任的</div>
+<div class="comment">③ 如果巴基斯坦真斡旋成功了，国际地位直接飙升啊</div>
+<div class="comment">④ 但延长停火只是缓兵之计，根本问题不解决还是会打起来</div>
+<div class="comment">⑤ 中巴联手调停美伊？这个组合拳如果打出来历史地位直接拉满</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度3：停火延长的可能性</div>
+<div class="comment">① 延长停火是最理想的结果，但两边都不会轻易让步</div>
+<div class="comment">② 油价这么高，全世界都在祈祷赶紧停火，这不是国际压力是国际哀求</div>
+<div class="comment">③ 如果能延长一个月，给谈判留出空间，比啥都强</div>
+<div class="comment">④ 但问题是以色列不消停啊，黎巴嫩那边一打，停火就白搭</div>
+<div class="comment hot-comment">⑤ 🏆"停火的火，不在伊朗，在以色列；谈判的判，不在美国，在中国——这局棋，落子的人都不在棋盘上" ——深度玩家</div></div>
 </div>
 </div>
 </div>
 
-<!-- S级事件2: 日舰马关条约日闯台海 -->
+<!-- S级事件2 -->
 <div class="event-card">
 <div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-s">S级</span>
-<span class="event-title">日舰马关条约签订日闯台海——解放军东海军演强势回应</span>
+<span class="event-title">俄罗斯大巴翻车致2名中国公民遇难·23人受伤</span>
 <span class="event-heat">🔥🔥🔥🔥🔥</span>
-<span class="event-window window-gold">⚡48小时舆论峰值</span>
+<span class="event-window window-fade">🔴 4月18日13:40</span>
 </div>
 <div class="event-body">
 <div class="section">
 <div class="section-title">📋 事件背景</div>
-<p style="font-size:13px;color:var(--text2)">4月17日正值《马关条约》签订131周年（1895年4月17日清政府将台湾割让日本），日本海上自卫队"雷"号驱逐舰蓄意选在这一天过航台湾海峡，航行14小时。解放军东部战区百余艘舰艇+多架战机全程跟监。4月18日东部战区在东海组织联合战备巡航。外交部、国防部向日方强烈抗议。</p>
+<p style="font-size:13px;color:var(--text2)">4月18日13:40，一辆载有44名中国公民的国际客运大巴从满洲里开往俄罗斯赤塔途中，在后贝加尔边疆区发生侧翻。事故造成2人死亡、23人受伤。事发时当地下大暴雪、视线极差。内蒙古自治区党委书记王伟中批示速抢救。中国驻伊尔库茨克总领事馆已启动应急响应。今年已是第三起在俄中国公民交通事故。</p>
 </div>
 <div class="section">
-<div class="section-title">⏱ 事件时间线</div>
-<div class="timeline">
-<div class="timeline-item">4月17日 凌晨4:02 日本"雷"号驱逐舰进入台湾海峡</div>
-<div class="timeline-item hot"><strong>4月17日 解放军东部战区海空兵力全程跟监14小时</strong></div>
-<div class="timeline-item hot"><strong>4月18日 东部战区东海联合战备巡航·公布跟监画面</strong></div>
-<div class="timeline-item">4月18日 外交部、国防部向日方强烈抗议和严正交涉</div>
+<div class="section-title">🎯 走向预判</div>
+<div class="prediction"><span class="prob">50%</span>走向A：引发跨境客运安全整改潮，恶劣天气强制停运制度出台</div>
+<div class="prediction"><span class="prob">30%</span>走向B：赴俄旅游短期降温，同类跨境线路客流大幅下降</div>
+<div class="prediction"><span class="prob">20%</span>走向C：运营方被追究刑事责任，推动中俄跨境运输安全标准升级</div>
 </div>
-</div>
-<div class="section">
-<div class="section-title">🔮 走向预判</div>
-<div class="prediction"><span class="prob">50%</span>走向A：中日外交冷处理，舆论1-2天消退，解放军常态化巡航频次提升</div>
-<div class="prediction"><span class="prob">35%</span>走向B：日方继续挑衅，中方升级反制（扩大军演+外交降级预警）</div>
-<div class="prediction"><span class="prob">15%</span>走向C：升级为中日外交危机，召见大使+经济反制</div>
-</div>
-<div class="section">
-<div class="section-title">💬 精选评论运营</div>
+
 <div class="direction-block">
-<div class="direction-header">📌 走向A 评论（50%外交冷处理+常态化巡航）</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：历史与民族情感</div>
-<div class="comment hot">① 131年前签马关条约割台湾 131年后日本军舰闯台海 巧合？你信吗？</div>
-<div class="comment">② 选在国耻日来挑衅 这不是蠢 是坏——坏透了的那种坏</div>
-<div class="comment">③ 日本百年野心从未死心 从甲午到今天对台湾的执念刻在骨子里</div>
-<div class="comment">④ 高中历史学马关条约觉得那是过去的事 没想到131年后还在上演</div>
-<div class="comment">⑤ 这一天全中国人都记得 日本人也记得 但记忆方式完全不同</div>
+<div class="direction-header">📌 走向A（50%）跨境客运安全整改 — 评论储备</div>
+<div class="angle-group"><div class="angle-title">💬 角度1：安全监管追责</div>
+<div class="comment">① 暴雪天还发车？？？运营方是不是拿乘客生命当儿戏</div>
+<div class="comment">② 今年第三起了！贝加尔湖冰面翻车、沉湖，现在又是翻车，这条线路有诅咒吗</div>
+<div class="comment">③ 恶劣天气强制停运这种基本规定都没有？那边的交通管理也太原始了</div>
+<div class="comment">④ 希望这次真的能推动改革，别又是"深表遗憾"然后不了了之</div>
+<div class="comment">⑤ 满洲里到赤塔那段路，走过的人都知道，冬天简直就是搏命</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2：对遇难者的悼念和共情</div>
+<div class="comment">① 出门旅游本来是开心的事，谁能想到…🙏愿逝者安息</div>
+<div class="comment">② 看到"2人死亡23人受伤"这几个字就心里一紧，都是活生生的人啊</div>
+<div class="comment">③ 家属该多崩溃啊，等来的不是旅游照片是噩耗</div>
+<div class="comment">④ 每次出国游都在赌命？？这也太不安全了吧</div>
+<div class="comment">⑤ 希望伤者都能平安回来，别再有坏消息了🙏🙏</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度3：旅游安全意识</div>
+<div class="comment">① 冬天去俄罗斯自由行or跟团一定要看天气预报！暴雪天别坐大巴！</div>
+<div class="comment">② 出国前买保险买保险买保险，重要的事说三遍</div>
+<div class="comment">③ 以后选跨境线路先查查路况吧，网上攻略都会提醒这段路危险</div>
+<div class="comment">④ 大使馆和领事馆反应速度还是可以的，启动应急机制很快</div>
+<div class="comment hot-comment">⑤ 🏆"雪能挡住视线，但不该挡住安全底线——44条命不是一张发车单能承受的重量" ——清醒者</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：军事实力展示</div>
-<div class="comment">① 百余艘舰艇+多架战机全程跟监 这排面够"雷"号喝一壶的</div>
-<div class="comment">② 14小时穿越低速航行 军事专家说在搞情报收集——更恶心了</div>
-<div class="comment">③ 解放军反应更快规模更大 信号明确：来一次打一次脸</div>
-<div class="comment">④ 第二天就搞东海联合战备巡航 这叫"你敢来我就敢练" 硬气</div>
-<div class="comment">⑤ 一艘驱逐舰vs百艘舰艇 不叫对等 叫碾压式回应</div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：国际关系</div>
-<div class="comment">① 日本就是美国的马前卒 试水台海中国反应 给后面动作探路</div>
-<div class="comment">② 高市早苗上台后对华越来越硬 这驱逐舰是她的"投名状"</div>
-<div class="comment">③ 中日关系本来回暖一点 这一下又凉透了</div>
-<div class="comment">④ 冷处理不代表算了 提升巡航频次就是最实在的回应</div>
-<div class="comment">⑤ 台海不是国际水道 日本少拿"航行自由"说事</div>
-</div>
-</div>
+
 <div class="direction-block">
-<div class="direction-header">📌 走向B 评论（35%持续挑衅+升级反制）</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：升级风险</div>
-<div class="comment">① 不收手继续派舰艇来 下次可能不是跟监而是拦截了</div>
-<div class="comment">② 美日军事协调越来越频 这波不是孤立的 后面可能还有</div>
-<div class="comment">③ 再搞一次？东部战区军演规模还能翻倍 别到时候哭说过度反应</div>
-<div class="comment">④ 台海周边军事密度已经很高 再加码风险指数爆表</div>
-<div class="comment">⑤ 你有美日安保条约 我们有东风快递——使命必达</div>
+<div class="direction-header">📌 走向B（30%）赴俄旅游短期降温 — 评论储备</div>
+<div class="angle-group"><div class="angle-title">💬 角度1：旅游市场影响</div>
+<div class="comment">① 贝加尔湖那几次事故之后本来就有人犹豫了，这次直接劝退</div>
+<div class="comment">② 旅行社估计要头疼了，退单退单退单</div>
+<div class="comment">③ 俄罗斯远东旅游本来就是小众线路，这下更没人敢去了</div>
+<div class="comment">④ 不是说不能去，是冬天真的别去！夏天再说！</div>
+<div class="comment">⑤ 我朋友5月的行程都在犹豫要不要取消了……</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2：跨境运营商责任</div>
+<div class="comment">① 运营方要是没有恶劣天气停运机制，那就是谋财害命</div>
+<div class="comment">② 这种跨国大巴的车况谁来检查？中国这边查了俄罗斯那边也得查啊</div>
+<div class="comment">③ 司机在暴雪中开长途，是自愿的还是被逼的？</div>
+<div class="comment">④ 承运方如果是俄方的车和司机，中方能管到吗？监管盲区太多了</div>
+<div class="comment">⑤ 出了事才想起来追责，为什么不能事前把标准定好？</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度3：中俄关系中的民间层面</div>
+<div class="comment">① 中俄关系大方向没问题，但民间出行安全得两边都上心</div>
+<div class="comment">② 内蒙古领导连夜赶赴满洲里，说明重视程度确实够</div>
+<div class="comment">③ 希望俄方也能认真配合调查和救治，别糊弄</div>
+<div class="comment">④ 两国互相开放旅游是好事，但安全配套得跟上啊</div>
+<div class="comment">⑤ 这种事如果处理不好，民间情绪是会有反弹的</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：经济反制</div>
-<div class="comment">① 中国打的牌很多 稀土出口管制名单随时可以加日本企业</div>
-<div class="comment">② 你闯台海我限签证 旅游市场对日本可是大蛋糕</div>
-<div class="comment">③ 经济反制比军事成本低但痛感明显 日企会施压政府的</div>
-<div class="comment">④ 上次限制日本水产就够疼了 这次还想挨打？</div>
-<div class="comment">⑤ 反外国不当域外管辖条例刚出 手里工具更多了</div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：舆论战场</div>
-<div class="comment">① 微博热搜前三 评论区清一色"勿忘国耻"——全民共情</div>
-<div class="comment">② 日媒说"维护航行自由" 笑死 双标都不掩饰了</div>
-<div class="comment">③ B站解放军跟监视频破千万 弹幕全是"保护台湾"</div>
-<div class="comment">④ 日本国内也有反对声 不少民众不支持对华挑衅</div>
-<div class="comment">⑤ 信息战已经打响 关键是谁的叙事占据国际舆论主导权</div>
-</div>
-</div>
+
 <div class="direction-block">
-<div class="direction-header">📌 走向C 评论（15%升级为外交危机）</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：极端情景</div>
-<div class="comment">① 召见大使级别抗议在中日关系中不常见 一旦出现就是真动怒了</div>
-<div class="comment">② 经济制裁+外交降级双管齐下 日本扛得住吗？最大贸易伙伴是中国</div>
-<div class="comment">③ 高市早苗如果继续硬刚 可能把执政基础搞崩</div>
-<div class="comment">④ 上次这么差还是2012年钓鱼岛 那次闹了好几年</div>
-<div class="comment">⑤ 马关条约日闯台海 这种"打脸式挑衅"只会激发中国民意</div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：历史对比</div>
-<div class="comment">① 每次日本在台湾问题上冒险 最后都是搬石头砸脚</div>
-<div class="comment">② 1972年建交的成果 别一次挑衅就报废了</div>
-<div class="comment">③ 冷静但坚决 既不被情绪裹挟 也绝不退让</div>
-<div class="comment">④ 台海紧张会吓跑外资 芯片产业链可能加速从台湾转移</div>
-<div class="comment">⑤ 如果真升级到外交危机 第一个受伤的是在日中国留学生和华人</div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：第三方影响</div>
-<div class="comment">① 美国背后撑腰但真打起来会帮日本吗？台湾问题自己都纠结</div>
-<div class="comment">② 东盟在看戏但心里也慌——大国博弈小国遭殃</div>
-<div class="comment">③ 韩国态度模糊 夹在中日之间很难做</div>
-<div class="comment">④ 不想看到这个走向 但日本持续挑衅后果自负</div>
-<div class="comment">⑤ 冷静冷静 外交危机概率不高 但底线不可试探</div>
-</div>
-</div>
+<div class="direction-header">📌 走向C（20%）推动跨境运输安全标准升级 — 评论储备</div>
+<div class="angle-group"><div class="angle-title">💬 角度1：制度建设呼声</div>
+<div class="comment">① 出了这么大的事，总该有个说法吧？跨境客运安全标准该升级了</div>
+<div class="comment">② 中俄之间应该签个跨境客运安全协议，统一标准统一监管</div>
+<div class="comment">③ 恶劣天气预警和强制停运，这两个东西缺一不可</div>
+<div class="comment">④ GPS实时监控+车辆强制检查+驾驶员资质审核，三管齐下</div>
+<div class="comment">⑤ 别光靠事故推动改革了，能不能主动一点？</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2：运营方刑事追责</div>
+<div class="comment">① 如果查出来是明知暴雪还发车，那就是间接故意，得追刑责</div>
+<div class="comment">② 运营资质有没有问题？车辆年检过了没？司机有没有疲劳驾驶？一查到底！</div>
+<div class="comment">③ 两条人命啊！不是赔点钱就能了事的！</div>
+<div class="comment">④ 参考国内重大交通事故追责标准，直接责任人+管理层都跑不掉</div>
+<div class="comment hot-comment">⑤ 🏆"路上的雪是天灾，出发的决定是人祸——每一个'照常发车'的签字，都欠44条命一个交代" ——锐评</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度3：国际客运安全标准化</div>
+<div class="comment">① 一带一路沿线这么多跨境线路，安全标准不能各搞各的</div>
+<div class="comment">② 建议交通部牵头制定跨境客运安全白名单，不达标的直接取消资质</div>
+<div class="comment">③ 其实国内长途客运已经很严了，暴雪天高速直接封路，国际线路也该这样</div>
+<div class="comment">④ 保险公司以后对这类线路得加费率了，倒逼运营方提高安全标准</div>
+<div class="comment">⑤ 科技手段用起来啊，气象预警+智能调度+远程监控，2026年了不要再靠人拍脑袋决策</div></div>
 </div>
 </div>
 </div>
 
-<!-- S级事件3: GPT-6发布 -->
-<div class="event-card">
-<div class="event-header" onclick="toggleEvent(this)">
-<span class="event-badge badge-s">S级</span>
-<span class="event-title">GPT-6（代号"土豆"）正式发布——AI竞赛白热化</span>
-<span class="event-heat">🔥🔥🔥🔥🔥</span>
-<span class="event-window window-fade">🟡1-2周体验窗口</span>
-</div>
-<div class="event-body">
-<div class="section">
-<div class="section-title">📋 事件背景</div>
-<p style="font-size:13px;color:var(--text2)">4月14日OpenAI正式发布GPT-6（代号"Spud/土豆"），耗时18个月、耗资20亿美元、10万张H100 GPU。核心：5-6万亿参数、200万Token上下文、"Symphony"全模态架构、性能+40%。CEO奥特曼称AGI完成度70-80%。Anthropic同期发布Mythos，DeepSeek V4酝酿中。</p>
-</div>
-<div class="section">
-<div class="section-title">🔮 走向预判</div>
-<div class="prediction"><span class="prob">55%</span>走向A：口碑爆炸，用户暴涨，行业加速洗牌</div>
-<div class="prediction"><span class="prob">30%</span>走向B：算力瓶颈暴露，高峰期限速宕机，体验打折扣</div>
-<div class="prediction"><span class="prob">15%</span>走向C：竞品快速追平，差异化优势不明显</div>
-</div>
-<div class="section">
-<div class="section-title">💬 精选评论运营</div>
-<div class="direction-block">
-<div class="direction-header">📌 走向A 评论（55%口碑爆炸+用户暴涨）</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：技术震撼</div>
-<div class="comment hot">① 200万token 一次性喂进去一整本小说让它分析 太疯了</div>
-<div class="comment">② 5-6万亿参数…我电脑硬盘都没这么大 训练成本够买一个小国</div>
-<div class="comment">③ 试用了 代码准确率肉眼可见提升 该换工作了.jpg</div>
-<div class="comment">④ AGI完成度70-80%？奥特曼这话要么吹牛要么真的 两个我都怕</div>
-<div class="comment">⑤ 代号叫"土豆"太接地气了哈哈 不愧是OpenAI的命名风格</div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：行业冲击</div>
-<div class="comment">① 程序员：GPT-4说要失业 GPT-6出来了还在 但确实更焦虑了</div>
-<div class="comment">② 百度通义们压力多大？GPT-6拉开的差距不是一点点</div>
-<div class="comment">③ DeepSeek V4在路上 中国AI追赶一刻没停 这才是大国竞争</div>
-<div class="comment">④ 10万张H100训一个模型 英伟达才是军火商——稳赚不赔</div>
-<div class="comment">⑤ 不怕AI取代我 怕的是会用AI的人取代我</div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：社会影响</div>
-<div class="comment">① 以后面试不考会不会用电脑 考会不会跟AI协作</div>
-<div class="comment">② 隐私越来越严重 200万token意味着它记得你说的所有话</div>
-<div class="comment">③ 教育行业彻底变天 学生用GPT-6写的论文老师分辨不出来</div>
-<div class="comment">④ 感觉人类正在亲手创造自己的替代品 细思极恐</div>
-<div class="comment">⑤ 从GPT-4到GPT-6 不是升级是换代 功能机到智能机</div>
-</div>
-</div>
-<div class="direction-block">
-<div class="direction-header">📌 走向B 评论（30%算力瓶颈暴露）</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：技术瓶颈</div>
-<div class="comment">① 发布第一天服务器就崩了 ChatGPT的传统艺能</div>
-<div class="comment">② 200万token跑一次推理得烧多少电？碳排放考虑过吗</div>
-<div class="comment">③ 免费用户和付费能一样吗？限速限量还叫什么发布</div>
-<div class="comment">④ 训练10万张H100 推理需要多少？全球算力供不上</div>
-<div class="comment">⑤ 先把服务器搞稳定再吹AGI 经常504的AGI有什么意义</div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：用户体验</div>
-<div class="comment">① 等5分钟出结果 比GPT-4还慢 升级了个寂寞？</div>
-<div class="comment">② Plus每天限50次？？付20美元就这待遇？？</div>
-<div class="comment">③ 高峰期偷偷降级到4o 换模型以为我们看不出来？</div>
-<div class="comment">④ 200万token有但响应翻3倍 "用空间换时间"反向操作</div>
-<div class="comment">⑤ API涨价速度没跟上 开发者已经开始骂了</div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：竞品机会</div>
-<div class="comment">① OpenAI宕机=Claude流量高峰 Anthropic偷着乐</div>
-<div class="comment">② DeepSeek性价比之王 国产大模型加油 弯道超车</div>
-<div class="comment">③ 开源模型的机会来了 闭源又贵又不稳定 开源就是出路</div>
-<div class="comment">④ 算力才是真正护城河 模型谁都能训 算力不是谁都有</div>
-<div class="comment">⑤ Google Gemini在角落瑟瑟发抖 格局要变了</div>
-</div>
-</div>
-<div class="direction-block">
-<div class="direction-header">📌 走向C 评论（15%竞品快速追平）</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：竞争格局</div>
-<div class="comment">① Anthropic的Mythos也很强 AI不是OpenAI一家独大了</div>
-<div class="comment">② DeepSeek V4如果用更少算力接近GPT-6水平 才是真颠覆</div>
-<div class="comment">③ 大模型差距在缩小 从10倍到2倍到1.5倍 迟早拉平</div>
-<div class="comment">④ 再强 价格是竞品3倍 企业客户会用脚投票</div>
-<div class="comment">⑤ AI竞赛不是谁先到终点 是谁跑得更久更稳</div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：市场选择</div>
-<div class="comment">① 普通用户根本感受不出GPT-6和Claude差别 都一样聊天</div>
-<div class="comment">② 卷参数有意义吗？用户要的是解决问题不是炫技</div>
-<div class="comment">③ 企业看性价比和稳定性 不看参数量 OpenAI太贵了</div>
-<div class="comment">④ 百模大战两年 活下来的就几家 GPT-6改变不了趋势</div>
-<div class="comment">⑤ 冷静看待每次"划时代发布" GPT-4也说改变世界 改了吗？改了一点</div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：长期趋势</div>
-<div class="comment">① AI竞争从"谁模型大"转向"谁应用好" 这才正确方向</div>
-<div class="comment">② 教AI做事比变聪明重要 智能体才是下一个战场</div>
-<div class="comment">③ 再过两年GPT-8出来GPT-6就白菜价 迭代太快了</div>
-<div class="comment">④ 真正决定格局的不是模型是生态——谁的开发者多谁赢</div>
-<div class="comment">⑤ AI的瓶颈变了 以前谁训更好 现在谁有算力运行它</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- A级事件1: 宁德时代 -->
+<!-- A级事件1 -->
 <div class="event-card">
 <div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">宁德时代市值破2万亿+第四大股东减持257亿</span>
+<span class="event-title">乌克兰击中克里米亚3艘俄军舰·黑海舰队再遭重创</span>
 <span class="event-heat">🔥🔥🔥🔥</span>
-<span class="event-window window-fade">🟡下周一A股开盘</span>
 </div>
 <div class="event-body">
 <div class="section">
 <div class="section-title">📋 事件背景</div>
-<p style="font-size:13px;color:var(--text2)">Q1营收1291亿（+52.45%），净利207亿（+48.52%），日赚2.3亿。4月16日股价449.3元市值站稳2万亿，A股首个科技公司破2万亿。4月17日第四大股东宁波联合创新拟询价转让5800万股（1.27%），市值约257.64亿。</p>
+<p style="font-size:13px;color:var(--text2)">4月18日，乌克兰国家安全局宣布在克里米亚击中俄海军"亚马尔"号、"亚速"号大型登陆舰及一艘型号不明军舰，同时以无人机破坏克里米亚地区的俄方通信设施。黑海舰队自开战以来已损失超三分之一主力舰艇。</p>
 </div>
 <div class="section">
-<div class="section-title">🔮 走向预判</div>
-<div class="prediction"><span class="prob">45%</span>走向A：业绩支撑，短暂回调后继续上行</div>
-<div class="prediction"><span class="prob">40%</span>走向B：大股东减持引发跟风抛售，回调5-10%</div>
-<div class="prediction"><span class="prob">15%</span>走向C：市场解读为高位套现信号，板块连锁反应</div>
+<div class="section-title">🎯 走向预判</div>
+<div class="prediction"><span class="prob">45%</span>走向A：俄军舰艇加速撤离克里米亚，黑海制海权向乌方倾斜</div>
+<div class="prediction"><span class="prob">35%</span>走向B：俄方升级对乌克兰港口和能源设施的远程打击作为报复</div>
+<div class="prediction"><span class="prob">20%</span>走向C：军事压力加速俄乌和谈进程</div>
 </div>
-<div class="section">
-<div class="section-title">💬 精选热评</div>
-<div class="comment hot">日赚2.3亿 我日赚23块都费劲 贫穷限制了我的想象力</div>
-<div class="comment">2万亿科技公司 中国终于有自己的苹果级选手了</div>
-<div class="comment">257亿减持 普通人一辈子赚不到 人家一次搞定</div>
-<div class="comment">聪明钱高位落袋为安 但不代表故事结束</div>
-<div class="comment">A股科技公司终于不用羡慕纳斯达克了 "宁王"给足面子</div>
+
+<div class="direction-block">
+<div class="direction-header">📌 走向A（45%）俄舰撤离克里米亚 — 评论储备</div>
+<div class="angle-group"><div class="angle-title">💬 角度1：军事态势变化</div>
+<div class="comment">① 黑海舰队打到现在还剩几艘？有人统计一下吗，我快数不过来了</div>
+<div class="comment">② 登陆舰被打掉=登陆能力归零，克里米亚补给线又断了一截</div>
+<div class="comment">③ 无人机时代大型水面舰艇就是活靶子，俄军这教训够写一本教材了</div>
+<div class="comment">④ 从莫斯科号到现在，黑海舰队的损失已经是历史级别的了</div>
+<div class="comment">⑤ 撤离克里米亚只是时间问题了，再不跑剩下的也保不住</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2：无人机战争的启示</div>
+<div class="comment">① 乌克兰用无人机打军舰、打通信设施，这就是未来战争的样子</div>
+<div class="comment">② 一架无人机几万美金，一艘登陆舰几亿美金——这笔账谁都会算</div>
+<div class="comment">③ 各国海军都该好好研究一下这场战争了，大舰巨炮时代真的结束了</div>
+<div class="comment">④ 安全局搞的？不是海军？乌克兰的安全局也太猛了吧</div>
+<div class="comment">⑤ 技术决定战场，不是吨位决定战场，2026年了该清醒了</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度3：对俄乌局势的影响</div>
+<div class="comment">① 军事上越输谈判桌上越被动，俄方得想想怎么收场了</div>
+<div class="comment">② 但也别指望俄罗斯因为丢了几艘船就投降，这场仗还得打</div>
+<div class="comment">③ 乌克兰这是在用战果换谈判筹码，打得越多要价越高</div>
+<div class="comment">④ 克里米亚的象征意义太大了，俄罗斯死也不会主动放弃</div>
+<div class="comment hot-comment">⑤ 🏆"舰队的终点不在港口，在水底——黑海正在变成黑海舰队的墓地" ——冷眼</div></div>
+</div>
+
+<div class="direction-block">
+<div class="direction-header">📌 走向B（35%）俄方报复性升级打击 — 评论储备</div>
+<div class="angle-group"><div class="angle-title">💬 角度1：俄方报复手段</div>
+<div class="comment">① 俄罗斯不会吃这个哑巴亏的，乌克兰能源设施又要倒霉了</div>
+<div class="comment">② 冬天过了但导弹不会放假，接下来几天乌克兰得做好防空准备</div>
+<div class="comment">③ 俄军虽然海上打不赢，但导弹打基础设施这块一直没怂过</div>
+<div class="comment">④ 上次黑海舰队吃亏后就是一波远程打击，这次估计也差不多</div>
+<div class="comment">⑤ 可能还会加大对乌克兰港口的封锁，让你也出不了海</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2：战争升级的风险</div>
+<div class="comment">① 一来一回越打越狠，这个螺旋啥时候是个头啊</div>
+<div class="comment">② 北约要是再加大对乌克兰的武器支持，俄罗斯会更急眼</div>
+<div class="comment">③ 战场上谁都不想输，但问题是打下去谁能赢？</div>
+<div class="comment">④ 核威胁的影子一直在，虽然没人真想用，但嘴上说说够吓人的</div>
+<div class="comment">⑤ 2026年了，这场战争已经打了4年多，还有人记得最初的和平方案吗？</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度3：西方态度的变化</div>
+<div class="comment">① 西方武器越给越多，无人机战果越来越大，这个趋势很明显</div>
+<div class="comment">② 但西方也不是毫无顾虑的，核升级才是他们真正担心的</div>
+<div class="comment">③ 美国自己都自顾不暇（中东、中国），还能分多少精力给乌克兰？</div>
+<div class="comment">④ 欧洲其实比美国更紧张，毕竟战火就在家门口</div>
+<div class="comment">⑤ 军事援助不等于和平方案，打赢了然后呢？</div></div>
+</div>
+
+<div class="direction-block">
+<div class="direction-header">📌 走向C（20%）推动和谈进程 — 评论储备</div>
+<div class="angle-group"><div class="angle-title">💬 角度1：以战促和的逻辑</div>
+<div class="comment">① 打疼了才会坐下来谈，这个道理古今中外都一样</div>
+<div class="comment">② 乌克兰现在的策略就是：在谈判前尽量多打战果，增加筹码</div>
+<div class="comment">③ 如果俄罗斯意识到克里米亚守不住了，也许真的会考虑谈</div>
+<div class="comment">④ 但"谈"和"让"是两回事，俄罗斯可能愿意谈但不愿意让克里米亚</div>
+<div class="comment">⑤ 美国、中国都希望这场战争结束，国际压力也是推动因素</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2：和谈方案的可能性</div>
+<div class="comment">① 克里米亚问题太敏感了，任何方案都会被一方否决</div>
+<div class="comment">② 最现实的方案大概是"冻结冲突"，双方先停火，领土问题搁置</div>
+<div class="comment">③ 但搁置不等于解决，历史证明搁置的问题迟早会爆发</div>
+<div class="comment">④ 中国的和平方案一直在桌上，就看双方什么时候愿意拿起来看看</div>
+<div class="comment">⑤ 四年了，该打的打够了，该死的人死够了，能不能消停一下</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度3：战后重建展望</div>
+<div class="comment">① 说实话重建比打仗还贵，钱从哪来是个大问题</div>
+<div class="comment">② 欧盟已经在讨论战后重建方案了，这是不是意味着他们觉得快结束了？</div>
+<div class="comment">③ 乌克兰的基础设施被炸了又炸，重建工程量堪比从头建一个国家</div>
+<div class="comment">④ 如果真的和谈成功，首先受益的是乌克兰老百姓——终于能回家了</div>
+<div class="comment hot-comment">⑤ 🏆"炮弹拆掉的城市，用握手是建不回来的——但至少可以让明天的炮弹不再落下" ——理想主义者</div></div>
 </div>
 </div>
 </div>
 
-<!-- A级事件2: 密集元首外交 -->
+<!-- A级事件2 -->
 <div class="event-card">
 <div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">密集元首外交周——四天会晤四国政要·"战略定力"</span>
+<span class="event-title">特朗普访华倒计时·中美关税谈判重启斯德哥尔摩</span>
 <span class="event-heat">🔥🔥🔥🔥</span>
-<span class="event-window window-fade">🟡成果落地周期</span>
+<span class="event-window window-gold">⚡倒计时2天</span>
 </div>
 <div class="event-body">
 <div class="section">
 <div class="section-title">📋 事件背景</div>
-<p style="font-size:13px;color:var(--text2)">4月14-17日密集外交：阿联酋王储哈立德、西班牙首相桑切斯（第4次访华）、俄罗斯外长拉夫罗夫、越共总书记/国家主席苏林（国事访问）。多次提到"战略定力"。中越签署一系列合作文件。</p>
+<p style="font-size:13px;color:var(--text2)">据纽约时报4月12日报道，中美已在瑞典斯德哥尔摩正式重启关税减免贸易谈判。特朗普访华进入最后倒计时（预计4月21日前后）。中方秉持开放理性态度，呼吁美方摒弃双重标准。100%汽车关税等极端施压手段和中东危机使美国急需与中国稳定关系。</p>
 </div>
 <div class="section">
-<div class="section-title">💬 精选热评</div>
-<div class="comment">四天见四国 效率比我刷相亲对象还高</div>
-<div class="comment">美国搞封锁打关税 中国搞外交拉朋友 两种路线的较量</div>
-<div class="comment">"战略定力"在当下环境里分量很重 谁都不跟着别人节奏走</div>
-<div class="comment">西班牙首相4年第4次来 欧洲不是铁板一块 有人想跟中国做生意</div>
-<div class="comment">越南苏林来中国而不是去美国 这选择本身就是信号</div>
+<div class="section-title">🎯 走向预判</div>
+<div class="prediction"><span class="prob">40%</span>走向A：访华期间达成阶段性协议，部分关税减免+稀土合作框架</div>
+<div class="prediction"><span class="prob">35%</span>走向B：形式大于内容，双方各说各话，核心分歧未解</div>
+<div class="prediction"><span class="prob">25%</span>走向C：因中东局势或国内反对声浪，访华推迟或缩减规模</div>
+</div>
+
+<div class="direction-block">
+<div class="direction-header">📌 走向A（40%）达成阶段性协议 — 评论储备</div>
+<div class="angle-group"><div class="angle-title">💬 角度1：经贸务实合作</div>
+<div class="comment">① 特朗普来了总得带点成果回去交差吧，不然国内怎么交代</div>
+<div class="comment">② 关税减免+稀土合作，这两样是最现实的成果选项</div>
+<div class="comment">③ 美企其实一直在游说降关税，华尔街的压力比白宫大多了</div>
+<div class="comment">④ 中方也不是不愿意合作，但前提是平等互利，不是你说啥就是啥</div>
+<div class="comment">⑤ 阶段性协议就是"先易后难"，把能谈的先谈了，难啃的以后再说</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2：政治层面考量</div>
+<div class="comment">① 特朗普需要在中期选举前展示外交成果，访华是最好的舞台</div>
+<div class="comment">② 但国内鹰派盯着呢，让步太大会被骂"对华软弱"</div>
+<div class="comment">③ 中方的立场很清楚：合作可以，但不接受单边施压</div>
+<div class="comment">④ 这次访华的外交姿态比实际成果更重要，双方都需要一个"双赢"的叙事</div>
+<div class="comment hot-comment">⑤ 🏆"带着关税来，带着协议走——特朗普的中国行，就是一场用面子换里子的交易" ——观棋者</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度3：对全球经济的影响</div>
+<div class="comment">① 中美哪怕只是"不打了"这个信号，全球股市都能涨一波</div>
+<div class="comment">② 供应链企业最关心关税，哪怕降5%都能省几十亿</div>
+<div class="comment">③ 但别高兴太早，特朗普回去后加关税的历史又不是没有</div>
+<div class="comment">④ 稀土合作如果真的落地，对全球科技产业是个大利好</div>
+<div class="comment">⑤ 中美关系的底层逻辑没变，竞争还是竞争，只是换个姿势</div></div>
+</div>
+
+<div class="direction-block">
+<div class="direction-header">📌 走向B（35%）形式大于内容 — 评论储备</div>
+<div class="angle-group"><div class="angle-title">💬 角度1：作秀VS实质</div>
+<div class="comment">① 又是"历史性访问""里程碑意义"？看多了套话已经免疫了</div>
+<div class="comment">② 合照握手签字仪式一套走完，然后各回各家各加各的税</div>
+<div class="comment">③ 上次去达沃斯不也签了一堆？后来都落实了吗？</div>
+<div class="comment">④ 中方外交辞令都是"深入坦诚交流"，翻译一下就是"吵了一架"</div>
+<div class="comment">⑤ 特朗普的deal就是：签的时候笑哈哈，回去就翻脸不认账</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2：核心分歧难解</div>
+<div class="comment">① 台湾问题、芯片制裁、南海——这些大问题一个都谈不拢</div>
+<div class="comment">② 关税只是表面文章，真正的博弈在科技和军事领域</div>
+<div class="comment">③ 美国想要的是中国让步，中国想要的是美国尊重——诉求完全不同</div>
+<div class="comment">④ 100%汽车关税都敢加的人，你指望他真心来谈合作？</div>
+<div class="comment">⑤ 中美关系的结构性矛盾不是一次访问能解决的，这个道理大家都懂</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度3：各方反应预判</div>
+<div class="comment">① 美媒会说"特朗普的中国之行取得突破性进展"</div>
+<div class="comment">② 中媒会说"中方重申了一贯立场，双方达成若干共识"</div>
+<div class="comment">③ 然后两边老百姓都觉得对方吃亏了——经典剧情</div>
+<div class="comment">④ 华尔街会先涨一波然后发现没实质利好再跌回来</div>
+<div class="comment">⑤ 最终还是中美关系的日常：边打边谈边合作边对抗</div></div>
+</div>
+
+<div class="direction-block">
+<div class="direction-header">📌 走向C（25%）访华推迟或缩减 — 评论储备</div>
+<div class="angle-group"><div class="angle-title">💬 角度1：中东危机拖累</div>
+<div class="comment">① 霍尔木兹海峡又关了，特朗普可能得先处理中东再来中国</div>
+<div class="comment">② 一边和伊朗对峙一边访华，精力够用吗？</div>
+<div class="comment">③ 如果停火彻底崩盘，特朗普可能取消所有出访计划</div>
+<div class="comment">④ 中东那边随时可能升级，万一访华期间出大事就尴尬了</div>
+<div class="comment">⑤ 国内共和党鹰派可能会施压："先搞定伊朗再去中国"</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2：国内政治风险</div>
+<div class="comment">① 美国国内反华情绪依然很高，访华被骂"卖国"的风险不小</div>
+<div class="comment">② 如果民调显示选民不支持，特朗普随时可以找借口取消</div>
+<div class="comment">③ 国会那帮对华强硬派不会乐意看到特朗普去中国"示好"</div>
+<div class="comment">④ 访华缩减规模也是一种选项：去是去了，但只待半天啥也不签</div>
+<div class="comment">⑤ 政客永远把选票放第一位，外交能牺牲就牺牲</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度3：对中方的影响</div>
+<div class="comment">① 中方肯定做了多手准备，来不来都行，不卑不亢</div>
+<div class="comment">② 如果推迟了反而说明美国内部问题很大，对中方不一定是坏事</div>
+<div class="comment">③ 中国不缺朋友，特朗普不来还有很多国家排队要来</div>
+<div class="comment">④ 别把中美关系的希望都压在一次访问上，格局得大一点</div>
+<div class="comment hot-comment">⑤ 🏆"来了是谈判，不来也是谈判——缺席本身就是最大的表态" ——战略家</div></div>
 </div>
 </div>
 </div>
 
-<!-- A级事件3: 中美关税谈判 -->
+<!-- A级事件3 -->
 <div class="event-card">
 <div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">中美重启斯德哥尔摩关税减免谈判</span>
+<span class="event-title">日舰选《马关条约》签订日过航台海·解放军全程跟监13小时</span>
 <span class="event-heat">🔥🔥🔥🔥</span>
-<span class="event-window window-fade">🟡谈判进展跟踪</span>
 </div>
 <div class="event-body">
 <div class="section">
 <div class="section-title">📋 事件背景</div>
-<p style="font-size:13px;color:var(--text2)">4月12日《纽约时报》：中美正式重启关税减免谈判，地点斯德哥尔摩。自2025年5月日内瓦以来最重要经贸对话。美最高法否决IEEPA关税→触发贸易法122条。贝森特密集发声。中方反域外管辖条例被视为谈判筹码。</p>
+<p style="font-size:13px;color:var(--text2)">4月17日，日本"雷"号驱逐舰过航台湾海峡——正是131年前《马关条约》签订日（1895年4月17日），该条约导致日本割占台湾。选择这一日期被广泛解读为蓄意挑衅。解放军东部战区组织海空兵力全程跟监警戒（4:02至17:50共约13小时）。外交部+国防部双重强硬回应。</p>
 </div>
 <div class="section">
-<div class="section-title">💬 精选热评</div>
-<div class="comment">终于重启了！企业等这天等了快一年</div>
-<div class="comment">斯德哥尔摩综合征：谈着谈着就习惯了——两国企业已适应高关税</div>
-<div class="comment">美国最高法院否定IEEPA关税 特朗普只能换招——这就是谈的动力</div>
-<div class="comment">中国出了反域外管辖条例 手里有牌 谈判底气更足</div>
-<div class="comment">不管结果如何 重回对话总比互扔关税好 至少方向对了</div>
+<div class="section-title">🎯 走向预判</div>
+<div class="prediction"><span class="prob">45%</span>走向A：中方持续施压，日方低调回应避免升级</div>
+<div class="prediction"><span class="prob">35%</span>走向B：引发中日关系新一轮冷却期</div>
+<div class="prediction"><span class="prob">20%</span>走向C：日方在美国压力下继续增加类似行动频率</div>
+</div>
+
+<div class="direction-block">
+<div class="direction-header">📌 走向A（45%）中方施压日方低调 — 评论储备</div>
+<div class="angle-group"><div class="angle-title">💬 角度1：对日本挑衅的愤怒</div>
+<div class="comment">① 4月17号？？？131年前的今天签的马关条约！！这日本是故意的吧！！</div>
+<div class="comment">② 从台湾割出去的那天到现在，日本对台湾的执念从来没断过</div>
+<div class="comment">③ 选这个日子就是在中国人伤口上撒盐，没有任何洗白的可能</div>
+<div class="comment">④ 日本外交部说"自由航行"？那我们也去津轻海峡自由航行一下？</div>
+<div class="comment">⑤ 解放军全程跟监13个小时，这个耐心和专业度我给满分</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2：中日关系走向</div>
+<div class="comment">① 中日关系本来就微妙，这一搞更冷了，下次首脑会面不知猴年马月</div>
+<div class="comment">② 日本在美国和中国之间选择当美国的马前卒，代价迟早要付</div>
+<div class="comment">③ 经济上离不开中国，军事上跟着美国——日本的分裂人格又犯了</div>
+<div class="comment">④ 中方的反制肯定不止是跟监，外交和经济层面的施压才是重头</div>
+<div class="comment">⑤ 安倍那一代还知道平衡，现在的日本政客是真的不怕死</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度3：台海安全形势</div>
+<div class="comment">① 今年台海过航的外国军舰也太多了，英国日本一个接一个</div>
+<div class="comment">② 每来一次解放军就出动一次，这不就是在帮我们练兵嘛</div>
+<div class="comment">③ 台独分裂势力看到外国军舰来就高兴，殊不知真打起来谁保你？</div>
+<div class="comment">④ 台海不是国际水域，不是谁想来就来的！</div>
+<div class="comment hot-comment">⑤ 🏆"131年前你签条约割台湾，131年后你开军舰过台海——历史不是轮回，是你在原地踏步" ——历史课代表</div></div>
+</div>
+
+<div class="direction-block">
+<div class="direction-header">📌 走向B（35%）中日关系新一轮冷却 — 评论储备</div>
+<div class="angle-group"><div class="angle-title">💬 角度1：外交层面冲击</div>
+<div class="comment">① 中日第五轮战略对话估计又要黄了，辛苦攒的缓和全白搭</div>
+<div class="comment">② 日本大使馆的微博评论区估计已经沦陷了吧😂</div>
+<div class="comment">③ 日企在华投资可能受到影响，民间抵制情绪一旦起来很难控制</div>
+<div class="comment">④ 外交部措辞从"关切"变成"坚决有力应对"，这个升级不是小事</div>
+<div class="comment">⑤ 日本以为跟着美国就有安全感？等美国撤了看你怎么办</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2：军事对峙常态化</div>
+<div class="comment">① 解放军东部战区现在估计习惯了：又来了？出动！</div>
+<div class="comment">② 每次跟监都是实战练兵，从这个角度说还得谢谢日本送上门的训练机会</div>
+<div class="comment">③ 但常态化不代表没风险，万一哪次擦枪走火就不是跟监那么简单了</div>
+<div class="comment">④ 台海周边的军事密度越来越高，事故风险也在上升</div>
+<div class="comment">⑤ 日本自卫队的预算年年涨，就是为了来我们门口秀存在感？</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度3：历史问题的再次激化</div>
+<div class="comment">① 4.17这个日期选择暴露了日本的真实心态——对侵华历史毫无悔意</div>
+<div class="comment">② 日本右翼一直在试探中国的底线，这次又是一次试探</div>
+<div class="comment">③ 中国的年轻人不会忘记历史的，这一点日本低估了</div>
+<div class="comment">④ 教科书都能改的国家，你还指望它尊重历史？</div>
+<div class="comment">⑤ 日本越挑衅，中国的统一意志越坚定——这个因果关系他们理解不了</div></div>
+</div>
+
+<div class="direction-block">
+<div class="direction-header">📌 走向C（20%）常态化挑衅持续 — 评论储备</div>
+<div class="angle-group"><div class="angle-title">💬 角度1：美日同盟的底层逻辑</div>
+<div class="comment">① 日本不是自己要来的，是美国让它来的——跟班就得听话</div>
+<div class="comment">② 美日同盟的核心就是用日本当炮灰牵制中国，日本心里清楚但不敢反抗</div>
+<div class="comment">③ 以后这种事只会越来越多，因为美国在加强"印太战略"</div>
+<div class="comment">④ 日本自卫队扩军备战，目标直指中国，这已经不是秘密了</div>
+<div class="comment">⑤ 但美国真打起来会保日本吗？看看乌克兰就知道了</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2：中方的应对策略</div>
+<div class="comment">① 常态化挑衅就用常态化应对，解放军的反应已经越来越快越来越专业</div>
+<div class="comment">② 除了军事跟监，经济手段也该用起来了——让日本感受到代价</div>
+<div class="comment">③ 稀土管制、赴日旅游限制、贸易措施——牌很多，看什么时候打</div>
+<div class="comment">④ 台海问题上中国的耐心是有限的，别以为一直不出手就是不敢</div>
+<div class="comment">⑤ 最好的反制就是加速自身发展，让挑衅变得毫无意义</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度3：长期影响</div>
+<div class="comment">① 中日关系回不到过去了，这是大多数人的共识</div>
+<div class="comment">② 经济上脱钩太难，但政治和军事上的对抗会持续加深</div>
+<div class="comment">③ 下一代中国人对日本的印象，正在被这些挑衅行为重新塑造</div>
+<div class="comment">④ 台海是中国的核心利益，这一点没有任何谈判空间</div>
+<div class="comment hot-comment">⑤ 🏆"来一次跟一次，来十次跟十次——台海不缺航道，缺的是某些国家对历史的记忆" ——钢铁直男</div></div>
 </div>
 </div>
 </div>
@@ -501,52 +533,44 @@ footer a{color:var(--accent2);text-decoration:none}
 <div class="event-card">
 <div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-b">B级</span>
-<span class="event-title">流感阳性率连续3周上升·乙流占比过半</span>
+<span class="event-title">我国摧毁特大假酒网络·涉案2.6亿元·查获近2万箱</span>
 <span class="event-heat">🔥🔥🔥</span>
 </div>
 <div class="event-body">
-<div class="section">
-<p style="font-size:13px;color:var(--text2)">全国流感病毒检测阳性率连升3周（第12-14周），16.3%。主要毒株从甲流转为乙流。上次乙流高峰2023年12月-2024年1月，距今两年人群免疫力下降。北方高于南方。中疾控提醒戴口罩。</p>
-</div>
+<div class="section"><p style="font-size:13px;color:var(--text2)">4月19日，市场监管总局通报，山西、四川两省联合行动，成功摧毁一个特大制售商标侵权和伪劣白酒的违法犯罪网络。查获侵权假冒白酒近2万箱，已查明涉案金额2.6亿元。</p></div>
 </div>
 </div>
 
 <div class="event-card">
 <div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-b">B级</span>
-<span class="event-title">国办"9号文"药品价格改革·支持创新药自主定价</span>
+<span class="event-title">NBA季后赛火湖大战G1·杜兰特膝伤出战成疑</span>
 <span class="event-heat">🔥🔥🔥</span>
 </div>
 <div class="event-body">
-<div class="section">
-<p style="font-size:13px;color:var(--text2)">4月14日国办印发《健全药品价格形成机制若干意见》，构建"市场主导、医保引导、多元支撑、动态调整"药价新体系，支持创新药自主定价。被称为药品价格领域最重磅改革文件。</p>
-</div>
+<div class="section"><p style="font-size:13px;color:var(--text2)">4月19日8:30火箭vs湖人季后赛首轮G1开打。杜兰特右膝挫伤出战成疑，东契奇、里夫斯确定缺席。杜兰特季后赛总得分4985分，距超越邓肯升至历史第五仅差40分。</p></div>
 </div>
 </div>
 
 <div class="event-card">
 <div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-b">B级</span>
-<span class="event-title">反外国不当域外管辖条例正式实施</span>
+<span class="event-title">智元机器人2026合作伙伴大会·宣布进入"部署态"</span>
 <span class="event-heat">🔥🔥🔥</span>
 </div>
 <div class="event-body">
-<div class="section">
-<p style="font-size:13px;color:var(--text2)">4月13日国务院公布，自公布之日起施行。维护国家主权安全发展利益，被视为中美经贸博弈新工具。</p>
-</div>
+<div class="section"><p style="font-size:13px;color:var(--text2)">4月17日智元机器人在上海举办2026合作伙伴大会，2500位来自34个国家的合作伙伴参会。发布4款本体新品和4个AI大模型，宣布具身智能产业从"开发态"迈向"部署态"。精灵G2在龙旗科技工厂实现全球首个具身智能产线规模化落地。</p></div>
 </div>
 </div>
 
 <div class="event-card">
 <div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-b">B级</span>
-<span class="event-title">第六届消博会闭幕·3400+品牌创纪录</span>
+<span class="event-title">新西兰P-8A军机持续抵近中国周边空域侦察</span>
 <span class="event-heat">🔥🔥🔥</span>
 </div>
 <div class="event-body">
-<div class="section">
-<p style="font-size:13px;color:var(--text2)">4月13-18日海南举办，60+国家地区超3400个品牌参展，国际展品占比65%。聚焦消费科技、AI、低空飞行、智能网联汽车等新消费热点。加拿大主宾国，上海主宾市。</p>
-</div>
+<div class="section"><p style="font-size:13px;color:var(--text2)">4月17日外交部发言人郭嘉昆表示，新西兰空军一架P-8A反潜巡逻机持续在黄海、东海海空域抵近侦察滋扰，损害中方安全利益，增加误解误判风险，也对相关空域民航航班正常运行造成干扰。中方已作出坚决有力应对。国防部亦发表声明。</p></div>
 </div>
 </div>
 
@@ -554,23 +578,23 @@ footer a{color:var(--accent2);text-decoration:none}
 <div class="rhino-section">
 <h2>🦏 灰犀牛预警</h2>
 <div class="rhino-item">
-<div class="title">🦏 美伊停火4月22日到期——最大不确定性窗口</div>
-<div class="desc">两周停火协议4月22日到期。伊斯兰堡谈判已破裂，下轮谈判未定。伊朗重新关闭海峡+炮击油轮。如不续签，全面冲突升级概率极高。</div>
+<div class="title">⚠️ 美伊停火4月22日到期·最后72小时博弈</div>
+<div class="desc">停火仅剩3天，美军准备强行登临伊朗关联油轮和商船施压，以色列已空袭黎巴嫩，多线裂痕同时出现。下周一为巴基斯坦可能重启谈判的关键窗口。</div>
 </div>
 <div class="rhino-item">
-<div class="title">🦏 美以12000人地面入侵伊朗应急计划</div>
-<div class="desc">3月25日曝光美以评估向伊朗部署约12000地面部队应急预案，海湾国家可能提供资金支持。五角大楼扩大打击选项清单。</div>
+<div class="title">⚠️ 特朗普访华预计4月21日前后·中美关税减免谈判进行中</div>
+<div class="desc">斯德哥尔摩谈判重启中，访华日期迫近。中东局势若失控或影响行程安排。</div>
 </div>
 <div class="rhino-item">
-<div class="title">🦏 中美关税暂停2026年11月到期</div>
-<div class="desc">24%对等关税暂停至2026年11月10日。距到期7个月，如斯德哥尔摩谈判无果，提前恢复高关税不无可能。</div>
+<div class="title">⚠️ IATA警告欧洲5月底或因缺油出现"停飞潮"</div>
+<div class="desc">国际航协警告，若霍尔木兹海峡持续关闭，欧洲航空燃油储备将在5月底前耗尽，部分航线面临停飞风险。</div>
 </div>
 </div>
 
 <footer>
-<p>📡 热点监控看板 · 数据截至 2026-04-19 07:00</p>
-<p>覆盖12大垂类+热搜TOP+灰犀牛+军事5子维度 · 14项自检全部通过</p>
-<p style="margin-top:8px">Powered by <a href="#">Hot Monitor System</a> · Auto-deployed via GitHub Pages</p>
+<p>📡 数据来源：新华社、央视网、外交部、人民网、知乎、微博、B站、抖音等</p>
+<p>🤖 由AI热点监控系统自动生成 | 更新于 2026-04-19 18:00</p>
+<p>💬 评论为拟人化运营储备，仅供参考</p>
 </footer>
 </div>
 
@@ -579,11 +603,6 @@ function toggleEvent(header){
 const body=header.nextElementSibling;
 body.classList.toggle('active');
 }
-// 默认展开第一个S级事件
-document.addEventListener('DOMContentLoaded',()=>{
-const first=document.querySelector('.event-body');
-if(first)first.classList.add('active');
-});
 </script>
 </body>
 </html>
