@@ -32,7 +32,7 @@ header .sub{color:var(--text2);font-size:14px;margin-bottom:16px}
 .date-header{font-size:18px;font-weight:700;color:var(--accent2);padding:12px 0;border-bottom:2px solid var(--border);margin-bottom:12px;display:flex;align-items:center;gap:8px}
 .date-header .count{font-size:12px;color:var(--text2);background:var(--card2);padding:2px 10px;border-radius:12px}
 
-.report-card{background:var(--card);border-radius:12px;margin:10px 0;overflow:hidden;border:1px solid var(--border);transition:all .2s;display:flex;align-items:stretch}
+.report-card{background:var(--card);border-radius:12px;margin:10px 0;overflow:hidden;border:1px solid var(--border);transition:all .2s;display:flex;align-items:stretch;text-decoration:none;color:inherit}
 .report-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--accent)}
 .report-time{padding:16px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:90px;background:var(--card2);border-right:1px solid var(--border)}
 .report-time .time{font-size:22px;font-weight:700;color:var(--accent2)}
@@ -40,12 +40,12 @@ header .sub{color:var(--text2);font-size:14px;margin-bottom:16px}
 .report-info{flex:1;padding:14px 20px;display:flex;flex-direction:column;justify-content:center}
 .report-info .title{font-size:15px;font-weight:600;margin-bottom:4px}
 .report-info .meta{font-size:12px;color:var(--text2)}
-.report-link{padding:16px 20px;display:flex;align-items:center;justify-content:center;font-size:20px;text-decoration:none;color:var(--accent2);transition:color .2s}
+.report-link{padding:16px 20px;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--accent2);transition:color .2s}
 .report-link:hover{color:var(--accent)}
 
 .empty{text-align:center;padding:80px 20px;color:var(--text2)}
 .empty .icon{font-size:48px;margin-bottom:16px}
-.empty .msg{font-size:16px}
+.empty .msg{font-size:16px;line-height:1.8}
 
 footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 footer p{margin:4px 0}
@@ -87,7 +87,7 @@ footer a:hover{text-decoration:underline}
 <div id="content">
 <div class="loading">
 <div class="spinner"></div>
-<p>正在从 GitHub 加载历史报告列表...</p>
+<p>正在加载历史报告列表...</p>
 </div>
 </div>
 
@@ -98,12 +98,11 @@ footer a:hover{text-decoration:underline}
 </div>
 
 <script>
-const REPO_API = 'https://api.github.com/repos/honeyzheng/hot-monitor-dashboard/contents/history';
-const BASE_URL = '';  // 同目录
+// 从静态 manifest.json 加载历史列表（不依赖 GitHub API，永不限流）
+const MANIFEST_URL = 'manifest.json';
 
 let allReports = [];
 
-// 时段映射
 const periodMap = {
   '07': {name: '早报', emoji: '🌅'},
   '09': {name: '早间报', emoji: '☀️'},
@@ -117,7 +116,6 @@ const periodMap = {
 };
 
 function parseFileName(name) {
-  // 格式: 20260421_1500.html
   const m = name.match(/^(\d{4})(\d{2})(\d{2})_(\d{2})(\d{2})\.html$/);
   if (!m) return null;
   const [, year, month, day, hour, min] = m;
@@ -136,15 +134,17 @@ function parseFileName(name) {
 
 async function loadReports() {
   try {
-    const resp = await fetch(REPO_API);
+    const resp = await fetch(MANIFEST_URL + '?t=' + Date.now());
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    const files = await resp.json();
+    const data = await resp.json();
+    
+    // manifest.json 格式: { "files": ["20260421_1800.html", ...] }
+    const files = data.files || [];
     
     allReports = files
-      .filter(f => f.name.endsWith('.html') && f.name !== 'index.html')
-      .map(f => parseFileName(f.name))
+      .map(f => parseFileName(f))
       .filter(Boolean)
-      .sort((a, b) => b.sortKey.localeCompare(a.sortKey));  // 最新的在前
+      .sort((a, b) => b.sortKey.localeCompare(a.sortKey));
 
     renderStats();
     renderReports(allReports);
@@ -152,8 +152,13 @@ async function loadReports() {
     console.error('Load failed:', err);
     document.getElementById('content').innerHTML = `
       <div class="empty">
-        <div class="icon">😔</div>
-        <div class="msg">加载失败，可能是网络问题或尚无历史报告<br><small style="color:var(--text2)">${err.message}</small></div>
+        <div class="icon">📭</div>
+        <div class="msg">暂无历史报告<br><br>
+        <span style="font-size:13px;color:var(--text2)">
+          历史报告会在每次定时监控任务执行后自动归档<br>
+          每天最多6份（7:00 / 9:00 / 12:00 / 15:00 / 18:00 / 21:00）<br>
+          请稍后再来查看 ~
+        </span></div>
       </div>`;
   }
 }
@@ -162,8 +167,8 @@ function renderStats() {
   const total = allReports.length;
   const days = new Set(allReports.map(r => r.date)).size;
   const latest = allReports.length > 0 ? allReports[0].dateLabel : '-';
-  document.getElementById('totalCount').textContent = total;
-  document.getElementById('dayCount').textContent = days;
+  document.getElementById('totalCount').textContent = total || '-';
+  document.getElementById('dayCount').textContent = days || '-';
   document.getElementById('latestDate').textContent = latest;
 }
 
@@ -177,7 +182,6 @@ function renderReports(reports) {
     return;
   }
 
-  // 按日期分组
   const groups = {};
   reports.forEach(r => {
     if (!groups[r.date]) groups[r.date] = [];
@@ -191,7 +195,7 @@ function renderReports(reports) {
       <div class="date-header">📅 ${first.fullDateLabel} <span class="count">${items.length}份报告</span></div>`;
     
     for (const r of items) {
-      html += `<a href="${r.fileName}" class="report-card" style="text-decoration:none;color:inherit">
+      html += `<a href="${r.fileName}" class="report-card">
         <div class="report-time">
           <div class="time">${r.time}</div>
           <div class="period">${r.period.name}</div>
@@ -209,13 +213,11 @@ function renderReports(reports) {
   document.getElementById('content').innerHTML = html;
 }
 
-// 筛选功能
+// 筛选
 document.getElementById('filterBar').addEventListener('click', (e) => {
   if (!e.target.classList.contains('filter-btn')) return;
-  
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   e.target.classList.add('active');
-  
   const filter = e.target.dataset.filter;
   if (filter === 'all') {
     renderReports(allReports);
@@ -224,7 +226,6 @@ document.getElementById('filterBar').addEventListener('click', (e) => {
   }
 });
 
-// 启动
 loadReports();
 </script>
 </body>
