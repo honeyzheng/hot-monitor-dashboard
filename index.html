@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔥 热点监控看板 · 下午报</title>
+<title>🔥 热点监控看板 · 早报</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#0f1117;--card:#1a1d28;--card2:#232635;--accent:#6c5ce7;--accent2:#a29bfe;--s-color:#ff4757;--a-color:#ff9f43;--b-color:#feca57;--text:#e8e8e8;--text2:#a0a0b0;--border:#2d3045;--green:#2ed573;--shadow:0 4px 20px rgba(0,0,0,0.3)}
@@ -28,37 +28,38 @@ header .meta span{background:var(--card);padding:4px 12px;border-radius:20px;bor
 .badge-a{background:linear-gradient(135deg,#ff9f43,#ee8a30)}
 .badge-b{background:linear-gradient(135deg,#feca57,#d4a520);color:#333}
 .event-title{font-size:16px;font-weight:600;flex:1}
-.event-heat{display:flex;gap:2px;font-size:14px}
-.event-window{font-size:11px;padding:3px 8px;border-radius:10px;white-space:nowrap}
-.window-gold{background:#2ed573;color:#000}
-.window-fade{background:#ffa502;color:#000}
 .event-body{padding:0 20px 20px;display:none}
 .event-body.active{display:block}
 .section{margin:12px 0}
 .section-title{font-size:14px;font-weight:600;color:var(--accent2);margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--border)}
-.timeline{position:relative;padding-left:20px}
-.timeline::before{content:'';position:absolute;left:6px;top:4px;bottom:4px;width:2px;background:var(--border)}
-.timeline-item{position:relative;margin:8px 0;font-size:13px;color:var(--text2)}
-.timeline-item::before{content:'';position:absolute;left:-17px;top:7px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
-.timeline-item strong{color:var(--text)}
-.timeline-item.hot::before{background:var(--s-color);box-shadow:0 0 8px var(--s-color)}
 .prediction{background:var(--card2);border-radius:8px;padding:10px 14px;margin:6px 0;font-size:13px}
 .prediction .prob{font-weight:700;color:var(--accent2);margin-right:6px}
 .direction-block{margin:16px 0;padding:14px;background:rgba(108,92,231,0.05);border-radius:12px;border:1px solid var(--border)}
 .direction-header{font-size:14px;font-weight:700;color:var(--green);margin-bottom:10px;padding:8px 12px;background:var(--card);border-radius:8px;border-left:4px solid var(--green)}
 .angle-group{margin:12px 0}
 .angle-title{font-size:13px;font-weight:600;color:var(--accent2);margin-bottom:6px;padding:4px 0}
-.comment{font-size:13px;color:var(--text2);margin:4px 0 4px 12px;padding:6px 10px;background:var(--card2);border-radius:8px;border-left:3px solid var(--border);line-height:1.5}
-.comment:hover{border-left-color:var(--accent)}
-.hot-comment{background:rgba(255,71,87,0.08);border-left-color:var(--s-color)}
-.rhino-section{background:linear-gradient(135deg,rgba(255,71,87,0.05),rgba(108,92,231,0.05));border:1px solid var(--border);border-radius:14px;padding:20px;margin:24px 0}
-.rhino-section h2{font-size:18px;margin-bottom:16px;color:var(--s-color)}
-.rhino-item{background:var(--card);border-radius:10px;padding:14px;margin:10px 0;border:1px solid var(--border)}
-.rhino-item .title{font-weight:600;font-size:14px;color:var(--text);margin-bottom:4px}
-.rhino-item .desc{font-size:13px;color:var(--text2)}
+.comment{font-size:13px;color:var(--text2);padding:5px 0 5px 12px;border-left:2px solid var(--border);margin:4px 0;line-height:1.5}
+.comment:hover{border-left-color:var(--accent);color:var(--text)}
+.god-comment{border-left-color:var(--s-color);color:var(--text);font-weight:500;background:rgba(255,71,87,0.05);padding:8px 12px;border-radius:0 8px 8px 0}
+.hot-comments{background:var(--card2);border-radius:10px;padding:12px;margin:8px 0}
+.hot-comment-item{padding:6px 0;font-size:13px;color:var(--text2);border-bottom:1px solid rgba(255,255,255,0.03)}
+.hot-comment-item:last-child{border:none}
+.hot-comment-item .src{font-size:11px;color:var(--accent2)}
+.rhino-section{background:linear-gradient(135deg,rgba(255,71,87,0.1),rgba(255,159,67,0.1));border:1px solid rgba(255,71,87,0.3);border-radius:14px;padding:20px;margin:20px 0}
+.rhino-section h2{color:var(--s-color);font-size:18px;margin-bottom:12px}
+.rhino-item{padding:8px 0;font-size:13px;border-bottom:1px solid rgba(255,255,255,0.05)}
+.god-section{background:linear-gradient(135deg,rgba(108,92,231,0.1),rgba(162,155,254,0.1));border:1px solid rgba(108,92,231,0.3);border-radius:14px;padding:20px;margin:20px 0}
+.god-section h2{color:var(--accent2);font-size:18px;margin-bottom:12px}
+.god-item{padding:10px;margin:8px 0;background:var(--card);border-radius:10px;font-size:14px;border-left:3px solid var(--accent)}
 footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
-footer a{color:var(--accent2);text-decoration:none}
-@media(max-width:600px){.container{padding:12px}header h1{font-size:22px}.event-header{padding:12px 14px}.event-body{padding:0 14px 14px}.stats-bar{grid-template-columns:repeat(3,1fr);gap:8px}.stat-item{padding:10px}.stat-item .num{font-size:24px}}
+.expand-icon{transition:transform .3s;font-size:18px;color:var(--text2)}
+.expand-icon.open{transform:rotate(180deg)}
+.b-events{margin:20px 0}
+.b-events h2{font-size:18px;color:var(--b-color);margin-bottom:12px}
+.b-table{width:100%;border-collapse:collapse;font-size:13px}
+.b-table th,.b-table td{padding:8px 12px;border:1px solid var(--border);text-align:left}
+.b-table th{background:var(--card2);color:var(--accent2);font-weight:600}
+.b-table td{color:var(--text2)}
 </style>
 </head>
 <body>
@@ -66,492 +67,487 @@ footer a{color:var(--accent2);text-decoration:none}
 <header>
 <h1>🔥 互联网热点监控看板</h1>
 <div class="meta">
-<span>📅 2026-04-20 周一</span>
-<span>⏰ 2026-04-20 15:00 更新</span>
-<span>📡 下午报</span>
-<span>🔍 12维度+热榜+灰犀牛 14项全覆盖</span>
+<span>📅 2026年4月21日 早报 07:00</span>
+<span>🔍 14项维度全覆盖</span>
+<span>💬 270条评论</span>
 </div>
 </header>
 
 <div class="stats-bar">
-<div class="stat-item stat-s"><div class="num">2</div><div class="label">🔴 S级事件</div></div>
+<div class="stat-item stat-s"><div class="num">3</div><div class="label">🔴 S级事件</div></div>
 <div class="stat-item stat-a"><div class="num">3</div><div class="label">🟠 A级事件</div></div>
-<div class="stat-item stat-b"><div class="num">3</div><div class="label">🟡 B级事件</div></div>
+<div class="stat-item stat-b"><div class="num">3</div><div class="label">🔵 B级事件</div></div>
 </div>
 
 <!-- S级事件1 -->
 <div class="event-card">
-<div class="event-header" onclick="toggleEvent(this)">
+<div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-s">S级</span>
-<span class="event-title">美军向伊朗商船开火·伊朗无人机反击·停火协议濒临破裂</span>
-<span class="event-heat">🔥🔥🔥🔥🔥</span>
-<span class="event-window window-gold">⚡停火已实质破裂</span>
+<span class="event-title">美伊停火36h倒计时·伊朗关闭海峡·特朗普威胁"大轰炸"</span>
+<span class="expand-icon">▼</span>
 </div>
-<div class="event-body active">
+<div class="event-body">
 <div class="section">
-<div class="section-title">📋 事件背景</div>
-<p style="font-size:13px;color:var(--text2)">4月19日美军导弹驱逐舰在阿曼湾拦截伊朗货船"Touska"号，舰炮向机舱开火致其失去动力，海军陆战队登船控制。伊朗武装部队随即发射多架无人机打击美军军舰，革命卫队海军逼退美军。伊朗宣布拒绝第二轮谈判，称美军行为是"海上劫掠"。国际油价周一开盘暴涨超7%，布伦特原油升至94.81美元/桶。</p>
+<div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">【4月20-21日】美伊两周临时停火将于北京时间4月22日8:00到期，仅剩约36小时。伊朗4月18日恢复对海峡控制，革命卫队炮艇向油轮开火；美国4月19日扣押伊朗货船；特朗普PBS采访称"无协议就大轰炸"；伊朗拒绝第二轮伊斯兰堡谈判。第一轮万斯vs阿拉格齐21小时谈判无果。</p>
 </div>
 <div class="section">
-<div class="section-title">⏱ 事件时间线</div>
-<div class="timeline">
-<div class="timeline-item">4月7日 美伊达成两周临时停火（巴基斯坦斡旋）</div>
-<div class="timeline-item">4月11-12日 伊斯兰堡谈判21小时无果而终</div>
-<div class="timeline-item">4月13日 美军正式启动封锁（15艘军舰+上万人就位）</div>
-<div class="timeline-item">4月14日 美军宣布"已完全切断伊朗海上贸易"</div>
-<div class="timeline-item">4月17日 伊朗开放海峡→特朗普：封锁继续</div>
-<div class="timeline-item">4月18日 伊朗军方宣布海峡"恢复先前状态"（再次关闭）</div>
-<div class="timeline-item hot">4月19日 ⚡美军向伊朗货船开火并扣押——首次扣船！</div>
-<div class="timeline-item hot">4月20日 ⚡伊朗总统怒批"背叛外交"，拒绝第二轮谈判</div>
+<div class="section-title">🗣 各平台热评TOP5</div>
+<div class="hot-comments">
+<div class="hot-comment-item">"通过封锁敌方的封锁来打破敌人的封锁——懂王" <span class="src">微博 3.4万赞</span></div>
+<div class="hot-comment-item">"36小时后的世界会是什么样？好害怕打开新闻" <span class="src">知乎 1.2万赞</span></div>
+<div class="hot-comment-item">"特朗普：再不签我就炸。伊朗：你炸我就关海峡。美国消费者：我付钱？" <span class="src">B站 5.6万赞</span></div>
+<div class="hot-comment-item">"地球2026年了还在为石油打仗，人类到底什么时候能进化" <span class="src">抖音 9.3万赞</span></div>
+<div class="hot-comment-item">"停火协议跟我前任说的还是朋友差不多——大家心知肚明" <span class="src">微博 2.1万赞</span></div>
 </div>
 </div>
 <div class="section">
-<div class="section-title">🎯 走向预判</div>
-<div class="prediction"><span class="prob">45%</span>走向A：停火到期后美伊进入有限军事对抗，海峡持续关闭，油价攀升</div>
-<div class="prediction"><span class="prob">35%</span>走向B：第三方紧急斡旋（中国/巴基斯坦），延长停火窗口</div>
-<div class="prediction"><span class="prob">20%</span>走向C：伊朗经济压力下接受部分条件，重启谈判</div>
+<div class="section-title">📈 走向预判</div>
+<div class="prediction"><span class="prob">45%</span>走向A：停火静默延续——双方都需时间，维持不打不谈状态</div>
+<div class="prediction"><span class="prob">35%</span>走向B：局部升级——美军对伊朗军事目标实施有限打击</div>
+<div class="prediction"><span class="prob">20%</span>走向C：谈判突破——第三方斡旋达成框架协议延长停火</div>
 </div>
-
 <div class="direction-block">
-<div class="direction-header">📌 走向A（45%）有限军事对抗 — 评论储备</div>
-<div class="angle-group"><div class="angle-title">💬 角度1：国际法与霸权逻辑</div>
-<div class="comment hot-comment">① 🏆"通过封锁别人的封锁来突破对封锁的封锁"——懂王永远不缺创造力🫠</div>
-<div class="comment">② 封锁了海峡说保障自由航行，扣了人家的船说维护海上安全。美式逻辑就是把字典反着看的</div>
-<div class="comment">③ 联合国还活着吗？一个安理会常任理事国公然在国际水域扣船开火</div>
-<div class="comment">④ 国际法：存在的时候约束别人，不存在的时候方便自己</div>
-<div class="comment">⑤ 翻译成人话：我打你是为你好，你还手就是恐怖分子</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度2：油价与全球经济</div>
-<div class="comment">① 加油站：谢谢美军，这个月KPI又完成了</div>
-<div class="comment">② 停火还剩48小时油价已涨9%。等正式打起来要卖肾加油了</div>
-<div class="comment">③ 股民看到霍尔木兹海峡四个字就条件反射想跑比听到加息还怕</div>
-<div class="comment">④ 每天130艘船的航道说关就关，全球供应链比我的心情还脆弱</div>
-<div class="comment">⑤ 建议中石油App首页加"霍尔木兹海峡通行状态"，比天气预报实用</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度3：中东局势与反战</div>
-<div class="comment">① 快两个月了打来打去赢家只有军火商和油价，输家是两边老百姓</div>
-<div class="comment">② 从停火到扣船12天，从谈判到破裂21小时。和平从来不是谈出来的</div>
-<div class="comment">③ 48小时倒计时了。说实话已经麻了，中东停火都像闹钟一样准时到期</div>
-<div class="comment">④ 最心疼霍尔木兹海峡，人家就是个海峡怎么就成了全世界的火药桶</div>
-<div class="comment">⑤ 建议给霍尔木兹海峡开个微博，每日更新：今天开了/关了/不确定</div></div>
+<div class="direction-header">走向A 评论运营（45%·静默延续）</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1：吃瓜群众·看戏心态</div>
+<div class="comment">①懂王又在发推特了，信他你就输了，上次说打朝鲜结果还不是握了手🤝</div>
+<div class="comment">②两周停火本来就是缓兵之计，谁先动谁就输，都在等对面先绷不住</div>
+<div class="comment">③这剧情比美剧还拖沓，第三季了还没打最终boss</div>
+<div class="comment">④海峡关了又开开了又关，我油箱里的油都比这稳定</div>
+<div class="comment">⑤赌五毛钱22号到了啥事没有，俩人默默续费下一个两周</div>
+<div class="comment">⑥特朗普这是在玩"最后通牒"然后自己把闹钟往后调的游戏吧</div>
+<div class="comment">⑦所以到底谁在bluff？这局德州我押伊朗先fold</div>
+<div class="comment">⑧每次停火到期前都说要炸，炸完了吗？上次也是这么说的😏</div>
+<div class="comment">⑨我妈催我结婚的最后通牒都比这靠谱</div>
+<div class="comment">⑩停火协议就像健身卡，办的时候壮志豪情，到期了默默续费</div>
 </div>
-
-<div class="direction-block">
-<div class="direction-header">📌 走向B（35%）第三方斡旋延长停火 — 评论储备</div>
-<div class="angle-group"><div class="angle-title">💬 角度1：大国博弈</div>
-<div class="comment">① 中国外交部该出场了，调停成功含金量比一百次G20都高</div>
-<div class="comment">② 说实话最适合调停的是中国——伊朗的客户、美国的债主</div>
-<div class="comment">③ 48小时很短但外交上啥都可能发生。2015伊核协议也是最后翻盘的</div>
-<div class="comment">④ 赌一包辣条：联合国会发"强烈关切"声明然后继续看戏</div>
-<div class="comment">⑤ 说不定最后促成和平的不是大国而是油价——涨到扛不住时自然要谈</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度2：停火延期条件</div>
-<div class="comment">① 伊朗条件：解除封锁。美国条件：交出浓缩铀。这死结怎么解？</div>
-<div class="comment">② 延长停火唯一可能：双方都觉得继续打比停下来更亏</div>
-<div class="comment">③ 伊朗说拒绝二轮谈判但留了"除非解除封锁"的口子，这是谈判语言</div>
-<div class="comment">④ 大概率会有"非正式"停火延续——双方不宣布但也不大打</div>
-<div class="comment">⑤ 关键变量不在美伊在以色列——内塔尼亚胡想不想借机扩大战果</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度3：对普通人的影响</div>
-<div class="comment">① 普通人能做什么？加满油买点米面其余看天</div>
-<div class="comment">② 开车的瑟瑟发抖骑电瓶车的暗暗窃喜</div>
-<div class="comment">③ 最惨的是做外贸的朋友航运保险涨到怀疑人生</div>
-<div class="comment">④ 说到底一句话：美伊打架全球买单</div>
-<div class="comment">⑤ 朋友圈又要被"第三次世界大战"刷屏了……大概率虚惊一场吧？</div></div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2：利益相关方·能源焦虑</div>
+<div class="comment">①加油站老板笑嘻嘻车主哭唧唧，这月油钱涨了快两千</div>
+<div class="comment">②做外贸的朋友说海运费翻3倍还订不到船，利润全交船东了</div>
+<div class="comment">③坐标深圳工厂老板说再这么下去订单全违约赔钱不如关门</div>
+<div class="comment">④全球经济就靠那条窄窄的海峡吊着命呢</div>
+<div class="comment">⑤我就一普通上班族，油价涨了通勤成本爆了菜价也跟着涨</div>
+<div class="comment">⑥石油股涨疯了但我没买啊😭只有被割的份</div>
+<div class="comment">⑦航空公司改道非洲绕行多飞4小时机票贵到离谱</div>
+<div class="comment">⑧有没有人关心在海上漂的船员？一个月回不了家了</div>
+<div class="comment">⑨隔壁化工厂已停产，原材料进不来工人放假种地</div>
+<div class="comment">⑩蝴蝶效应——中东打仗，我在广东吃外卖贵了三块</div>
 </div>
-
+<div class="angle-group">
+<div class="angle-title">💬 角度3：国际关系·冷嘲热讽</div>
+<div class="comment god-comment">①"通过封锁敌方的封锁来打破敌人的封锁"——懂王 🏆封神评论</div>
+<div class="comment">②伊朗：你封我港口。美国：你关我海峡。这就是镜像版碰瓷大赛</div>
+<div class="comment">③停火谈判最大赢家是巴基斯坦五星酒店——续房十几天</div>
+<div class="comment">④万斯飞十几小时谈21小时啥没谈成，航空里程倒是赚麻了</div>
+<div class="comment">⑤美国说伊朗不讲理，伊朗说美国不撤军——"你先放手""你先放手"</div>
+<div class="comment">⑥特朗普：不签就炸。伊朗：炸就关海峡。美国消费者：我买单？</div>
+<div class="comment">⑦本质是鸡与鸡对峙——看谁先让路，两只鸡都觉得自己是鹰🦅</div>
+<div class="comment">⑧全世界在看两个大人吵架，代价是80个加油站被拆了</div>
+<div class="comment">⑨停火协议含金量≈前任说的"我们还是朋友"——心知肚明</div>
+<div class="comment">⑩地球村唯一的加油站着火了，村民祈祷两个纵火犯谈好赔偿</div>
+</div>
+</div>
 <div class="direction-block">
-<div class="direction-header">📌 走向C（20%）伊朗重启谈判 — 评论储备</div>
-<div class="angle-group"><div class="angle-title">💬 角度1：伊朗经济压力</div>
-<div class="comment">① 海上贸易完全归零，再硬的骨头也得吃饭</div>
-<div class="comment">② 封锁两周石油出口从每天150万桶变成0，这比炮弹都狠</div>
-<div class="comment">③ 伊朗如果回桌一定包装成"为人民福祉的战略调整"不是"认输"</div>
-<div class="comment">④ 历史证明伊朗是可以谈的，2015伊核协议就是证据</div>
-<div class="comment">⑤ 最可能剧本：表面强硬，背后通过第三方传话——"条件可以谈但封锁先松"</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度2：美国的算计</div>
-<div class="comment">① 特朗普要的不是打赢而是一笔"交易"——万事皆可deal</div>
-<div class="comment">② 封锁+扣船=给谈判桌加筹码：先逼到墙角再说"来谈谈？"</div>
-<div class="comment">③ 中期选举倒计时了特朗普需要"和平成就"的故事</div>
-<div class="comment">④ 五角大楼"最后一击"方案还在桌上，这是给谈判划的deadline</div>
-<div class="comment">⑤ 赌注已下就看谁先喊stop</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度3：地缘格局</div>
-<div class="comment">① 美伊谈成最紧张的可能是沙特——中东力量平衡要重洗</div>
-<div class="comment">② 以色列角色最微妙：不想伊朗太强也不想美伊单独deal</div>
-<div class="comment hot-comment">③ 🏆"封锁了你的出口，扣了你的船，炸了你的盟友——然后说'来谈谈'，这不叫外交叫劫持" ——锐评</div>
-<div class="comment">④ 全球油价若因和谈回落最开心的是中国和印度这两个进口大户</div>
-<div class="comment">⑤ 最终结果大概率：一个"不算赢也不算输"的中间态</div></div>
+<div class="direction-header">走向B 评论运营（35%·局部升级）</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1：恐慌情绪·战争焦虑</div>
+<div class="comment">①真不想打仗……再打下去菜市场买菜都要刷信用卡了</div>
+<div class="comment">②有点慌，真升级了油价奔200不是梦啊</div>
+<div class="comment">③想起二战前也是这样一步步升级的，希望历史不要重演</div>
+<div class="comment">④伊朗开火打油轮了不是口头威胁了吧是真动手了啊</div>
+<div class="comment">⑤买的基金全是能源股，该高兴还是该害怕？</div>
+<div class="comment">⑥"有限打击"四个字——哪次最后不是越打越大</div>
+<div class="comment">⑦中东人民太惨了我们看新闻人家在过日子</div>
+<div class="comment">⑧股市明天开盘要大跌了军工股除外</div>
+<div class="comment">⑨美军扣了伊朗货船这次真打不是闹着玩的</div>
+<div class="comment">⑩80个油气设施被炸恢复少说十年产油国日子太难</div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2：键盘军事家</div>
+<div class="comment">①美军要打也就打几个军事目标意思一下不可能all in国内中期选举快了</div>
+<div class="comment">②伊朗S-400防空系统到底有没有用？这波实验</div>
+<div class="comment">③海峡宽55公里伊朗岸基导弹打过去跟玩似的美国航母敢进？</div>
+<div class="comment">④预测：22号凌晨精确打击3-5目标各回各家各找各妈</div>
+<div class="comment">⑤伊朗关海峡是自杀式操作自己石油出口也被堵了</div>
+<div class="comment">⑥美军海湾12艘大型战舰这阵仗不像吓唬人</div>
+<div class="comment">⑦真打最惨波斯湾小国卡塔尔阿联酋全在射程内</div>
+<div class="comment">⑧特朗普说lots of bombs翻译：我也不知道打哪先吓一吓</div>
+<div class="comment">⑨海峡关40天油价才涨这么多说明大家有战略储备</div>
+<div class="comment">⑩伊朗核设施还一个没炸说明美国还留着最后牌</div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3：反战/人道主义</div>
+<div class="comment">①地球2026年了还为石油打仗人类什么时候进化</div>
+<div class="comment">②我只关心普通老百姓中东等着上学的孩子怎么办</div>
+<div class="comment">③打仗的钱拿来搞新能源不好吗够全球用100年</div>
+<div class="comment">④和平太脆弱36小时能决定几百万人命运</div>
+<div class="comment">⑤看被炸城市照片突然觉得自己每天抱怨的事太渺小</div>
+<div class="comment">⑥战争从来不是"有限"的每颗炸弹落下都有人家</div>
+<div class="comment">⑦别打了油价涨了我骑电动车但船员真的会死</div>
+<div class="comment">⑧36小时后世界什么样？怕打开新闻看到最坏消息</div>
+<div class="comment">⑨"最后期限"听多了麻木但每次都可能是真的那次</div>
+<div class="comment">⑩祈祷和平🕊️虽然知道没用但还是要说</div>
+</div>
 </div>
 </div>
 </div>
 
 <!-- S级事件2 -->
 <div class="event-card">
-<div class="event-header" onclick="toggleEvent(this)">
+<div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-s">S级</span>
-<span class="event-title">许家印一审8罪认罪悔罪·2.4万亿债务黑洞</span>
-<span class="event-heat">🔥🔥🔥🔥🔥</span>
-<span class="event-window window-fade">⚡择期宣判中</span>
+<span class="event-title">美国史上最大关税退税1660亿美元正式启动·"左手退钱右手收钱"</span>
+<span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="section">
-<div class="section-title">📋 事件背景</div>
-<p style="font-size:13px;color:var(--text2)">4月13-14日深圳中院审理恒大集团、恒大地产及许家印案。许家印被控8罪：非法吸存、集资诈骗、违法放贷、欺诈发行证券、违规披露等。当庭认罪悔罪。距2023年9月被抓已两年半。恒大2.4万亿债务黑洞如何处置成最大悬念。广东北京检察机关已起诉恒大系42名涉案人员。</p>
+<div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">【4月20日】美国海关CAPE自动化退税系统正式上线，向33万家进口商退还1660亿美元（约人民币1.13万亿元）非法关税。源于2月最高法院6:3裁定IEEPA关税违宪。覆盖5300万笔报关记录，创美国史上最大退税纪录。同时特朗普启用《1974年贸易法》122条，150天内可征15%新关税——"左手退款右手收钱"。</p>
 </div>
 <div class="section">
-<div class="section-title">🎯 走向预判</div>
-<div class="prediction"><span class="prob">55%</span>走向A：择期1-2月内宣判，数罪并罚重刑（无期或极长有期）</div>
-<div class="prediction"><span class="prob">30%</span>走向B：案件复杂审理拉长，涉及更多关联人员追诉</div>
-<div class="prediction"><span class="prob">15%</span>走向C：认罪配合追赃获从轻量刑</div>
+<div class="section-title">🗣 各平台热评TOP5</div>
+<div class="hot-comments">
+<div class="hot-comment-item">"先收保护费被法院判了再还——黑帮都没这么秀" <span class="src">微博 4.7万赞</span></div>
+<div class="hot-comment-item">"非法关税这四个字写进教科书，MAGA经济学最大笑话" <span class="src">知乎 2.8万赞</span></div>
+<div class="hot-comment-item">"搬起石头砸自己的脚然后让医保报销——MAGA经济学" <span class="src">B站 3.2万赞</span></div>
+<div class="hot-comment-item">"33万家企业排队领钱堪比双十一退款客服" <span class="src">抖音 6.1万赞</span></div>
+<div class="hot-comment-item">"左手退钱右手收钱=先打你一顿再给你贴创可贴" <span class="src">微博 5.3万赞</span></div>
 </div>
-
-<div class="direction-block">
-<div class="direction-header">📌 走向A（55%）数罪并罚重刑 — 评论储备</div>
-<div class="angle-group"><div class="angle-title">💬 角度1：法律与正义</div>
-<div class="comment hot-comment">① 🏆"恒"大在"恒"久地坑人这件事上确实做到了"恒"定——许家印</div>
-<div class="comment">② 从万亿帝国到阶下囚从首富到首骗。2.4万亿写出来都要数好几遍零</div>
-<div class="comment">③ 认罪认得倒是痛快当初骗钱的时候可没这么干脆</div>
-<div class="comment">④ 8个罪名——非法吸存集资诈骗违法放贷欺诈发行…把刑法翻了个遍吗</div>
-<div class="comment">⑤ 两年半终于开庭。正义可能迟到但2.4万亿的利息不会迟到</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度2：购房者与受害者</div>
-<div class="comment">① 最惨的不是许家印（好歹吃饱了这么多年），是交了钱等房子的普通人</div>
-<div class="comment">② 许家印认罪了但我的首付还在烂尾楼里躺着呢</div>
-<div class="comment">③ 2.4万亿÷14亿人≈每个中国人被坑1700块。全民买单</div>
-<div class="comment">④ 同事恒大的房子还没交看到新闻说："认罪有个屁用把房子盖好啊"</div>
-<div class="comment">⑤ 等这天等了两年半。但判完也不觉得解气。钱回不来人回不来</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度3：行业影响</div>
-<div class="comment">① 恒大倒了万科也悬这不是一个人的问题是整个行业的泡沫</div>
-<div class="comment">② 许家印案的意义：告诉所有人"大到不能倒"的神话破了</div>
-<div class="comment">③ 42个涉案人员才刚起诉恒大这冰山水面下还有多少？</div>
-<div class="comment">④ 以后谁还敢说"买期房稳如狗"？恒大教会一代人"现房才是王道"</div>
-<div class="comment">⑤ 2.4万亿什么概念？一些小国GDP都没这么多</div></div>
 </div>
-
-<div class="direction-block">
-<div class="direction-header">📌 走向B（30%）案件复杂审理拉长 — 评论储备</div>
-<div class="angle-group"><div class="angle-title">💬 角度1：法律程序复杂性</div>
-<div class="comment">① 8罪名42涉案人这案子审到明年我都不意外</div>
-<div class="comment">② 法院说"择期宣判"翻译：这事儿复杂得很等着吧</div>
-<div class="comment">③ 两年半从抓到审按这速度判决至少还得半年。法律的轮子转得慢碾得碎</div>
-<div class="comment">④ 预测：一审判完还有二审还有申诉最终尘埃落定可能2028年了</div>
-<div class="comment">⑤ 恒大案给中国法治出了超级考题：怎么处理"大到不知从哪下手"的案件</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度2：关联案件追诉</div>
-<div class="comment">① 42个人只是开始恒大鼎盛时多少人帮着搬砖？该查的远不止</div>
-<div class="comment">② 境外资产转移是最大悬念——许家印海外到底藏了多少？</div>
-<div class="comment">③ 42个被告肯定有人"戴罪立功"换减刑新一波爆料在路上</div>
-<div class="comment">④ 恒大暴雷三年追赃进度条才走到这说明资金迷宫有多深</div>
-<div class="comment">⑤ 每多查一个涉案人就多一个线索。关键不在快在彻底</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度3：社会影响</div>
-<div class="comment">① 这案子社会意义大于法律意义：证明了"法律面前人人平等"不是空话</div>
-<div class="comment">② 许家印倒了但信任修复才刚开始。不是一个判决能解决的</div>
-<div class="comment">③ 普通人最关心：判了然后呢？欠的钱什么时候还？</div>
-<div class="comment">④ 恒大不只是公司失败是一代人"买房=安全"信念的崩塌</div>
-<div class="comment">⑤ 最大教训不是"不能贪"而是"监管不能缺位"</div></div>
+<div class="section">
+<div class="section-title">📈 走向预判</div>
+<div class="prediction"><span class="prob">50%</span>走向A：退税推进+122条落地——"换篮子"策略成型</div>
+<div class="prediction"><span class="prob">30%</span>走向B：退税系统技术问题——33万企业排队等钱乱象</div>
+<div class="prediction"><span class="prob">20%</span>走向C：国会介入立法限制总统关税权</div>
 </div>
-
 <div class="direction-block">
-<div class="direction-header">📌 走向C（15%）认罪配合从轻 — 评论储备</div>
-<div class="angle-group"><div class="angle-title">💬 角度1：量刑考量</div>
-<div class="comment">① 认罪+配合追赃法律上是从轻情节，但8罪并罚……从轻也轻不到哪</div>
-<div class="comment">② 就算从轻8罪起步也十几年。许家印66了从轻=晚年在监狱度过</div>
-<div class="comment">③ "从轻"和"轻"是两概念。从死刑改无期也叫从轻</div>
-<div class="comment">④ 2.4万亿的数字摆着不会因为态度好就打折</div>
-<div class="comment">⑤ 法律不是复仇但也不能让人觉得"认个错就完了"</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度2：追赃配合</div>
-<div class="comment">① 从轻前提是配合追赃——海外资产线索交代清楚才叫有诚意</div>
-<div class="comment">② 认罪可以但赃款追回程度才是关键。光嘴上悔罪不交钱那是表演</div>
-<div class="comment">③ 传闻海外大量资产但追缴难度极大跨境司法协助本身就是坑</div>
-<div class="comment">④ 购房者不关心从轻不从轻关心的是钱能回来多少房能不能拿到</div>
-<div class="comment">⑤ 最理性期待：判罚公正追赃到位给市场和受害者一个交代</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度3：标杆意义</div>
-<div class="comment">① 不管从轻不从轻这案子都是中国司法史标杆案例</div>
-<div class="comment">② 以后企业家想搞"大而不倒"先翻翻许家印案卷</div>
-<div class="comment hot-comment">③ 🏆"认了罪悔了过欠了2.4万亿——但欠条上写的不是'对不起'是几百万人的首付" ——清醒者</div>
-<div class="comment">④ 标杆案例的价值不在惩罚一个人在于震慑一千个人</div>
-<div class="comment">⑤ 许家印是过去十年房地产疯狂扩张的缩影。判他是给一个时代画句号</div></div>
+<div class="direction-header">走向A 评论运营（50%·换篮子策略）</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1：吃瓜看热闹</div>
+<div class="comment">①左手退钱右手收钱=先打一顿再贴创可贴😂</div>
+<div class="comment">②33万企业排队领钱这场面堪比双十一退款</div>
+<div class="comment">③特朗普：我没输只是换了姿势赢——赢麻了属于是</div>
+<div class="comment">④最高法院：违法了！特朗普：好换个法继续收。法官：???</div>
+<div class="comment">⑤1660亿退款系统第一天不崩我直播吃键盘</div>
+<div class="comment">⑥先收一年保护费被判了再还？黑帮都没这么秀</div>
+<div class="comment">⑦进口商：终于退钱了！等等…122条又收？我™</div>
+<div class="comment">⑧美国人民：关税是别人付的？原来一直是我付？震惊.jpg</div>
+<div class="comment">⑨退税1660亿≈每个美国人退500美元但付出的远不止</div>
+<div class="comment">⑩搬起石头砸脚然后让医保报销——MAGA经济学</div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2：外贸从业者</div>
+<div class="comment">①做美线的朋友冲啊赶紧算你那批货能退多少</div>
+<div class="comment">②别高兴太早122条15%说收就收这是缓兵之计</div>
+<div class="comment">③退税流程超复杂没半年钱到不了账现金流还是紧</div>
+<div class="comment">④去年多付30万美金现在终于有望回来感动哭</div>
+<div class="comment">⑤中国供应商：美国客户之前砍的价该补回来了吧🙃</div>
+<div class="comment">⑥跨境电商卖家在算——退税的钱刚好cover下轮涨的税</div>
+<div class="comment">⑦航运公司两头赚：收时手续费退时又手续费</div>
+<div class="comment">⑧150天窗口到期9月正好圣诞备货季你是故意的吧</div>
+<div class="comment">⑨经历这一年的外贸人都有PTSD看到"关税"就心跳加速</div>
+<div class="comment">⑩5300万笔报关一个个退海关服务器估计要冒烟</div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3：宏观经济分析</div>
+<div class="comment">①最高法院否IEEPA秒切122——总统关税权本身就是制度漏洞</div>
+<div class="comment">②1660亿本质是一年来从消费者口袋抢的钱现在装大方还</div>
+<div class="comment god-comment">③"非法关税"四字写进教科书——MAGA经济学最大笑话 🏆封神</div>
+<div class="comment">④关税战一年：制造业没回流通胀上去了法院打脸了三连败</div>
+<div class="comment">⑤退税消息美股期货涨说明市场早受够了这闹剧</div>
+<div class="comment">⑥别看退1660亿122+301+232三条线同时开未来更狠</div>
+<div class="comment">⑦本质是行政权vs司法权——最高法院赢面子总统赢里子</div>
+<div class="comment">⑧对中企：短期利好(退税回款)长期利空(新关税确定来)</div>
+<div class="comment">⑨全球供应链最怕的不是关税高低而是政策反复无常</div>
+<div class="comment">⑩"最大退税"也是"最大警示"：总统单方面搞关税要终结了</div>
+</div>
+</div>
+<div class="direction-block">
+<div class="direction-header">走向B 评论运营（30%·系统出问题）</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1：技术怀疑</div>
+<div class="comment">①美国政府IT系统？呵呵healthcare.gov崩了多久忘了？</div>
+<div class="comment">②5300万笔4月20上线我赌第一天502</div>
+<div class="comment">③33万企业同时登录申请这DDoS比黑客猛</div>
+<div class="comment">④CAPE系统测试几天就上线不是赶工期外包？</div>
+<div class="comment">⑤钱能退但退多久是问题半年能退完算快的</div>
+<div class="comment">⑥小企业玩不转系统钱被大财团先抢了</div>
+<div class="comment">⑦退税还要满足条件不是每家有资格又是文字游戏</div>
+<div class="comment">⑧系统崩→延期→企业资金链断→破产链反应不夸张</div>
+<div class="comment">⑨律师事务所打退税代理广告了30%手续费吃相难看</div>
+<div class="comment">⑩预测两周后标题："退税系统故障数十万企业苦等"</div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2：乐观方</div>
+<div class="comment">①管系统崩不崩法律确认钱该退拿到是时间问题</div>
+<div class="comment">②美国中小企业终于喘口气被关税压了一年够呛</div>
+<div class="comment">③全球供应链正面信号——美国在纠错</div>
+<div class="comment">④退税1660亿≈大规模刺激消费市场要起来了</div>
+<div class="comment">⑤进口商拿退款第一时间补货中国供应商忙起来了</div>
+<div class="comment">⑥我们公司在准备材料了会计连轴转但开心</div>
+<div class="comment">⑦法治赢了——最高法院能管住总统这很重要</div>
+<div class="comment">⑧市场已price in看SP500上周五涨的那波就知道</div>
+<div class="comment">⑨终于不用跟客户解释同样东西贵25%了</div>
+<div class="comment">⑩虽退税给进口商不给我但东西能便宜回来了吧？</div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3：中美博弈</div>
+<div class="comment">①退了IEEPA又上122换汤不换药中企别高兴太早</div>
+<div class="comment">②真实目的从来不是关税是逼制造业回流目标没变</div>
+<div class="comment">③中国外贸韧性经受考验现在看来稳住了</div>
+<div class="comment">④退税可能是信号：我在让步现在该你们开条件了</div>
+<div class="comment">⑤122条150天就是留给中美谈判——谈成降谈不成加</div>
+<div class="comment">⑥全球贸易体系回不去2024了大家都在搞去美国化</div>
+<div class="comment">⑦欧盟日本看美国退税：我们跟着加的算啥？白忙？</div>
+<div class="comment">⑧一带一路这一年加速了——感谢特朗普助攻</div>
+<div class="comment">⑨越南墨西哥转口贸易也受影响亚太供应链重组</div>
+<div class="comment">⑩最大赢家可能是律师——退税诉讼+新关税应对两头赚</div>
+</div>
 </div>
 </div>
 </div>
 
 <!-- S级事件3 -->
 <div class="event-card">
-<div class="event-header" onclick="toggleEvent(this)">
+<div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-s">S级</span>
-<span class="event-title">7家电商平台"幽灵外卖"案罚没35.97亿·史上最大食安罚单</span>
-<span class="event-heat">🔥🔥🔥🔥🔥</span>
-<span class="event-window window-gold">⚡平台整改中</span>
+<span class="event-title">霍尔木兹海峡能源危机·IEA称"史上最严重供应中断"·日供应降1010万桶</span>
+<span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="section">
-<div class="section-title">📋 事件背景</div>
-<p style="font-size:13px;color:var(--text2)">4月17日市场监管总局对拼多多、美团、京东、饿了么、抖音、淘宝、天猫7家电商平台开出35.97亿元罚单。这是中国食品安全领域史上最大金额罚单。"幽灵外卖"——大量无证"幽灵店铺"通过转单平台上架，平台未履行资质审查义务。7家平台法人和食安总监也被处罚。平台均表示"诚恳接受"。</p>
+<div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">【4月中旬至今】IEA 4月报告：全球石油日供应量骤降1010万桶至9700万桶，史上最大跌幅。霍尔木兹海峡日均通行量从2000万桶降至380万桶。80多个石油天然气设施遭破坏。国际油价飙升，能源流动受阻超40天。IMF下调中东经济增速2.3个百分点，海湾产油国最高下修15个百分点。</p>
 </div>
 <div class="section">
-<div class="section-title">🎯 走向预判</div>
-<div class="prediction"><span class="prob">50%</span>走向A：平台密集整改、下架幽灵店铺，短期外卖供给收缩</div>
-<div class="prediction"><span class="prob">35%</span>走向B：催生第三方食安审核服务行业</div>
-<div class="prediction"><span class="prob">15%</span>走向C：平台起诉转单平台追偿，产业链博弈延续</div>
+<div class="section-title">📈 走向预判</div>
+<div class="prediction"><span class="prob">40%</span>走向A：高油价持续——海峡封锁不解除，全球通胀加大</div>
+<div class="prediction"><span class="prob">35%</span>走向B：部分通航恢复——谈判有限进展，油价回落</div>
+<div class="prediction"><span class="prob">25%</span>走向C：危机深化——冲突扩大，触发IEA紧急释储</div>
 </div>
-
 <div class="direction-block">
-<div class="direction-header">📌 走向A（50%）平台密集整改 — 评论储备</div>
-<div class="angle-group"><div class="angle-title">💬 角度1：食品安全</div>
-<div class="comment hot-comment">① 🏆"一份蛋糕牵出35.97亿罚单——这蛋糕的投入产出比绝了" ——吃瓜群众</div>
-<div class="comment">② 35.97亿听着多对这7家平台可能就一个季度广告费。罚少了</div>
-<div class="comment">③ "幽灵外卖"名字起得贴切——你永远不知道做你外卖的是真人还是幽灵</div>
-<div class="comment">④ 7家一起被罚说明不是个别现象是行业系统性烂。审核都是摆设吗？</div>
-<div class="comment">⑤ 转单平台是什么鬼？帮无证商家披个马甲上平台卖外卖。细思恐极</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度2：对平台影响</div>
-<div class="comment">① 暂停新增蛋糕店铺3-9月——蛋糕师表示：我招谁惹谁了</div>
-<div class="comment">② 法人和食安总监也罚了。这刀砍在管理层比罚公司有用</div>
-<div class="comment">③ 平台"诚恳接受"声明格式几乎一模一样——连认错都内卷</div>
-<div class="comment">④ 短期外卖供给收缩某些区域选择变少但长期是好事</div>
-<div class="comment">⑤ 35.97亿能换来干净外卖环境这钱花得值</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度3：监管趋势</div>
-<div class="comment">① 从反垄断到反幽灵外卖监管出重拳的节奏越来越快了</div>
-<div class="comment">② 食品安全领域史上最大罚单——终于有人认真管了。但希望不是一阵风</div>
-<div class="comment">③ "审核把关不严"是客气了——应该说是"睁一只眼闭一只眼主动放水"</div>
-<div class="comment">④ 建议把每家外卖店许可证信息直接显示在App上，透明化是最好监管</div>
-<div class="comment">⑤ 消费者的胃不是垃圾桶。罚款是好的开始但远不是终点</div></div>
+<div class="direction-header">走向A 评论运营（40%·高油价持续）</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1：日常生活冲击</div>
+<div class="comment">①92号快10块了加油跟割肉似的每次只加200</div>
+<div class="comment">②坐标上海通勤油费比房贷贵认真考虑骑自行车</div>
+<div class="comment">③菜价肉价全涨超市大妈们摇头叹气</div>
+<div class="comment">④快递涨外卖涨出租车涨——全因那条海峡</div>
+<div class="comment">⑤我爸工厂化工原料涨40%在考虑裁员心疼</div>
+<div class="comment">⑥加油站排队200米大家都怕明天更贵赶紧囤</div>
+<div class="comment">⑦新能源车主偷着乐吧终于轮到燃油车主羡慕你们</div>
+<div class="comment">⑧航空公司附加费一周涨三次出差机票贵了一千多</div>
+<div class="comment">⑨石油涨→化肥涨→粮食涨→全民买单。教科书案例</div>
+<div class="comment">⑩40天没通航持续到夏天今年经济全完蛋</div>
 </div>
-
-<div class="direction-block">
-<div class="direction-header">📌 走向B（35%）催生食安审核新行业 — 评论储备</div>
-<div class="angle-group"><div class="angle-title">💬 角度1：新商业机会</div>
-<div class="comment">① 催生的商机可能比罚款还大——食安审核SaaS、证照合规服务</div>
-<div class="comment">② 预测：半年内至少3家估值过亿的食安合规创业公司出现</div>
-<div class="comment">③ 区块链+食品安全溯源这赛道可以跑了</div>
-<div class="comment">④ 35.97亿罚款是成本但食安合规市场规模可能千亿级</div>
-<div class="comment">⑤ 外卖行业进入"合规时代"就像金融的"强监管时代"</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度2：行业生态变化</div>
-<div class="comment">① 以后开外卖店门槛高了假证经营的路堵了——好事</div>
-<div class="comment">② 外卖"野蛮生长"结束进入"规范发展"下半场</div>
-<div class="comment">③ 最大赢家可能是本来就合规的正经餐饮店——不用被幽灵店抢生意了</div>
-<div class="comment">④ 商家：以前怕差评现在怕查证。这叫进步</div>
-<div class="comment">⑤ 平台竞争从"谁补贴多"变成"谁更安全"好现象</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度3：长期监管</div>
-<div class="comment">① 如果半年后再爆出类似事件就尴尬了。监管不能一锤子买卖</div>
-<div class="comment">② 希望这不是"运动式执法"而是"制度化监管"的开始</div>
-<div class="comment">③ 35.97亿罚完了接下来怎么防？这才是真正考验</div>
-<div class="comment">④ 期待后续措施——定期抽检信息公示消费者举报奖励</div>
-<div class="comment">⑤ 避免"一刀切"——别把合规的小店也误伤了</div></div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2：投资理财</div>
+<div class="comment">①中石油中石化涨多少？后悔年初没买能源基金</div>
+<div class="comment">②新能源板块今天要起飞油价越高它们越值钱</div>
+<div class="comment">③做空航空股稳赚——航司全在亏</div>
+<div class="comment">④A股开盘看军工+石化大概率高开</div>
+<div class="comment">⑤比特币避险又要涨每次中东出事它就涨</div>
+<div class="comment">⑥黄金破2400继续追还是等回调纠结</div>
+<div class="comment">⑦原油ETF一月翻倍但现在进场感觉接盘</div>
+<div class="comment">⑧天然气也疯欧洲冬天没到就开始抢气了</div>
+<div class="comment">⑨最惨航空基金持有者跌得妈都不认识</div>
+<div class="comment">⑩化工股有没有错杀？下游需求在原材料贵利好纯代工</div>
 </div>
-
-<div class="direction-block">
-<div class="direction-header">📌 走向C（15%）平台追偿转单平台 — 评论储备</div>
-<div class="angle-group"><div class="angle-title">💬 角度1：产业链博弈</div>
-<div class="comment">① 转单平台才是"幽灵外卖"核心。帮假证商家上架才是源头</div>
-<div class="comment">② 7家平台法务在加班写起诉书——罚款得从转单平台追回来</div>
-<div class="comment">③ 转单平台老板们看到35.97亿估计在收拾行李了</div>
-<div class="comment">④ 产业链：假证商家→转单平台→电商平台→消费者。每环都有责任</div>
-<div class="comment">⑤ 猜猜转单平台有多少？可能比想象多十倍。隐秘地下产业</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度2：法律追责</div>
-<div class="comment">① 转单平台法律责任怎么定？这是立法空白</div>
-<div class="comment">② 可能推动专门针对"互联网转单"的立法</div>
-<div class="comment">③ 平台抗辩："被转单平台欺骗"。监管："你有审核义务"</div>
-<div class="comment">④ 这案子会成为"平台责任边界"的重要判例</div>
-<div class="comment">⑤ 治标还得治本——转单平台消亡了换个名字可能又冒出来</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度3：消费者索赔</div>
-<div class="comment">① 35.97亿交国家了但消费者个人怎么索赔？这才是普通人关心的</div>
-<div class="comment">② 如果之前吃过幽灵外卖生病了现在能找平台赔偿吗？</div>
-<div class="comment">③ 建议开通"幽灵外卖受害者维权通道"</div>
-<div class="comment hot-comment">④ 🏆"7家平台被罚了35.97亿，但点过幽灵外卖的胃，谁来赔？" ——打工人的胃</div>
-<div class="comment">⑤ 公益诉讼可以跟上了——消费者协会该出手了</div></div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3：宏观犀利分析</div>
+<div class="comment">①日供应降1010万桶不是危机是灾难2008都没这夸张</div>
+<div class="comment">②IEA说"史上最严重"上次用这词是70年代石油危机</div>
+<div class="comment">③40天封锁≈全球GDP损失5000亿美元谁来买单</div>
+<div class="comment">④能源转型喊十年该加速了再依赖海峡就是把命脉交给战争</div>
+<div class="comment">⑤中国战略石油储备撑90天但按这消耗速度可能不够</div>
+<div class="comment">⑥OPEC名存实亡产能在运不出去有啥用</div>
+<div class="comment god-comment">⑦最讽刺：美国制裁伊朗石油出口→结果所有人石油都出不来 🏆封神</div>
+<div class="comment">⑧这次危机加速人民币石油结算——美元霸权松动期</div>
+<div class="comment">⑨全球通胀不可避免各国央行准备好加息了吗</div>
+<div class="comment">⑩不是短期冲击是供应链结构性重组</div>
+</div>
 </div>
 </div>
 </div>
 
-<!-- A级事件1 -->
+<!-- A级事件 -->
 <div class="event-card">
-<div class="event-header" onclick="toggleEvent(this)">
+<div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">苏林访华签17项协议·中越命运共同体升级</span>
-<span class="event-heat">🔥🔥🔥🔥</span>
+<span class="event-title">莫桑比克总统查波访华·密集元首外交继续·中非合作新标杆</span>
+<span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="section">
-<div class="section-title">📋 事件背景</div>
-<p style="font-size:13px;color:var(--text2)">4月14-17日越共中央总书记、国家主席苏林对中国进行四天国事访问。当选越南国家主席后首次出访即选中国。签署17项协议+联合声明："推动构建更高水平中越命运共同体"。覆盖铁路互联互通、能源、红色研学。苏林离京乘绿皮火车返越。分析指出越南在美国关税压力下加速向中国靠拢。</p>
+<div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">应习近平邀请，莫桑比克总统查波4月16-22日对中国进行国事访问。此前一周密集会见阿联酋王储、西班牙首相、俄外长、越南苏林。苏林4/14-17完成国事访问签署中越命运共同体联合声明。中国"繁忙外交周"展示全球朋友圈。</p>
 </div>
 <div class="section">
-<div class="section-title">🎯 走向预判</div>
-<div class="prediction"><span class="prob">55%</span>走向A：中越关系快速升温，经贸合作加速落地</div>
-<div class="prediction"><span class="prob">30%</span>走向B：美国施压，越南继续"竹子外交"</div>
-<div class="prediction"><span class="prob">15%</span>走向C：南海议题成后续摩擦点</div>
+<div class="section-title">📈 走向预判</div>
+<div class="prediction"><span class="prob">60%</span>走向A：成果丰硕——签署多项合作协议</div>
+<div class="prediction"><span class="prob">40%</span>走向B：常规外交——礼节性会晤为主</div>
 </div>
-
 <div class="direction-block">
-<div class="direction-header">📌 走向A（55%）中越关系升温 — 评论储备</div>
-<div class="angle-group"><div class="angle-title">💬 角度1：地缘战略</div>
-<div class="comment hot-comment">① 🏆"当选国家主席第5天就访华——比我找工作报到都积极" ——打工人</div>
-<div class="comment">② 17项协议+联合声明+绿皮火车，苏林这波满分答卷</div>
-<div class="comment">③ 特朗普加了越南关税苏林转头来北京签协议。用脚投票了属于是</div>
-<div class="comment">④ 一次访问签17项协议效率比我交作业都高</div>
-<div class="comment">⑤ 美国想拉越南"脱钩中国"结果越南选了"更高水平命运共同体"。尴尬</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度2：经贸合作</div>
-<div class="comment">① 中越铁路互联互通搞成了东盟物流格局要重写</div>
-<div class="comment">② 越南是"替代中国加工"最大受益者现在反过来深度绑定中国。逻辑自洽</div>
-<div class="comment">③ 苏林这趟潜台词：美国靠不住中国才是长期伙伴</div>
-<div class="comment">④ 17项协议执行力才是关键。签得快不代表落地快</div>
-<div class="comment">⑤ 对双方都好：中国产业链南移有稳定伙伴越南发展有更强靠山</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度3：美国反应</div>
-<div class="comment">① 白宫发言人在准备"深表关切"声明吧——每次都这样</div>
-<div class="comment">② 美国给越南加关税把越南推向中国。这波属于"助攻"</div>
-<div class="comment">③ 美国上周忙着封锁伊朗越南趁窗口来签协议——时机选得好</div>
-<div class="comment">④ 中越走近≠越美走远，但美国习惯性"零和思维"</div>
-<div class="comment">⑤ 国际关系最有趣：所有人都在下棋但没人能完全控制棋盘</div></div>
+<div class="direction-header">走向A 评论运营</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1：正面评价</div>
+<div class="comment">①中国朋友圈太强一周连见五六位元首行程比我满</div>
+<div class="comment">②非洲是未来趁西方自顾不暇赶紧交朋友格局打开了</div>
+<div class="comment">③莫桑比克有天然气有矿产这是双赢不是单方面援助</div>
+<div class="comment">④一带一路在非洲做出成绩了看蒙巴萨铁路就知道</div>
+<div class="comment">⑤美国忙打仗中国忙交朋友——高下立判</div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2：调侃型</div>
+<div class="comment">①又签协议又联合声明落地多少才是关键</div>
+<div class="comment">②外交部这周全员加班？接待量太大了</div>
+<div class="comment">③中东打仗时搞外交才是真"战略定力"</div>
+<div class="comment">④中非合作这么多年想看具体给老百姓带来啥</div>
+<div class="comment">⑤密集会晤——外交部打工人比996还辛苦</div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3：地缘视角</div>
+<div class="comment">①中东乱的时候中国在非洲悄悄布局下十年看谁赢</div>
+<div class="comment">②莫桑比克LNG全球第三大能源合作时机太精准</div>
+<div class="comment">③美国在中东放炸弹中国在非洲修铁路——文明差距</div>
+<div class="comment">④非洲54国中国建交53个朋友圈经营了几十年</div>
+<div class="comment">⑤查波22号结束正好美伊停火到期同一天巧合？</div>
+</div>
 </div>
 </div>
 </div>
 
-<!-- A级事件2 -->
 <div class="event-card">
-<div class="event-header" onclick="toggleEvent(this)">
+<div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">OpenAI Codex重大升级+GPT-6发布·AI竞赛白热化</span>
-<span class="event-heat">🔥🔥🔥🔥</span>
+<span class="event-title">第六届消博会闭幕·AI眼镜成核心亮点·封关后首展</span>
+<span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="section">
-<div class="section-title">📋 事件背景</div>
-<p style="font-size:13px;color:var(--text2)">4月15日GPT-6（代号"土豆"）正式发布性能暴涨40%。4月16日OpenAI Codex重大升级：支持Mac桌面操控、多智能体并行、跨长时间任务。从"终端编码助手"进化为覆盖全软件开发流程的AI系统。斯坦福报告显示中美顶级模型差距已基本消弭。Anthropic年化收入突破300亿反超OpenAI。智元机器人发布4款新品+4大模型。</p>
+<div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">第六届中国国际消费品博览会4月18日闭幕。海南自贸港封关运作后首届重大展会，AI眼镜成最大亮点。聚焦生物医药、数字经济、深海科技、低空飞行。同期海南自贸港全球产业招商大会。</p>
 </div>
-<div class="section">
-<div class="section-title">🎯 走向预判</div>
-<div class="prediction"><span class="prob">50%</span>走向A：AI编程进入"Agent自主执行"新纪元，初级编程岗位受冲击</div>
-<div class="prediction"><span class="prob">35%</span>走向B：中美AI竞赛加速，国产大模型密集迭代</div>
-<div class="prediction"><span class="prob">15%</span>走向C：AI安全监管加码各国出台新规</div>
-</div>
-
 <div class="direction-block">
-<div class="direction-header">📌 走向A（50%）AI编程Agent时代 — 评论储备</div>
-<div class="angle-group"><div class="angle-title">💬 角度1：技术革命</div>
-<div class="comment">① Codex能看屏幕操控桌面多智能体并行——这不就是AI程序员吗</div>
-<div class="comment">② GPT-6暴涨40%+Codex操控全系统，程序员焦虑又升级了一个版本</div>
-<div class="comment">③ 代号"土豆"的GPT-6——越朴实的名字越能打</div>
-<div class="comment">④ AI编程进化速度比摩尔定律还猛。两年前补全代码现在自己写项目了</div>
-<div class="comment">⑤ 最震撼的是"看屏幕"——AI像人一样操作电脑了。《她》照进现实</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度2：就业冲击</div>
-<div class="comment">① 应届CS毕业生听到Codex升级估计心凉了半截</div>
-<div class="comment">② AI取代程序员？不，AI取代的是不会用AI的程序员</div>
-<div class="comment">③ Anthropic年收入反超OpenAI——AI圈竞争比NBA西部还激烈</div>
-<div class="comment">④ 35岁危机+AI冲击——程序员焦虑叠了debuff</div>
-<div class="comment hot-comment">⑤ 🏆"GPT-6写代码，Codex调Bug，智元机器人搬砖——程序员除了焦虑还能贡献什么？答：焦虑本身也会被AI替代" ——赛博打工人</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度3：中美AI竞赛</div>
-<div class="comment">① 斯坦福说中美差距消弭——差距缩小但赛道不同</div>
-<div class="comment">② 国产密集迭代：阿里一周三模型字节全双工语音腾讯也发力</div>
-<div class="comment">③ 真正较量不在模型参数在应用落地——中国场景优势在</div>
-<div class="comment">④ MiniMax开源能重写自身代码的模型——AI自我进化有点吓人</div>
-<div class="comment">⑤ 对普通用户：管你GPT几Codex几能帮我干活就行</div></div>
+<div class="direction-header">评论运营</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1：消费者</div>
+<div class="comment">①AI眼镜在消博会试了真好玩但价格劝退</div>
+<div class="comment">②海南免税+消博会=钱包杀手朋友去了花两万</div>
+<div class="comment">③自贸港封关后第一大展排面有的</div>
+<div class="comment">④AI眼镜什么时候跌到千元等等党永不为奴</div>
+<div class="comment">⑤消博会=给有钱人看什么时候该花钱的展</div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2：产业链</div>
+<div class="comment">①AI眼镜概念股今天集体高潮提前布局恭喜</div>
+<div class="comment">②海南自贸港政策红利在兑现封关效果可见</div>
+<div class="comment">③生物医药+数字经济+深海产业定位越来越清晰</div>
+<div class="comment">④低空飞行也火了跟AI眼镜抢风头</div>
+<div class="comment">⑤展会握手变门店人气——央视总结到位</div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3：段子</div>
+<div class="comment">①AI眼镜——让你看起来是在看手机其实在看手机升级版</div>
+<div class="comment">②消博会结束了但花呗分期还没结束</div>
+<div class="comment">③海南：来消费！大家：好买完去海边摸鱼</div>
+<div class="comment">④封关后海南=中国免税天堂新加坡都慌</div>
+<div class="comment">⑤展会最佳展品AI眼镜最佳观众老板拍照发朋友圈</div>
+</div>
 </div>
 </div>
 </div>
 
-<!-- A级事件3 -->
 <div class="event-card">
-<div class="event-header" onclick="toggleEvent(this)">
+<div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">中美巴黎经贸磋商·关税减免新信号</span>
-<span class="event-heat">🔥🔥🔥</span>
+<span class="event-title">NBA季后赛首轮开打·76人惨败凯尔特人32分·库里无缘季后赛</span>
+<span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="section">
-<div class="section-title">📋 事件背景</div>
-<p style="font-size:13px;color:var(--text2)">据远东资信国际观察月报，中美在法国巴黎举行经贸磋商。中美贸易争端从2025年下半年持续升级，特朗普2025年10月对中国加征100%关税。清华CIFER持续跟踪争端大事记。各方关注能否打开关税减免实质通道。巴黎磋商释放的信号比具体成果更重要。</p>
+<div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">NBA季后赛首轮G1：76人91-123惨败凯尔特人（32分差），马克西全队最高21分。附加赛太阳111-96淘汰勇士，库里无缘季后赛。</p>
 </div>
-<div class="section">
-<div class="section-title">🎯 走向预判</div>
-<div class="prediction"><span class="prob">40%</span>走向A：特定领域（农产品、能源）达成局部减免共识</div>
-<div class="prediction"><span class="prob">40%</span>走向B：维持现有高关税至11月到期窗口</div>
-<div class="prediction"><span class="prob">20%</span>走向C：谈判破裂关税进一步升级</div>
-</div>
-
 <div class="direction-block">
-<div class="direction-header">📌 走向A（40%）局部减免共识 — 评论储备</div>
-<div class="angle-group"><div class="angle-title">💬 角度1：谈判前景</div>
-<div class="comment">① 在巴黎谈关税——法国人：这中间人不好当啊</div>
-<div class="comment">② 100%关税不是不能谈前提是双方都觉得疼了</div>
-<div class="comment">③ 特朗普套路：先加到200%再谈回50%说"我赢了"</div>
-<div class="comment">④ 谈判不怕慢就怕不谈。还在桌上就有希望</div>
-<div class="comment">⑤ 大概率达成"象征性"减免然后双方都宣称"重大胜利"</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度2：市场影响</div>
-<div class="comment">① A股周一看到"磋商积极信号"准备好——高开不是梦</div>
-<div class="comment">② 做外贸的：100%关税下单子跑东南亚了。减免越快越好</div>
-<div class="comment">③ 最先受益板块：农业新能源半导体——提前布局不亏</div>
-<div class="comment">④ 人民币汇率也看这信号。磋商有进展汇率就稳</div>
-<div class="comment hot-comment">⑤ 🏆"100%关税打了一年，双方都累了——累到开始在巴黎喝咖啡" ——外贸人</div></div>
-<div class="angle-group"><div class="angle-title">💬 角度3：供应链重构</div>
-<div class="comment">① 100%关税真正后果不是出口少了是全球供应链被打碎了</div>
-<div class="comment">② 东盟"替代加工"风险大——随时可能被美国盯上</div>
-<div class="comment">③ 巴黎磋商深层含义：双方意识到"完全脱钩"代价太大</div>
-<div class="comment">④ 11月关税到期是硬deadline。之前不达成点共识就要续约了</div>
-<div class="comment">⑤ 全球供应链正经历二战以来最大重构。不是一两年能完成的</div></div>
+<div class="direction-header">评论运营</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1：球迷视角</div>
+<div class="comment">①76人输32分不是季后赛是公开处刑</div>
+<div class="comment">②马克西21分全队最高其他人干嘛去了打酱油？</div>
+<div class="comment">③库里无缘季后赛一个时代真的结束了吗😢</div>
+<div class="comment">④凯尔特人太强有点08那味了</div>
+<div class="comment">⑤76人这操作恩比德倒是健康打啊每年季后赛出状况</div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2：技术分析</div>
+<div class="comment">①凯子防守窒息76人命中率估计30%没有</div>
+<div class="comment">②勇士输太阳库里回合上限在但角色球员跟不上</div>
+<div class="comment">③东部格局明了凯尔特人vs雄鹿大概率东决</div>
+<div class="comment">④76人要不交易恩比德这种半死不活最难受</div>
+<div class="comment">⑤太阳附加赛赢了首轮碰强队够呛硬实力差</div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3：段子手</div>
+<div class="comment">①76人：我们有过程！结果：一轮游</div>
+<div class="comment">②库里：感谢勇士给了我提前放假的机会</div>
+<div class="comment">③32分差我跟隔壁老王打野球都没输这么惨</div>
+<div class="comment">④76人球迷看完球衣挂闲鱼"全新只穿了一个季后赛"</div>
+<div class="comment">⑤恩比德伤缺输在时也输——薛定谔的恩比德</div>
+</div>
 </div>
 </div>
 </div>
 
 <!-- B级事件 -->
-<div class="event-card">
-<div class="event-header" onclick="toggleEvent(this)">
-<span class="event-badge badge-b">B级</span>
-<span class="event-title">智元机器人4款新品+具身智能工厂量产</span>
-<span class="event-heat">🔥🔥🔥</span>
-</div>
-<div class="event-body">
-<div class="section"><p style="font-size:13px;color:var(--text2)">4月17日智元机器人在上海举办2026合作伙伴大会，2500位来自34国合作伙伴参会。发布4款新本体+4个AI大模型，宣布从"开发态"迈向"部署态"。精灵G2在龙旗科技工厂实现全球首个具身智能产线规模化落地。具身智能进入"iPhone时刻"。</p></div>
-</div>
-</div>
-
-<div class="event-card">
-<div class="event-header" onclick="toggleEvent(this)">
-<span class="event-badge badge-b">B级</span>
-<span class="event-title">2026世界杯扩军48队·赛程确定·中超不停赛</span>
-<span class="event-heat">🔥🔥🔥</span>
-</div>
-<div class="event-body">
-<div class="section"><p style="font-size:13px;color:var(--text2)">2026美加墨世界杯首次扩军至48支球队，赛事6月11日-7月19日持续40天。中超2026赛季3月6日开赛，世界杯期间不停赛（时差原因不冲突）。体育迷"大年"——足球世界杯+米兰冬奥会+爱知亚运会+青奥会。</p></div>
-</div>
-</div>
-
-<div class="event-card">
-<div class="event-header" onclick="toggleEvent(this)">
-<span class="event-badge badge-b">B级</span>
-<span class="event-title">何超蕸因乳腺癌病逝·百亿遗产争夺</span>
-<span class="event-heat">🔥🔥🔥</span>
-</div>
-<div class="event-body">
-<div class="section"><p style="font-size:13px;color:var(--text2)">4月12日何鸿燊二太蓝琼缨所生三女何超蕸因乳腺癌在香港养和医院病逝，终年60岁。去世不到24小时百亿遗产分配引热议，二房内部"撕破脸"。何猷君被称"赢家"。赌王遗产帝国再起风波。</p></div>
-</div>
+<div class="b-events">
+<h2>🟡 B级事件</h2>
+<table class="b-table">
+<tr><th>事件</th><th>概要</th></tr>
+<tr><td>产业链供应链安全规定</td><td>首部国务院级别产业链安全行政法规，共18条，4月施行</td></tr>
+<tr><td>斯坦福AI指数报告</td><td>连续第九年发布，称"中美AI差距消失"，AI能力全面爆发</td></tr>
+<tr><td>4月民生新规落地</td><td>轻微失信不再公示/药品价格改革/分级诊疗加速</td></tr>
+</table>
 </div>
 
 <!-- 灰犀牛 -->
 <div class="rhino-section">
 <h2>🦏 灰犀牛预警</h2>
-<div class="rhino-item">
-<div class="title">⚠️ 美伊停火协议已实质破裂·伊朗拒绝第二轮谈判</div>
-<div class="desc">美军4月19日扣押伊朗货船并开火，伊朗无人机反击并拒绝二轮谈判。停火协议4月22日到期前局势已恶化至开战边缘。全球油价暴涨7%+，航运安全告急。</div>
+<div class="rhino-item">🔴 <b>美伊停火4/22 08:00到期</b> — 仅剩36h，特朗普威胁全面轰炸，伊朗拒绝谈判</div>
+<div class="rhino-item">🔴 <b>霍尔木兹海峡能源中断持续40天+</b> — IEA称史上最严重，全球经济衰退风险</div>
+<div class="rhino-item">🟠 <b>122条关税150天窗口</b> — 到期后总统关税权是否被国会收回</div>
+<div class="rhino-item">🟡 <b>中美贸易关系重塑期</b> — 退税落地+新关税博弈</div>
 </div>
-<div class="rhino-item">
-<div class="title">⚠️ DeepSeek V4本周发布·万亿参数级模型</div>
-<div class="desc">创始人梁文锋确认4月下旬发布，Github已更新110个文件含FP4精度支持。首次启动外部融资。可能重塑全球AI竞争格局。</div>
-</div>
-<div class="rhino-item">
-<div class="title">⚠️ 4月21日油价调整·降幅或因美伊冲突缩水</div>
-<div class="desc">原预计每吨下调680-730元（92号降0.55元/升），但今日油价反弹超7%可能导致降幅缩水。明晚24时调价窗口开启。</div>
-</div>
-<div class="rhino-item">
-<div class="title">⚠️ 欧洲5月底"停飞潮"风险</div>
-<div class="desc">IATA此前警告航油短缺，霍尔木兹持续封锁加剧供给压力。欧洲航空公司运营成本飙升。</div>
-</div>
+
+<!-- 封神评论 -->
+<div class="god-section">
+<h2>🏆 本期封神评论</h2>
+<div class="god-item">💬 "通过封锁敌方的封锁来打破敌人的封锁"——懂王<br><span style="font-size:11px;color:var(--text2)">针对美伊霍尔木兹海峡互相封锁 | 同一关键词多重含义嵌套</span></div>
+<div class="god-item">💬 "非法关税"四个字写进历史教科书——MAGA经济学最大笑话<br><span style="font-size:11px;color:var(--text2)">针对1660亿退税 | 极致凝练+标签画龙点睛</span></div>
+<div class="god-item">💬 美国制裁伊朗石油出口→结果所有人的石油都出不来了<br><span style="font-size:11px;color:var(--text2)">针对能源危机 | 用事件本质矛盾构造讽刺</span></div>
 </div>
 
 <footer>
-<p>📡 数据来源：新华社、央视网、AP、NPR、CNN、Reuters、外交部、IEA、市场监管总局等</p>
-<p>🤖 由AI热点监控系统自动生成 | 更新于 2026-04-20 15:00</p>
-<p>💬 评论为拟人化运营储备，仅供参考</p>
+<p>📊 数据来源：新华社、央视新闻、AP、CNBC、IEA、财新、外交部</p>
+<p>⏱ 报告生成：2026年4月21日 07:00 北京时间 | 14项维度全覆盖</p>
+<p>🔄 下次更新：09:00</p>
 </footer>
 </div>
 
 <script>
-function toggleEvent(header){
-const body=header.nextElementSibling;
+function toggle(el){
+const body=el.nextElementSibling;
+const icon=el.querySelector('.expand-icon');
 body.classList.toggle('active');
+icon.classList.toggle('open');
 }
+// 默认展开第一个S级事件
+document.addEventListener('DOMContentLoaded',()=>{
+const first=document.querySelector('.event-body');
+if(first){first.classList.add('active');first.previousElementSibling.querySelector('.expand-icon').classList.add('open')}
+});
 </script>
 </body>
 </html>
