@@ -40,6 +40,11 @@ header .meta span{background:var(--card);padding:4px 12px;border-radius:20px;bor
 .angle-title{font-size:13px;font-weight:600;color:var(--accent2);margin-bottom:6px;padding:4px 0}
 .comment{font-size:13px;color:var(--text2);padding:5px 0 5px 12px;border-left:2px solid var(--border);margin:4px 0;line-height:1.5}
 .comment:hover{border-left-color:var(--accent);color:var(--text)}
+.comment-item{position:relative;padding-right:50px}
+.copy-btn{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:var(--card2);border:1px solid var(--border);color:var(--text2);font-size:11px;padding:2px 8px;border-radius:4px;cursor:pointer;opacity:0;transition:opacity .2s}
+.comment-item:hover .copy-btn{opacity:1}
+.copy-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.copy-btn.copied{background:var(--green);color:#fff;border-color:var(--green)}
 .god-comment{border-left-color:var(--s-color);color:var(--text);font-weight:500;background:rgba(255,71,87,0.05);padding:8px 12px;border-radius:0 8px 8px 0}
 .hot-comments{background:var(--card2);border-radius:10px;padding:12px;margin:8px 0}
 .hot-comment-item{padding:6px 0;font-size:13px;color:var(--text2);border-bottom:1px solid rgba(255,255,255,0.03)}
@@ -78,10 +83,10 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 <div class="stat-item stat-b"><div class="num">4</div><div class="label">🟡 B级事件</div></div>
 </div>
 <div class="event-card">
-<div class="event-header" onclick="this.parentElement.classList.toggle('open')">
+<div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-s">S级</span>
 <span class="event-title">美伊停火48h终极倒计时·美军扣押中国油轮·外交部回应·伊朗矛盾信号</span>
-<span class="toggle-icon">▼</span>
+<span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="event-time">⏰ 时间线： 2026年4月21日 10:00-12:00 持续高频更新</div>
@@ -168,10 +173,10 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 <div class="comment-item">⑤做多和平，做空恐慌——华尔街的经典操作</div>
 </div>
 </div><div class="event-card">
-<div class="event-header" onclick="this.parentElement.classList.toggle('open')">
+<div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-s">S级</span>
 <span class="event-title">宁德时代"超级科技日"今日举办·钠电+凝聚态+快充发布·港股创新高</span>
-<span class="toggle-icon">▼</span>
+<span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="event-time">⏰ 时间线： 2026年4月21日 全天</div>
@@ -279,80 +284,14 @@ footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 </div>
 </div>
 
-<!-- A级事件2: 文班亚马 -->
+<!-- A级事件: 3岁男童虐致死案宣判 -->
 <div class="event-card">
 <div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">文班亚马全票当选NBA最佳防守球员·史上最年轻DPOY</span>
+<span class="event-title">3岁男童虐致死案宣判·赵雨蝶被判死缓·舆论热议量刑争议</span>
 <span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
-<div class="section">
-<div class="section-title">📍 事件概要</div>
-<p style="font-size:13px;color:var(--text2)">NBA官方宣布马刺球星文班亚马当选2025-26赛季DPOY。历史首位全票当选，史上最年轻DPOY(22岁)。马刺队史第四位。本赛季场均25.0分11.5篮板，连续第三年盖帽王。</p>
-</div>
-<div class="section">
-<div class="section-title">🗣 各平台热评TOP5</div>
-<div class="hot-comments">
-<div class="hot-comment-item">"全票当选，把其他候选人按地上摩擦" <span class="src">虎扑 2.8万回复</span></div>
-<div class="hot-comment-item">"2m24的身高像在篮筐上安了个盖子" <span class="src">B站 弹幕刷屏</span></div>
-<div class="hot-comment-item">"全票！有谁不服？" <span class="src">抖音 2.6万赞</span></div>
-</div>
-</div>
-</div>
-</div>
-
-<!-- B级事件 -->
-<div class="b-events">
-<h2>🟡 B级事件速览</h2>
-<table class="b-table">
-<tr><th>事件</th><th>概要</th></tr>
-<tr><td>莫桑比克总统查波抵京</td><td>4月16-22日国事访问，元首10年来首次访华</td></tr>
-<tr><td>第139届广交会第一期落幕</td><td>16.7万境外采购商到会增5.9%，216国参与</td></tr>
-<tr><td>发改委扩大内需方案</td><td>制定2026-2030年扩大内需战略实施方案</td></tr>
-<tr><td>微博文化之夜</td><td>话题阅读超150亿，郑州多次登上热搜</td></tr>
-<tr><td>中超第七轮</td><td>海港主场迎战升班马重庆铜梁龙</td></tr>
-</table>
-</div>
-
-<!-- 灰犀牛 -->
-<div class="rhino-section">
-<h2>🦏 灰犀牛预警</h2>
-<div class="rhino-item">🔴 <b>美伊停火4/22 08:00到期</b> — 仅剩36h，扣押货船，伊朗态度反复</div>
-<div class="rhino-item">🔴 <b>霍尔木兹海峡持续受阻</b> — 油价冲击100美元，全球经济衰退风险</div>
-<div class="rhino-item">🟠 <b>美国122条关税150天窗口</b> — 左手退税右手收钱</div>
-<div class="rhino-item">🟠 <b>特朗普上诉暂缓退税执行</b> — 1660亿退税可能名存实亡</div>
-<div class="rhino-item">🟡 <b>发改委扩大内需方案</b> — 增量政策Q2密集出台</div>
-</div>
-
-<!-- 封神评论 -->
-<div class="god-section">
-<h2>🏆 本期封神评论</h2>
-<div class="god-item">💬 "通过封锁敌方的封锁来打破敌人的封锁，结果油价把所有人都封锁了"<br><span style="font-size:11px;color:var(--text2)">美伊停火倒计时 | 同一关键词多重含义嵌套+递进升级</span></div>
-<div class="god-item">💬 "最高法说不能收→退你钱→换个法条继续收。这不是法治，这是换了个收银台"<br><span style="font-size:11px;color:var(--text2)">1660亿关税退税 | 极致凝练揭示荒谬本质</span></div>
-</div>
-
-<footer>
-<p>📊 数据来源：新华社、央视新闻、AP、CNBC、财新、外交部</p>
-<p>⏱ 报告生成：2026年4月21日 12:00 北京时间 | 14项维度全覆盖</p>
-<p>🔄 下次更新：15:00 下午报</p>
-</footer>
-</div>
-
-<script>
-function toggle(el){
-const body=el.nextElementSibling;
-const icon=el.querySelector('.expand-icon');
-if(body)body.classList.toggle('active');
-if(icon)icon.classList.toggle('open');
-}
-document.addEventListener('DOMContentLoaded',()=>{
-const first=document.querySelector('.event-body');
-if(first){first.classList.add('active');const icon=first.previousElementSibling.querySelector('.expand-icon');if(icon)icon.classList.add('open')}
-});
-</script>
-</body>
-</html>
 <div class="section-title">📈 走向预判</div>
 <div class="prediction-item"><span class="pct">55%</span> 走向A（55%）：舆论聚焦"死缓是否过轻"——可能推动儿童保护立法</div>
 <div class="prediction-item"><span class="pct">30%</span> 走向B（30%）：关注转向生父黄某某——另案处理结果成焦点</div>
@@ -415,11 +354,13 @@ if(first){first.classList.add('active');const icon=first.previousElementSibling.
 <div class="comment-item">④虐童案量刑标准确实需要统一指导</div>
 <div class="comment-item">⑤法治的进步就是在一次次争议中前进的</div>
 </div>
-</div><div class="event-card">
-<div class="event-header" onclick="this.parentElement.classList.toggle('open')">
+</div>
+<!-- A级事件: 工信部发布会（完整评论版） -->
+<div class="event-card">
+<div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-a">A级</span>
 <span class="event-title">工信部发布会·一季度工业增加值增6.1%·算电协同+太空算力+6G</span>
-<span class="toggle-icon">▼</span>
+<span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="event-time">⏰ 时间线： 2026年4月21日 10:00 国新办发布会</div>
@@ -492,11 +433,13 @@ if(first){first.classList.add('active');const icon=first.previousElementSibling.
 <div class="comment-item">④散户永远是最后一个知道利好的人</div>
 <div class="comment-item">⑤建议工信部以后不开发布会了，对股市更友好</div>
 </div>
-</div><div class="event-card">
-<div class="event-header" onclick="this.parentElement.classList.toggle('open')">
+</div>
+<!-- A级事件: 文班亚马DPOY（完整评论版） -->
+<div class="event-card">
+<div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-a">A级</span>
 <span class="event-title">文班亚马全票当选NBA最佳防守球员·NBA历史首位</span>
-<span class="toggle-icon">▼</span>
+<span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="event-time">⏰ 时间线： 2026年4月21日 早间公布</div>
@@ -571,10 +514,10 @@ if(first){first.classList.add('active');const icon=first.previousElementSibling.
 <div class="comment-item">⑤作为球迷我最怕听到的不是输球而是伤病报告</div>
 </div>
 </div><div class="event-card">
-<div class="event-header" onclick="this.parentElement.classList.toggle('open')">
+<div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-b">B级</span>
 <span class="event-title">肖战诉张某名誉权纠纷案今日上海开庭</span>
-<span class="toggle-icon">▼</span>
+<span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="fact-item">• 4月21日上午9时，上海市静安区人民法院开庭审理</div>
@@ -582,10 +525,10 @@ if(first){first.classList.add('active');const icon=first.previousElementSibling.
 <div class="fact-item">• 此前4月15日杭州拱墅区法院已审理另一名誉案</div>
 </div>
 </div><div class="event-card">
-<div class="event-header" onclick="this.parentElement.classList.toggle('open')">
+<div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-b">B级</span>
 <span class="event-title">第六届消博会收官·离岛免税消费4.7亿元</span>
-<span class="toggle-icon">▼</span>
+<span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="fact-item">• 消博会4月13-18日在海南举办，已落幕</div>
@@ -593,10 +536,10 @@ if(first){first.classList.add('active');const icon=first.previousElementSibling.
 <div class="fact-item">• 封关后首届国家级大展，消费热度持续攀升</div>
 </div>
 </div><div class="event-card">
-<div class="event-header" onclick="this.parentElement.classList.toggle('open')">
+<div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-b">B级</span>
 <span class="event-title">A股午间震荡·创业板跌0.94%</span>
-<span class="toggle-icon">▼</span>
+<span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="fact-item">• 上证指数报4072.39点，跌0.24%</div>
@@ -605,10 +548,10 @@ if(first){first.classList.add('active');const icon=first.previousElementSibling.
 <div class="fact-item">• 受美伊局势不确定性和全球市场凌晨下跌影响</div>
 </div>
 </div><div class="event-card">
-<div class="event-header" onclick="this.parentElement.classList.toggle('open')">
+<div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-b">B级</span>
 <span class="event-title">中美关税博弈持续·美国1660亿退税推进中</span>
-<span class="toggle-icon">▼</span>
+<span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="fact-item">• 中美于斯德哥尔摩重启关税减免谈判</div>
@@ -618,10 +561,10 @@ if(first){first.classList.add('active');const icon=first.previousElementSibling.
 </div>
 </div>
 <div class="event-card">
-<div class="event-header" onclick="this.parentElement.classList.toggle('open')">
+<div class="event-header" onclick="toggle(this)">
 <span class="event-badge" style="background:linear-gradient(135deg,#8854d0,#6c5ce7);color:#fff">🔮</span>
 <span class="event-title">灰犀牛扫描（5项酝酿中重大事件）</span>
-<span class="toggle-icon">▼</span>
+<span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="fact-item">• <strong>美伊停火到期后全面军事冲突</strong> — 概率:中 影响:极高 最早4月22日8:00</div>
@@ -640,13 +583,37 @@ if(first){first.classList.add('active');const icon=first.previousElementSibling.
 function toggle(el){
 const body=el.nextElementSibling;
 const icon=el.querySelector('.expand-icon');
-body.classList.toggle('active');
-icon.classList.toggle('open');
+if(body)body.classList.toggle('active');
+if(icon)icon.classList.toggle('open');
 }
-// 默认展开第一个S级事件
+function copyComment(btn){
+const item=btn.parentElement;
+const text=item.textContent.replace('复制','').replace('已复制','').trim();
+navigator.clipboard.writeText(text).then(()=>{
+btn.textContent='已复制';btn.classList.add('copied');
+setTimeout(()=>{btn.textContent='复制';btn.classList.remove('copied')},1500);
+}).catch(()=>{
+const ta=document.createElement('textarea');ta.value=text;
+document.body.appendChild(ta);ta.select();document.execCommand('copy');
+document.body.removeChild(ta);
+btn.textContent='已复制';btn.classList.add('copied');
+setTimeout(()=>{btn.textContent='复制';btn.classList.remove('copied')},1500);
+});
+}
 document.addEventListener('DOMContentLoaded',()=>{
+// 默认展开第一个S级事件
 const first=document.querySelector('.event-body');
-if(first){first.classList.add('active');first.previousElementSibling.querySelector('.expand-icon').classList.add('open')}
+if(first){first.classList.add('active');const icon=first.previousElementSibling.querySelector('.expand-icon');if(icon)icon.classList.add('open')}
+// 给所有评论项添加复制按钮
+document.querySelectorAll('.comment-item').forEach(item=>{
+if(!item.querySelector('.copy-btn')){
+const btn=document.createElement('button');
+btn.className='copy-btn';btn.textContent='复制';
+btn.onclick=function(e){e.stopPropagation();copyComment(this)};
+item.style.position='relative';item.style.paddingRight='50px';
+item.appendChild(btn);
+}
+});
 });
 </script>
 </body>
