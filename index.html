@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔥 热点监控看板 · 下午报 16:00</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
+<title>🔥 热点监控看板 · 晚报 18:00</title>
+<style>*{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#0f1117;--card:#1a1d28;--card2:#232635;--accent:#6c5ce7;--accent2:#a29bfe;--s-color:#ff4757;--a-color:#ff9f43;--b-color:#feca57;--text:#e8e8e8;--text2:#a0a0b0;--border:#2d3045;--green:#2ed573;--shadow:0 4px 20px rgba(0,0,0,0.3)}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
 .container{max-width:900px;margin:0 auto;padding:16px}
@@ -19,21 +18,15 @@ header .meta span{background:var(--card);padding:4px 12px;border-radius:20px;bor
 .stat-item{background:var(--card);border-radius:12px;padding:16px;text-align:center;border:1px solid var(--border)}
 .stat-item .num{font-size:32px;font-weight:700}
 .stat-item .label{font-size:12px;color:var(--text2);margin-top:4px}
-.stat-s .num{color:var(--s-color)}
-.stat-a .num{color:var(--a-color)}
-.stat-b .num{color:var(--b-color)}
+.stat-s .num{color:var(--s-color)}.stat-a .num{color:var(--a-color)}.stat-b .num{color:var(--b-color)}
 .event-card{background:var(--card);border-radius:14px;margin:16px 0;overflow:hidden;border:1px solid var(--border);transition:transform .2s}
 .event-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 .event-header{padding:16px 20px;display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none}
 .event-badge{padding:4px 10px;border-radius:6px;font-size:12px;font-weight:700;color:#fff;white-space:nowrap}
-.badge-s{background:linear-gradient(135deg,#ff4757,#ff3838)}
-.badge-a{background:linear-gradient(135deg,#ff9f43,#ee8a30)}
-.badge-b{background:linear-gradient(135deg,#feca57,#d4a520);color:#333}
+.badge-s{background:linear-gradient(135deg,#ff4757,#ff3838)}.badge-a{background:linear-gradient(135deg,#ff9f43,#ee8a30)}.badge-b{background:linear-gradient(135deg,#feca57,#d4a520);color:#333}
 .event-title{font-size:16px;font-weight:600;flex:1}
-.expand-icon{font-size:14px;color:var(--text2);transition:transform .3s}
-.expand-icon.open{transform:rotate(180deg)}
-.event-body{padding:0 20px 20px;display:none}
-.event-body.active{display:block}
+.expand-icon{font-size:14px;color:var(--text2);transition:transform .3s}.expand-icon.open{transform:rotate(180deg)}
+.event-body{padding:0 20px 20px;display:none}.event-body.active{display:block}
 .section{margin:12px 0}
 .section-title{font-size:14px;font-weight:600;color:var(--accent2);margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--border)}
 .prediction{background:var(--card2);border-radius:8px;padding:10px 14px;margin:6px 0;font-size:13px}
@@ -53,8 +46,7 @@ header .meta span{background:var(--card);padding:4px 12px;border-radius:20px;bor
 .hot-comments{background:var(--card2);border-radius:10px;padding:12px;margin:8px 0}
 .hot-comment-item{padding:6px 0;font-size:13px;color:var(--text2);border-bottom:1px solid rgba(255,255,255,0.03)}
 .hot-comment-item .src{font-size:11px;color:var(--accent2);margin-left:6px}
-.b-events{margin:24px 0}
-.b-events h2{font-size:18px;color:var(--b-color);margin-bottom:12px}
+.b-events{margin:24px 0}.b-events h2{font-size:18px;color:var(--b-color);margin-bottom:12px}
 .b-table{width:100%;border-collapse:collapse;font-size:13px}
 .b-table th{background:var(--card2);padding:10px;text-align:left;border-bottom:2px solid var(--border);color:var(--accent2)}
 .b-table td{padding:10px;border-bottom:1px solid var(--border);color:var(--text2)}
@@ -67,17 +59,16 @@ header .meta span{background:var(--card);padding:4px 12px;border-radius:20px;bor
 .god-item{padding:10px 0;font-size:14px;border-bottom:1px solid rgba(255,255,255,0.05)}
 footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
 footer p{margin:4px 0}
-@media(max-width:600px){header h1{font-size:22px}.stats-bar{grid-template-columns:1fr}.event-title{font-size:14px}}
-</style>
+@media(max-width:600px){header h1{font-size:22px}.stats-bar{grid-template-columns:1fr}.event-title{font-size:14px}}</style>
 </head>
 <body>
 <div class="container">
 <header>
-<h1>🔥 热点监控看板 · 下午报</h1>
+<h1>🔥 热点监控看板 · 晚报</h1>
 <div class="meta">
-<span>📅 2026年4月21日 16:00</span>
+<span>📅 2026年4月21日 18:00</span>
 <span>📡 12大垂类+热榜+灰犀牛 全覆盖</span>
-<span>🔄 下次更新：18:00 晚报</span>
+<span>🔄 下次更新：21:00 夜报</span>
 </div>
 <a href="history/" class="history-btn">📚 历史报告</a>
 </header>
@@ -85,465 +76,494 @@ footer p{margin:4px 0}
 <div class="stats-bar">
 <div class="stat-item stat-s"><div class="num">2</div><div class="label">🔴 S级事件</div></div>
 <div class="stat-item stat-a"><div class="num">3</div><div class="label">🟠 A级事件</div></div>
-<div class="stat-item stat-b"><div class="num">5</div><div class="label">🟡 B级事件</div></div>
+<div class="stat-item stat-b"><div class="num">4</div><div class="label">🟡 B级事件</div></div>
 </div>
 
-<!-- ============ S级事件1: 美伊停火倒计时 ============ -->
 <div class="event-card">
 <div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-s">S级</span>
-<span class="event-title">美伊停火协议4/22到期终极倒计时·伊朗赴会伊斯兰堡·特朗普威胁再开战</span>
+<span class="event-title">美伊停火倒计时最后36h·美军向伊朗商船开火·第二轮谈判生死局</span>
 <span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
-<div class="section">
-<div class="section-title">📍 事件概要</div>
-<p style="font-size:13px;color:var(--text2)">北京时间4月22日08:00，美伊两周临时停火协议正式到期，仅剩不到16小时。伊朗此前曾一度拒绝赴会，但4月21日终于确认赴伊斯兰堡进行第二轮谈判。特朗普4月20日明确威胁：若到期前不达协议将重启军事行动。霍尔木兹海峡虽已对商船重开，但安全形势脆弱。AP、CNBC、CNN等多家外媒均将此列为全球头号关注事件。</p>
-</div>
-<div class="section">
-<div class="section-title">🗣 各平台热评TOP5</div>
+<div class="section"><div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">北京时间4月22日08:00美伊两周停火协议到期。4月20日美军在阿曼湾向伊朗商船开火，伊朗军方宣布将报复。伊朗此前确认赴伊斯兰堡第二轮谈判但4月20日外交部发言人称"暂无谈判计划"。霍尔木兹海峡经历"开了又关"反转——伊朗先宣布开放后又恢复封控。油价21日再涨7%突破105美元/桶。</p></div>
+<div class="section"><div class="section-title">🗣 各平台热评TOP5</div>
 <div class="hot-comments">
-<div class="hot-comment-item">"停火倒计时36小时，全世界跟着美伊吸氧" <span class="src">微博 1.2万转发</span></div>
-<div class="hot-comment-item">"谈还是打？特朗普自己都不知道" <span class="src">抖音 3.1万赞</span></div>
-<div class="hot-comment-item">"Iran confirms Islamabad talks but says 'won't negotiate at any cost'" <span class="src">AP 2.8k shares</span></div>
-<div class="hot-comment-item">"油价赌场又要开盘了" <span class="src">雪球 8600回复</span></div>
-<div class="hot-comment-item">"最后36小时，不是谈判是赌命" <span class="src">知乎 6200赞同</span></div>
-</div>
-</div>
+<div class="hot-comment-item">"停火36小时倒计时，油价跟着倒吸一口凉气" <span class="src">微博 2.1万转发</span></div>
+<div class="hot-comment-item">"美军向商船开火，停火协议成了一张废纸" <span class="src">抖音 5.2万赞</span></div>
+<div class="hot-comment-item">"Iran: no plans for talks. Also Iran: confirms Islamabad visit." <span class="src">AP 3.5k shares</span></div>
+<div class="hot-comment-item">"霍尔木兹海峡开了又关，跟我家wifi信号一样" <span class="src">知乎 9800赞同</span></div>
+<div class="hot-comment-item">"全球都在等两个字：续或战" <span class="src">雪球 1.2万回复</span></div>
+</div></div>
 <div class="section-title">📈 走向预判</div>
-<div class="prediction"><span class="prob">40%</span>最后时刻达成框架性延期协议，停火再延14天，油价回落5-8%</div>
-<div class="prediction"><span class="prob">35%</span>谈判破裂但双方默契"技术性延期"，不宣布停火结束但也不重启大规模行动</div>
-<div class="prediction"><span class="prob">25%</span>彻底谈崩，美军对伊朗本土目标发动新一轮空袭，霍尔木兹海峡再度关闭，油价暴涨</div>
-
-<!-- 走向1 -->
-<div class="direction-block">
-<div class="direction-header">🟢 走向1：达成延期协议 (40%)</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：吃瓜群众视角</div>
-<div class="comment-item"><div class="comment">① 又续了两周？这停火协议跟我的视频会员一样，永远在续费</div></div>
-<div class="comment-item"><div class="comment">② 谈了半天就延期14天 我以为怎么着也得签个和平协议啊</div></div>
-<div class="comment-item"><div class="comment">③ 全球股市松口气，我手里的中石油也松了口气</div></div>
-<div class="comment-item"><div class="comment">④ 合着谈了这么久就是续杯？星巴克都没这么能续</div></div>
-<div class="comment-item"><div class="comment">⑤ 还好还好 我五一出去玩油价能便宜点了吧</div></div>
+<div class="prediction"><span class="prob">40%</span>最后时刻巴基斯坦斡旋成功，双方达成框架性延期协议再延14天，油价回落5-8%</div>
+<div class="prediction"><span class="prob">35%</span>谈判破裂但双方默契"技术性延期"，不宣布停火结束也不重启大规模行动，油价高位震荡</div>
+<div class="prediction"><span class="prob">25%</span>彻底谈崩，美军对伊朗目标发动新一轮空袭，霍尔木兹海峡再度关闭，油价暴涨至120+</div>
+<div class="direction-block"><div class="direction-header">🟢 走向A：框架性延期达成（40%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：普通人视角——"油价终于能喘口气"</div>
+<div class="comment-item"><div class="comment">①哈哈哈终于续了，我加油站囤的油可以不用了吧😂</div></div>
+<div class="comment-item"><div class="comment">②说白了两边都不想真打，都在等对方先低头呗</div></div>
+<div class="comment-item"><div class="comment">③巴基斯坦这波斡旋真行啊，诺贝尔和平奖提名安排上</div></div>
+<div class="comment-item"><div class="comment">④续了也就14天吧…14天后又来一次全球心脏病发作</div></div>
+<div class="comment-item"><div class="comment">⑤油价降了记得通知我，我车都不敢开了快骑自行车了</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：国际关系分析</div>
-<div class="comment-item"><div class="comment">① 延期本身就是外交胜利，至少双方还愿意坐下来——这在中东已经是奇迹</div></div>
-<div class="comment-item"><div class="comment">② 巴基斯坦当调停人赚足面子，伊斯兰堡这波外交操作直接封神</div></div>
-<div class="comment-item"><div class="comment">③ 说白了两边都不想真打 但也都不愿先示弱 所以续费是最优解</div></div>
-<div class="comment-item"><div class="comment">④ 延期14天后呢？还是得面对核问题和海峡问题，拖不是办法</div></div>
-<div class="comment-item"><div class="comment">⑤ 特朗普需要一个"我带来了和平"的故事讲给选民听，延期够用了</div></div>
+<div class="angle-group"><div class="angle-title">💬角度2：投资者视角——"又可以抄底了"</div>
+<div class="comment-item"><div class="comment god-comment">停火续期：用谈判续谈判，用延期续延期，用等待续等待——当代行为艺术</div></div>
+<div class="comment-item"><div class="comment">②中东概念股明天怕是要跌停了，上周追高的又被套了</div></div>
+<div class="comment-item"><div class="comment">③油价回调5-8%的话 中远海能得跌多少啊我算算…</div></div>
+<div class="comment-item"><div class="comment">④续约14天=给投资者14天跑路窗口 懂的都懂</div></div>
+<div class="comment-item"><div class="comment">⑤A股航运板块：利好出尽是利空，还是得跑</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：金融市场反应</div>
-<div class="comment-item"><div class="comment">① 油价秒跌 早说嘛 又不是第一次续费了 市场都麻了</div></div>
-<div class="comment-item"><div class="comment">② 做空原油的兄弟们这波赢麻了，做多的只能含泪止损</div></div>
-<div class="comment-item"><div class="comment">③ 航空股航运股集体拉涨 霍尔木兹海峡通了就是最大利好</div></div>
-<div class="comment-item"><div class="comment">④ 延期不等于和平 油价反弹随时会来 别太早下车</div></div>
-<div class="comment-item"><div class="comment">⑤ 黄金4800→4700 避险资金跑路速度比我下班还快</div></div>
+<div class="angle-group"><div class="angle-title">💬角度3：国际政治视角——"面子工程罢了"</div>
+<div class="comment-item"><div class="comment">①框架协议有啥用？上次也是框架协议 两周后还不是打回原形</div></div>
+<div class="comment-item"><div class="comment">②特朗普需要一个"我赢了"的narrative去竞选，续约刚好</div></div>
+<div class="comment-item"><div class="comment">③伊朗：我不是怕你，我只是还没准备好（doge</div></div>
+<div class="comment-item"><div class="comment">④巴基斯坦才是这场牌局唯一的赢家 两边通吃</div></div>
+<div class="comment-item"><div class="comment">⑤14天延期，14天后再演一出，这不连续剧嘛</div></div>
 </div>
 </div>
-
-<!-- 走向2 -->
-<div class="direction-block">
-<div class="direction-header">🟡 走向2：技术性延期/模糊处理 (35%)</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：看透本质型</div>
-<div class="comment-item"><div class="comment">① 不宣布停火结束也不宣布延期——这叫什么？薛定谔的停火</div></div>
-<div class="comment-item"><div class="comment">② 两边都骑虎难下 干脆装糊涂 经典外交操作</div></div>
-<div class="comment-item"><div class="comment">③ 停火不停火不重要 重要的是油轮还能不能过海峡</div></div>
-<div class="comment-item"><div class="comment">④ 美伊关系现在就像我跟前任 说分了又没彻底分 说好了又没真好</div></div>
-<div class="comment-item"><div class="comment">⑤ 这叫战略模糊 学学人家 高端操作</div></div>
+<div class="direction-block"><div class="direction-header">🟡 走向B：技术性延期但不宣布（35%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：吃瓜群众视角——"薛定谔的停火"</div>
+<div class="comment-item"><div class="comment">①这停火到底是停了还是没停？就像我的工资 发了又好像没发</div></div>
+<div class="comment-item"><div class="comment">②不宣布结束也不宣布延期 这是量子停火啊朋友们</div></div>
+<div class="comment-item"><div class="comment god-comment">停火不停火不重要，重要的是停火状态的叠加态——物理学在中东找到了应用场景</div></div>
+<div class="comment-item"><div class="comment">④美伊：我们之间的关系很复杂。网友：你俩是分手了还是没分？</div></div>
+<div class="comment-item"><div class="comment">⑤默契延期说白了就是谁都不想背锅 谁先说停火结束谁就是战争贩子</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：担忧型</div>
-<div class="comment-item"><div class="comment">① 模糊处理最危险 任何一次擦枪走火都可能升级</div></div>
-<div class="comment-item"><div class="comment">② 市场最怕不确定性 这种不上不下的状态比打起来还折磨</div></div>
-<div class="comment-item"><div class="comment">③ 今天不谈明天不打，拖到哪天算哪天？全球供应链受不了这种折腾</div></div>
-<div class="comment-item"><div class="comment">④ 企业怎么做计划？油价一天一个价 合同都不知道怎么签</div></div>
-<div class="comment-item"><div class="comment">⑤ 这种灰色状态对老百姓最不友好 油价居高不下但你又说没打仗</div></div>
+<div class="angle-group"><div class="angle-title">💬角度2：能源市场视角——"油价坐过山车"</div>
+<div class="comment-item"><div class="comment">①不明确就是最大的不确定性 油价继续疯就完了</div></div>
+<div class="comment-item"><div class="comment">②做多做空都不敢，只能做观望，太难了期货人</div></div>
+<div class="comment-item"><div class="comment">③高位震荡=两头割 散户又当韭菜了</div></div>
+<div class="comment-item"><div class="comment">④这种模糊状态运费保险费全涨 外贸人要哭了</div></div>
+<div class="comment-item"><div class="comment">⑤OPEC：我们也不知道该增产还是减产…先开个会吧</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：幽默消解</div>
-<div class="comment-item"><div class="comment">① 美伊关系状态：It's Complicated</div></div>
-<div class="comment-item"><div class="comment">② 停火协议到期了 双方选择已读不回</div></div>
-<div class="comment-item"><div class="comment">③ 特朗普：到期了哈。伊朗：收到。然后呢？然后就没有然后了</div></div>
-<div class="comment-item"><div class="comment">④ 世界人民表示：你们到底打不打？不打我去睡了</div></div>
-<div class="comment-item"><div class="comment">⑤ 停火协议到期就像deadline到了交不出论文 先假装没看到邮件</div></div>
+<div class="angle-group"><div class="angle-title">💬角度3：军事观察视角——"都在部署"</div>
+<div class="comment-item"><div class="comment">①不宣布≠不准备 美军82空降师可没撤 该来的会来</div></div>
+<div class="comment-item"><div class="comment">②伊朗地下工厂没停过一天 这14天也是在抢时间</div></div>
+<div class="comment-item"><div class="comment">③技术性延期就是给双方擦枪走火留了个借口</div></div>
+<div class="comment-item"><div class="comment">④CNN：both sides preparing for the worst 翻译过来就是要打了</div></div>
+<div class="comment-item"><div class="comment">⑤海峡这种状态 保险公司怕是最难受的</div></div>
 </div>
 </div>
-
-<!-- 走向3 -->
-<div class="direction-block">
-<div class="direction-header">🔴 走向3：谈崩重启军事行动 (25%)</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：震惊/恐慌型</div>
-<div class="comment-item"><div class="comment">① 真崩了？？？我油箱还没加满啊啊啊</div></div>
-<div class="comment-item"><div class="comment">② 完了完了 油价100美金指日可待 我的车要改骑自行车了</div></div>
-<div class="comment-item"><div class="comment">③ 这两个月全球经济好不容易缓过来 一夜回到解放前</div></div>
-<div class="comment-item"><div class="comment">④ 霍尔木兹要是再关 全球20%的石油运输直接瘫痪 想想就头皮发麻</div></div>
-<div class="comment-item"><div class="comment">⑤ A股航运石油板块准备集体涨停 散户们冲啊（不是投资建议）</div></div>
+<div class="direction-block"><div class="direction-header">🔴 走向C：谈崩重启军事行动（25%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：恐慌视角——"第三次石油危机"</div>
+<div class="comment-item"><div class="comment">①完了完了 120的油价我直接封车不开了</div></div>
+<div class="comment-item"><div class="comment">②说好的和平呢？怎么又打起来了？？？</div></div>
+<div class="comment-item"><div class="comment">③股市明天得崩 我的基金啊啊啊啊啊</div></div>
+<div class="comment-item"><div class="comment">④2026年真的魔幻 疫情关税战争三连击</div></div>
+<div class="comment-item"><div class="comment">⑤超市要不要囤点东西…上次涨价太快了</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：理性分析型</div>
-<div class="comment-item"><div class="comment">① 真打的概率其实不高——双方都承受不起全面战争的代价</div></div>
-<div class="comment-item"><div class="comment">② 即使谈崩也大概率是有限度的军事行动而非全面入侵</div></div>
-<div class="comment-item"><div class="comment">③ 关注中国外交部态度 中方一直在斡旋 王毅这次出访东南亚可能也有相关布局</div></div>
-<div class="comment-item"><div class="comment">④ 欧盟和日韩才是最急的 他们的能源依赖比我们大得多</div></div>
-<div class="comment-item"><div class="comment">⑤ 历史经验看 海湾地区的冲突从来都是打打停停 不会一打到底</div></div>
+<div class="angle-group"><div class="angle-title">💬角度2：反战情绪视角——"谁的孩子在打仗"</div>
+<div class="comment-item"><div class="comment">①打仗死的都是普通人 那些政客在空调房里下棋呢</div></div>
+<div class="comment-item"><div class="comment">②美国民调60%反战 但又有啥用呢</div></div>
+<div class="comment-item"><div class="comment">③伊朗年轻人刷着ins反战 跟乌克兰当年一样</div></div>
+<div class="comment-item"><div class="comment">④石油换的是钱 命换的是什么？</div></div>
+<div class="comment-item"><div class="comment">⑤特朗普竞选的时候不是说要peace吗 现在呢</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：讽刺型</div>
-<div class="comment-item"><div class="comment">① 特朗普：我要和平！（但如果打起来那也是伊朗的错）</div></div>
-<div class="comment-item"><div class="comment">② 停火两周，花了几十亿美元，结果回到原点。效率真高啊</div></div>
-<div class="comment-item"><div class="comment">③ 美国：我花1660亿退关税左手给钱 打仗右手花钱 完美对冲</div></div>
-<div class="comment-item"><div class="comment">④ 通过开战来结束战争 通过制裁来促进贸易 懂王的逻辑真的很懂</div></div>
-<div class="comment-item"><div class="comment">⑤ 中东人民表示已经习惯了 你们打你们的 我先把油田盖好</div></div>
+<div class="angle-group"><div class="angle-title">💬角度3：中国影响视角——"油价传导链"</div>
+<div class="comment-item"><div class="comment">①油价120的话 国内92#怕是要破9块了</div></div>
+<div class="comment-item"><div class="comment">②外贸人已经哭晕在厕所 运费翻倍海运排不上</div></div>
+<div class="comment-item"><div class="comment">③A股能源股又要涨了 但这种涨法谁开心啊</div></div>
+<div class="comment-item"><div class="comment">④通胀压力一来 央妈的降息空间又小了</div></div>
+<div class="comment-item"><div class="comment">⑤加油站又要排队了 上次排了仨小时</div></div>
 </div>
 </div>
-</div>
-</div>
-
-<!-- ============ S级事件2: 爱奇艺AI艺人库 ============ -->
+</div></div>
 <div class="event-card">
 <div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-s">S级</span>
-<span class="event-title">爱奇艺"AI艺人库"引爆热搜·多位艺人辟谣授权·龚宇三发微博回应</span>
+<span class="event-title">美国1660亿关税退款系统正式上线·122条款关税博弈讽刺性收场</span>
 <span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
-<div class="section">
-<div class="section-title">📍 事件概要</div>
-<p style="font-size:13px;color:var(--text2)">4月20日爱奇艺世界大会上，CEO龚宇宣布"纳逗Pro AI艺人库"——称100多位艺人同意入驻AI平台可用于AIGC创作。消息冲上微博热搜第一，阅读量数亿。随即于和伟、张若昀、王楚然、李一桐等多位艺人团队紧急声明"未签署任何AI授权"。4月21日龚宇连发三条微博回应：①科技永远不是为了取代人 ②入驻仅代表有接洽意向 ③与现行合作流程一致。争议焦点：AI是否会取代真人演员？平台是否在未授权情况下使用艺人肖像？</p>
-</div>
-<div class="section">
-<div class="section-title">🗣 各平台热评TOP5</div>
+<div class="section"><div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">4月21日，美国海关正式启动1660亿美元关税退款系统。2月20日最高法裁定IEEPA关税违宪后，特朗普改用《贸易法》122条款继续加税，但企业已开始追回此前多缴税款。观察者网评论：这场关税博弈"最终以向企业退钱草草落幕"。退税系统预计需运行至少500天才能完成全部退款。</p></div>
+<div class="section"><div class="section-title">🗣 各平台热评TOP5</div>
 <div class="hot-comments">
-<div class="hot-comment-item">"爱奇艺：我们有100个艺人同意了。艺人们：不 你没有" <span class="src">微博 5.6万转</span></div>
-<div class="hot-comment-item">"以后看剧都不知道演员是真人还是AI 细思极恐" <span class="src">B站 2.3万弹幕</span></div>
-<div class="hot-comment-item">"龚宇把话说得很艺术——表达意愿≠签了合同 中文博大精深" <span class="src">知乎 1.8万赞</span></div>
-<div class="hot-comment-item">"周一围两年前就说过'有一天AI会取代演员' 神预言了" <span class="src">抖音 4.2万赞</span></div>
-<div class="hot-comment-item">"科技以人为本≠科技以人为素材" <span class="src">微博 3.1万赞</span></div>
-</div>
-</div>
+<div class="hot-comment-item">"1660亿退税 够退500年的 美国效率永远不会让人失望" <span class="src">微博 1.8万转发</span></div>
+<div class="hot-comment-item">"加了再退 退了再加 美国海关成了旋转门" <span class="src">抖音 4.1万赞</span></div>
+<div class="hot-comment-item">"The tariff refund system is live but will take 500 days to process" <span class="src">Reuters 2.9k shares</span></div>
+<div class="hot-comment-item">"这波操作属于左手收钱右手退钱 中间赚个手续费" <span class="src">知乎 7500赞同</span></div>
+<div class="hot-comment-item">"关税退款？先用了一年企业的无息贷款呗" <span class="src">雪球 9200回复</span></div>
+</div></div>
 <div class="section-title">📈 走向预判</div>
-<div class="prediction"><span class="prob">45%</span>舆论持续发酵2-3天，更多艺人发声辟谣，爱奇艺被迫下架或修改AI艺人库功能</div>
-<div class="prediction"><span class="prob">35%</span>爱奇艺通过细化规则平息争议，AI艺人库保留但增加显著的授权标识和opt-out机制</div>
-<div class="prediction"><span class="prob">20%</span>监管部门介入，出台AI影视行业肖像权保护指导意见</div>
-
-<!-- 走向1 -->
-<div class="direction-block">
-<div class="direction-header">🟢 走向1：舆论发酵+爱奇艺修改方案 (45%)</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：演员/创作者立场</div>
-<div class="comment-item"><div class="comment">① 我的脸我做主 什么时候轮到平台替我决定了？</div></div>
-<div class="comment-item"><div class="comment">② 先斩后奏然后说"只是表达意愿" 这话术比AI还智能</div></div>
-<div class="comment-item"><div class="comment">③ 今天替你表达意愿 明天替你接戏 后天直接替你活了是吧</div></div>
-<div class="comment-item"><div class="comment">④ 难怪演员们集体否认 这种事不辟谣等于默认 谁敢不说话</div></div>
-<div class="comment-item"><div class="comment">⑤ 作为一个群演我倒是无所谓 反正也没人在乎我是真人还是AI 🙃</div></div>
+<div class="prediction"><span class="prob">45%</span>退税系统正常运行，企业陆续拿回税款，但122条款新关税持续，贸易格局不变</div>
+<div class="prediction"><span class="prob">35%</span>特朗普上诉成功冻结退税，1660亿被锁，中美企业双输</div>
+<div class="prediction"><span class="prob">20%</span>退税推动中美贸易回暖信号，双方重启谈判窗口</div>
+<div class="direction-block"><div class="direction-header">🟢 走向A：退税正常进行但新关税持续（45%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：外贸企业视角——"退了旧的来了新的"</div>
+<div class="comment-item"><div class="comment god-comment">最高法说不能收→退你钱→换个法条继续收。不是法治，是换了个收银台——懂王の财技</div></div>
+<div class="comment-item"><div class="comment">②退倒是退了 但122条款加的不比IEEPA少啊 换了个名字收</div></div>
+<div class="comment-item"><div class="comment">③老板让我算退税能回多少 我说算了吧新关税比退的还多</div></div>
+<div class="comment-item"><div class="comment">④美国企业：退税好开心！看到新关税：开心不起来了</div></div>
+<div class="comment-item"><div class="comment">⑤500天退完…到那时候122条款的税又收了500天了 无限循环</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：技术恐惧与社会思考</div>
-<div class="comment-item"><div class="comment">① AI取代工厂工人的时候我们沉默 取代程序员的时候我们焦虑 取代明星的时候全网炸了——说到底还是谁的蛋糕被动了</div></div>
-<div class="comment-item"><div class="comment">② 普通人的工作被AI抢走没人管 艺人的肖像权被动一下全网声援 讽刺不</div></div>
-<div class="comment-item"><div class="comment">③ 这事本质是肖像权问题不是技术问题 别把锅甩给AI</div></div>
-<div class="comment-item"><div class="comment">④ 说实话AI生成的表演如果真的能打 那说明这个行业门槛确实不高</div></div>
-<div class="comment-item"><div class="comment">⑤ 以后面试：请问你是人类演员还是AI演员？薪资不一样哦</div></div>
+<div class="angle-group"><div class="angle-title">💬角度2：经济学者视角——"关税政策的U型弯"</div>
+<div class="comment-item"><div class="comment">①从违宪到换法条 美国贸易法成了变形金刚想怎么变怎么变</div></div>
+<div class="comment-item"><div class="comment">②1660亿退款就是在承认过去一年的关税是错误的</div></div>
+<div class="comment-item"><div class="comment">③但承认错误≠改正错误 122条款本质上换汤不换药</div></div>
+<div class="comment-item"><div class="comment">④全球供应链的不确定性只会更大 企业哪敢做长期规划</div></div>
+<div class="comment-item"><div class="comment">⑤IMF都说了 这种关税反复横跳伤害最大的是美国自己</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：吃瓜/段子</div>
-<div class="comment-item"><div class="comment">① 爱奇艺：我们有100个艺人。记者：谁？爱奇艺：这个不方便说。艺人们：我们方便——没有我</div></div>
-<div class="comment-item"><div class="comment">② 龚宇连发三条微博 一条比一条像AI写的 你确定不是先用自己做实验了？</div></div>
-<div class="comment-item"><div class="comment">③ 以后追星追的是真人还是数据包 粉丝也太难了吧</div></div>
-<div class="comment-item"><div class="comment">④ AI艺人不会塌房 不会迟到 不会耍大牌——等等这不是优点吗</div></div>
-<div class="comment-item"><div class="comment">⑤ 建议爱奇艺先用AI替换掉自己的广告 比替换演员有意义多了</div></div>
+<div class="angle-group"><div class="angle-title">💬角度3：中国立场视角——"以不变应万变"</div>
+<div class="comment-item"><div class="comment">①美国折腾来折腾去 中国出口照样增长15% 这就是答案</div></div>
+<div class="comment-item"><div class="comment">②退税说明美国扛不住了 自己的企业先不干了</div></div>
+<div class="comment-item"><div class="comment">③一季度外贸11.84万亿说明中国供应链韧性顶住了</div></div>
+<div class="comment-item"><div class="comment">④等着吧 下半年美国还得找中国谈 因为通胀扛不住</div></div>
+<div class="comment-item"><div class="comment">⑤东南亚转口贸易数据就是最好的注脚 关税挡不住的</div></div>
 </div>
 </div>
-
-<!-- 走向2 -->
-<div class="direction-block">
-<div class="direction-header">🟡 走向2：增加授权标识化解争议 (35%)</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：理性建设型</div>
-<div class="comment-item"><div class="comment">① 方向没错但方式错了 先获得明确书面授权再上架 这么难？</div></div>
-<div class="comment-item"><div class="comment">② opt-in和opt-out区别很大 应该让艺人主动选择入库 而不是默认入库需要退出</div></div>
-<div class="comment-item"><div class="comment">③ 其实好莱坞SAG-AFTRA去年就谈过这个问题了 爱奇艺完全可以参考</div></div>
-<div class="comment-item"><div class="comment">④ 技术是中性的 关键看规则怎么定 希望这次能推动行业标准出台</div></div>
-<div class="comment-item"><div class="comment">⑤ 最终会变成新的商业模式 演员多一份收入来源 平台多一种内容形态 关键是分钱要公平</div></div>
+<div class="direction-block"><div class="direction-header">🟡 走向B：特朗普上诉冻结退税（35%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：美国企业视角——"被反复PUA"</div>
+<div class="comment-item"><div class="comment">①说退又不退了？？美国企业被自己政府PUA到麻木了</div></div>
+<div class="comment-item"><div class="comment">②冻结退税=企业白等了半年 现金流就这么被白嫖</div></div>
+<div class="comment-item"><div class="comment">③美国中小企业协会都怒了 说这是对企业的第二次伤害</div></div>
+<div class="comment-item"><div class="comment">④苹果们有钱扛得住 小企业直接倒闭了好吗</div></div>
+<div class="comment-item"><div class="comment">⑤法院判了要退 总统说不退 这叫什么三权分立？</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：质疑型</div>
-<div class="comment-item"><div class="comment">① 加个标识就完事了？核心问题是你没经过人家同意就把名字挂上去了啊</div></div>
-<div class="comment-item"><div class="comment">② 修改方案不如道歉 先把已经造成的伤害处理好再说</div></div>
-<div class="comment-item"><div class="comment">③ 互联网公司的标准操作：先干了再说 出事了就改 改完接着干</div></div>
-<div class="comment-item"><div class="comment">④ "增加显著授权标识"——翻译：以前没有标识就敢上 现在加上是因为被抓了</div></div>
-<div class="comment-item"><div class="comment">⑤ 我预判这波修改之后过半年又会悄悄放宽限制 等着看</div></div>
+<div class="angle-group"><div class="angle-title">💬角度2：股市反应视角——"利空炸弹"</div>
+<div class="comment-item"><div class="comment">①冻结退税的消息一出 道琼斯怕是要跳水</div></div>
+<div class="comment-item"><div class="comment">②进口概念股又要暴跌一波了 上次跌了20%这次得30%</div></div>
+<div class="comment-item"><div class="comment">③华尔街已经在做空了 消息灵通的资本永远跑在前面</div></div>
+<div class="comment-item"><div class="comment">④美股靠AI撑着呢 关税这颗雷炸了AI也扛不住</div></div>
+<div class="comment-item"><div class="comment">⑤退了又冻 跟A股T+1一样 让你看到钱但拿不走</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：行业从业者视角</div>
-<div class="comment-item"><div class="comment">① 做影视AI的同行都在骂爱奇艺——你一家捅这么大篓子 监管一来我们全遭殃</div></div>
-<div class="comment-item"><div class="comment">② 正规AI影视公司都是签了授权才用的 爱奇艺这操作让整个行业倒退</div></div>
-<div class="comment-item"><div class="comment">③ 最怕的就是一刀切监管 到时候技术创新全卡死</div></div>
-<div class="comment-item"><div class="comment">④ 其实很多小演员愿意入AI库增加曝光 但头部艺人不愿意 这个分层需求没被考虑到</div></div>
-<div class="comment-item"><div class="comment">⑤ 经纪公司现在应该都在加班修改合同条款了 新增一条"AI肖像使用"</div></div>
+<div class="angle-group"><div class="angle-title">💬角度3：国际舆论视角——"法治笑话"</div>
+<div class="comment-item"><div class="comment">①最高法说违宪→总统说我不听→法治在美国就是个笑话</div></div>
+<div class="comment-item"><div class="comment">②欧盟发言人表示shock 但也习惯了shock</div></div>
+<div class="comment-item"><div class="comment">③这事儿要是发生在别的国家 CNN早开始民主输出了</div></div>
+<div class="comment-item"><div class="comment">④WTO又要写长篇报告了 但写了也没人看</div></div>
+<div class="comment-item"><div class="comment">⑤1660亿在法院和白宫之间反复横跳 钱都不知道该去哪</div></div>
 </div>
 </div>
-
-<!-- 走向3 -->
-<div class="direction-block">
-<div class="direction-header">🔴 走向3：监管部门介入出台指导意见 (20%)</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：支持监管型</div>
-<div class="comment-item"><div class="comment">① 早该管了 AI换脸诈骗都出多少案例了 肖像权保护刻不容缓</div></div>
-<div class="comment-item"><div class="comment">② 正好最高法刚发了知识产权惩罚性赔偿新规 AI肖像权也该安排上了</div></div>
-<div class="comment-item"><div class="comment">③ 今天是明星 明天就是普通人 你的脸随时可以被AI用 不监管行吗</div></div>
-<div class="comment-item"><div class="comment">④ 支持出台明确法规 别让平台打着创新旗号侵犯公民权利</div></div>
-<div class="comment-item"><div class="comment">⑤ 比起事后追责 事前审批更重要 不然又是先污染后治理</div></div>
+<div class="direction-block"><div class="direction-header">🔴 走向C：退税推动谈判窗口重启（20%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：乐观派视角——"转机来了"</div>
+<div class="comment-item"><div class="comment">①退税就是一个积极信号 至少说明美国知道关税不可持续</div></div>
+<div class="comment-item"><div class="comment">②双方都需要一个台阶下 退税正好是那个台阶</div></div>
+<div class="comment-item"><div class="comment">③中美谈起来对全球都好 股市暴涨指日可待</div></div>
+<div class="comment-item"><div class="comment">④就看特朗普想不想在访华前营造好氛围了</div></div>
+<div class="comment-item"><div class="comment">⑤退税+谈判 如果成了 今年Q3经济就能反弹</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：担忧过度监管</div>
-<div class="comment-item"><div class="comment">① 希望监管是画跑道不是关大门 AI影视在中国还有很大发展空间</div></div>
-<div class="comment-item"><div class="comment">② 一管就死一放就乱 中国科技监管的老难题了</div></div>
-<div class="comment-item"><div class="comment">③ 好莱坞用AI用得飞起 我们要是管太死 以后只能看别人的AI电影</div></div>
-<div class="comment-item"><div class="comment">④ 指导意见可以 但别搞成审批制 创作自由还是要保障的</div></div>
-<div class="comment-item"><div class="comment">⑤ 关键是执行 出了规定但执行不到位 跟没出一样</div></div>
+<div class="angle-group"><div class="angle-title">💬角度2：谨慎派视角——"别高兴太早"</div>
+<div class="comment-item"><div class="comment">①之前有多少次"重启谈判"最后都没下文？</div></div>
+<div class="comment-item"><div class="comment">②退税和谈判是两回事 不要混为一谈</div></div>
+<div class="comment-item"><div class="comment">③122条款还在呢 60%的关税一天没取消都别乐观</div></div>
+<div class="comment-item"><div class="comment">④美国大选年 任何贸易政策都是为选票服务的</div></div>
+<div class="comment-item"><div class="comment">⑤过去五年教会我一件事：对中美谈判永远保持低预期</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：讽刺/段子</div>
-<div class="comment-item"><div class="comment">① 爱奇艺以一己之力推动了中国AI肖像权立法进程 功德无量</div></div>
-<div class="comment-item"><div class="comment">② AI伦理审查办法刚出不到一个月 爱奇艺就送了个活靶子 监管同志们不用找案例了</div></div>
-<div class="comment-item"><div class="comment">③ 龚宇：我不是在推广AI 我是在帮国家完善法律体系（强行正能量）</div></div>
-<div class="comment-item"><div class="comment">④ 监管部门：谢谢爱奇艺 正愁找不到由头呢</div></div>
-<div class="comment-item"><div class="comment">⑤ 建议处罚：让龚宇的AI分身替他上一年班 体验一下被AI取代的感觉</div></div>
+<div class="angle-group"><div class="angle-title">💬角度3：产业链视角——"调整已不可逆"</div>
+<div class="comment-item"><div class="comment">①就算谈成了 转出去的产能也回不来了</div></div>
+<div class="comment-item"><div class="comment">②越南墨西哥吃到的红利不会吐出来</div></div>
+<div class="comment-item"><div class="comment">③中国企业已经学会了出海 不再依赖单一市场</div></div>
+<div class="comment-item"><div class="comment">④全球供应链重构是不可逆的趋势 谁谈都一样</div></div>
+<div class="comment-item"><div class="comment">⑤真正的赢家是那些提前布局了全球化的中国企业</div></div>
 </div>
 </div>
-</div>
-</div>
-
-<!-- ============ A级事件1: 油价首次下调 ============ -->
+</div></div>
 <div class="event-card">
 <div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">国内油价今晚24时迎2026年首次下调·每吨降555元·加满一箱省22元</span>
+<span class="event-title">DeepSeek V4月底定档·万亿参数Mega MoE·全面适配华为昇腾950P</span>
 <span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
-<div class="section">
-<div class="section-title">📍 事件概要</div>
-<p style="font-size:13px;color:var(--text2)">国家发改委宣布：4月21日24时起，国内汽油价格每吨下调555元，柴油下调530元。折合升价：92号汽油降0.44元，95号降0.46元，0号柴油降0.45元。这是2026年以来首次下调（此前七次为一搁浅六连涨）。加满一箱50L油少花约22元。下调原因：国际油价受美伊停火及霍尔木兹海峡重开影响大幅回落。</p>
-</div>
-<div class="section">
-<div class="section-title">🗣 各平台热评TOP5</div>
+<div class="section"><div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">4月20日多方确认DeepSeek V4将于4月底正式发布。该模型采用万亿参数Mega MoE架构（1.6万亿参数，512个激活专家），首次全面适配华为昇腾950P芯片，实现国产模型+国产算力双突破。同期AI算力全链涨价，腾讯云最高涨463%，阿里云涨34%，云计算终结20年降价史。</p></div>
+<div class="section"><div class="section-title">🗣 各平台热评TOP5</div>
 <div class="hot-comments">
-<div class="hot-comment-item">"涨了半年终于降了一次 感动得想哭" <span class="src">微博 2.3万赞</span></div>
-<div class="hot-comment-item">"每箱省22块 够我买杯奶茶的 谢谢国家" <span class="src">抖音 1.8万赞</span></div>
-<div class="hot-comment-item">"六连涨之后降一次就这么开心 我们是不是太好养了" <span class="src">知乎 9500赞</span></div>
-<div class="hot-comment-item">"五一自驾的成本终于降了点 虽然降得不多但心理安慰到了" <span class="src">小红书 6200赞</span></div>
-<div class="hot-comment-item">"一吨降555 我一箱省22 你说这是数学还是玄学" <span class="src">B站 弹幕刷屏</span></div>
-</div>
-</div>
+<div class="hot-comment-item">"V4适配昇腾 这是真正的国产替代 不是嘴上说说" <span class="src">微博 1.5万转发</span></div>
+<div class="hot-comment-item">"腾讯涨463%是认真的吗 我的项目要跑不起了" <span class="src">抖音 3.8万赞</span></div>
+<div class="hot-comment-item">"DeepSeek V4 on Ascend 950P: 2.87x vs H20" <span class="src">Reddit r/LocalLLaMA 1.2k upvotes</span></div>
+<div class="hot-comment-item">"以前说算力便宜模型贵 现在倒过来了 都贵" <span class="src">知乎 6300赞同</span></div>
+<div class="hot-comment-item">"小团队AI创业梦碎 涨价直接淘汰一批" <span class="src">B站 2.1万弹幕</span></div>
+</div></div>
 <div class="section-title">📈 走向预判</div>
-<div class="prediction"><span class="prob">50%</span>若美伊谈判顺利，国际油价继续回落，下一轮（5月6日）可能再降</div>
-<div class="prediction"><span class="prob">30%</span>油价短期企稳，五一前后保持当前水平</div>
-<div class="prediction"><span class="prob">20%</span>美伊谈判破裂油价反弹，下一轮面临重新上涨压力</div>
-
-<div class="direction-block">
-<div class="direction-header">🟢 走向1：油价继续回落 (50%)</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：车主/消费者视角</div>
-<div class="comment-item"><div class="comment">① 终于不用计算器算加油费了 这半年涨价涨得我都会心算了</div></div>
-<div class="comment-item"><div class="comment">② 五一自驾游安排上！省下的油钱够在高速服务区多吃碗泡面</div></div>
-<div class="comment-item"><div class="comment">③ 滴滴司机狂喜 终于不是在给中石油打工了</div></div>
-<div class="comment-item"><div class="comment">④ 新能源车主路过 看你们开心的样子我也跟着乐乐</div></div>
-<div class="comment-item"><div class="comment">⑤ 等降到7块以下再叫我 现在这个价还是贵</div></div>
+<div class="prediction"><span class="prob">50%</span>V4如期发布且性能超预期，引领新一轮国产AI狂潮，相关概念股暴涨</div>
+<div class="prediction"><span class="prob">30%</span>V4发布但初期产能受限，推理成本高，商业化落地缓慢</div>
+<div class="prediction"><span class="prob">20%</span>V4再次跳票或性能不及预期，市场信心受挫</div>
+<div class="direction-block"><div class="direction-header">🟢 走向A：V4如期发布性能超预期（50%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：开发者视角</div>
+<div class="comment-item"><div class="comment god-comment">万亿参数跑在昇腾上，老黄的噩梦从PPT变成了benchmark——国产算力の逆袭</div></div>
+<div class="comment-item"><div class="comment">②等V4等到头秃 这次真来了的话 我项目直接迁移</div></div>
+<div class="comment-item"><div class="comment">③H20都干不过昇腾950P优化后的V4 英伟达该慌了</div></div>
+<div class="comment-item"><div class="comment">④开源吗开源吗开源吗 求求了 我要本地部署！</div></div>
+<div class="comment-item"><div class="comment">⑤512个激活专家 这MoE也太豪横了吧 钱烧的</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：经济分析</div>
-<div class="comment-item"><div class="comment">① 油价下降→物流成本降→消费品价格降→CPI缓解，利好内需</div></div>
-<div class="comment-item"><div class="comment">② 配合发改委扩大内需方案，油价下调来得很及时</div></div>
-<div class="comment-item"><div class="comment">③ 这次发改委出手很果断 之前还搞过调控机制缓冲涨价 现在降价倒是很利索</div></div>
-<div class="comment-item"><div class="comment">④ 关注下一轮5月6日的调价窗口 如果美伊继续谈还有降价空间</div></div>
-<div class="comment-item"><div class="comment">⑤ 国际油价跌了但国内还是高位 中间差价被谁赚了？</div></div>
+<div class="angle-group"><div class="angle-title">💬角度2：投资者视角</div>
+<div class="comment-item"><div class="comment">①昇腾概念明天怕是要集体涨停了 华为产业链狂欢</div></div>
+<div class="comment-item"><div class="comment">②算力涨价+V4发布 双重催化 AI板块要起飞</div></div>
+<div class="comment-item"><div class="comment">③寒武纪海光这波得涨多少 我算算仓位</div></div>
+<div class="comment-item"><div class="comment">④但冷静一下 上次GPT-6发布概念股涨了三天就跌了</div></div>
+<div class="comment-item"><div class="comment">⑤不追高不追高不追高…但好想追</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：段子手</div>
-<div class="comment-item"><div class="comment">① 2026年油价成绩单：六连涨一搁浅一下降 七上一下 堪比过山车</div></div>
-<div class="comment-item"><div class="comment">② 涨的时候闻着味就涨 降的时候要等"计价周期"。这规则我替它做了总结：涨随时 降看缘</div></div>
-<div class="comment-item"><div class="comment">③ 省22块够加满油后买杯瑞幸庆祝了 但油钱涨的那几百还是肉疼</div></div>
-<div class="comment-item"><div class="comment">④ 我不知道你们怎么想的 反正我决定今晚11:59去加油站排队</div></div>
-<div class="comment-item"><div class="comment">⑤ 友情提醒：降价是今晚24时 不是现在 现在冲去加油的兄弟亏了</div></div>
+<div class="angle-group"><div class="angle-title">💬角度3：行业格局视角</div>
+<div class="comment-item"><div class="comment">①V4+昇腾=完全不依赖英伟达 中国AI自主可控了</div></div>
+<div class="comment-item"><div class="comment">②OpenAI、Google、Anthropic以后多了一个真正的对手</div></div>
+<div class="comment-item"><div class="comment">③算力涨价反而利好DeepSeek 因为效率是它的核心竞争力</div></div>
+<div class="comment-item"><div class="comment">④国内大模型洗牌加速 小玩家要出局了</div></div>
+<div class="comment-item"><div class="comment">⑤下半年就看谁能先跑出杀手级应用了</div></div>
 </div>
 </div>
+<div class="direction-block"><div class="direction-header">🟡 走向B：发布但商业化缓慢（30%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：务实派视角</div>
+<div class="comment-item"><div class="comment">①万亿参数是牛 但推理一次多少钱？小公司用得起吗</div></div>
+<div class="comment-item"><div class="comment">②之前V3也说性能炸裂 但实际体验跟V2差距没那么大</div></div>
+<div class="comment-item"><div class="comment">③昇腾适配是突破 但生态还差得远 CUDA不是一天能替的</div></div>
+<div class="comment-item"><div class="comment">④算力涨价+推理成本高 中小开发者被两头夹击</div></div>
+<div class="comment-item"><div class="comment">⑤技术是好技术 但离to C还有距离</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：竞争对手视角</div>
+<div class="comment-item"><div class="comment">①GPT-6刚发布两周 V4就来了 卷死了真的</div></div>
+<div class="comment-item"><div class="comment">②但GPT-6的多模态目前还是碾压级的 V4能追上吗</div></div>
+<div class="comment-item"><div class="comment">③Qwen3.6、混元HY3都在4月发 大模型大乱斗</div></div>
+<div class="comment-item"><div class="comment">④最后拼的不是参数 是生态和应用场景</div></div>
+<div class="comment-item"><div class="comment">⑤谁先解决幻觉问题谁才是真正的王</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：用户视角</div>
+<div class="comment-item"><div class="comment">①作为普通用户 我只关心它回答准不准 别动不动胡说</div></div>
+<div class="comment-item"><div class="comment">②V3老是服务器崩 V4能稳定运行吗 别12小时宕机了</div></div>
+<div class="comment-item"><div class="comment">③专家模式体验还行 但有时候比快速模式还慢</div></div>
+<div class="comment-item"><div class="comment">④希望上下文窗口100万token是真的 长文档终于有救了</div></div>
+<div class="comment-item"><div class="comment">⑤开不开源才是关键 开源我就是无条件支持</div></div>
 </div>
 </div>
-
-<!-- ============ A级事件2: 美国1660亿关税退税 ============ -->
+<div class="direction-block"><div class="direction-header">🔴 走向C：跳票或不及预期（20%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：失望视角</div>
+<div class="comment-item"><div class="comment">①又跳票的话 DeepSeek信誉就完了 狼来了几次了</div></div>
+<div class="comment-item"><div class="comment">②V3等了大半年 V4又等？我直接转GPT-6了</div></div>
+<div class="comment-item"><div class="comment">③国产大模型的通病就是PPT先行 产品后到</div></div>
+<div class="comment-item"><div class="comment">④梁文锋每次内部确认都跳票 这次也不抱期待了</div></div>
+<div class="comment-item"><div class="comment">⑤算了 还是先用着V3吧 能用就行</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：市场反应视角</div>
+<div class="comment-item"><div class="comment">①跳票的话 之前炒的昇腾概念股得回调20%</div></div>
+<div class="comment-item"><div class="comment">②资本市场最恨不确定性 说到做不到直接用脚投票</div></div>
+<div class="comment-item"><div class="comment">③竞品趁机抢市场 留给V4的窗口期越来越短了</div></div>
+<div class="comment-item"><div class="comment">④AI板块短期承压 但长期趋势不变</div></div>
+<div class="comment-item"><div class="comment">⑤不及预期也正常 万亿参数哪有那么容易</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：产业影响视角</div>
+<div class="comment-item"><div class="comment">①V4延迟发布 华为昇腾的示范效应也会打折扣</div></div>
+<div class="comment-item"><div class="comment">②竞争对手有了更多追赶时间 先发优势消失</div></div>
+<div class="comment-item"><div class="comment">③开发者生态建设更难 大家不敢押注一个不确定的平台</div></div>
+<div class="comment-item"><div class="comment">④但V3依然强劲 延迟不等于失败 耐心等</div></div>
+<div class="comment-item"><div class="comment">⑤真正厉害的产品都是跳了好几次票才出来的</div></div>
+</div>
+</div>
+</div></div>
 <div class="event-card">
 <div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">美国1660亿关税退税正式启动·CAPE系统上线·122条款替补加税</span>
+<span class="event-title">A股连续反弹·沪指站上4105点·商业航天概念爆发·成交2.43万亿</span>
 <span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
-<div class="section">
-<div class="section-title">📍 事件概要</div>
-<p style="font-size:13px;color:var(--text2)">4月20日美国海关正式启动CAPE自动化退税系统，向33万家进口商退还1660亿美元非法关税（源于最高法院6:3裁定IEEPA关税违宪）。但特朗普政府同步启用《1974年贸易法》第122条，可在150天内征收最高15%关税（无需国会批准）。"左手退税右手加税"操作引发全球关注。4月13日政府已提出上诉暂缓执行退税，但被法院驳回。</p>
-</div>
+<div class="section"><div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">4月21日A股主要股指涨跌互现，沪指涨0.57%报4105.36点站稳4100上方，成交2.43万亿略有缩量。商业航天、元器件、工业气体板块涨幅居前，AI概念回调。博云新材6连板领涨，顺灏股份获23亿主力净流入。市场情绪偏暖但分化明显。</p></div>
+<div class="section"><div class="section-title">🗣 各平台热评TOP5</div>
+<div class="hot-comments">
+<div class="hot-comment-item">"4100守住了 但个股跌多涨少 赚了指数亏了钱" <span class="src">微博 8600转发</span></div>
+<div class="hot-comment-item">"博云新材6连板 追还是不追这是个问题" <span class="src">抖音 2.9万赞</span></div>
+<div class="hot-comment-item">"航天板块尾盘集体拉升 巨力索具最后4分钟涨停" <span class="src">雪球 7800回复</span></div>
+<div class="hot-comment-item">"成交2.43万亿缩量了 要注意风险了" <span class="src">知乎 4200赞同</span></div>
+<div class="hot-comment-item">"AI回调 航天接力 A股的风口比天气预报还难猜" <span class="src">B站 1.6万弹幕</span></div>
+</div></div>
 <div class="section-title">📈 走向预判</div>
-<div class="prediction"><span class="prob">45%</span>退税系统逐步运行，122条款关税维持高压，中美贸易继续博弈</div>
-<div class="prediction"><span class="prob">35%</span>退税进度缓慢，大量进口商因手续复杂实际拿不到钱</div>
-<div class="prediction"><span class="prob">20%</span>国会出手限制122条款滥用，关税政策根本性转向</div>
-
-<div class="direction-block">
-<div class="direction-header">🟢 走向1：退税推进+122条款博弈 (45%)</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：看透本质</div>
-<div class="comment-item"><div class="comment">① 左手退税1660亿 右手122条款收税——搬起石头砸完脚 换只手继续砸</div></div>
-<div class="comment-item"><div class="comment">② 最高法说不能收→退你钱→换个法条继续收。这不是法治 这是换了个收银台</div></div>
-<div class="comment-item"><div class="comment">③ 33万家进口商排队领钱 特朗普在旁边看着咬牙切齿</div></div>
-<div class="comment-item"><div class="comment">④ 150天窗口期一过122条款也到头了 到时候还得找新法条 美国法律工具人真忙</div></div>
-<div class="comment-item"><div class="comment">⑤ 这波操作的本质：输了官司但绝不认输 换个马甲继续干</div></div>
+<div class="prediction"><span class="prob">45%</span>沪指短期震荡上行挑战4200，航天军工概念持续活跃</div>
+<div class="prediction"><span class="prob">35%</span>缩量后回调整固，4100成为新的争夺点位</div>
+<div class="prediction"><span class="prob">20%</span>若美伊谈崩油价暴涨，A股短期急跌考验3900支撑</div>
+<div class="direction-block"><div class="direction-header">🟢 走向A：震荡上行挑战4200（45%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：散户视角</div>
+<div class="comment-item"><div class="comment">①4100站稳了！下一个目标4200冲冲冲💪</div></div>
+<div class="comment-item"><div class="comment">②终于解套了 被套了仨月的票今天回本了 泪目</div></div>
+<div class="comment-item"><div class="comment">③航天板块还能上车不？博云6板了好恐高</div></div>
+<div class="comment-item"><div class="comment">④这行情就是大盘涨你不涨 大盘跌你先跌 心累</div></div>
+<div class="comment-item"><div class="comment">⑤明天加仓！赌一把 反正都亏习惯了hh</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：外贸从业者</div>
-<div class="comment-item"><div class="comment">① 做美线的兄弟赶紧去申请退税 真金白银能拿回来</div></div>
-<div class="comment-item"><div class="comment">② CAPE系统据说只能处理63%的申报 剩下的三分之一没有时间表 呵呵</div></div>
-<div class="comment-item"><div class="comment">③ 别高兴太早 122条款15%的新税已经在路上了</div></div>
-<div class="comment-item"><div class="comment">④ 退的是IEEPA关税 301和232还在 算下来成本并没降多少</div></div>
-<div class="comment-item"><div class="comment">⑤ 美国客户最近下单都犹犹豫豫的 谁也不知道下个月税率是多少</div></div>
+<div class="angle-group"><div class="angle-title">💬角度2：机构视角</div>
+<div class="comment-item"><div class="comment">①4100上方确认支撑 短期看多到4200-4300区间</div></div>
+<div class="comment-item"><div class="comment">②航天军工有政策催化 商业航天法年内可能出台</div></div>
+<div class="comment-item"><div class="comment">③缩量是隐忧 放量才能确认突破 目前还是观望</div></div>
+<div class="comment-item"><div class="comment">④外资在加仓消费和新能源 内资在炒题材 风格分裂</div></div>
+<div class="comment-item"><div class="comment">⑤Q2财报季即将来临 业绩才是硬道理</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：段子</div>
-<div class="comment-item"><div class="comment">① 通过退税来加税 通过加税来退税 美国财政就是个莫比乌斯环</div></div>
-<div class="comment-item"><div class="comment">② 特朗普对关税的执念就像我对奶茶的执念——知道不好但就是戒不掉</div></div>
-<div class="comment-item"><div class="comment">③ 美国最高法院：不许收！特朗普：好的换个法条收😊</div></div>
-<div class="comment-item"><div class="comment">④ 美国进口商的心情：一只手接退税支票 另一只手签新关税单 两手都要硬</div></div>
-<div class="comment-item"><div class="comment">⑤ 1660亿退税规模 够每个美国人分500块 但他们拿不到 因为是退给企业的 哈哈</div></div>
+<div class="angle-group"><div class="angle-title">💬角度3：技术面视角</div>
+<div class="comment-item"><div class="comment">①沪指周线级别多头排列 MACD金叉确认</div></div>
+<div class="comment-item"><div class="comment">②4200是年线压力位 需要放量才能突破</div></div>
+<div class="comment-item"><div class="comment">③航天板块换手率过高 短线有调整需求</div></div>
+<div class="comment-item"><div class="comment">④创业板跟不上主板节奏 结构性分化明显</div></div>
+<div class="comment-item"><div class="comment">⑤成交如果能回到2.6万亿以上 4200没问题</div></div>
 </div>
 </div>
+<div class="direction-block"><div class="direction-header">🟡 走向B：缩量回调整固（35%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：谨慎派</div>
+<div class="comment-item"><div class="comment">①缩量不追高 这是A股铁律 别贪</div></div>
+<div class="comment-item"><div class="comment">②今天下跌个股多于上涨 指数失真</div></div>
+<div class="comment-item"><div class="comment">③4100如果守不住 下看4050 该减仓减仓</div></div>
+<div class="comment-item"><div class="comment">④航天板块明天分化 博云可能开板了</div></div>
+<div class="comment-item"><div class="comment">⑤现在满仓的建议减到六成 留点子弹</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：价值派</div>
+<div class="comment-item"><div class="comment">①回调正好上车消费白马 茅台又到黄金坑了</div></div>
+<div class="comment-item"><div class="comment">②高股息策略在震荡市最稳 银行电力闭眼买</div></div>
+<div class="comment-item"><div class="comment">③题材炒作都是浮云 业绩增长才是王道</div></div>
+<div class="comment-item"><div class="comment">④等下周一季报出来 选好赛道再加仓</div></div>
+<div class="comment-item"><div class="comment">⑤缩量整固是健康的 涨太快反而不踏实</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：游资视角</div>
+<div class="comment-item"><div class="comment">①龙头博云明天大概率分歧 但如果能封住就是7板妖股</div></div>
+<div class="comment-item"><div class="comment">②接力方向看元器件和工业气体 低位补涨</div></div>
+<div class="comment-item"><div class="comment">③尾盘拉的那些票 明天高开低走概率大 别接盘</div></div>
+<div class="comment-item"><div class="comment">④情绪退潮期做龙头回封才是正道 杂毛别碰</div></div>
+<div class="comment-item"><div class="comment">⑤连板高度打开 赚钱效应还在 但要快进快出</div></div>
 </div>
 </div>
-
-<!-- ============ A级事件3: 最高法知识产权新司法解释 ============ -->
+<div class="direction-block"><div class="direction-header">🔴 走向C：外部冲击急跌（20%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：恐慌视角</div>
+<div class="comment-item"><div class="comment">①如果中东崩了 A股能扛住？历史告诉你扛不住</div></div>
+<div class="comment-item"><div class="comment">②油价120的话 通胀预期直接打压降息空间</div></div>
+<div class="comment-item"><div class="comment">③3900是最后防线 破了直接看3600</div></div>
+<div class="comment-item"><div class="comment">④黑天鹅年年有 今年特别多 躺平算了</div></div>
+<div class="comment-item"><div class="comment">⑤赶紧把融资盘了了 杠杆最危险的时候</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：防御策略视角</div>
+<div class="comment-item"><div class="comment">①降仓位！现金为王！等确定性信号再进</div></div>
+<div class="comment-item"><div class="comment">②避险买黄金ETF和国债 这时候不是英雄主义的时候</div></div>
+<div class="comment-item"><div class="comment">③石油石化板块反而是对冲标的 中国石油可以配点</div></div>
+<div class="comment-item"><div class="comment">④回避高位题材股 它们跌起来最凶</div></div>
+<div class="comment-item"><div class="comment">⑤美伊谈崩的话 至少等三天再考虑抄底</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：长线视角</div>
+<div class="comment-item"><div class="comment">①短期波动不改长期趋势 A股牛市格局没变</div></div>
+<div class="comment-item"><div class="comment">②每次急跌都是加仓机会 前提是你选对了标的</div></div>
+<div class="comment-item"><div class="comment">③四月份跌了再涨 涨了再跌 习惯就好</div></div>
+<div class="comment-item"><div class="comment">④中国经济基本面没问题 外部冲击只是插曲</div></div>
+<div class="comment-item"><div class="comment">⑤定投党最开心了 跌了正好捡便宜</div></div>
+</div>
+</div>
+</div></div>
 <div class="event-card">
 <div class="event-header" onclick="toggle(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">最高法发布知识产权惩罚性赔偿新司法解释·最高5倍赔偿·5月1日施行</span>
+<span class="event-title">NBA季后赛首轮激战·凯尔特人vs76人·湖人G1擒火箭·詹姆斯准三双</span>
 <span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
-<div class="section">
-<div class="section-title">📍 事件概要</div>
-<p style="font-size:13px;color:var(--text2)">4月20日，最高人民法院发布《关于审理侵害知识产权民事纠纷案件适用惩罚性赔偿的解释》（法释〔2026〕7号），明确8种故意侵权情形，最高可判5倍赔偿。同时发布2026-2030年知识产权司法保护实施方案，首次涵盖AI生成内容、AI模型参数等前沿问题。2025年涉数据权属纠纷案件908件同比增25.6%。自5月1日起施行。</p>
-</div>
+<div class="section"><div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">4月21日NBA季后赛首轮次日开战。此前G1：湖人主场力克火箭（詹姆斯准三双+肯纳德三分神准），骑士、掘金、尼克斯均拿下开门红。今日焦点：凯尔特人vs76人（恩比德伤缺）、雷霆vs太阳、活塞vs魔术、马刺vs开拓者四组对决全面打响。</p></div>
+<div class="section"><div class="section-title">🗣 各平台热评TOP5</div>
+<div class="hot-comments">
+<div class="hot-comment-item">"詹姆斯41岁季后赛准三双 永远的goat🐐" <span class="src">微博 2.3万转发</span></div>
+<div class="hot-comment-item">"恩比德又伤了 76人这赛季白忙了" <span class="src">抖音 3.5万赞</span></div>
+<div class="hot-comment-item">"LeBron is literally defying Father Time" <span class="src">Twitter/X 45k likes</span></div>
+<div class="hot-comment-item">"绿军健康阵容打残阵76人 这还有悬念吗" <span class="src">虎扑 1.1万回复</span></div>
+<div class="hot-comment-item">"今年季后赛对阵太好看了 每组都有故事线" <span class="src">B站 1.8万弹幕</span></div>
+</div></div>
 <div class="section-title">📈 走向预判</div>
-<div class="prediction"><span class="prob">50%</span>5月1日施行后侵权赔偿金额大幅提升，头部平台加强版权合规</div>
-<div class="prediction"><span class="prob">30%</span>AI领域首批适用案例出现，推动行业规范化</div>
-<div class="prediction"><span class="prob">20%</span>中小企业维权成本仍高，实际效果有待观察</div>
-
-<div class="direction-block">
-<div class="direction-header">🟢 走向1：侵权赔偿金额提升 (50%)</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1：支持者视角</div>
-<div class="comment-item"><div class="comment">① 最高5倍赔偿 终于不是"侵权赚100万赔10万"的时代了</div></div>
-<div class="comment-item"><div class="comment">② 正好配合爱奇艺AI艺人库事件——肖像权侵权的成本要大幅提高了</div></div>
-<div class="comment-item"><div class="comment">③ 原创作者狂喜 抄袭者瑟瑟发抖 这波改革方向绝对对</div></div>
-<div class="comment-item"><div class="comment">④ 涵盖AI生成内容的知识产权保护 这个前瞻性给满分</div></div>
-<div class="comment-item"><div class="comment">⑤ 配合十部门AI伦理审查办法 知识产权保护体系终于在补短板了</div></div>
+<div class="prediction"><span class="prob">50%</span>凯尔特人大胜，湖人2-0领先，西部雷霆横扫太阳</div>
+<div class="prediction"><span class="prob">30%</span>76人爆冷偷一场，湖人火箭打成1-1拉锯</div>
+<div class="prediction"><span class="prob">20%</span>季后赛大冷门频出，低种子球队连续逆袭</div>
+<div class="direction-block"><div class="direction-header">🟢 走向A：强队碾压如期推进（50%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：球迷视角</div>
+<div class="comment-item"><div class="comment">①绿军4-0横扫76人 没有恩比德就是这么残酷</div></div>
+<div class="comment-item"><div class="comment">②老詹41了还能carry 天选之人没有退役年龄</div></div>
+<div class="comment-item"><div class="comment">③雷霆这阵容太深了 太阳也就能挣扎一下</div></div>
+<div class="comment-item"><div class="comment">④今年骑士有戏 东部决赛骑士绿军 经典重现</div></div>
+<div class="comment-item"><div class="comment">⑤湖人打火箭跟打训练赛似的 too easy</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2：行业影响</div>
-<div class="comment-item"><div class="comment">① 游戏换皮、短视频搬运、AI洗稿的好日子到头了</div></div>
-<div class="comment-item"><div class="comment">② 互联网大厂的法务部又要招人了 合规成本直线上升</div></div>
-<div class="comment-item"><div class="comment">③ 赔5倍这个力度放在全球范围内都算重的 中国知产保护真的在进步</div></div>
-<div class="comment-item"><div class="comment">④ 小公司可能更难了 专利流氓拿着新规来碰瓷的会增多</div></div>
-<div class="comment-item"><div class="comment">⑤ 利好知识产权概念股 汉邦高科安妮股份可以关注</div></div>
+<div class="angle-group"><div class="angle-title">💬角度2：数据分析视角</div>
+<div class="comment-item"><div class="comment">①凯尔特人防守效率联盟第一 76人没恩比德进攻端直接塌了</div></div>
+<div class="comment-item"><div class="comment">②詹姆斯季后赛历史得分已破8000分 这个纪录后人追不上</div></div>
+<div class="comment-item"><div class="comment">③火箭常规赛末段5连败 状态最差的时候遇湖人 凶多吉少</div></div>
+<div class="comment-item"><div class="comment">④太阳靠布克单核很难走远 替补深度差太多</div></div>
+<div class="comment-item"><div class="comment">⑤主场优势在季后赛被放大 首轮基本没有黑八的</div></div>
 </div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3：理性思考</div>
-<div class="comment-item"><div class="comment">① 法规是好法规 就是怕执行打折 以前的赔偿标准也不低但判下来都打了折</div></div>
-<div class="comment-item"><div class="comment">② 关键看举证——怎么证明是"故意"侵权？这8种情形的认定标准需要看细则</div></div>
-<div class="comment-item"><div class="comment">③ 期待AI领域的首个适用案例 能定义很多模糊地带</div></div>
-<div class="comment-item"><div class="comment">④ 中小企业维权成本还是高 请律师打官司的钱可能比赔偿还多</div></div>
-<div class="comment-item"><div class="comment">⑤ 涉AI的知产纠纷才是未来的大头 908件同比增25.6%说明问题</div></div>
+<div class="angle-group"><div class="angle-title">💬角度3：博彩/竞猜视角</div>
+<div class="comment-item"><div class="comment">①绿军让12.5分 闭眼买</div></div>
+<div class="comment-item"><div class="comment">②湖人2-0的赔率已经降到1.3了 没肉吃了</div></div>
+<div class="comment-item"><div class="comment">③雷霆4-1太阳 这个赔率还不错 可以搞</div></div>
+<div class="comment-item"><div class="comment">④季后赛投注量暴增300% 赌狗狂欢节</div></div>
+<div class="comment-item"><div class="comment">⑤詹姆斯40+ 10+的prop bet居然赔2.5 值得冲</div></div>
 </div>
 </div>
+<div class="direction-block"><div class="direction-header">🟡 走向B：爆冷出现（30%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：看戏视角</div>
+<div class="comment-item"><div class="comment">①76人爆冷赢一场的话 微博体育区又得炸</div></div>
+<div class="comment-item"><div class="comment">②火箭年轻人无所畏惧 万一状态来了呢</div></div>
+<div class="comment-item"><div class="comment">③申京打詹姆斯 这个matchup其实很有看头</div></div>
+<div class="comment-item"><div class="comment">④季后赛嘛 什么都可能发生 去年谁想到独行侠进总决</div></div>
+<div class="comment-item"><div class="comment">⑤太阳当年也是黑八过 布克一爆发谁挡得住</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：专业分析视角</div>
+<div class="comment-item"><div class="comment">①76人的防守体系在季后赛会更有效 慢节奏克绿军</div></div>
+<div class="comment-item"><div class="comment">②火箭的三分命中率如果回升到40% 湖人不好打</div></div>
+<div class="comment-item"><div class="comment">③季后赛和常规赛完全是两种比赛 别用常规赛数据预测</div></div>
+<div class="comment-item"><div class="comment">④太阳的经验优势在关键时刻会体现 CP3和布克都是老油条</div></div>
+<div class="comment-item"><div class="comment">⑤冷门往往出在第一轮 因为样本太小 一两场比赛就翻盘了</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：情绪视角</div>
+<div class="comment-item"><div class="comment">①爆冷才好看啊！谁要看强队无脑碾压</div></div>
+<div class="comment-item"><div class="comment">②作为火箭球迷 我就指望这一场了 别让我失望</div></div>
+<div class="comment-item"><div class="comment">③恩比德不打76人赢了才是真传奇</div></div>
+<div class="comment-item"><div class="comment">④每年都有黑马 今年轮到谁了？</div></div>
+<div class="comment-item"><div class="comment">⑤竞猜网站要是全买冷门 赔率得炸</div></div>
 </div>
 </div>
-
-<!-- ============ B级事件 ============ -->
-<div class="b-events">
-<h2>🟡 B级事件速览</h2>
+<div class="direction-block"><div class="direction-header">🔴 走向C：大冷门连续逆袭（20%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：震惊视角</div>
+<div class="comment-item"><div class="comment">①如果76人真赢了绿军 那真是NBA历史名场面</div></div>
+<div class="comment-item"><div class="comment">②黑八传奇再现的话 微博服务器先崩为敬</div></div>
+<div class="comment-item"><div class="comment">③大冷门=大流量 各平台运营都在祈祷爆冷</div></div>
+<div class="comment-item"><div class="comment">④万一真出黑八 我竞猜赚翻了 提前庆祝</div></div>
+<div class="comment-item"><div class="comment">⑤NBA剧本组你出来 这也太戏剧了</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：历史对比视角</div>
+<div class="comment-item"><div class="comment">①07年勇士黑八独行侠 21年太阳黑马跑到总决 都有先例</div></div>
+<div class="comment-item"><div class="comment">②但今年强队阵容确实太完整 黑八难度是历史级的</div></div>
+<div class="comment-item"><div class="comment">③季后赛的魅力就在于不确定性 这才是竞技体育</div></div>
+<div class="comment-item"><div class="comment">④如果多组大冷门 联盟收视率反而暴涨</div></div>
+<div class="comment-item"><div class="comment">⑤作为中立球迷 我只想看精彩比赛 谁赢不重要</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：媒体视角</div>
+<div class="comment-item"><div class="comment">①ESPN预测准确率每年也就60% 专家也经常打脸</div></div>
+<div class="comment-item"><div class="comment">②冷门越多话题越多 自媒体的流量密码</div></div>
+<div class="comment-item"><div class="comment">③NBA最怕的是没悬念 冷门反而是联盟最想看到的</div></div>
+<div class="comment-item"><div class="comment">④社交媒体讨论度跟冷门数量正相关 数据说话</div></div>
+<div class="comment-item"><div class="comment">⑤今年季后赛要是全横扫 那也太没意思了</div></div>
+</div>
+</div>
+</div></div>
+<div class="b-events"><h2>🟡 B级事件速览</h2>
 <table class="b-table">
-<tr><th>事件</th><th>概要</th></tr>
-<tr><td>王毅访问柬泰缅</td><td>4.22-26日应邀访问，中柬外长防长"2+2"首次会议，深化澜湄合作</td></tr>
-<tr><td>A股小幅收涨</td><td>沪指+0.07%报4085，深成指+0.1%续创4年新高，创业板+0.31%，成交2.43万亿缩量</td></tr>
-<tr><td>NBA季后赛骑士2:0猛龙</td><td>哈登末节封神带队，骑士115-105连取两场，系列赛大比分2-0领先</td></tr>
-<tr><td>国务院药品价格新规</td><td>健全药品价格形成机制14条举措，严惩以缺逼涨、防范非理性竞价中标</td></tr>
-<tr><td>司法部行政复议典型案例</td><td>聚焦新就业群体权益保护、新业态监管、社保政策落实等民生问题</td></tr>
-</table>
-</div>
-
-<!-- ============ 灰犀牛 ============ -->
-<div class="rhino-section">
-<h2>🦏 灰犀牛预警</h2>
-<div class="rhino-item">🔴 <b>美伊停火4/22 08:00到期</b> — 仅剩不到16h，伊朗确认赴会但态度反复，谈崩风险仍存</div>
-<div class="rhino-item">🔴 <b>美国122条款关税150天窗口</b> — 退了IEEPA关税但换了新法条继续加税，窗口期9月到期</div>
-<div class="rhino-item">🟠 <b>AI肖像权争议扩大化</b> — 爱奇艺事件可能引发监管部门出台AI影视行业规范</div>
-<div class="rhino-item">🟠 <b>特朗普上诉退税执行</b> — 4月13日已提出暂缓退税，若上诉成功1660亿退税可能冻结</div>
-<div class="rhino-item">🟡 <b>发改委扩大内需方案</b> — 2026-2030年增量政策Q2密集出台，关注消费刺激措施</div>
-</div>
-
-<!-- ============ 封神评论 ============ -->
-<div class="god-section">
-<h2>🏆 本期封神评论</h2>
-<div class="god-item">💬 "最高法说不能收→退你钱→换个法条继续收。这不是法治，这是换了个收银台"<br><span style="font-size:11px;color:var(--text2)">美国关税退税 | 极致凝练揭示荒谬本质——一句话讲清1660亿退税的魔幻逻辑</span></div>
-<div class="god-item">💬 "爱奇艺：我们有100个艺人同意了。艺人们：不，你没有"<br><span style="font-size:11px;color:var(--text2)">AI艺人库争议 | 结构性讽刺——用爱奇艺自己的话打爱奇艺的脸</span></div>
-<div class="god-item">💬 "涨的时候闻着味就涨，降的时候要等'计价周期'。涨随时，降看缘"<br><span style="font-size:11px;color:var(--text2)">油价首次下调 | 绕口令式幽默揭示油价调控的不对称逻辑</span></div>
+<tr><th>事件</th><th>时间</th><th>要点</th></tr>
+<tr><td>合肥民宿针孔摄像头案</td><td>4月20日</td><td>警方刑拘2人，多个针孔摄像头直播大学生隐私</td></tr>
+<tr><td>中越联合声明</td><td>4月17日</td><td>苏林访华，构建更高水平中越命运共同体</td></tr>
+<tr><td>云厂商AI算力集体涨价</td><td>4月18日</td><td>腾讯云最高涨463%，阿里百度跟进，终结20年降价史</td></tr>
+<tr><td>新西兰军机抵近中国周边空域</td><td>4月17日</td><td>外交部：影响民航安全，已提出严正交涉</td></tr>
+</table></div><div class="rhino-section"><h2>🦏 灰犀牛扫描</h2>
+<div class="rhino-item">🔴 <b>美伊停火4/22 08:00到期</b> — 最后36h倒计时，美军已向伊朗商船开火，伊朗表态反复</div>
+<div class="rhino-item">🔴 <b>特朗普上诉冻结1660亿退税</b> — 4月13日已提出暂缓退税申请，若上诉成功退税可能被冻结</div>
+<div class="rhino-item">🟠 <b>DeepSeek V4能否如期发布</b> — 定档4月底但已多次跳票，V3服务器曾崩溃12小时</div>
+<div class="rhino-item">🟠 <b>AI算力涨价传导效应</b> — 云厂商集体涨价后中小AI创业公司面临资金链断裂</div>
+<div class="rhino-item">🟡 <b>122条款150天窗口</b> — 临时关税9月到期，届时贸易格局面临新一轮剧变</div>
+</div><div class="god-section"><h2>🏆 本期封神评论</h2>
+<div class="god-item">💬 "最高法说不能收→退你钱→换个法条继续收。不是法治，是换了个收银台"——懂王の财技<br><span style="font-size:11px;color:var(--text2)">美国关税退税 | 极致凝练揭示荒谬本质——一句话讲清1660亿退税的魔幻逻辑</span></div>
+<div class="god-item">💬 "停火续期：用谈判续谈判，用延期续延期，用等待续等待"——当代行为艺术<br><span style="font-size:11px;color:var(--text2)">美伊停火 | 绕口令式幽默——同一结构三连叠 揭示和谈本质是无限循环</span></div>
+<div class="god-item">💬 "万亿参数跑在昇腾上，老黄的噩梦从PPT变成了benchmark"——国产算力の逆袭<br><span style="font-size:11px;color:var(--text2)">DeepSeek V4 | 结构性讽刺——PPT vs benchmark的对比精准打击英伟达焦虑</span></div>
+<div class="god-item">💬 "停火不停火不重要，重要的是停火状态的叠加态"——物理学在中东找到了应用场景<br><span style="font-size:11px;color:var(--text2)">美伊默契延期 | 跨领域梗——量子力学×国际政治 高级幽默</span></div>
 </div>
 
 <footer>
-<p>📊 数据来源：新华社、央视新闻、AP、CNBC、CNN、USAToday、国家发改委、最高人民法院、外交部</p>
-<p>⏱ 报告生成：2026年4月21日 16:00 北京时间 | 14项维度全覆盖</p>
-<p>🔄 下次更新：18:00 晚报</p>
+<p>📊 数据来源：新华社、央视新闻、AP、CNBC、CNN、Reuters、光明日报、凤凰财经、观察者网</p>
+<p>⏱ 报告生成：2026年4月21日 18:00 北京时间 | 14项维度全覆盖</p>
+<p>🔄 下次更新：21:00 夜报</p>
 </footer>
 </div>
-
 <script>
-function toggle(el){
-const body=el.nextElementSibling;
-const icon=el.querySelector('.expand-icon');
-if(body)body.classList.toggle('active');
-if(icon)icon.classList.toggle('open');
-}
-function copyComment(btn){
-const item=btn.parentElement;
-const text=item.querySelector('.comment').textContent.trim();
-navigator.clipboard.writeText(text).then(()=>{
-btn.textContent='已复制';btn.classList.add('copied');
-setTimeout(()=>{btn.textContent='复制';btn.classList.remove('copied')},1500);
-}).catch(()=>{
-const ta=document.createElement('textarea');ta.value=text;
-document.body.appendChild(ta);ta.select();document.execCommand('copy');
-document.body.removeChild(ta);
-btn.textContent='已复制';btn.classList.add('copied');
-setTimeout(()=>{btn.textContent='复制';btn.classList.remove('copied')},1500);
-});
-}
-document.addEventListener('DOMContentLoaded',()=>{
-// 默认展开第一个S级事件
-const first=document.querySelector('.event-body');
-if(first){first.classList.add('active');const icon=first.previousElementSibling.querySelector('.expand-icon');if(icon)icon.classList.add('open')}
-// 给所有评论项添加复制按钮
-document.querySelectorAll('.comment-item').forEach(item=>{
-if(!item.querySelector('.copy-btn')){
-const btn=document.createElement('button');
-btn.className='copy-btn';btn.textContent='复制';
-btn.onclick=function(e){e.stopPropagation();copyComment(this)};
-item.appendChild(btn);
-}
-});
-});
+function toggle(el){const body=el.nextElementSibling;const icon=el.querySelector('.expand-icon');if(body)body.classList.toggle('active');if(icon)icon.classList.toggle('open')}
+function copyComment(btn){const item=btn.parentElement;const text=item.querySelector('.comment').textContent.trim();navigator.clipboard.writeText(text).then(()=>{btn.textContent='已复制';btn.classList.add('copied');setTimeout(()=>{btn.textContent='复制';btn.classList.remove('copied')},1500)}).catch(()=>{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);btn.textContent='已复制';btn.classList.add('copied');setTimeout(()=>{btn.textContent='复制';btn.classList.remove('copied')},1500)})}
+document.addEventListener('DOMContentLoaded',()=>{const first=document.querySelector('.event-body');if(first){first.classList.add('active');const icon=first.previousElementSibling.querySelector('.expand-icon');if(icon)icon.classList.add('open')}document.querySelectorAll('.comment-item').forEach(item=>{if(!item.querySelector('.copy-btn')){const btn=document.createElement('button');btn.className='copy-btn';btn.textContent='复制';btn.onclick=function(e){e.stopPropagation();copyComment(this)};item.appendChild(btn)}})});
 </script>
 </body>
 </html>
