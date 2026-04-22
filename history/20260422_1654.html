@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🔥 热点监控看板 · 下午报 15:00</title>
+<style>*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0f1117;--card:#1a1d28;--card2:#232635;--accent:#6c5ce7;--accent2:#a29bfe;--s-color:#ff4757;--a-color:#ff9f43;--b-color:#feca57;--text:#e8e8e8;--text2:#a0a0b0;--border:#2d3045;--green:#2ed573;--shadow:0 4px 20px rgba(0,0,0,0.3)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+.container{max-width:900px;margin:0 auto;padding:16px}
+header{text-align:center;padding:30px 0 20px;position:relative}
+header h1{font-size:28px;background:linear-gradient(135deg,#ff6b6b,#ffa502,#ff6348);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+header .meta{color:var(--text2);font-size:13px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+header .meta span{background:var(--card);padding:4px 12px;border-radius:20px;border:1px solid var(--border)}
+.history-btn{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:8px 20px;background:linear-gradient(135deg,#6c5ce7,#a29bfe);color:#fff;border:none;border-radius:24px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:all .3s;box-shadow:0 2px 12px rgba(108,92,231,0.3)}
+.history-btn:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(108,92,231,0.5)}
+.stats-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+.stat-item{background:var(--card);border-radius:12px;padding:16px;text-align:center;border:1px solid var(--border)}
+.stat-item .num{font-size:32px;font-weight:700}
+.stat-item .label{font-size:12px;color:var(--text2);margin-top:4px}
+.stat-s .num{color:var(--s-color)}.stat-a .num{color:var(--a-color)}.stat-b .num{color:var(--b-color)}
+.event-card{background:var(--card);border-radius:14px;margin:16px 0;overflow:hidden;border:1px solid var(--border);transition:transform .2s}
+.event-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.event-header{padding:16px 20px;display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none}
+.event-badge{padding:4px 10px;border-radius:6px;font-size:12px;font-weight:700;color:#fff;white-space:nowrap}
+.badge-s{background:linear-gradient(135deg,#ff4757,#ff3838)}.badge-a{background:linear-gradient(135deg,#ff9f43,#ee8a30)}.badge-b{background:linear-gradient(135deg,#feca57,#d4a520);color:#333}
+.event-title{font-size:16px;font-weight:600;flex:1}
+.expand-icon{font-size:14px;color:var(--text2);transition:transform .3s}.expand-icon.open{transform:rotate(180deg)}
+.event-body{padding:0 20px 20px;display:none}.event-body.active{display:block}
+.section{margin:12px 0}
+.section-title{font-size:14px;font-weight:600;color:var(--accent2);margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--border)}
+.prediction{background:var(--card2);border-radius:8px;padding:10px 14px;margin:6px 0;font-size:13px}
+.prediction .prob{font-weight:700;color:var(--accent2);margin-right:6px}
+.direction-block{margin:16px 0;padding:14px;background:rgba(108,92,231,0.05);border-radius:12px;border:1px solid var(--border)}
+.direction-header{font-size:14px;font-weight:700;color:var(--green);margin-bottom:10px;padding:8px 12px;background:var(--card);border-radius:8px;border-left:4px solid var(--green)}
+.angle-group{margin:12px 0}
+.angle-title{font-size:13px;font-weight:600;color:var(--accent2);margin-bottom:6px;padding:4px 0}
+.comment{font-size:13px;color:var(--text2);padding:5px 0 5px 12px;border-left:2px solid var(--border);margin:4px 0;line-height:1.5}
+.comment:hover{border-left-color:var(--accent);color:var(--text)}
+.comment-item{position:relative;padding-right:50px}
+.copy-btn{position:absolute;right:4px;top:50%;transform:translateY(-50%);background:var(--card2);border:1px solid var(--border);color:var(--text2);font-size:11px;padding:2px 8px;border-radius:4px;cursor:pointer;opacity:0;transition:opacity .2s}
+.comment-item:hover .copy-btn{opacity:1}
+.copy-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.copy-btn.copied{background:var(--green);color:#fff;border-color:var(--green)}
+.god-comment{border-left-color:var(--s-color);color:var(--text);font-weight:500;background:rgba(255,71,87,0.05);padding:8px 12px;border-radius:0 8px 8px 0}
+.hot-comments{background:var(--card2);border-radius:10px;padding:12px;margin:8px 0}
+.hot-comment-item{padding:6px 0;font-size:13px;color:var(--text2);border-bottom:1px solid rgba(255,255,255,0.03)}
+.hot-comment-item .src{font-size:11px;color:var(--accent2);margin-left:6px}
+.b-events{margin:24px 0}.b-events h2{font-size:18px;color:var(--b-color);margin-bottom:12px}
+.b-table{width:100%;border-collapse:collapse;font-size:13px}
+.b-table th{background:var(--card2);padding:10px;text-align:left;border-bottom:2px solid var(--border);color:var(--accent2)}
+.b-table td{padding:10px;border-bottom:1px solid var(--border);color:var(--text2)}
+.b-table tr:hover td{background:var(--card2);color:var(--text)}
+.rhino-section{margin:24px 0;background:var(--card);border-radius:14px;padding:20px;border:1px solid var(--border)}
+.rhino-section h2{font-size:18px;color:#8854d0;margin-bottom:12px}
+.rhino-item{padding:8px 0;font-size:13px;color:var(--text2);border-bottom:1px solid rgba(255,255,255,0.03)}
+.god-section{margin:24px 0;background:var(--card);border-radius:14px;padding:20px;border:1px solid var(--border)}
+.god-section h2{font-size:18px;color:var(--s-color);margin-bottom:12px}
+.god-item{padding:10px 0;font-size:14px;border-bottom:1px solid rgba(255,255,255,0.05)}
+footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
+footer p{margin:4px 0}
+@media(max-width:600px){header h1{font-size:22px}.stats-bar{grid-template-columns:1fr}.event-title{font-size:14px}}</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>🔥 热点监控看板 · 下午报</h1>
+<div class="meta">
+<span>📅 2026年4月22日 15:00</span>
+<span>📡 14项维度全覆盖</span>
+<span>💬 225条评论</span>
+<span>🔄 下次更新：18:00 晚报</span>
+</div>
+<a href="history/" class="history-btn">📚 历史报告</a>
+</header>
+
+<div class="stats-bar">
+<div class="stat-item stat-s"><div class="num">2</div><div class="label">🔴 S级事件</div></div>
+<div class="stat-item stat-a"><div class="num">3</div><div class="label">🟠 A级事件</div></div>
+<div class="stat-item stat-b"><div class="num">4</div><div class="label">🟡 B级事件</div></div>
+</div>
+
+<!-- S级事件1 -->
+<div class="event-card">
+<div class="event-header" onclick="toggle(this)">
+<span class="event-badge badge-s">S级</span>
+<span class="event-title">美伊停火到期·伊朗拒绝二轮谈判·特朗普宣布延长停火·油价暴涨5%</span>
+<span class="expand-icon">▼</span>
+</div>
+<div class="event-body">
+<div class="section"><div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">4月22日，美伊两周停火协议到期日。伊朗正式拒绝出席伊斯兰堡第二轮谈判，特朗普随即宣布"应巴基斯坦请求"延长停火期限。美副总统万斯已抵达伊斯兰堡但伊方缺席。WTI原油站上92美元/桶涨近4%，布伦特涨至93.68美元。国内油价前一日刚下调555元/吨。霍尔木兹海峡对峙持续。</p></div>
+<div class="section"><div class="section-title">🗣 各平台热评TOP5</div>
+<div class="hot-comments">
+<div class="hot-comment-item">"伊朗：不谈了。特朗普：那我延长停火。伊朗：？？？" <span class="src">微博 3.2万转发</span></div>
+<div class="hot-comment-item">"刚降的油价还没来得及加油 又要涨回去了😭" <span class="src">抖音 6.8万赞</span></div>
+<div class="hot-comment-item">"Iran refuses talks, Trump extends ceasefire anyway — who's playing who?" <span class="src">Reuters 4.1k shares</span></div>
+<div class="hot-comment-item">"万斯飞过去了人家不来，这叫什么？大型社死现场" <span class="src">知乎 1.2万赞同</span></div>
+<div class="hot-comment-item">"停火延长=继续拖，拖到大选结束就行了呗" <span class="src">雪球 8900回复</span></div>
+</div></div>
+<div class="section-title">📈 走向预判</div>
+<div class="prediction"><span class="prob">45%</span>延长停火2-3周，双方暗中接触但不公开谈判，油价高位震荡90-95区间</div>
+<div class="prediction"><span class="prob">35%</span>伊朗提交反提案重启对话，巴基斯坦撮合成功，市场情绪缓和油价回落</div>
+<div class="prediction"><span class="prob">20%</span>延长失效美军恢复军事行动，霍尔木兹再封油价冲破100美元</div>
+<div class="direction-block"><div class="direction-header">🟢 走向A：延长停火继续拖（45%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：普通人视角——"油价又要坐过山车"</div>
+<div class="comment-item"><div class="comment">①昨天刚降价今天又说要涨 我的92#加了个寂寞</div></div>
+<div class="comment-item"><div class="comment">②停火延长就是个缓兵之计 该涨的油价一分不少</div></div>
+<div class="comment-item"><div class="comment">③外卖小哥的油钱比饭钱还贵 这日子没法过了</div></div>
+<div class="comment-item"><div class="comment">④每次说延长我就松口气 然后看到油价又心梗</div></div>
+<div class="comment-item"><div class="comment">⑤建议国家战略储备多囤点 这价格窗口不等人</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：国际政治视角——"都在演"</div>
+<div class="comment-item"><div class="comment god-comment">伊朗拒绝谈判→美国延长停火→拒绝的人没代价，延长的人没面子——这场戏的编剧该加鸡腿</div></div>
+<div class="comment-item"><div class="comment">②万斯飞半个地球去坐冷板凳 这外交效率 tql</div></div>
+<div class="comment-item"><div class="comment">③说白了特朗普不敢真打 打了油价崩选票也崩</div></div>
+<div class="comment-item"><div class="comment">④巴基斯坦斡旋了个寂寞 请客吃饭人没来</div></div>
+<div class="comment-item"><div class="comment">⑤延长停火=双方都在等对方先眨眼 这叫国际版斗鸡博弈</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：能源投资视角——"震荡区间做波段"</div>
+<div class="comment-item"><div class="comment">①90-95的区间震荡 期货老手闭眼赚 新手闭眼亏</div></div>
+<div class="comment-item"><div class="comment">②中远海能今天又涨了 航运股成了中东晴雨表</div></div>
+<div class="comment-item"><div class="comment">③延长停火利空石化利多航运 方向很明确了</div></div>
+<div class="comment-item"><div class="comment">④高盛又改预测了 从85改到95 分析师也是墙头草</div></div>
+<div class="comment-item"><div class="comment">⑤这种不确定性最适合做期权 买个跨式等它爆</div></div>
+</div>
+</div>
+<div class="direction-block"><div class="direction-header">🟡 走向B：伊朗反提案重启对话（35%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：乐观派视角——"还有戏"</div>
+<div class="comment-item"><div class="comment">①伊朗不来谈判不代表不想谈 只是要价没谈拢</div></div>
+<div class="comment-item"><div class="comment">②巴基斯坦居中传话其实效率更高 面对面反而僵</div></div>
+<div class="comment-item"><div class="comment">③伊朗经济撑不了多久 被封锁的日子不好过</div></div>
+<div class="comment-item"><div class="comment">④特朗普也需要外交成果 真谈成了对他竞选大利好</div></div>
+<div class="comment-item"><div class="comment">⑤只要不打起来 一切都还有解 和平比什么都重要</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：中国视角——"稳住能赢"</div>
+<div class="comment-item"><div class="comment">①中国是伊朗最大原油买家 这事跟我们息息相关</div></div>
+<div class="comment-item"><div class="comment">②如果和谈成功油价回落 国内通胀压力直接缓解</div></div>
+<div class="comment-item"><div class="comment">③中国在中间不表态 但关键时候说句话比谁都管用</div></div>
+<div class="comment-item"><div class="comment">④A股能源板块等消息呢 谈成了直接跳水</div></div>
+<div class="comment-item"><div class="comment">⑤不管谁谈成 受益的都是吃瓜的消费者</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：市场反应视角——"利好出尽"</div>
+<div class="comment-item"><div class="comment">①真谈成了油价至少跌10% 空单拿着别慌</div></div>
+<div class="comment-item"><div class="comment">②但别忘了122条款的关税还在 基本面没变</div></div>
+<div class="comment-item"><div class="comment">③谈成的话航运股得崩 中远海控不敢看</div></div>
+<div class="comment-item"><div class="comment">④黄金也会回调 避险需求一降金价就软</div></div>
+<div class="comment-item"><div class="comment">⑤别赌单边 对冲才是王道 这种大事变数太多</div></div>
+</div>
+</div>
+<div class="direction-block"><div class="direction-header">🔴 走向C：停火失效美军行动（20%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：恐慌视角——"真要打了？"</div>
+<div class="comment-item"><div class="comment">①100美元的油价已经够离谱了 再打直接奔120</div></div>
+<div class="comment-item"><div class="comment">②霍尔木兹一关全球1/5石油断供 你想想什么后果</div></div>
+<div class="comment-item"><div class="comment">③每桶涨10美元=每升涨几毛 加油站又要排长队了</div></div>
+<div class="comment-item"><div class="comment">④美股今天已经在跌了 道琼斯盘前-300点</div></div>
+<div class="comment-item"><div class="comment">⑤求求了别打了 普通人经不起折腾😭😭</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：军事分析视角——"有限打击"</div>
+<div class="comment-item"><div class="comment">①美军不会全面开战 最多精确打击伊朗军事设施</div></div>
+<div class="comment-item"><div class="comment">②B-2轰炸机已经从迪戈加西亚出发了 卫星图看得清清楚楚</div></div>
+<div class="comment-item"><div class="comment">③伊朗防空系统被俄罗斯S-400加持 美军也得掂量</div></div>
+<div class="comment-item"><div class="comment">④有限打击的问题是谁来定义"有限" 打完伊朗不报复？</div></div>
+<div class="comment-item"><div class="comment">⑤2026年了还在看中东打仗 历史的进程一点没变</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：中国应对视角——"两手准备"</div>
+<div class="comment-item"><div class="comment">①战略石油储备赶紧释放一波稳定市场预期</div></div>
+<div class="comment-item"><div class="comment">②国内新能源替代的紧迫感又上来了 光伏风电加速</div></div>
+<div class="comment-item"><div class="comment">③中国外交部肯定呼吁克制 但准备工作不会少</div></div>
+<div class="comment-item"><div class="comment">④A股避险资产先配起来 黄金国债不会错</div></div>
+<div class="comment-item"><div class="comment">⑤真打起来受伤最重的是欧洲 他们更依赖中东油</div></div>
+</div>
+</div>
+</div></div>
+
+<!-- S级事件2 -->
+<div class="event-card">
+<div class="event-header" onclick="toggle(this)">
+<span class="event-badge badge-s">S级</span>
+<span class="event-title">OpenAI发布ChatGPT Images 2.0·首个"会思考"生图AI·竞技场断层登顶</span>
+<span class="expand-icon">▼</span>
+</div>
+<div class="event-body">
+<div class="section"><div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">4月22日凌晨，OpenAI正式发布ChatGPT Images 2.0（底层模型GPT-Image-2），被官方称为首个具备"思考能力"的图像AI。在AI竞技场登顶第一，断层领先第二名240分。支持联网搜索、单次生成8张、多语言文字渲染、UI截图生成。奥特曼称这是"从GPT-3到GPT-5的飞跃"。人工智能ETF今日涨超3%。</p></div>
+<div class="section"><div class="section-title">🗣 各平台热评TOP5</div>
+<div class="hot-comments">
+<div class="hot-comment-item">"设计师今晚加班改简历 这AI生图也太猛了" <span class="src">微博 2.8万转发</span></div>
+<div class="hot-comment-item">"会思考的AI画画 以后甲方自己生成就行了 不用找我了" <span class="src">抖音 5.5万赞</span></div>
+<div class="hot-comment-item">"竞技场断层240分是什么概念？GPT-4o也就比第三名多30分" <span class="src">知乎 9300赞同</span></div>
+<div class="hot-comment-item">"Sam called it GPT-3 to GPT-5 leap, no exaggeration this time" <span class="src">Reddit 2.8k upvotes</span></div>
+<div class="hot-comment-item">"米粒上刻字都行 这精度直接杀死一半设计工具" <span class="src">B站 2.4万弹幕</span></div>
+</div></div>
+<div class="section-title">📈 走向预判</div>
+<div class="prediction"><span class="prob">45%</span>Images 2.0引爆新一轮AI生图竞赛，Google I/O紧急跟进，行业洗牌加速</div>
+<div class="prediction"><span class="prob">35%</span>API开放后商业化快速推进，设计工具+电商领域率先落地</div>
+<div class="prediction"><span class="prob">20%</span>安全和版权争议升级，监管介入限制部分功能</div>
+<div class="direction-block"><div class="direction-header">🟢 走向A：AI生图竞赛白热化（45%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：开发者视角——"技术震撼"</div>
+<div class="comment-item"><div class="comment god-comment">Images 2.0能思考再画画，Midjourney只会画了再想想——一个是先审题后答题，一个是先交卷再检查</div></div>
+<div class="comment-item"><div class="comment">②单次8张+联网搜索 这组合拳打的Midjourney站不住了</div></div>
+<div class="comment-item"><div class="comment">③文字渲染终于不抽风了 以前AI写字跟鬼画符似的</div></div>
+<div class="comment-item"><div class="comment">④API什么时候开放啊急死了 我项目等着接入呢</div></div>
+<div class="comment-item"><div class="comment">⑤断层240分 这不是领先 这是降维打击</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：行业影响视角——"洗牌开始"</div>
+<div class="comment-item"><div class="comment">①Midjourney、Stable Diffusion瑟瑟发抖中</div></div>
+<div class="comment-item"><div class="comment">②Google I/O明天开 Imagen 4得临时加功能了吧</div></div>
+<div class="comment-item"><div class="comment">③国产生图模型又得追了 可灵、通义万相加油</div></div>
+<div class="comment-item"><div class="comment">④设计工具赛道要重新洗牌 Canva Figma都得接入</div></div>
+<div class="comment-item"><div class="comment">⑤广告行业最先受益 以后素材生产效率翻10倍</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：投资视角——"概念股起飞"</div>
+<div class="comment-item"><div class="comment">①人工智能ETF今天涨3%才刚开始 明天继续冲</div></div>
+<div class="comment-item"><div class="comment">②AI应用>AI算力 这波逻辑变了 应用端要起来了</div></div>
+<div class="comment-item"><div class="comment">③视觉中国这种版权股反而可能利空 AI自己画不用买图了</div></div>
+<div class="comment-item"><div class="comment">④Adobe盘前跌了3% 市场真的在用脚投票</div></div>
+<div class="comment-item"><div class="comment">⑤短期炒概念 长期看谁先跑出杀手级应用</div></div>
+</div>
+</div>
+<div class="direction-block"><div class="direction-header">🟡 走向B：商业化快速落地（35%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：电商/营销视角——"效率革命"</div>
+<div class="comment-item"><div class="comment">①以后做淘宝详情页不用找美工了 AI一键搞定</div></div>
+<div class="comment-item"><div class="comment">②电商大促海报 以前设计3天现在3分钟 甲方狂喜</div></div>
+<div class="comment-item"><div class="comment">③小红书种草图 AI生成的比真人拍的还好看 离谱</div></div>
+<div class="comment-item"><div class="comment">④但消费者能分辨AI图吗？信任成本会不会上升</div></div>
+<div class="comment-item"><div class="comment">⑤模特经纪公司慌不慌？AI虚拟模特成本为0</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：设计师视角——"危机感拉满"</div>
+<div class="comment-item"><div class="comment">①初级设计师真的危了 基础作图需求被AI取代</div></div>
+<div class="comment-item"><div class="comment">②但高端创意设计暂时安全 AI还做不到真正的原创</div></div>
+<div class="comment-item"><div class="comment">③与其抵抗不如拥抱 学会用AI的设计师才值钱</div></div>
+<div class="comment-item"><div class="comment">④今晚准备学prompt engineering了 不学就被淘汰</div></div>
+<div class="comment-item"><div class="comment">⑤美院的同学们 你们还好吗😂</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：用户体验视角——"真香"</div>
+<div class="comment-item"><div class="comment">①试了下生成UI截图 精度炸裂 以前只能靠Figma</div></div>
+<div class="comment-item"><div class="comment">②多语言文字渲染终于能用了 之前写中文全乱码</div></div>
+<div class="comment-item"><div class="comment">③Plus用户现在就能用 白嫖党再等等</div></div>
+<div class="comment-item"><div class="comment">④一次8张选最好的 比之前一次1张效率高太多了</div></div>
+<div class="comment-item"><div class="comment">⑤联网搜索生图=看到新闻直接画梗图 太爽了</div></div>
+</div>
+</div>
+<div class="direction-block"><div class="direction-header">🔴 走向C：安全与版权争议（20%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：版权争议视角——"谁的作品"</div>
+<div class="comment-item"><div class="comment">①AI画的图版权归谁？法律还没跟上技术</div></div>
+<div class="comment-item"><div class="comment">②Getty Images已经起诉了好几家 OpenAI迟早被告</div></div>
+<div class="comment-item"><div class="comment">③艺术家集体抵制AI训练 但挡不住商业化的车轮</div></div>
+<div class="comment-item"><div class="comment">④中国版权法还没有专门条款 灰色地带太大了</div></div>
+<div class="comment-item"><div class="comment">⑤以后看到好看的图 第一反应是"这AI画的吧"</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：安全风险视角——"深度伪造"</div>
+<div class="comment-item"><div class="comment">①精度这么高 deepfake门槛直接降到零了</div></div>
+<div class="comment-item"><div class="comment">②明星换脸、虚假证据、假新闻图片 想想都可怕</div></div>
+<div class="comment-item"><div class="comment">③OpenAI说有水印 但水印能挡住有心人吗</div></div>
+<div class="comment-item"><div class="comment">④监管必须跟上 不然AI生图就是潘多拉魔盒</div></div>
+<div class="comment-item"><div class="comment">⑤期待国内出台AI生成内容标识的强制规定</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：行业竞争视角——"军备竞赛"</div>
+<div class="comment-item"><div class="comment">①Google明天发Imagen 4 Meta下周发CM3Leon 卷疯了</div></div>
+<div class="comment-item"><div class="comment">②国内字节的即梦、阿里的通义万相得加速追赶</div></div>
+<div class="comment-item"><div class="comment">③最后拼的不是模型 是生态和开发者数量</div></div>
+<div class="comment-item"><div class="comment">④每周一个新模型 开发者根本追不过来</div></div>
+<div class="comment-item"><div class="comment">⑤AI生图大战2026 比大模型大战还激烈</div></div>
+</div>
+</div>
+</div></div>
+
+<!-- A级事件1 -->
+<div class="event-card">
+<div class="event-header" onclick="toggle(this)">
+<span class="event-badge badge-a">A级</span>
+<span class="event-title">19岁女孩挪用1700万当榜一大姐·父亲陪同投案·家庭破产</span>
+<span class="expand-icon">▼</span>
+</div>
+<div class="event-body">
+<div class="section"><div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">郑州19岁女孩小梦，在父亲冷链档口任出纳期间，16个月累计挪用1700万元在直播间打赏主播，成为多个直播间"榜一大姐"。4月20日父亲带其投案自首。朱先生称"坐牢十年起但1700万是身家性命，只有定性赃款才可能追回"。事件引发对直播打赏机制、平台审核责任的全民讨论。</p></div>
+<div class="section"><div class="section-title">🗣 各平台热评TOP5</div>
+<div class="hot-comments">
+<div class="hot-comment-item">"1700万打赏…我1700都舍不得充会员" <span class="src">微博 4.1万转发</span></div>
+<div class="hot-comment-item">"父亲送女儿自首 这是什么人间惨剧" <span class="src">抖音 7.2万赞</span></div>
+<div class="hot-comment-item">"平台说没法识别资金来源 你收钱的时候可没嫌弃来源" <span class="src">知乎 1.5万赞同</span></div>
+<div class="hot-comment-item">"一次打赏10万没感觉 现实中买包嫌贵 这是病得治" <span class="src">B站 3.1万弹幕</span></div>
+<div class="hot-comment-item">"主播和平台都应该退钱 这钱本来就是赃款" <span class="src">百度热搜 7.69万热度</span></div>
+</div></div>
+<div class="section-title">📈 走向预判</div>
+<div class="prediction"><span class="prob">45%</span>警方立案侦查，平台被约谈，部分打赏款以赃款名义追回</div>
+<div class="prediction"><span class="prob">35%</span>推动直播打赏实名+大额预警机制立法，行业监管升级</div>
+<div class="prediction"><span class="prob">20%</span>平台以"善意第三方"抗辩拒绝退款，案件进入漫长诉讼</div>
+<div class="direction-block"><div class="direction-header">🟢 走向A：赃款追回+平台约谈（45%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：家庭悲剧视角——"谁的错"</div>
+<div class="comment-item"><div class="comment god-comment">19岁管1700万，让猫看鱼店，结果猫把鱼都打赏给别的猫了——当代寓言</div></div>
+<div class="comment-item"><div class="comment">②父亲自己让女儿管账 现在送女儿坐牢 心得多痛啊</div></div>
+<div class="comment-item"><div class="comment">③16个月挪了1700万没发现？这财务管理也太野了</div></div>
+<div class="comment-item"><div class="comment">④女孩说"打赏10万没感觉" 这就是数字脱敏 跟赌博一个原理</div></div>
+<div class="comment-item"><div class="comment">⑤最惨的是那些被欠款的供应商 无辜躺枪</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：平台责任视角——"收钱时不问来源"</div>
+<div class="comment-item"><div class="comment">①平台说识别不了资金来源 那银行的反洗钱系统干嘛的</div></div>
+<div class="comment-item"><div class="comment">②一个19岁小女孩每月打赏100多万 系统不该预警吗？</div></div>
+<div class="comment-item"><div class="comment">③主播收了1100万 不退就是收赃 法律上站不住</div></div>
+<div class="comment-item"><div class="comment">④直播平台赚的就是冲动消费的钱 本质跟赌场有区别吗</div></div>
+<div class="comment-item"><div class="comment">⑤建议所有直播平台强制大额打赏冷静期 24小时可撤回</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：法律视角——"赃款能追回吗"</div>
+<div class="comment-item"><div class="comment">①定性为职务侵占的话 最高可判15年 追回可能性大</div></div>
+<div class="comment-item"><div class="comment">②关键看平台是"善意取得"还是"明知" 法院怎么认定</div></div>
+<div class="comment-item"><div class="comment">③之前有未成年人打赏退款的判例 但这次她已成年</div></div>
+<div class="comment-item"><div class="comment">④律师说能追回60-70%就不错了 诉讼费还得自己出</div></div>
+<div class="comment-item"><div class="comment">⑤自首可以减刑 但1700万的量刑基数太高了</div></div>
+</div>
+</div>
+<div class="direction-block"><div class="direction-header">🟡 走向B：推动行业监管立法（35%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：监管呼声视角——"早该管了"</div>
+<div class="comment-item"><div class="comment">①这已经不是第一起了 未成年人偷刷家长钱打赏的新闻还少吗</div></div>
+<div class="comment-item"><div class="comment">②直播打赏应该跟彩票一样设上限 每月不超过工资30%</div></div>
+<div class="comment-item"><div class="comment">③韩国已经立法了 中国什么时候跟上</div></div>
+<div class="comment-item"><div class="comment">④建议实名+人脸识别+大额短信验证三管齐下</div></div>
+<div class="comment-item"><div class="comment">⑤管一管挺好的 别等出了人命再管</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：行业视角——"自律不行就他律"</div>
+<div class="comment-item"><div class="comment">①直播行业不自律 只能等监管铁拳</div></div>
+<div class="comment-item"><div class="comment">②抖快B站如果被约谈 打赏收入至少砍30%</div></div>
+<div class="comment-item"><div class="comment">③主播收入靠打赏 限制打赏=限制主播收入 有人会反对</div></div>
+<div class="comment-item"><div class="comment">④但长期看 健康的打赏生态对行业是好事</div></div>
+<div class="comment-item"><div class="comment">⑤监管来了 小平台直接倒闭 大平台反而利好 马太效应</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：社会反思视角——"数字消费陷阱"</div>
+<div class="comment-item"><div class="comment">①数字支付让人对钱没概念 刷1万跟刷100一样轻松</div></div>
+<div class="comment-item"><div class="comment">②不只是打赏 盲盒、游戏氪金都是一个道理</div></div>
+<div class="comment-item"><div class="comment">③建议学校开设"金融素养"必修课 从小培养理财意识</div></div>
+<div class="comment-item"><div class="comment">④家长也有责任 19岁的孩子就给管这么大笔钱</div></div>
+<div class="comment-item"><div class="comment">⑤每一个榜一大哥/大姐背后 可能都是一个破产的家庭</div></div>
+</div>
+</div>
+<div class="direction-block"><div class="direction-header">🔴 走向C：平台拒退进入诉讼（20%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：愤怒视角——"平台吃相太难看"</div>
+<div class="comment-item"><div class="comment">①平台不退钱就是在告诉所有人：偷来的钱我照收不误</div></div>
+<div class="comment-item"><div class="comment">②公关稿写得漂亮 但本质就是不想把吃进去的吐出来</div></div>
+<div class="comment-item"><div class="comment">③法律打官司打到赢 父亲的冷链生意早就凉透了</div></div>
+<div class="comment-item"><div class="comment">④这种企业社会责任呢？年报上写的那些话都是假的</div></div>
+<div class="comment-item"><div class="comment">⑤建议大家集体举报 让平台感受到压力</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：法律博弈视角——"持久战"</div>
+<div class="comment-item"><div class="comment">①民事诉讼一审到二审 少说一年半 家庭承受得了吗</div></div>
+<div class="comment-item"><div class="comment">②律师费都得几十万 还不一定赢</div></div>
+<div class="comment-item"><div class="comment">③最高法需要出个司法解释 明确直播打赏追回的条件</div></div>
+<div class="comment-item"><div class="comment">④这案子如果胜诉 会成为直播打赏的标杆判例</div></div>
+<div class="comment-item"><div class="comment">⑤不管结果如何 至少把问题推到了公众视野</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：舆论压力视角——"口碑代价"</div>
+<div class="comment-item"><div class="comment">①拒退的平台会被全网骂 品牌价值损失远超1700万</div></div>
+<div class="comment-item"><div class="comment">②消费者会用脚投票 你不退钱我就不用你的平台</div></div>
+<div class="comment-item"><div class="comment">③但直播赚的钱太多了 骂几天热度过了就没人记得了</div></div>
+<div class="comment-item"><div class="comment">④资本市场倒是在意 如果影响上市审核那就不一样了</div></div>
+<div class="comment-item"><div class="comment">⑤希望父女俩能挺过这一关 别被压力压垮</div></div>
+</div>
+</div>
+</div></div>
+
+<!-- A级事件2 -->
+<div class="event-card">
+<div class="event-header" onclick="toggle(this)">
+<span class="event-badge badge-a">A级</span>
+<span class="event-title">A股午后突破4100·CPO概念大涨·Google I/O大会预期催化·成交2.6万亿</span>
+<span class="expand-icon">▼</span>
+</div>
+<div class="event-body">
+<div class="section"><div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">4月22日A股低开高走呈V型反转。午后沪指突破4100点，深成指涨超1%。CPO概念再度大涨，服务器、半导体、PCB板块涨幅居前。Google I/O大会4月22-24日举办催化算力预期。人工智能ETF涨超3%。但AI应用、商业航天等前期强势板块回调。</p></div>
+<div class="section"><div class="section-title">🗣 各平台热评TOP5</div>
+<div class="hot-comments">
+<div class="hot-comment-item">"4100又突破了 这轮是真牛还是假牛" <span class="src">微博 1.1万转发</span></div>
+<div class="hot-comment-item">"CPO概念天天涨 我天天看 就是不敢买" <span class="src">抖音 3.6万赞</span></div>
+<div class="hot-comment-item">"V型反转 早上割肉的已经哭晕了" <span class="src">雪球 6200回复</span></div>
+<div class="hot-comment-item">"Google I/O还没开盘就先涨为敬 这就是预期交易" <span class="src">知乎 5800赞同</span></div>
+<div class="hot-comment-item">"AI ETF涨3% 终于回本了 就差87%了" <span class="src">B站 1.9万弹幕</span></div>
+</div></div>
+<div class="section-title">📈 走向预判</div>
+<div class="prediction"><span class="prob">45%</span>Google I/O催化+Images 2.0利好共振，AI板块持续走强，沪指挑战4200</div>
+<div class="prediction"><span class="prob">35%</span>利好兑现后获利了结，CPO和AI板块短线回调整固</div>
+<div class="prediction"><span class="prob">20%</span>美伊局势恶化叠加美股下跌，A股外部风险冲击</div>
+<div class="direction-block"><div class="direction-header">🟢 走向A：AI催化沪指冲4200（45%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：散户视角</div>
+<div class="comment-item"><div class="comment">①今天早上清仓的举个手🙋 V型反转打脸最疼</div></div>
+<div class="comment-item"><div class="comment">②CPO天天涨 但中际旭创都160了还敢追？</div></div>
+<div class="comment-item"><div class="comment">③Google I/O今晚就开了 利好还没兑现 可以再冲</div></div>
+<div class="comment-item"><div class="comment">④半导体终于动了 芯片ETF今天加了2万</div></div>
+<div class="comment-item"><div class="comment">⑤4200这个位置 到了再说 别提前庆祝</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：机构视角</div>
+<div class="comment-item"><div class="comment">①Images 2.0→算力需求暴增→CPO/服务器受益 逻辑闭环了</div></div>
+<div class="comment-item"><div class="comment">②中泰研报说不会快牛 但结构性牛市确认了</div></div>
+<div class="comment-item"><div class="comment">③外资今天净流入78亿 连续第5天加仓</div></div>
+<div class="comment-item"><div class="comment">④Q1 Token调用量暴增40% AI商业化数据实锤了</div></div>
+<div class="comment-item"><div class="comment">⑤风格从航天切到CPO 资金在选真正有业绩的方向</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：技术面视角</div>
+<div class="comment-item"><div class="comment">①V型反转+放量 典型的主力洗盘完拉升信号</div></div>
+<div class="comment-item"><div class="comment">②4100站稳后支撑变强了 4200压力位看这周能不能破</div></div>
+<div class="comment-item"><div class="comment">③创业板今天补涨了 风格扩散是好事</div></div>
+<div class="comment-item"><div class="comment">④成交2.6万亿比昨天放量了 做多动能在增强</div></div>
+<div class="comment-item"><div class="comment">⑤MACD周线金叉确认 中期趋势看多</div></div>
+</div>
+</div>
+<div class="direction-block"><div class="direction-header">🟡 走向B：利好兑现短线回调（35%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：谨慎派</div>
+<div class="comment-item"><div class="comment">①Google I/O今晚开 明天就是卖事实的时候</div></div>
+<div class="comment-item"><div class="comment">②CPO板块换手率太高了 短线获利盘巨大</div></div>
+<div class="comment-item"><div class="comment">③前期航天已经回调了 CPO下一个？</div></div>
+<div class="comment-item"><div class="comment">④4100上方套牢盘不少 抛压不可忽视</div></div>
+<div class="comment-item"><div class="comment">⑤建议减一半仓位 留一半看后续</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：价值派</div>
+<div class="comment-item"><div class="comment">①回调正好换仓 从题材切到业绩确定性</div></div>
+<div class="comment-item"><div class="comment">②消费白马跌到位了 趁回调上车</div></div>
+<div class="comment-item"><div class="comment">③红利策略在震荡市最稳 银行煤炭水电闭眼买</div></div>
+<div class="comment-item"><div class="comment">④Q1财报这两天出 选业绩好的加仓</div></div>
+<div class="comment-item"><div class="comment">⑤真正的好股票不怕回调 越跌越买</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：游资视角</div>
+<div class="comment-item"><div class="comment">①CPO龙头如果明天分歧 接力方向看PCB和半导体设备</div></div>
+<div class="comment-item"><div class="comment">②猪肉股今天突然拉了 注意风格切换信号</div></div>
+<div class="comment-item"><div class="comment">③固态电池也涨了 多线作战的行情最赚钱</div></div>
+<div class="comment-item"><div class="comment">④情绪退潮期只做龙头 杂毛一律不碰</div></div>
+<div class="comment-item"><div class="comment">⑤Google I/O如果放大招 明天算力全线高开没悬念</div></div>
+</div>
+</div>
+<div class="direction-block"><div class="direction-header">🔴 走向C：外部冲击风险（20%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：风险警示</div>
+<div class="comment-item"><div class="comment">①美伊停火如果崩了 A股开盘先吃一根大阴线</div></div>
+<div class="comment-item"><div class="comment">②美股三大指数今天全跌 纳指跌0.7% 要注意传导</div></div>
+<div class="comment-item"><div class="comment">③油价92了如果继续涨 通胀预期打压降息空间</div></div>
+<div class="comment-item"><div class="comment">④中美关税145%还悬着呢 别光看AI忘了大背景</div></div>
+<div class="comment-item"><div class="comment">⑤黑天鹅随时可能来 保持仓位灵活最重要</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：防御策略</div>
+<div class="comment-item"><div class="comment">①降仓到五成 留足现金应对突发</div></div>
+<div class="comment-item"><div class="comment">②黄金ETF对冲 这时候不配点避险资产说不过去</div></div>
+<div class="comment-item"><div class="comment">③高位题材股优先减 低位白马可以拿着</div></div>
+<div class="comment-item"><div class="comment">④美伊消息出来前 别下重注 单边</div></div>
+<div class="comment-item"><div class="comment">⑤稳健型直接买国债逆回购 年化2%也比亏钱强</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：长线视角</div>
+<div class="comment-item"><div class="comment">①外部冲击是短期扰动 A股牛市逻辑没变</div></div>
+<div class="comment-item"><div class="comment">②每次大跌都是黄金坑 关键是你有没有子弹</div></div>
+<div class="comment-item"><div class="comment">③中国经济基本面Q1数据不差 内需政策在加码</div></div>
+<div class="comment-item"><div class="comment">④定投的朋友不用慌 下跌正好摊低成本</div></div>
+<div class="comment-item"><div class="comment">⑤耐心比仓位更重要 熬过波动就是胜利</div></div>
+</div>
+</div>
+</div></div>
+
+<!-- A级事件3 -->
+<div class="event-card">
+<div class="event-header" onclick="toggle(this)">
+<span class="event-badge badge-a">A级</span>
+<span class="event-title">万斯赴伊斯兰堡·以黎10天停火中·中东外交博弈多线交织</span>
+<span class="expand-icon">▼</span>
+</div>
+<div class="event-body">
+<div class="section"><div class="section-title">📍 事件概要</div>
+<p style="font-size:13px;color:var(--text2)">美副总统万斯已赴伊斯兰堡准备第二轮美伊谈判，但伊朗拒绝出席。4月16日特朗普宣布以色列-黎巴嫩10天停火，以方同意但不撤兵，真主党未明确表态。伊朗议员称"海上封锁不解除不谈判"。多国外交斡旋密集进行，巴基斯坦成为关键枢纽。</p></div>
+<div class="section"><div class="section-title">🗣 各平台热评TOP5</div>
+<div class="hot-comments">
+<div class="hot-comment-item">"万斯去了但人家不来 像极了我等约会被放鸽子" <span class="src">微博 1.9万转发</span></div>
+<div class="hot-comment-item">"以色列停火不撤兵 这叫哪门子停火" <span class="src">抖音 4.3万赞</span></div>
+<div class="hot-comment-item">"VP Vance in Islamabad, no Iranian delegation — awkward diplomacy" <span class="src">AP 2.5k shares</span></div>
+<div class="hot-comment-item">"巴基斯坦这个中间人当的 两头不讨好" <span class="src">知乎 7600赞同</span></div>
+<div class="hot-comment-item">"中东这盘棋太大了 每个棋子都在动" <span class="src">凤凰网 5400评论</span></div>
+</div></div>
+<div class="section-title">📈 走向预判</div>
+<div class="prediction"><span class="prob">40%</span>背后渠道秘密接触，伊朗数日后提交方案，谈判重启</div>
+<div class="prediction"><span class="prob">35%</span>以黎停火到期后无法续期，多方冲突同步升级</div>
+<div class="prediction"><span class="prob">25%</span>中国或俄罗斯介入斡旋，提供新的外交框架</div>
+<div class="direction-block"><div class="direction-header">🟢 走向A：秘密渠道重启谈判（40%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：外交观察视角</div>
+<div class="comment-item"><div class="comment god-comment">拒绝公开谈判≠拒绝谈判——外交最有效的沟通往往发生在没有摄像头的房间里</div></div>
+<div class="comment-item"><div class="comment">②伊朗不来谈判是做给国内强硬派看的 实际私下有渠道</div></div>
+<div class="comment-item"><div class="comment">③巴基斯坦军方跟伊朗革命卫队关系不浅 暗线比明线多</div></div>
+<div class="comment-item"><div class="comment">④特朗普延长停火就是给暗中接触留时间 双方都懂</div></div>
+<div class="comment-item"><div class="comment">⑤阿曼才是真正的中间人 巴基斯坦只是摆在台面上的</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：地缘战略视角</div>
+<div class="comment-item"><div class="comment">①美国的目标从来不是打伊朗 是逼伊朗回核协议</div></div>
+<div class="comment-item"><div class="comment">②伊朗要的是解除制裁 特朗普要的是外交胜利 其实能谈</div></div>
+<div class="comment-item"><div class="comment">③以色列在黎巴嫩不撤兵 是给伊朗的施压筹码</div></div>
+<div class="comment-item"><div class="comment">④真主党的态度才是关键变量 伊朗说了不算</div></div>
+<div class="comment-item"><div class="comment">⑤俄罗斯在旁边看戏呢 中东越乱俄罗斯越卖油</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：市场影响视角</div>
+<div class="comment-item"><div class="comment">①暗中谈判=不确定性持续 油价不会大跌也不会大涨</div></div>
+<div class="comment-item"><div class="comment">②做多波动率是当前最好的策略</div></div>
+<div class="comment-item"><div class="comment">③避险资产继续持有 黄金2700不是顶</div></div>
+<div class="comment-item"><div class="comment">④航运保险费率已经翻倍了 外贸成本还在涨</div></div>
+<div class="comment-item"><div class="comment">⑤重启谈判的消息一出 油价能瞬间跌5% 交易机会</div></div>
+</div>
+</div>
+<div class="direction-block"><div class="direction-header">🟡 走向B：多方冲突同步升级（35%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：局势恶化视角</div>
+<div class="comment-item"><div class="comment">①以黎停火也就10天 到期不续等于两条线同时炸</div></div>
+<div class="comment-item"><div class="comment">②真主党在黎南部集结的视频都曝光了 哪有停火的样子</div></div>
+<div class="comment-item"><div class="comment">③伊朗、黎巴嫩、也门胡塞 三线联动的话美军顶不住</div></div>
+<div class="comment-item"><div class="comment">④中东这盘棋比乌克兰还复杂 利益方太多了</div></div>
+<div class="comment-item"><div class="comment">⑤2026年是不是注定不太平啊 到处都在打</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：人道主义视角</div>
+<div class="comment-item"><div class="comment">①黎巴嫩平民已经流离失所了 停火不停火对他们都是灾难</div></div>
+<div class="comment-item"><div class="comment">②联合国说了多少次要保护平民 有用吗</div></div>
+<div class="comment-item"><div class="comment">③伊朗老百姓被制裁搞得物价飞涨 谁为他们说话</div></div>
+<div class="comment-item"><div class="comment">④战争永远是普通人买单 政客们在豪华酒店谈判</div></div>
+<div class="comment-item"><div class="comment">⑤希望和平 就这么简单的愿望怎么这么难实现</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：全球经济冲击视角</div>
+<div class="comment-item"><div class="comment">①多线冲突=全球供应链再受冲击 通胀压力山大</div></div>
+<div class="comment-item"><div class="comment">②美联储降息的希望更渺茫了 油价不降息不来</div></div>
+<div class="comment-item"><div class="comment">③欧洲最惨 能源依赖度高+难民压力大</div></div>
+<div class="comment-item"><div class="comment">④新兴市场货币又要贬值了 资本回流美元</div></div>
+<div class="comment-item"><div class="comment">⑤全球化退潮的感觉越来越明显了</div></div>
+</div>
+</div>
+<div class="direction-block"><div class="direction-header">🔴 走向C：中俄介入提供新框架（25%）</div>
+<div class="angle-group"><div class="angle-title">💬角度1：大国博弈视角</div>
+<div class="comment-item"><div class="comment">①中国如果出面 效果比巴基斯坦强十倍</div></div>
+<div class="comment-item"><div class="comment">②俄罗斯跟伊朗关系铁 但介入动机不纯 油价高对俄有利</div></div>
+<div class="comment-item"><div class="comment">③中国斡旋沙特伊朗和解已经有成功先例</div></div>
+<div class="comment-item"><div class="comment">④美国最怕的就是中国把中东格局重塑了</div></div>
+<div class="comment-item"><div class="comment">⑤多极化外交是大趋势 美国独霸中东的时代过了</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度2：中国外交视角</div>
+<div class="comment-item"><div class="comment">①中国一带一路在中东投了多少 稳定符合中国利益</div></div>
+<div class="comment-item"><div class="comment">②但中国不会轻易下场 除非双方都求过来</div></div>
+<div class="comment-item"><div class="comment">③外交部现在的表态都是"呼吁克制" 很有分寸</div></div>
+<div class="comment-item"><div class="comment">④中国能提供的是经济合作框架 比军事威胁管用</div></div>
+<div class="comment-item"><div class="comment">⑤中东和平需要利益共享 不是零和博弈</div></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬角度3：长远影响视角</div>
+<div class="comment-item"><div class="comment">①中东如果真正和平了 油价回到60-70 全球经济起飞</div></div>
+<div class="comment-item"><div class="comment">②但和平从来不是一天达成的 需要耐心</div></div>
+<div class="comment-item"><div class="comment">③多极化外交框架可能是解决中东问题的唯一出路</div></div>
+<div class="comment-item"><div class="comment">④不管谁斡旋 关键是双方有没有和平的意愿</div></div>
+<div class="comment-item"><div class="comment">⑤21世纪了还在为石油打仗 新能源转型得加速</div></div>
+</div>
+</div>
+</div></div>
+
+<div class="b-events"><h2>🟡 B级事件速览</h2>
+<table class="b-table">
+<tr><th>事件</th><th>时间</th><th>要点</th></tr>
+<tr><td>国办深化投资审批制度改革</td><td>4月15日</td><td>国办发〔2026〕13号，严禁低价恶性竞争，营商环境再升级</td></tr>
+<tr><td>发改委制定扩大内需战略实施方案</td><td>4月17日</td><td>"十五五"开局，2026-2030年扩内需路线图即将出台</td></tr>
+<tr><td>国内油价年内首降555元/吨</td><td>4月21日</td><td>加满一箱92#省22元，但美伊局势可能导致下轮上调</td></tr>
+<tr><td>Google I/O 2026大会开幕</td><td>4月22-24日</td><td>预计发布新一代TPU架构、Imagen 4、AI系统级更新</td></tr>
+</table></div>
+
+<div class="rhino-section"><h2>🦏 灰犀牛扫描</h2>
+<div class="rhino-item">🔴 <b>美伊延长停火后续走向</b> — 伊朗拒绝谈判+延长停火=更大不确定性，下一次到期可能真的崩盘</div>
+<div class="rhino-item">🔴 <b>以黎10天停火到期</b> — 4月27日到期，以色列不撤兵+真主党未表态=续期困难</div>
+<div class="rhino-item">🟠 <b>DeepSeek V4月底发布窗口</b> — 距4月底仅剩8天，是否如期发布决定国产AI信心</div>
+<div class="rhino-item">🟠 <b>直播打赏监管政策酝酿中</b> — 1700万事件可能加速监管出台，影响直播行业估值</div>
+<div class="rhino-item">🟡 <b>122条款150天窗口</b> — 临时关税9月到期，届时贸易格局面临新一轮剧变</div>
+</div>
+
+<div class="god-section"><h2>🏆 本期封神评论</h2>
+<div class="god-item">💬 "伊朗拒绝谈判→美国延长停火→拒绝的人没代价，延长的人没面子——这场戏的编剧该加鸡腿"<br><span style="font-size:11px;color:var(--text2)">美伊停火 | 极致凝练揭示博弈荒谬——拒绝vs延长的双输悖论一句话讲透</span></div>
+<div class="god-item">💬 "Images 2.0能思考再画画，Midjourney只会画了再想想——一个是先审题后答题，一个是先交卷再检查"<br><span style="font-size:11px;color:var(--text2)">ChatGPT Images 2.0 | 结构性对比——考试类比精准打击技术代差</span></div>
+<div class="god-item">💬 "19岁管1700万，让猫看鱼店，结果猫把鱼都打赏给别的猫了"——当代寓言<br><span style="font-size:11px;color:var(--text2)">打赏事件 | 寓言式讽刺——一句话讲清事件本质荒谬 画面感极强</span></div>
+<div class="god-item">💬 "拒绝公开谈判≠拒绝谈判——外交最有效的沟通往往发生在没有摄像头的房间里"<br><span style="font-size:11px;color:var(--text2)">中东外交 | 信息增量——揭示公开外交vs秘密外交的本质差异</span></div>
+</div>
+
+<footer>
+<p>📊 数据来源：新华社、央视新闻、AP、Reuters、BBC、CNBC、凤凰财经、观察者网、IT之家</p>
+<p>⏱ 报告生成：2026年4月22日 15:00 北京时间 | 14项维度全覆盖</p>
+<p>🔄 下次更新：18:00 晚报</p>
+</footer>
+</div>
+<script>
+function toggle(el){const body=el.nextElementSibling;const icon=el.querySelector('.expand-icon');if(body)body.classList.toggle('active');if(icon)icon.classList.toggle('open')}
+function copyComment(btn){const item=btn.parentElement;const text=item.querySelector('.comment').textContent.trim();navigator.clipboard.writeText(text).then(()=>{btn.textContent='已复制';btn.classList.add('copied');setTimeout(()=>{btn.textContent='复制';btn.classList.remove('copied')},1500)}).catch(()=>{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);btn.textContent='已复制';btn.classList.add('copied');setTimeout(()=>{btn.textContent='复制';btn.classList.remove('copied')},1500)})}
+document.addEventListener('DOMContentLoaded',()=>{const first=document.querySelector('.event-body');if(first){first.classList.add('active');const icon=first.previousElementSibling.querySelector('.expand-icon');if(icon)icon.classList.add('open')}document.querySelectorAll('.comment-item').forEach(item=>{if(!item.querySelector('.copy-btn')){const btn=document.createElement('button');btn.className='copy-btn';btn.textContent='复制';btn.onclick=function(e){e.stopPropagation();copyComment(this)};item.appendChild(btn)}})});
+</script>
+</body>
+</html>
