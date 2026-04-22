@@ -64,7 +64,7 @@ footer a:hover{text-decoration:underline}
 <div class="container">
 <header>
 <h1>📚 历史报告归档</h1>
-<p class="sub">每次监控生成的报告均已归档，可随时查阅历史内容、预判及评论</p>
+<p class="sub">每次监控生成的报告均已归档，可随时查阅历史内容、预判及评论<br><span style="color:#ff9f43;font-size:13px">📌 历史报告保留最近30天，过期自动清理</span></p>
 <a href="../" class="back-btn">🔥 返回最新看板</a>
 </header>
 
@@ -157,6 +157,7 @@ async function loadReports() {
         <span style="font-size:13px;color:var(--text2)">
           历史报告会在每次定时监控任务执行后自动归档<br>
           每天最多6份（7:00 / 9:00 / 12:00 / 15:00 / 18:00 / 21:00）<br>
+          报告保留最近30天，过期自动清理<br>
           请稍后再来查看 ~
         </span></div>
       </div>`;
