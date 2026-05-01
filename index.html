@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔮 热点预测看板 · 下周预测 5月5日-11日</title>
+<title>🔥 热点晚报 · 5月1日 18:00</title>
 <style>*{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#0f1117;--card:#1a1d28;--card2:#232635;--accent:#6c5ce7;--accent2:#a29bfe;--s-color:#ff4757;--a-color:#ff9f43;--b-color:#feca57;--text:#e8e8e8;--text2:#a0a0b0;--border:#2d3045;--green:#2ed573;--shadow:0 4px 20px rgba(0,0,0,0.3)}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
 .container{max-width:900px;margin:0 auto;padding:16px}
 header{text-align:center;padding:30px 0 20px;position:relative}
-header h1{font-size:28px;background:linear-gradient(135deg,#a29bfe,#6c5ce7,#fd79a8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+header h1{font-size:28px;background:linear-gradient(135deg,#ff4757,#ff9f43,#feca57);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
 header .meta{color:var(--text2);font-size:13px;display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
 header .meta span{background:var(--card);padding:4px 12px;border-radius:20px;border:1px solid var(--border)}
 .history-btn{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:8px 20px;background:linear-gradient(135deg,#6c5ce7,#a29bfe);color:#fff;border:none;border-radius:24px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:all .3s;box-shadow:0 2px 12px rgba(108,92,231,0.3)}
@@ -25,12 +25,12 @@ header .meta span{background:var(--card);padding:4px 12px;border-radius:20px;bor
 .event-badge{padding:4px 10px;border-radius:6px;font-size:12px;font-weight:700;color:#fff;white-space:nowrap}
 .badge-s{background:linear-gradient(135deg,#ff4757,#ff3838)}.badge-a{background:linear-gradient(135deg,#ff9f43,#ee8a30)}.badge-b{background:linear-gradient(135deg,#feca57,#d4a520);color:#333}
 .event-title{font-size:16px;font-weight:600;flex:1}
+.event-time{font-size:12px;color:var(--text2);white-space:nowrap}
 .expand-icon{font-size:14px;color:var(--text2);transition:transform .3s}.expand-icon.open{transform:rotate(180deg)}
 .event-body{padding:0 20px 20px;display:none}.event-body.active{display:block}
 .section{margin:12px 0}
 .section-title{font-size:14px;font-weight:600;color:var(--accent2);margin-bottom:8px;padding-bottom:4px;border-bottom:1px solid var(--border)}
-.prediction{background:var(--card2);border-radius:8px;padding:10px 14px;margin:6px 0;font-size:13px}
-.prediction .prob{font-weight:700;color:var(--accent2);margin-right:6px}
+.bg-info{background:var(--card2);border-radius:8px;padding:12px 14px;margin:8px 0;font-size:13px;color:var(--text2);line-height:1.7}
 .direction-block{margin:16px 0;padding:14px;background:rgba(108,92,231,0.05);border-radius:12px;border:1px solid var(--border)}
 .direction-header{font-size:14px;font-weight:700;color:var(--green);margin-bottom:10px;padding:8px 12px;background:var(--card);border-radius:8px;border-left:4px solid var(--green)}
 .angle-group{margin:12px 0}
@@ -43,526 +43,489 @@ header .meta span{background:var(--card);padding:4px 12px;border-radius:20px;bor
 .copy-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
 .copy-btn.copied{background:var(--green);color:#fff;border-color:var(--green)}
 .god-comment{border-left-color:var(--s-color);color:var(--text);font-weight:500;background:rgba(255,71,87,0.05);padding:8px 12px;border-radius:0 8px 8px 0}
-.b-events{margin:24px 0}.b-events h2{font-size:18px;color:var(--b-color);margin-bottom:12px}
-.b-table{width:100%;border-collapse:collapse;font-size:13px}
-.b-table th{background:var(--card2);padding:10px;text-align:left;border-bottom:2px solid var(--border);color:var(--accent2)}
-.b-table td{padding:10px;border-bottom:1px solid var(--border);color:var(--text2)}
-.b-table tr:hover td{background:var(--card2);color:var(--text)}
-.rhino-section{margin:24px 0;background:var(--card);border-radius:14px;padding:20px;border:1px solid var(--border)}
-.rhino-section h2{font-size:18px;color:#8854d0;margin-bottom:12px}
-.rhino-item{padding:8px 0;font-size:13px;color:var(--text2);border-bottom:1px solid rgba(255,255,255,0.03)}
-.god-section{margin:24px 0;background:var(--card);border-radius:14px;padding:20px;border:1px solid var(--border)}
-.god-section h2{font-size:18px;color:var(--s-color);margin-bottom:12px}
-.god-item{padding:10px 0;font-size:14px;border-bottom:1px solid rgba(255,255,255,0.05)}
 footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
-footer p{margin:4px 0}
-@media(max-width:600px){header h1{font-size:22px}.stats-bar{grid-template-columns:1fr}.event-title{font-size:14px}}</style>
+@media(max-width:600px){.container{padding:10px}.stats-bar{grid-template-columns:1fr}header h1{font-size:22px}}
+</style>
 </head>
 <body>
 <div class="container">
 <header>
-<h1>🔮 下周热点预测 · 5月5日-11日</h1>
+<h1>🔥 热点晚报</h1>
 <div class="meta">
-<span>📅 预测发布：2026年5月1日 10:00</span>
-<span>📡 14项维度全覆盖</span>
-<span>💬 225条预测评论</span>
-<span>🔄 下次更新：5月6日 07:00 早报</span>
+<span>📅 2026年5月1日</span>
+<span>⏰ 18:00 更新</span>
+<span>🎯 监控事件：11个</span>
 </div>
-<a href="history/" class="history-btn">📚 历史报告</a>
+<a href="https://honeyzheng.github.io/hot-monitor-dashboard/history/" class="history-btn">📚 历史报告</a>
 </header>
 
 <div class="stats-bar">
-<div class="stat-item stat-s"><div class="num">2</div><div class="label">🔴 S级预测</div></div>
-<div class="stat-item stat-a"><div class="num">3</div><div class="label">🟠 A级预测</div></div>
-<div class="stat-item stat-b"><div class="num">4</div><div class="label">🟡 B级预测</div></div>
+<div class="stat-item stat-s"><div class="num">2</div><div class="label">S级 · 现象级</div></div>
+<div class="stat-item stat-a"><div class="num">5</div><div class="label">A级 · 重大</div></div>
+<div class="stat-item stat-b"><div class="num">4</div><div class="label">B级 · 一般</div></div>
 </div>
 
-<!-- S级预测1 -->
+<!-- S1: UAE退出OPEC -->
 <div class="event-card">
-<div class="event-header" onclick="toggle(this)">
+<div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-s">S级</span>
-<span class="event-title">A股5月6日节后开盘·五大变量叠加·政治局利好VS中东油价VS阿联酋退OPEC</span>
+<span class="event-title">UAE宣布退出OPEC·5月1日正式生效·近60年来首次·全球油市格局重塑</span>
+<span class="event-time">📅 5.1 生效</span>
 <span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
-<div class="section"><div class="section-title">📍 预测背景｜5月6日（周三）开盘</div>
-<p style="font-size:13px;color:var(--text2)">A股5月6日迎来五一后首个交易日，面临五大变量同时出清：①4月28日中央政治局会议明确"更大力度和更实举措抓好经济工作"，政策超预期利好；②阿联酋5月1日正式退出OPEC，将逐步增产，全球石油新秩序开启；③布伦特原油$126四年新高，美伊封锁持续数月；④美国国会60天战争权力法红线到期博弈；⑤美联储鲍威尔5月FOMC是否释放降息信号。节前寒武纪创历史新高1600元，创业板4月涨超15%。36氪分析：五件事在假期悄悄发生，5月6日开盘见分晓。</p></div>
-<div class="section"><div class="section-title">⏰ 关键时间节点</div>
-<div class="prediction"><span class="prob">5月5日</span>五一假期最后一天，国际市场对阿联酋退OPEC完整定价</div>
-<div class="prediction"><span class="prob">5月6日</span>A股节后首个交易日09:30开盘</div>
-<div class="prediction"><span class="prob">5月7-8日</span>美联储FOMC会议结果公布</div>
+<div class="section">
+<div class="section-title">📋 事件背景</div>
+<div class="bg-info">阿联酋正式退出OPEC及OPEC+联盟，自1967年加入以来近60年首次。此举源于阿联酋对OPEC产量配额的不满，叠加美伊战争背景下全球能源格局剧变。阿联酋为OPEC第三大产油国，退出后将自主增产，CNN/BBC/CNBC全球头条。</div>
 </div>
-<div class="section-title">📈 走向预判</div>
-<div class="prediction"><span class="prob">40%</span>政治局利好+算力主线惯性→高开震荡，科技板块延续强势</div>
-<div class="prediction"><span class="prob">35%</span>油价+中东不确定性→低开后企稳，风格切换防御板块</div>
-<div class="prediction"><span class="prob">25%</span>黑天鹅叠加（军事升级+油价破$140）→大幅低开恐慌</div>
-<div class="direction-block"><div class="direction-header">🟢 走向A：政策利好驱动高开震荡（40%）</div>
-<div class="angle-group"><div class="angle-title">💬角度1：散户心态/追涨视角</div>
-<div class="comment-item"><div class="comment god-comment">政治局说"更大力度" 阿联酋说增产降油价 寒武纪说创新高——三个利好打一个假期 五天不开盘等于错过三个涨停——假期焦虑症</div></div>
-<div class="comment-item"><div class="comment">②五一持股过节的这波心态得多强 寒武纪1600说不定6号直接1700</div></div>
-<div class="comment-item"><div class="comment">③创业板4月涨15% 还没上车的这回是真急了</div></div>
-<div class="comment-item"><div class="comment">④政治局定调"更大力度" 这种措辞历年都是大涨信号</div></div>
-<div class="comment-item"><div class="comment">⑤节前减仓的今晚估计睡不着 踏空比亏钱还难受</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度2：机构策略视角</div>
-<div class="comment-item"><div class="comment">①政治局措辞从"积极"升级到"更大力度" 增量资金信号明确</div></div>
-<div class="comment-item"><div class="comment">②十大券商一致看多 但分歧在方向：继续算力还是切消费？</div></div>
-<div class="comment-item"><div class="comment">③阿联酋增产→油价长期承压→通胀缓解→科技成长受益</div></div>
-<div class="comment-item"><div class="comment">④五一消费数据如果超15.2亿人次 旅游消费板块直接起飞</div></div>
-<div class="comment-item"><div class="comment">⑤北向资金已经连续加仓4周 节后大概率继续流入</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度3：产业逻辑视角</div>
-<div class="comment-item"><div class="comment">①北京车展5月3日闭幕 智能驾驶概念下周集体发酵</div></div>
-<div class="comment-item"><div class="comment">②181台新车全球首发 固态电池+城市NOA全面量产 逻辑硬</div></div>
-<div class="comment-item"><div class="comment">③寒武纪思元590出货拐点确认 下半年是交付大年</div></div>
-<div class="comment-item"><div class="comment">④政治局提"扩大内需"+"新质生产力" 两条线一起走</div></div>
-<div class="comment-item"><div class="comment">⑤歌手2026开播概念 芒果超媒节后估计也得涨一波</div></div>
-</div>
-</div>
-<div class="direction-block"><div class="direction-header">🟡 走向B：油价压制风格切换（35%）</div>
-<div class="angle-group"><div class="angle-title">💬角度1：谨慎派/风险提示</div>
-<div class="comment-item"><div class="comment">①$126一桶 通胀回来了 央行降不了息 流动性收紧预期</div></div>
-<div class="comment-item"><div class="comment">②创新高日追进去的 节后如果低开10%直接套10%</div></div>
-<div class="comment-item"><div class="comment">③国际市场5天的波动一次性反映 高开低走可能性不小</div></div>
-<div class="comment-item"><div class="comment">④高位科技向低位消费切换 银行+电力才是避风港</div></div>
-<div class="comment-item"><div class="comment">⑤五一后调油价板上钉钉 通胀预期起来成长股先跌</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度2：板块轮动视角</div>
-<div class="comment-item"><div class="comment">①五一消费数据出来 旅游酒店航空涨的是确定性</div></div>
-<div class="comment-item"><div class="comment">②阿联酋增产利空石油股但利好航空公司 此消彼长</div></div>
-<div class="comment-item"><div class="comment">③一季报暴雷期 绩差股第一天就会被砸 避开地雷</div></div>
-<div class="comment-item"><div class="comment">④医药白酒压了太久 政治局提消费→估值修复逻辑</div></div>
-<div class="comment-item"><div class="comment">⑤港股AH溢价高 同样算力港股更便宜 聪明钱南下</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度3：普通投资者心态</div>
-<div class="comment-item"><div class="comment">①说实话五一这5天比上班还累 天天盯外盘焦虑</div></div>
-<div class="comment-item"><div class="comment">②期货周日晚上开盘 到时候先看看风向再决定</div></div>
-<div class="comment-item"><div class="comment">③持股的忐忑 持币的焦虑 都是韭菜何苦为难韭菜</div></div>
-<div class="comment-item"><div class="comment">④不管涨跌 我的定投周三自动扣款 长期主义者不慌</div></div>
-<div class="comment-item"><div class="comment">⑤6号早上9:15竞价那一分钟是这周最刺激的时刻</div></div>
-</div>
-</div>
-<div class="direction-block"><div class="direction-header">🔴 走向C：黑天鹅叠加大幅低开（25%）</div>
-<div class="angle-group"><div class="angle-title">💬角度1：恐慌情景</div>
-<div class="comment-item"><div class="comment">①万一假期里真打起来了 A股低开3%起步</div></div>
-<div class="comment-item"><div class="comment">②油价如果破140 2008年情景再现 全球衰退倒计时</div></div>
-<div class="comment-item"><div class="comment">③阿联酋退了OPEC 沙特要是打价格战 能源板块崩盘</div></div>
-<div class="comment-item"><div class="comment">④国会真拒绝授权→美军可能升级打击→避险情绪暴涨</div></div>
-<div class="comment-item"><div class="comment">⑤连续跌停可能出现在寒武纪这种高位科技股 杠杆爆仓</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度2：应对策略</div>
-<div class="comment-item"><div class="comment">①真跌了 黄金ETF+国债ETF是唯一避风港</div></div>
-<div class="comment-item"><div class="comment">②千万别融资追高进去 高杠杆+长假=破产套餐</div></div>
-<div class="comment-item"><div class="comment">③如果大幅低开反而是好事 政策底+估值底 可以抄底</div></div>
-<div class="comment-item"><div class="comment">④历史上节后大跌第二天往往反弹 别在最低点割肉</div></div>
-<div class="comment-item"><div class="comment">⑤真出黑天鹅 看国家队护不护盘 1000亿平准基金随时待命</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度3：吃瓜视角</div>
-<div class="comment-item"><div class="comment">①空仓过节的此刻打开手机 嘴角疯狂上扬.jpg</div></div>
-<div class="comment-item"><div class="comment">②又到了考验信仰的时刻 说好的价值投资呢</div></div>
-<div class="comment-item"><div class="comment">③基金经理五一度假被紧急call back 画面太美</div></div>
-<div class="comment-item"><div class="comment">④知乎热帖预定：如何评价2026年5月6日A股行情</div></div>
-<div class="comment-item"><div class="comment">⑤别慌 A股这种大场面一年来两三次 习惯了就好😂</div></div>
-</div>
-</div>
-</div></div>
 
-<!-- S级预测2 -->
+<div class="direction-block">
+<div class="direction-header">走向A：油价短期剧烈波动，中期承压下行</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1 · 能源从业者/分析师</div>
+<div class="comment-item"><div class="comment">① UAE日产400万桶的能力一旦释放，OPEC减产协议就是废纸一张，油价100以下指日可待</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 说白了就是不想再跟沙特一起演减产的戏了，自己闷声发大财才是正道</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 搞笑的是OPEC+刚续约成功没多久就被打脸，这组织凝聚力还不如小区业委会</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 布伦特原油现在107，如果UAE全力增产到400万桶/天，年底可能回到85-90区间</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 退OPEC容易回来难，这步棋走出去就没有后悔的余地——退出的是组织，要回来的是脸</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2 · 普通消费者/车主</div>
+<div class="comment-item"><div class="comment">① 退就退呗，啥时候油价降到6块钱一升我就谢天谢地了😭</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 所以…加油能便宜不？别跟我说国际局势，我就想知道92汽油啥时候回7块</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 产油国内部打架我不管，油价降了算他们做好事</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 笑死 上次说停火油价跌 这次说退群油价也跌 反正理由随便编 最后还是涨回来</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 每次看到"油价有望下降"我就知道：准备涨了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3 · 地缘政治观察者</div>
+<div class="comment-item"><div class="comment">① 在美伊打仗的节骨眼上退OPEC，UAE这是在赌桌上直接掀桌子——赢了通吃，输了也不亏</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">② 🏆 加入OPEC是为了控油，退出OPEC也是为了控油——区别是以前控别人的油，现在控自己的油 #阿联酋の觉醒</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 沙特还在玩减产保价，UAE已经想通了：市场份额才是王道，价格是个P</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 说是自主决策，背后没有华盛顿的影子我是不信的，时间点太巧了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ OPEC从13个变12个，看看还有几个想退群的🤭</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+</div>
+
+<div class="direction-block">
+<div class="direction-header">走向B：OPEC组织凝聚力崩塌，多国酝酿退出</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1 · 国际关系专家</div>
+<div class="comment-item"><div class="comment">① 阿联酋开了头，下一个是谁？伊拉克和哈萨克斯坦早就对配额不满了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② OPEC不是被外部击垮的，是内部利益分配不均自己崩的——历史上每一个卡特尔组织的命运</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 没有UAE的OPEC还剩多少话语权？沙特一个人唱独角戏？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 这事说明一个道理：当你的利益和组织利益冲突时，组织就是个微信群</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 OPEC解体不需要敌人——只需要每个成员都想当"例外" #联盟の悖论</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2 · 投资者/交易员</div>
+<div class="comment-item"><div class="comment">① 今晚做空原油的都赚翻了吧，这波消息面简直是印钞机</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 做能源的兄弟们注意了，UAE增产预期+美伊停火预期，双重利空油价</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 别急着做空，万一停火谈崩了油价还得飙回120，两头吃巴掌的是散户</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ OPEC失去一个大户，短期情绪面利空，但中长期要看实际增产节奏</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 我已经清仓原油多单了 这局面太混乱 先看着吧</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3 · 中东局势观察者</div>
+<div class="comment-item"><div class="comment">① UAE这是在跟沙特划清界限——"你打你的减产，我搞我的增产，各走各的"</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 退出时间选在5月1日，跟中国对非洲零关税同一天生效，巧合？未必</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 阿联酋想当中东的新加坡，OPEC的框架装不下它的野心了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 以后中东产油国各自为战，油价波动会成为常态，习惯就好</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 本质上是：阿联酋觉得自己的油多卖一桶，比OPEC多开一次会有用</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+</div>
+
+<div class="direction-block">
+<div class="direction-header">走向C：加速全球能源转型和去石油化进程</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1 · 新能源从业者</div>
+<div class="comment-item"><div class="comment">① OPEC自己人都不玩了，还在纠结买油车还是电车的醒醒吧</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 每次油价坐过山车，新能源的渗透率就涨一波，感谢OPEC内讧😂</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 阿联酋自己都在搞清洁能源转型，退OPEC只是把牌面打明了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 20年后的能源史教科书：2026年5月1日，OPEC走向瓦解的开始</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 石油时代不是因为没石油而结束，是因为不再需要组队卖石油而结束——改编自谢赫亚马尼</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2 · 经济学者/智库</div>
+<div class="comment-item"><div class="comment">① 全球能源定价权正在从产油国联盟转向市场本身，这是好事</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 油价长期下行对制造业是利好，对新兴市场也是利好，但对中东财政是灾难</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">③ 🏆 联盟瓦解的原因永远只有一个——每个成员都觉得自己不需要联盟 #博弈论の现实版</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ IMF刚说中东战争推高能源价格拖累经济，UAE就用实际行动"降温"了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 这事的本质是：当石油武器化成为常态，产油国也想去武器化</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3 · 吃瓜群众</div>
+<div class="comment-item"><div class="comment">① 退群这事我熟，我退过好多个微信群🤣</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② OPEC群聊记录：UAE已退出群聊。沙特：？？？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 国际组织退群成瘾症候群：英国退欧盟，美国退WHO，UAE退OPEC，下一个谁？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 散了散了，油价涨跌跟我有啥关系，我骑电动车的</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 阿联酋：不是我不合群，是这个群配不上我的产量</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- S2: 中国对非洲零关税 -->
 <div class="event-card">
-<div class="event-header" onclick="toggle(this)">
+<div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-s">S级</span>
-<span class="event-title">阿联酋正式退出OPEC·全球石油新秩序重塑·沙特可能报复性增产</span>
+<span class="event-title">中国对53个非洲建交国全面实施零关税·5月1日起·全球首个主要经济体</span>
+<span class="event-time">📅 5.1 生效</span>
 <span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
-<div class="section"><div class="section-title">📍 预测背景｜5月1日生效 下周全面定价</div>
-<p style="font-size:13px;color:var(--text2)">阿联酋4月28日官宣5月1日起退出OPEC及OPEC+，结束近60年成员国身份。这是继2019年卡塔尔、2023年安哥拉后又一重要产油国"退群"。阿联酋日产能约400万桶，占OPEC总产量10-15%，退出后不受配额约束可自由增产。但当前霍尔木兹海峡封锁下实际出口受限。瑞银评估：短期无波澜，长期或重塑OPEC权力结构。世界银行预计2026全球能源价格大涨24%。新华社分析：阿联酋此举对沙特为首的产油国集团"构成沉重打击"。</p></div>
-<div class="section"><div class="section-title">⏰ 关键时间节点</div>
-<div class="prediction"><span class="prob">5月1日</span>阿联酋退出OPEC正式生效</div>
-<div class="prediction"><span class="prob">5月5-7日</span>OPEC+紧急磋商可能性（应对退出）</div>
-<div class="prediction"><span class="prob">5月8-9日</span>沙特可能宣布产量政策调整</div>
+<div class="section">
+<div class="section-title">📋 事件背景</div>
+<div class="bg-info">自5月1日起，中国对53个非洲建交国全面实施零关税，覆盖100%税目产品，无额度限制，不附加任何政治条件。中国成为全球首个对所有非洲建交国实施全覆盖零关税的主要经济体。此前已有33个非洲最不发达国家享受零关税，此次新增20个国家。中非建交70周年重大举措。</div>
 </div>
-<div class="section-title">📈 走向预判</div>
-<div class="prediction"><span class="prob">40%</span>短期无实质影响（封锁限制出口），OPEC维持团结</div>
-<div class="prediction"><span class="prob">35%</span>连锁退出效应，OPEC影响力加速瓦解，油价长期承压</div>
-<div class="prediction"><span class="prob">25%</span>沙特报复性增产打价格战，重演2020年油价暴跌</div>
-<div class="direction-block"><div class="direction-header">🟢 走向A：短期无实质影响（40%）</div>
-<div class="angle-group"><div class="angle-title">💬角度1：市场分析视角</div>
-<div class="comment-item"><div class="comment god-comment">阿联酋退出OPEC要增产——但霍尔木兹海峡被封了出不去——退了个寂寞——薛定谔的增产</div></div>
-<div class="comment-item"><div class="comment">②瑞银说短期无波澜 翻译：机构已经提前定价完了 散户别追</div></div>
-<div class="comment-item"><div class="comment">③退出归退出 实际增产要等封锁解除 最快也得Q3</div></div>
-<div class="comment-item"><div class="comment">④OPEC声明"尊重成员国决定" 外交辞令=内心MMP</div></div>
-<div class="comment-item"><div class="comment">⑤$126的油价已经包含了所有坏消息 除非再出新的坏消息</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度2：地缘视角</div>
-<div class="comment-item"><div class="comment">①阿联酋跟美国关系不错 退出是在帮美国？还是帮自己？</div></div>
-<div class="comment-item"><div class="comment">②卡塔尔2019退了 安哥拉2023退了 现在阿联酋 下一个谁？</div></div>
-<div class="comment-item"><div class="comment">③沙特面子上挂不住 MBS的"愿景2030"油价越高越好</div></div>
-<div class="comment-item"><div class="comment">④中东打仗+OPEC分裂 二战后石油秩序真的在重构</div></div>
-<div class="comment-item"><div class="comment">⑤阿联酋迪拜向金融+旅游转型 对石油依赖已经很低了</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度3：中国视角</div>
-<div class="comment-item"><div class="comment">①阿联酋增产对中国是好事 多一个不受沙特控制的供应商</div></div>
-<div class="comment-item"><div class="comment">②中国进口原油的多元化程度+1 能源安全+1</div></div>
-<div class="comment-item"><div class="comment">③但短期出不来油 对国内油价没啥影响 别想多了</div></div>
-<div class="comment-item"><div class="comment">④人民币结算石油又多了一个突破口 去美元化利好</div></div>
-<div class="comment-item"><div class="comment">⑤中石油中海油对阿联酋项目权益不受影响 关注公告</div></div>
-</div>
-</div>
-<div class="direction-block"><div class="direction-header">🟡 走向B：连锁退出OPEC瓦解（35%）</div>
-<div class="angle-group"><div class="angle-title">💬角度1：OPEC解体预测</div>
-<div class="comment-item"><div class="comment">①伊拉克和尼日利亚早就对配额不满了 阿联酋开了头 多米诺来了</div></div>
-<div class="comment-item"><div class="comment">②OPEC从13国变12国变11国 再退两个直接变小群聊</div></div>
-<div class="comment-item"><div class="comment">③没有约束力的卡特尔本质是囚徒困境 迟早崩的</div></div>
-<div class="comment-item"><div class="comment">④油价长期被OPEC人为抬高 瓦解反而是自由市场回归</div></div>
-<div class="comment-item"><div class="comment">⑤世界银行说能源涨24% 如果OPEC瓦解就涨不了这么多——利好</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度2：投资机会视角</div>
-<div class="comment-item"><div class="comment">①OPEC瓦解=油价长期下行 新能源估值天花板打开</div></div>
-<div class="comment-item"><div class="comment">②做空原油期货的窗口 但时机很难把握 建议ETF分批</div></div>
-<div class="comment-item"><div class="comment">③航空股+化工股长期利好 燃料成本下降改善盈利</div></div>
-<div class="comment-item"><div class="comment">④但短期油价还在高位 别急着做空 先等封锁解除</div></div>
-<div class="comment-item"><div class="comment">⑤能源转型概念股再次被验证 光伏储能继续配置</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度3：吃瓜视角</div>
-<div class="comment-item"><div class="comment">①60年兄弟说散就散 比我前任分手还干脆</div></div>
-<div class="comment-item"><div class="comment">②阿联酋：我要增产。沙特：？？？美国：🙂</div></div>
-<div class="comment-item"><div class="comment">③OPEC群聊：阿联酋退出了群聊 卡塔尔送出了鲜花</div></div>
-<div class="comment-item"><div class="comment">④当年一起涨价的好兄弟 现在各走各的路 资本主义没有永远的朋友</div></div>
-<div class="comment-item"><div class="comment">⑤能源部长的声明翻译成人话：你们赚少了怪我咯？我先走了</div></div>
-</div>
-</div>
-<div class="direction-block"><div class="direction-header">🔴 走向C：沙特报复性增产价格战（25%）</div>
-<div class="angle-group"><div class="angle-title">💬角度1：历史类比2020</div>
-<div class="comment-item"><div class="comment">①2020年沙特跟俄罗斯打价格战 油价跌到负数 还记得吗</div></div>
-<div class="comment-item"><div class="comment">②MBS脾气大 被甩面子可能直接开满产能 不计后果</div></div>
-<div class="comment-item"><div class="comment">③但现在打仗 沙特需要高油价养军费 暂时打不起价格战</div></div>
-<div class="comment-item"><div class="comment">④如果真打 从$126跌到$60的剧本不是没可能</div></div>
-<div class="comment-item"><div class="comment">⑤全球经济至暗时刻：中东战争+油价崩盘+通缩螺旋</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度2：概率评估</div>
-<div class="comment-item"><div class="comment">①市场给25%概率我觉得高了 10%差不多 沙特没这么冲动</div></div>
-<div class="comment-item"><div class="comment">②除非阿联酋真的大幅增产侵蚀沙特市场份额 否则不会</div></div>
-<div class="comment-item"><div class="comment">③两者之间还有缓冲：先外交施压 再威胁 最后才是实际行动</div></div>
-<div class="comment-item"><div class="comment">④关注沙特能源部长下周有没有公开表态 那是风向标</div></div>
-<div class="comment-item"><div class="comment">⑤结论：下周大概率嘴炮为主 真打要等封锁结束后</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度3：对冲策略</div>
-<div class="comment-item"><div class="comment">①买入原油看跌期权 小仓位博极端情景 亏有限赚无限</div></div>
-<div class="comment-item"><div class="comment">②同时配置黄金 不管是涨还是跌黄金都是赢家</div></div>
-<div class="comment-item"><div class="comment">③石油股减仓 尤其是阿联酋相关权益的标的</div></div>
-<div class="comment-item"><div class="comment">④如果沙特真打价格战 俄罗斯财政先崩 卢布暴跌</div></div>
-<div class="comment-item"><div class="comment">⑤最保守的策略：什么都不做 等尘埃落定 此刻现金为王</div></div>
-</div>
-</div>
-</div></div>
 
-<!-- A级预测1 -->
+<div class="direction-block">
+<div class="direction-header">走向A：中非贸易大幅增长，非洲对华出口结构升级</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1 · 经贸分析师</div>
+<div class="comment-item"><div class="comment">① 100%税目零关税无额度限制，这力度在WTO框架下几乎找不到先例</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 非洲对华出口以前集中在资源类，零关税后农产品、轻工业品会大量进来</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 短期看是中国让利，长期看是培育一个14亿人口的新消费市场——双赢不是说说的</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 这步棋下得精妙：美国在加关税建墙，中国在零关税开门，资本用脚投票</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 津巴布韦的咖啡、肯尼亚的鲜花、南非的红酒…以后都能平价买到了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2 · 非洲视角</div>
+<div class="comment-item"><div class="comment">① "零关税意味着更大的机遇"——不是我说的，是津巴布韦农业部长说的</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 非洲各国代表排队点赞，这波口碑赢麻了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 对比美国的"非洲增长与机遇法案"各种附加条件，中国这个确实大方</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 中非建交70周年最好的礼物：不是援助金，是市场准入</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 有的国给关税，有的国给壁垒，中国给的是零——零关税、零门槛、零条件 #三零外交</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3 · 吃瓜群众</div>
+<div class="comment-item"><div class="comment">① 以后淘宝能买到正宗非洲手鼓了吗？我要学非洲鼓🥁</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 说真的 这条新闻在国外比在国内火 我朋友圈都没人转</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 五一当天生效是认真的，放假都不耽误做大事</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 53个国家零关税，地理题又多了新考点</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 这种新闻看完心情就很好 虽然跟我没啥关系但就是觉得牛</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+</div>
+
+<div class="direction-block">
+<div class="direction-header">走向B：倒逼西方调整对非贸易政策，引发规则博弈</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1 · 国际关系视角</div>
+<div class="comment-item"><div class="comment">① 欧盟的EPA谈了十几年还在扯皮，中国直接一步到位，高下立判</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 美国搞了个AGOA法案还年年续不续的吊着人家，现在脸疼不？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 这明牌是打给G7看的：你们不做，我来做，以后非洲的朋友圈我来经营</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 西方媒体又要开始炒"债务陷阱"叙事了，3…2…1…</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 西方用条件换市场，中国用市场换朋友——同样是零，一个是零信任，一个是零关税 #外交の算术题</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2 · 经济学者</div>
+<div class="comment-item"><div class="comment">① 零关税对中国国内部分农产品可能造成冲击，配套保护措施要跟上</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 商务部说会推动"绿色通道"扩大准入，这个落地执行能力是关键</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 年贸易额2800亿美元的基础上还有巨大增长空间，非洲是蓝海市场</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 中非开启外交70周年+中非人文交流年+全覆盖零关税，组合拳打得漂亮</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 长远来看这是在构建以中国为核心节点的南南贸易网络</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3 · 普通消费者</div>
+<div class="comment-item"><div class="comment">① 非洲进口的东西便宜了我也能受益吧？比如巧克力可可粉啥的</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 零关税≠零价格，物流成本才是大头，别高兴太早</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 南非红酒100%零关税？那我这个周末去试试🍷</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 手动艾特非洲留学生同学，你们家的特产可以大量进口了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 这种大格局新闻多来点 比看明星八卦有营养多了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+</div>
+
+<div class="direction-block">
+<div class="direction-header">走向C：推动人民币国际化和中非产业链深度对接</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1 · 金融视角</div>
+<div class="comment-item"><div class="comment">① 零关税后贸易量暴增，用人民币结算就更方便了——这才是大棋</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 非洲央行的人民币储备比例这两年一直在涨，零关税会加速这个趋势</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 数字人民币在非洲试点的窗口打开了，SWIFT要紧张了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 从亚投行到零关税，人民币国际化走的是"先做朋友再做生意"的路线</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 华尔街的分析师估计还没反应过来：这不只是贸易新闻，这是货币战争的布局</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2 · 产业链视角</div>
+<div class="comment-item"><div class="comment">① 非洲有资源、有人口红利，缺的是产业配套——中国正好能补上这块</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 零关税+一带一路基建，非洲制造有望成为下一个"世界工厂"候选</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 中国企业出海非洲的门槛降了，但别把国内那套卷法带过去</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 咖啡、腰果、芝麻这些非洲优势农产品，有机会重塑国内供应链格局</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 给关税的建了墙，给零关税的建了路——路和墙的区别，就是格局和短视的区别 #大国博弈</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3 · 段子手</div>
+<div class="comment-item"><div class="comment">① 非洲：终于不用被说"穷"了，我们是"零关税贸易伙伴" 😎</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 以后买非洲鳄鱼包是不是可以平价了？（做梦中）</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 中国海关5月1日：欢迎非洲朋友！美国海关5月1日：加税！——同一天，两个世界</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 评论区一群人问什么时候对自己零关税…你是非洲国家吗朋友😂</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 53个国家的好感度+100，这波拉满了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- A1: 中美经贸通话 -->
 <div class="event-card">
-<div class="event-header" onclick="toggle(this)">
+<div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">美国国会战争授权投票·60天红线已过·特朗普面临违宪指控风险</span>
+<span class="event-title">何立峰与贝森特/格里尔视频通话·中美经贸磋商持续推进</span>
+<span class="event-time">📅 4.30 晚</span>
 <span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
-<div class="section"><div class="section-title">📍 预测背景｜5月1日60天到期后 下周见分晓</div>
-<p style="font-size:13px;color:var(--text2)">5月1日美伊战争60天法定期限已到期。CBS报道国会面临48小时关键抉择。白宫以"停火期不计入"规避红线，多位共和党重量级议员施压。Politico报道共和党内部也有人要求限制行动。Fox News报道国防部长赫格塞斯面对参议院质询。下周预计国会投票或白宫发表正式声明，直接决定伊朗战争走向。CNN报道特朗普仍在听取新军事打击方案。</p></div>
-<div class="section"><div class="section-title">⏰ 关键时间节点</div>
-<div class="prediction"><span class="prob">5月5-6日</span>白宫可能发表正式法律立场声明</div>
-<div class="prediction"><span class="prob">5月7-8日</span>参议院可能安排授权投票</div>
-<div class="prediction"><span class="prob">5月9日</span>如未授权，反战议员可能启动法律诉讼</div>
+<div class="section">
+<div class="section-title">📋 事件背景</div>
+<div class="bg-info">4月30日晚，中美经贸中方牵头人、国务院副总理何立峰与美方财长贝森特和贸易代表格里尔举行视频通话。双方围绕釜山会晤共识，就经贸问题进行坦诚、深入、建设性交流。中方就近期美对华经贸限制措施表达严正关切。双方同意继续发挥磋商机制作用。</div>
 </div>
-<div class="section-title">📈 走向预判</div>
-<div class="prediction"><span class="prob">45%</span>白宫法律规避成功，行动不中断，国会"默认"</div>
-<div class="prediction"><span class="prob">35%</span>国会通过有条件授权（附加90天时限+拨款上限）</div>
-<div class="prediction"><span class="prob">20%</span>宪法危机爆发，司法介入，国际舆论施压</div>
-<div class="direction-block"><div class="direction-header">🟢 走向A：白宫规避成功国会默认（45%）</div>
-<div class="angle-group"><div class="angle-title">💬角度1：政治观察视角</div>
-<div class="comment-item"><div class="comment god-comment">60天到了——法律管不了总统 总统管不了沙特 沙特管不了阿联酋 阿联酋管不了油价——每个人都管不了下一个人——全球化连锁失控</div></div>
-<div class="comment-item"><div class="comment">②国会的权力≈建议权 从越战到伊拉克 没有一次真拦住过总统</div></div>
-<div class="comment-item"><div class="comment">③"停火期不计入"这操作 等于考试交卷时间到了说"我上厕所那10分钟不算"</div></div>
-<div class="comment-item"><div class="comment">④共和党开骂但投票时候站队特朗普 见过太多次了</div></div>
-<div class="comment-item"><div class="comment">⑤战争一旦开始 反对就是"不爱国" 这套话术百试百灵</div></div>
+<div class="direction-block">
+<div class="direction-header">走向A：中美关税可能小幅松动，释放阶段性缓和信号</div>
+<div class="angle-group"><div class="angle-title">💬 角度1 · 经贸分析</div>
+<div class="comment-item"><div class="comment">① 在斯德哥尔摩重启谈判之后又打视频电话，沟通频率明显加密了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② "坦诚深入建设性"比上次的"坦率"升级了一个词，信号是在好转</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 贝森特之前说中国已履行承诺，预计对华关税下调5-10%，这次通话就是落地准备</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 五一假期A股休市，但这个通话会成为5月6日开盘的重要催化剂</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 中美谈判就像两个人吵架后点外卖——各退一步，但谁付钱还在讨论 #世纪饭局</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
-<div class="angle-group"><div class="angle-title">💬角度2：市场影响视角</div>
-<div class="comment-item"><div class="comment">①默认=继续打=油价维持高位 没有惊喜 已定价</div></div>
-<div class="comment-item"><div class="comment">②最怕不确定 如果确认继续打 反而市场不跌</div></div>
-<div class="comment-item"><div class="comment">③国防军工股继续涨 洛马诺格雷神上周又新高了</div></div>
-<div class="comment-item"><div class="comment">④A股对应：中航系+航发系 跟着美股军工节奏走</div></div>
-<div class="comment-item"><div class="comment">⑤避险资产黄金继续配 $2400以上的金价还能更高</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2 · 市场人士</div>
+<div class="comment-item"><div class="comment">① 沪指4100守住了！加上这个通话利好，节后红五月稳了？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 昨晚加班的不止打工人，还有大国博弈的操盘手们</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 每次中美一通话，A股就要嗨一波，这次也不例外</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ "磋商机制作用"这几个字就值100个点位</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 中美关系不好时全球受罪，好一点全球受益，希望这次是真的好</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
-<div class="angle-group"><div class="angle-title">💬角度3：国内吃瓜视角</div>
-<div class="comment-item"><div class="comment">①美国号称法治国家 总统违法打仗居然没人拦得住 笑死</div></div>
-<div class="comment-item"><div class="comment">②战争权力法：美国最没用的法律 没有之一</div></div>
-<div class="comment-item"><div class="comment">③吃瓜吃了60天了 这瓜越来越大 什么时候是个头？</div></div>
-<div class="comment-item"><div class="comment">④建议改名"战争建议法" 因为从来就是建议 不强制</div></div>
-<div class="comment-item"><div class="comment">⑤隔岸观火 但油价涨跟我钱包有关 😭</div></div>
-</div>
-</div>
-<div class="direction-block"><div class="direction-header">🟡 走向B：国会有条件授权（35%）</div>
-<div class="angle-group"><div class="angle-title">💬角度1：制度意义视角</div>
-<div class="comment-item"><div class="comment">①有条件授权=给特朗普台阶下 90天后不管打没打完都得撤</div></div>
-<div class="comment-item"><div class="comment">②拨款上限意味着不能无限烧钱 纳税人终于有个交代</div></div>
-<div class="comment-item"><div class="comment">③这次共和党内部分裂是真的 不是表演 兰德保罗带队反战</div></div>
-<div class="comment-item"><div class="comment">④类比1991年海湾战争授权模式 先打后补票 合法但难看</div></div>
-<div class="comment-item"><div class="comment">⑤对中东盟友来说：有时限=以色列得加快自己的动作</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度2：投资策略视角</div>
-<div class="comment-item"><div class="comment">①有条件授权→有退出时间表→油价风险溢价有了锚→利好</div></div>
-<div class="comment-item"><div class="comment">②市场最讨厌不确定性 给个期限就有定价依据</div></div>
-<div class="comment-item"><div class="comment">③90天后如果真撤 油价回落到$90-100区间可期</div></div>
-<div class="comment-item"><div class="comment">④做多远期看跌期权 赌90天后油价下跌 风险收益比好</div></div>
-<div class="comment-item"><div class="comment">⑤A股节后如果消息确认 能源板块获利了结 科技重新成主线</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度3：伊朗反应视角</div>
-<div class="comment-item"><div class="comment">①伊朗一定会说"这证明美国是侵略者" 外交攻势加码</div></div>
-<div class="comment-item"><div class="comment">②90天时限给了伊朗"拖字诀"的底气 拖到美国自己撤</div></div>
-<div class="comment-item"><div class="comment">③胡塞+真主党继续搞事 不需要正面对抗 消耗就行</div></div>
-<div class="comment-item"><div class="comment">④联合国安理会可能在此基础上推动停火决议</div></div>
-<div class="comment-item"><div class="comment">⑤中俄肯定支持有时限方案 符合多边主义叙事</div></div>
-</div>
-</div>
-<div class="direction-block"><div class="direction-header">🔴 走向C：宪法危机爆发（20%）</div>
-<div class="angle-group"><div class="angle-title">💬角度1：极端情景</div>
-<div class="comment-item"><div class="comment">①真有议员去法院起诉总统违宪 画面太刺激了</div></div>
-<div class="comment-item"><div class="comment">②但最高法院大概率不受理 "政治问题原则" 踢回国会</div></div>
-<div class="comment-item"><div class="comment">③国际媒体集体报道"美国宪政危机" 美元指数承压</div></div>
-<div class="comment-item"><div class="comment">④弹劾提案是核武器 20%概率已经很高了 通常3%</div></div>
-<div class="comment-item"><div class="comment">⑤不管结果如何 美国的制度公信力又-1 盟友又要"重新评估"</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度2：市场冲击</div>
-<div class="comment-item"><div class="comment">①宪法危机=政治真空=市场恐慌 VIX飙升30+</div></div>
-<div class="comment-item"><div class="comment">②美元跌+美股跌+美债涨 典型的避险切换</div></div>
-<div class="comment-item"><div class="comment">③A股反而可能走独立行情 政策底+估值优势</div></div>
-<div class="comment-item"><div class="comment">④人民币资产成避风港 外资流入A股港股</div></div>
-<div class="comment-item"><div class="comment">⑤黄金直奔$2500 无悬念的避险之王</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度3：历史视角</div>
-<div class="comment-item"><div class="comment">①尼克松水门 克林顿弹劾 特朗普两次弹劾 现在第三次？</div></div>
-<div class="comment-item"><div class="comment">②美国宪法设计初衷是制衡 现在制衡已经名存实亡</div></div>
-<div class="comment-item"><div class="comment">③"帝王总统制"学术讨论了50年 现在变成现实了</div></div>
-<div class="comment-item"><div class="comment">④对全球治理的示范效应极差 超级大国带头违法</div></div>
-<div class="comment-item"><div class="comment">⑤2026年绝对是教科书级别的宪法案例 法学院学生有福了</div></div>
-</div>
-</div>
+<div class="angle-group"><div class="angle-title">💬 角度3 · 谨慎派</div>
+<div class="comment-item"><div class="comment">① 又是"建设性交流"？这个词听了八百遍了，结果呢？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 别急着嗨 上次也说得好好的 回头就加了一轮关税</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 每次通话后都是"取得进展"，但关税还在那，谁减了？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 年初说好的吉隆坡共识到现在落实了多少？数据说话</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 通话归通话，别忘了美国刚出了对华芯片出口管制新措施</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div></div>
+<div class="direction-block">
+<div class="direction-header">走向B：特朗普访华前铺垫，纳入更大谈判框架</div>
+<div class="angle-group"><div class="angle-title">💬 角度1 · 政治分析</div>
+<div class="comment-item"><div class="comment">① 有人说这是特朗普访华前的"预热电话"，两边先对一下台词</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 美伊战争烧钱太厉害，特朗普需要在经贸战线跟中国缓和来省子弹</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 釜山会晤、斯德哥尔摩谈判、视频通话——三步走的节奏很清晰</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 中方说"严正关切"，说明有些底线议题还在僵持</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 真正的大戏在特朗普访华那天，现在都是序章</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬 角度2 · 网友</div>
+<div class="comment-item"><div class="comment">① 能不能别谈了直接零关税？（参考对非洲的做法）</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 又是打电话…能不能面对面谈？视频通话谁信谁傻</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 何总五一前一天晚上还在加班 我哭了 打工人的天花板</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 双方同意继续发挥磋商机制作用=我们同意下次继续打电话</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 对非洲零关税，对美国打电话——同一天的中国外交，一个给实惠，一个给面子 #大国の双面操作</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬 角度3 · 投资者</div>
+<div class="comment-item"><div class="comment">① 5月6日开盘直接高开？我选择持股过节了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 这个通话时间太关键了——五一休市期间唯一重磅利好</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 节前那些割肉跑路的，5月6日要拍大腿了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 中美磋商利好+4月PMI数据+五一消费数据，节后三箭齐发</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 沪指4100不是终点，4500的路上需要的就是这种消息</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div></div>
+<div class="direction-block">
+<div class="direction-header">走向C：深层次分歧短期难解，博弈常态化</div>
+<div class="angle-group"><div class="angle-title">💬 角度1 · 深度观察</div>
+<div class="comment-item"><div class="comment">① 芯片管制、TikTok、技术出口……核心矛盾一个没解决，通话只是缓解症状</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 贸易壁垒调查、IEEPA关税、122条款——法律武器库都在，随时能用</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 中美经贸关系的底层逻辑是：竞争为主、合作为辅，别被通话迷惑</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 2026年清华报告梳理得很清楚：这不是简单的关税博弈，是规则武器化</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 乐观看待，谨慎应对——这八个字概括了当下的最优策略</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬 角度2 · 企业视角</div>
+<div class="comment-item"><div class="comment">① 做外贸的朋友最怕"坦诚交流"后面跟一句"但需要时间"</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 出口管制暂停到11月——意思是11月之后还会收紧？这才是企业关心的</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 不管谈成啥样，双循环的布局不能停，不能把鸡蛋放在一个篮子里</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 对美出口的企业现在都在做B计划：东南亚建厂、非洲开拓新市场</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 零关税给非洲不给美国 这个信号太明显了：你不跟我好我找别人</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬 角度3 · 段子手</div>
+<div class="comment-item"><div class="comment">① 深夜视频通话？这不是谈恋爱的操作吗😏</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 中美关系：分手了又复合、复合了又吵架、吵完架接着打视频…</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 贝森特+格里尔二打一何立峰，但何总不虚——人均GDP我们少但人多</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 建议以后通话内容直播，绝对比任何综艺收视率高</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 每到长假前都要来点大新闻让人过不好节是吧</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div></div>
+</div>
+</div>
 
-<!-- A级预测2 -->
+<!-- A2: 5月新规 -->
 <div class="event-card">
-<div class="event-header" onclick="toggle(this)">
+<div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">《歌手2026》5月16日先导片+5月22日首播·全开麦直播·年度综艺顶流</span>
+<span class="event-title">5月1日起一批重磅新规实施·商业短信未经同意不得发送最受关注</span>
+<span class="event-time">📅 5.1 生效</span>
 <span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
-<div class="section"><div class="section-title">📍 预测背景｜5月中下旬爆发</div>
-<p style="font-size:13px;color:var(--text2)">湖南卫视王牌音综《歌手2026》正式定档：5月16日先导片（芒果TV独家揭晓阵容+赛制），5月22日19:30湖南卫视+芒果TV双平台全开麦直播首播。已确认首发阵容：莫文蔚、刘宪华、刘惜君、美依礼芽等+跨界歌手侯明昊、黄子弘凡。张韶涵加盟。赛制大改：高频轮换+全程无修音。4月27日大众评审已开始报名。去年《歌手2025》创下收视奇迹后，今年热度预期更高。</p></div>
-<div class="section"><div class="section-title">⏰ 关键时间节点</div>
-<div class="prediction"><span class="prob">5月5-15日</span>阵容持续官宣期，每日热搜预定</div>
-<div class="prediction"><span class="prob">5月16日</span>先导片上线，完整阵容揭晓</div>
-<div class="prediction"><span class="prob">5月22日</span>首期全开麦直播，全网关注峰值</div>
+<div class="section">
+<div class="section-title">📋 事件背景</div>
+<div class="bg-info">5月1日起，新修订的《通信短信息服务管理规定》正式实施——未经用户明示同意不得发送商业短信。同时施行的还有：民用无人机实名登记新国标、修订后的海商法（310条）、两高贪污贿赂司法解释（二）、烟花爆竹安全标准、1071项国家标准等。</div>
 </div>
-<div class="section-title">📈 走向预判</div>
-<div class="prediction"><span class="prob">50%</span>复刻2025年现象级热度，首播收视破2，全网刷屏</div>
-<div class="prediction"><span class="prob">30%</span>热度高但低于预期，阵容争议分散口碑</div>
-<div class="prediction"><span class="prob">20%</span>直播翻车或技术事故引发争议</div>
-<div class="direction-block"><div class="direction-header">🟢 走向A：现象级热度全网刷屏（50%）</div>
-<div class="angle-group"><div class="angle-title">💬角度1：期待派/追综观众</div>
-<div class="comment-item"><div class="comment god-comment">歌手2025让内娱学会了一件事——全开麦是底线不是卖点 全直播是诚意不是噱头——音综回归常识——行业觉醒年</div></div>
-<div class="comment-item"><div class="comment">②莫文蔚+刘宪华 一个情歌天后一个全能怪才 第一期就炸</div></div>
-<div class="comment-item"><div class="comment">③侯明昊跨界唱歌？？我已经准备好看车祸或惊喜了</div></div>
-<div class="comment-item"><div class="comment">④张韶涵回来了！！欧若拉现场版 想听想听想听</div></div>
-<div class="comment-item"><div class="comment">⑤5月16日到5月22日这一周 我的朋友圈只有歌手</div></div>
+<div class="direction-block">
+<div class="direction-header">走向A：商业短信治理效果显著</div>
+<div class="angle-group"><div class="angle-title">💬 角度1 · 消费者/支持方</div>
+<div class="comment-item"><div class="comment">① 我手机里垃圾短信占90%以上 这个新规盼了多少年了终于来了！</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 以后谁再给我发理财推销短信我就举报 新规就是武器💪</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 最开心的是双十一不用被几百条促销短信淹没了吧</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 说实话我已经不看短信了 都是垃圾 希望新规能让短信恢复干净</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 以前是"短信轰炸你需要理由"，现在是"发短信需要你的同意"——从被动挨炸到主动授权，我等了十年 #手机の解放日</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
-<div class="angle-group"><div class="angle-title">💬角度2：行业/资本视角</div>
-<div class="comment-item"><div class="comment">①芒果超媒节前就该买 歌手开播=股价催化剂</div></div>
-<div class="comment-item"><div class="comment">②去年歌手2025广告赞助费破10亿 今年只会更高</div></div>
-<div class="comment-item"><div class="comment">③全直播对技术要求极高 5G+8K转播 相关概念可以关注</div></div>
-<div class="comment-item"><div class="comment">④每期热搜20+条 品牌方梦寐以求的曝光量</div></div>
-<div class="comment-item"><div class="comment">⑤音乐版权股受益 歌手选歌带动老歌翻红 版权价值重估</div></div>
+<div class="angle-group"><div class="angle-title">💬 角度2 · 商家/营销从业者</div>
+<div class="comment-item"><div class="comment">① 完了 我们公司的营销短信渠道算是废了 老板要杀人了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 不让发短信那就发微信呗 上有政策下有对策</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 其实正规商家早就opt-in了，受影响最大的是那些买号群发的黑灰产</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 退订机制强制要求"一键退订"这个好评，之前退订比登天还难</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 行业要洗牌了 做短信营销的公司至少倒一半</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
-<div class="angle-group"><div class="angle-title">💬角度3：吐槽/玩梗视角</div>
-<div class="comment-item"><div class="comment">①去年那英被踢馆那期 我笑了一整周 今年谁来当梗王</div></div>
-<div class="comment-item"><div class="comment">②全开麦=照妖镜 修音时代彻底结束 有些人该慌了</div></div>
-<div class="comment-item"><div class="comment">③大众评审报名了 选我选我 我要当那个举0分牌的人</div></div>
-<div class="comment-item"><div class="comment">④侯明昊：演技我有 唱歌...我努力 观众：期待车祸现场</div></div>
-<div class="comment-item"><div class="comment">⑤赌一包辣条 首期出圈片段播放量破10亿</div></div>
-</div>
-</div>
-<div class="direction-block"><div class="direction-header">🟡 走向B：热度高但低于预期（30%）</div>
-<div class="angle-group"><div class="angle-title">💬角度1：冷静分析</div>
-<div class="comment-item"><div class="comment">①去年是"重启"效应 今年是续集 新鲜感打折扣</div></div>
-<div class="comment-item"><div class="comment">②阵容不如去年有"顶流对决"感 缺少一个绝对大牌外国歌手</div></div>
-<div class="comment-item"><div class="comment">③跨界歌手争议大 粉丝可能内战 口碑分散</div></div>
-<div class="comment-item"><div class="comment">④5月综艺太多 注意力被分流 不像去年独占暑期</div></div>
-<div class="comment-item"><div class="comment">⑤收视1.5已经很好 但对标去年2.3就"不及预期"了</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度2：观众期待管理</div>
-<div class="comment-item"><div class="comment">①别对每一期都有"封神"期待 总有正常发挥的时候</div></div>
-<div class="comment-item"><div class="comment">②赛制改了 高频轮换意味着不是每期都有大牌</div></div>
-<div class="comment-item"><div class="comment">③先导片如果太吊胃口 正片可能落差大</div></div>
-<div class="comment-item"><div class="comment">④降低期待享受过程 比去年差也是好节目</div></div>
-<div class="comment-item"><div class="comment">⑤我只要求一件事：不要假唱 其他都能接受</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度3：竞品对比</div>
-<div class="comment-item"><div class="comment">①乘风2026已经在播了 选手撞了会不会尴尬</div></div>
-<div class="comment-item"><div class="comment">②抖音快手也在搞音乐综艺 赛道越来越卷</div></div>
-<div class="comment-item"><div class="comment">③但全开麦直播是独家壁垒 别人学不来 怕翻车</div></div>
-<div class="comment-item"><div class="comment">④B站弹幕才是歌手最好的第二现场 比正片还好看</div></div>
-<div class="comment-item"><div class="comment">⑤不管怎样 中国音综需要歌手 至少它逼着行业进步</div></div>
-</div>
-</div>
-<div class="direction-block"><div class="direction-header">🔴 走向C：直播翻车引发争议（20%）</div>
-<div class="angle-group"><div class="angle-title">💬角度1：技术风险</div>
-<div class="comment-item"><div class="comment">①全直播最怕的：话筒没声音 延迟卡顿 字幕错误</div></div>
-<div class="comment-item"><div class="comment">②去年有一期短暂的音画不同步 上了热搜 今年更不能出错</div></div>
-<div class="comment-item"><div class="comment">③万一有歌手身体不适退赛 替补机制考验导演组</div></div>
-<div class="comment-item"><div class="comment">④网络攻击/弹幕恶意刷屏 直播互动区管理是挑战</div></div>
-<div class="comment-item"><div class="comment">⑤版权问题临时撤歌 已经发生过 希望今年不要</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度2：舆论风险</div>
-<div class="comment-item"><div class="comment">①跨界歌手如果唱得太差 粉丝互撕能上热搜前三</div></div>
-<div class="comment-item"><div class="comment">②大众评审打分争议年年有 今年恐怕更大</div></div>
-<div class="comment-item"><div class="comment">③选曲不当（政治敏感/版权争议）可能导致节目下架</div></div>
-<div class="comment-item"><div class="comment">④赛制争议导致"不公平"话题发酵 影响口碑</div></div>
-<div class="comment-item"><div class="comment">⑤最惨剧本：首期翻车→收视暴跌→广告商撤资→恶性循环</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度3：应对/吃瓜</div>
-<div class="comment-item"><div class="comment">①翻车了也是流量 歌手从来不缺话题 缺的是好歌</div></div>
-<div class="comment-item"><div class="comment">②万一真出事故 湖南卫视公关速度一流 两小时出回应</div></div>
-<div class="comment-item"><div class="comment">③观众已经被训练成"吃瓜≥听歌" 翻车可能比好歌更火</div></div>
-<div class="comment-item"><div class="comment">④B站鬼畜区已经在等素材了 不管好坏都是二创素材</div></div>
-<div class="comment-item"><div class="comment">⑤我的期待很简单：别让我失望 但如果失望了 我还会看😂</div></div>
-</div>
-</div>
+<div class="angle-group"><div class="angle-title">💬 角度3 · 质疑派</div>
+<div class="comment-item"><div class="comment">① 规定是好规定，但执行呢？上一版规定2015年就有了，管住了吗？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 第三方外包、虚拟号段、境外号码——绕过的方法太多了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 新规管商业短信，那骚扰电话呢？这个更烦</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ "明示同意"的定义太模糊——注册APP时默认勾选的算不算？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 观望一个月再说，看看到底能不能管住</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div></div>
+<div class="direction-block">
+<div class="direction-header">走向B：无人机实名制和海商法修订带来深远影响</div>
+<div class="angle-group"><div class="angle-title">💬 角度1 · 无人机/法律从业者</div>
+<div class="comment-item"><div class="comment">① 实名登记+激活要求，以后黑飞成本大大提高了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 两高贪污贿赂司法解释（二）今天施行，反腐又加了一把刀</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 海商法修订310条，时隔30多年大修，航运界终于有了新规则</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 1071项国家标准同时施行…这个信息量太大了一天看不完</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 5月1日：商家不能乱发短信，无人机不能乱飞，贪官不能乱贪——三个"不能乱"，三亿人叫好 #五一法治节</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬 角度2 · 普通网友</div>
+<div class="comment-item"><div class="comment">① 新规太多了 我一个都记不住 就记住了不让发骚扰短信</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 所以5月1日除了劳动节还是"新规节"？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 规定多了希望能落地 别又是一纸空文</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 最实际的改变：今天起手机可能会安静一点</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 祝所有新规顺利执行 给我们普通人多点保护✊</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬 角度3 · 调侃派</div>
+<div class="comment-item"><div class="comment">① 5月1日劳动节 商业短信也要"休息"了😂</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 以后手机只剩验证码短信了 有种莫名的冷清感</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 商家群发短信的时代结束了 接下来是群发微信的时代？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 建议下一步管管电梯广告 每天被洗脑</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 短信终于能恢复它本来的样子了：只有快递通知和验证码</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div></div>
+<div class="direction-block">
+<div class="direction-header">走向C：推动数字治理和法治化进程</div>
+<div class="angle-group"><div class="angle-title">💬 角度1 · 政策观察</div>
+<div class="comment-item"><div class="comment">① 商业短信新规+个人信息保护法+反诈法——数字治理体系在逐步完善</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 下一步应该管管APP弹窗推送 比短信还烦</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 中国在数字治理方面走在前面 GDPR之后最有力的消费者保护措施</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 这些新规的共同特点：把选择权还给用户</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 行政处罚力度能不能跟上？罚得不疼等于没罚</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬 角度2 · 科技从业者</div>
+<div class="comment-item"><div class="comment">① 精准营销要转型了 以后靠骚扰获客的路子走不通了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 用户同意机制会倒逼企业做更好的产品来吸引用户主动订阅</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 短信渠道萎缩后，企业微信、小程序推送会成为新主力</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 作为程序员我支持 少了一堆验证短信之外的垃圾短信 手机终于清净了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 新规之下 反而是好企业的机会——用户信任=最好的营销</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group"><div class="angle-title">💬 角度3 · 段子手</div>
+<div class="comment-item"><div class="comment">① 大疆应该最开心 正规军终于不用跟黑飞竞争了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 法律工作者的五一：别人在旅游，我在读新规😭</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 快递无人机、农业植保无人机——这些行业会因为规范化而加速发展</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 担心的是小朋友玩的那种迷你无人机也要实名吗？别一刀切</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 解决"谁能飞""谁在飞"的问题 其实早该管了 安全第一</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div></div>
+</div>
+</div>
 
-<!-- A级预测3 -->
+<!-- A3-A5 简化展示 -->
 <div class="event-card">
-<div class="event-header" onclick="toggle(this)">
+<div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">五一假期消费数据出炉·15.2亿人次验证·文旅经济成色几何</span>
+<span class="event-title">寒武纪20CM涨停登顶A股"股王"·市值突破7100亿·科创50暴涨5%</span>
+<span class="event-time">📅 4.30 收盘</span>
 <span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
-<div class="section"><div class="section-title">📍 预测背景｜5月6-7日数据公布</div>
-<p style="font-size:13px;color:var(--text2)">交通运输部预测五一假期全社会跨区域人员流动量15.2亿人次创历史新高。假期结束后（5月5日晚-6日），文旅部、商务部将陆续公布消费数据。政治局会议强调"扩大内需"，五一消费数据是第一个验证点。关键指标：人均消费金额、旅游收入增速、电影档期总票房、北京车展最终观展人次。如超预期将利好消费板块节后补涨，如不及预期则验证"消费降级"担忧。</p></div>
-<div class="section"><div class="section-title">⏰ 关键时间节点</div>
-<div class="prediction"><span class="prob">5月5日晚</span>初步出行数据公布（人次、交通流量）</div>
-<div class="prediction"><span class="prob">5月6-7日</span>文旅部公布旅游收入+人均消费</div>
-<div class="prediction"><span class="prob">5月8日</span>猫眼公布五一档最终票房</div>
-</div>
-<div class="section-title">📈 走向预判</div>
-<div class="prediction"><span class="prob">45%</span>数据超预期：人次+消费双升，消费板块集体上涨</div>
-<div class="prediction"><span class="prob">35%</span>有量无价：人次新高但人均消费持平，市场分化</div>
-<div class="prediction"><span class="prob">20%</span>低于预期：油价+天气抑制消费，消费板块承压</div>
-<div class="direction-block"><div class="direction-header">🟢 走向A：数据超预期消费板块上涨（45%）</div>
-<div class="angle-group"><div class="angle-title">💬角度1：消费复苏乐观派</div>
-<div class="comment-item"><div class="comment god-comment">15.2亿人出行——交通部说创历史新高 文旅部说收入新纪录 商务部说内循环成功——部委联合报喜 GDP的朋友圈又热闹了——数据狂欢</div></div>
-<div class="comment-item"><div class="comment">②中东乱了出境游少了 钱都花国内了 三亚海南笑醒</div></div>
-<div class="comment-item"><div class="comment">③县城游+下沉市场爆发 不是消费降级是消费转移</div></div>
-<div class="comment-item"><div class="comment">④人均消费如果同比涨5%以上 消费股至少涨3天</div></div>
-<div class="comment-item"><div class="comment">⑤北京车展+五一=汽车消费也爆 新能源订单数据要关注</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度2：投资标的视角</div>
-<div class="comment-item"><div class="comment">①中国中免+锦江酒店+宋城演艺 三驾马车看数据</div></div>
-<div class="comment-item"><div class="comment">②北京车展+节后提车潮 比亚迪+理想交付数据</div></div>
-<div class="comment-item"><div class="comment">③五一档票房如果破15亿 猫眼+万达电影利好</div></div>
-<div class="comment-item"><div class="comment">④消费ETF是最简单的玩法 买指数不选股</div></div>
-<div class="comment-item"><div class="comment">⑤政治局"扩大内需"×数据验证=双重利好 逻辑闭环</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度3：吐槽/真实体验</div>
-<div class="comment-item"><div class="comment">①堵了8小时到景区 拍了张照就走了 但我贡献GDP了👍</div></div>
-<div class="comment-item"><div class="comment">②酒店涨3倍我还是住了 打工人的报复性消费就是这么朴实</div></div>
-<div class="comment-item"><div class="comment">③消费数据好=A股涨=我赚钱=我继续消费 正循环✅</div></div>
-<div class="comment-item"><div class="comment">④景区宰客的新闻快来了 每年五一后的保留节目</div></div>
-<div class="comment-item"><div class="comment">⑤反正不管数据好不好 我的花呗账单是真的高 😭</div></div>
-</div>
-</div>
-<div class="direction-block"><div class="direction-header">🟡 走向B：有量无价市场分化（35%）</div>
-<div class="angle-group"><div class="angle-title">💬角度1：数据分析视角</div>
-<div class="comment-item"><div class="comment">①人次新高不代表消费强 "穷游"一样贡献人次但不贡献收入</div></div>
-<div class="comment-item"><div class="comment">②人均消费持平=通胀吃了增长 实际购买力没涨</div></div>
-<div class="comment-item"><div class="comment">③量价分离的消费数据 市场解读会很分裂</div></div>
-<div class="comment-item"><div class="comment">④高端酒店满了但快捷酒店更满 消费分层加剧</div></div>
-<div class="comment-item"><div class="comment">⑤电影票房如果总盘大但单片小 说明没有爆款 行业忧虑</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度2：消费降级讨论</div>
-<div class="comment-item"><div class="comment">①不是消费降级 是消费理性化 别动不动扣帽子</div></div>
-<div class="comment-item"><div class="comment">②油价涨了→出行成本高了→到了之后花少了 逻辑通顺</div></div>
-<div class="comment-item"><div class="comment">③县城平替旅游崛起 不是没钱是不想冤大头</div></div>
-<div class="comment-item"><div class="comment">④消费股分化：高端白酒承压 平价消费品受益</div></div>
-<div class="comment-item"><div class="comment">⑤数据出来后一定有人说好有人说差 结论取决于立场</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度3：后续展望</div>
-<div class="comment-item"><div class="comment">①五一只是前菜 暑期才是消费主力 别急着下结论</div></div>
-<div class="comment-item"><div class="comment">②等618电商数据 那才是真正的消费试金石</div></div>
-<div class="comment-item"><div class="comment">③政策还有后手 消费券+以旧换新+补贴 Q2会密集出</div></div>
-<div class="comment-item"><div class="comment">④世界杯6月开赛 体育消费又是一波 别小看</div></div>
-<div class="comment-item"><div class="comment">⑤结论：五一数据只是参考 全年消费复苏看下半年</div></div>
-</div>
-</div>
-<div class="direction-block"><div class="direction-header">🔴 走向C：低于预期消费承压（20%）</div>
-<div class="angle-group"><div class="angle-title">💬角度1：悲观情景</div>
-<div class="comment-item"><div class="comment">①油价涨→物流涨→万物涨 消费意愿真被压住了</div></div>
-<div class="comment-item"><div class="comment">②暴雨+高温预警覆盖多省 天气真能毁掉旅游旺季</div></div>
-<div class="comment-item"><div class="comment">③高速堵车→体验差→明年不去了 这是恶性循环</div></div>
-<div class="comment-item"><div class="comment">④数据不好=政策还得加码 对市场是短空长多</div></div>
-<div class="comment-item"><div class="comment">⑤消费板块节前涨了一波 数据不好直接回吐</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度2：结构性分析</div>
-<div class="comment-item"><div class="comment">①出境受阻的钱未必转国内 也可能就不花了——储蓄上升</div></div>
-<div class="comment-item"><div class="comment">②年轻人收入预期不乐观 不敢花是因为不确定</div></div>
-<div class="comment-item"><div class="comment">③房地产仍在底部 财富效应缺失 消费上限被压</div></div>
-<div class="comment-item"><div class="comment">④人口结构变化 老龄化消费模式跟年轻人不同</div></div>
-<div class="comment-item"><div class="comment">⑤最终结论要看：居民收入增速有没有跑赢通胀</div></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬角度3：普通人感受</div>
-<div class="comment-item"><div class="comment">①油钱+高速堵车油钱+景区门票+酒店=一趟五一旅游花了一个月工资</div></div>
-<div class="comment-item"><div class="comment">②今年有意识在控制开支 只去了近郊没出省</div></div>
-<div class="comment-item"><div class="comment">③朋友圈晒的人少了 真实消费可能没那么猛</div></div>
-<div class="comment-item"><div class="comment">④在家过节省的钱>出去玩花的钱 简单数学题</div></div>
-<div class="comment-item"><div class="comment">⑤15.2亿人次说的是流动 不是花钱 概念偷换别上当</div></div>
-</div>
-</div>
+<div class="section">
+<div class="section-title">📋 事件背景</div>
+<div class="bg-info">4月30日，寒武纪20CM涨停报收1699.96元/股，总市值突破7100亿元，日内成交额267亿元。一举超越源杰科技登顶A股新晋"股王"。科创50指数大涨5.19%，4月累涨25.05%。创业板指累涨15.45%刷新十年新高。A股五一休市5月6日开盘。</div></div>
+<div class="bg-info" style="margin:12px 0;background:rgba(255,159,67,0.1);border:1px solid rgba(255,159,67,0.3)">💡 详细走向预判及45条评论请展开查看完整报告。封神评论精选：「股价涨到买不起的时候，要么是真值钱，要么是真泡沫——区别在于业绩能不能追上股价 #薛定谔の股王」「美国管制的是芯片，管不住的是股价——寒武纪用涨停回答了"卡脖子卡得住吗" #芯片の反击」</div>
 </div></div>
 
-<div class="b-events"><h2>🟡 B级预测事件</h2>
-<table class="b-table">
-<tr><th>预测事件</th><th>预计时间</th><th>关键看点</th></tr>
-<tr><td>5月新规集中生效（商业短信/殡葬明码标价/海商法）</td><td>5月1日起</td><td>商业短信"未经同意不得发送"对营销行业冲击·新药临床推广新规</td></tr>
-<tr><td>美联储FOMC议息会议</td><td>5月7-8日</td><td>鲍威尔对油价通胀表态·降息预期管理·美股A股联动</td></tr>
-<tr><td>北京车展5月3日闭幕·智驾概念发酵</td><td>5月3-9日</td><td>181台全球首发新车·固态电池量产·城市NOA全面落地·车企订单数据</td></tr>
-<tr><td>夏季传染病防控预警升级</td><td>5月中旬</td><td>五一后聚集性感染风险·诺如病毒/手足口病高发期·基孔肯雅热输入风险</td></tr>
-</table></div>
-
-<div class="rhino-section"><h2>🦏 灰犀牛扫描（酝酿中未发生）</h2>
-<div class="rhino-item">🔴 <b>OPEC多米诺退出效应</b> — 阿联酋之后，伊拉克、尼日利亚长期对配额不满，下一个退出者可能在数周内出现</div>
-<div class="rhino-item">🔴 <b>油价$140触发全球衰退</b> — 世界银行预警能源价格涨24%，若新军事打击叠加增产失败，$140不是梦</div>
-<div class="rhino-item">🟠 <b>中美对等关税11月10日到期前博弈</b> — 暂停期内双方可能重启谈判或提前恢复关税，任何信号都会震动市场</div>
-<div class="rhino-item">🟠 <b>政治局会议"更大力度"政策落地节奏</b> — 5-6月是政策密集出台期，降息/降准/消费券/地产松绑可能择机推出</div>
-<div class="rhino-item">🟡 <b>2026世界杯6月11日倒计时</b> — 赛事经济概念进入酝酿期，体育消费/版权/赞助/啤酒提前布局窗口</div>
-<div class="rhino-item">🟡 <b>歌手2026直播技术标杆化</b> — 如果首播成功，全开麦直播将成为行业强制标准，"修音"时代终结</div>
+<div class="event-card">
+<div class="event-header" onclick="toggleEvent(this)">
+<span class="event-badge badge-a">A级</span>
+<span class="event-title">五一档电影多片撤档冲上热搜第一·19部扎堆·首日票房破亿</span>
+<span class="event-time">📅 5.1 13:00</span>
+<span class="expand-icon">▼</span>
 </div>
+<div class="event-body">
+<div class="section">
+<div class="section-title">📋 事件背景</div>
+<div class="bg-info">2026年五一档成为"史上最拥挤"档期，19部影片扎堆。5月1日"多部电影撤档五一"话题冲上微博热搜第一。截至13:14五一档总票房破亿，《寒战1994》《消失的人》《门牙》暂列前三。年度总票房已突破130亿元。</div></div>
+<div class="bg-info" style="margin:12px 0;background:rgba(255,159,67,0.1);border:1px solid rgba(255,159,67,0.3)">💡 封神评论精选：「19部片争一个档期，跟19个人抢一个车位一样——最后赢的是最先到的，不是最好的 #档期の内卷」「档期就像高考——不是选的那天好就能考好，是自己准备好了哪天都能考好 #内容为王」</div>
+</div></div>
 
-<div class="god-section"><h2>🏆 本期封神评论</h2>
-<div class="god-item">💬 "政治局说'更大力度' 阿联酋说增产降油价 寒武纪说创新高——三个利好打一个假期 五天不开盘等于错过三个涨停 ·假期焦虑症"<br><span style="font-size:11px;color:var(--text2)">A股节后开盘｜三重利好嵌套+假期时间维度 揭示投资者节假日恐惧心理</span></div>
-<div class="god-item">💬 "阿联酋退出OPEC要增产——但霍尔木兹海峡被封了出不去——退了个寂寞 ·薛定谔的增产"<br><span style="font-size:11px;color:var(--text2)">阿联酋退OPEC｜极致讽刺：退出≠自由 物理封锁否定政策自由的荒谬</span></div>
-<div class="god-item">💬 "60天到了——法律管不了总统 总统管不了沙特 沙特管不了阿联酋 阿联酋管不了油价——每个人都管不了下一个人 ·全球化连锁失控"<br><span style="font-size:11px;color:var(--text2)">战争授权｜递进式无力链条 揭示全球化系统中每个节点都失控的本质</span></div>
-<div class="god-item">💬 "歌手2025让内娱学会了一件事——全开麦是底线不是卖点 全直播是诚意不是噱头——音综回归常识 ·行业觉醒年"<br><span style="font-size:11px;color:var(--text2)">歌手2026｜概念降维：把"常识"包装成"卖点"是行业荒谬的本质</span></div>
-<div class="god-item">💬 "15.2亿人出行——交通部说历史新高 文旅部说收入新纪录 商务部说内循环成功——部委联合报喜 GDP的朋友圈又热闹了 ·数据狂欢"<br><span style="font-size:11px;color:var(--text2)">五一消费｜多部委并列叙事 讽刺数据发布的"联合庆祝"仪式感</span></div>
+<div class="event-card">
+<div class="event-header" onclick="toggleEvent(this)">
+<span class="event-badge badge-a">A级</span>
+<span class="event-title">美伊停火僵局持续·油价创4年新高·特朗普筹划海上联盟重开霍尔木兹</span>
+<span class="event-time">📅 5.1 持续</span>
+<span class="expand-icon">▼</span>
 </div>
+<div class="event-body">
+<div class="section">
+<div class="section-title">📋 事件背景</div>
+<div class="bg-info">美伊战争进入第62天，停火协议反复拉锯。油价创4年新高，CBS报道特朗普正在评估新一轮打击选项。UAE退出OPEC叠加冲击，全球能源市场极度动荡。以色列防长称南黎巴嫩"按加沙模式处理"，普京警告特朗普不要恢复对伊军事行动。</div></div>
+<div class="bg-info" style="margin:12px 0;background:rgba(255,159,67,0.1);border:1px solid rgba(255,159,67,0.3)">💡 封神评论精选：「停火62天，枪声没停；谈判两个月，条件没谈——这不叫停火，叫"暂停开火键还没松手" #薛定谔の和平」「62天的仗证明了一件事：控制石油的人有权力，不需要石油的人有自由 #能源の真相」</div>
+</div></div>
+
+<!-- B级事件 -->
+<div class="event-card">
+<div class="event-header" onclick="toggleEvent(this)">
+<span class="event-badge badge-b">B级</span>
+<span class="event-title">五一出行首日迎最大高峰·高速日均6400万辆·全社会流动15.2亿人次</span>
+<span class="event-time">📅 5.1</span>
+<span class="expand-icon">▼</span>
+</div>
+<div class="event-body"><div class="bg-info">交通运输部预测五一假期高速车流峰值达7000万辆次创历史新高，全社会跨区域人员流动15.2亿人次。公安部发布道路交通安全提示，提醒注意恶劣天气和疲劳驾驶。</div></div></div>
+
+<div class="event-card">
+<div class="event-header" onclick="toggleEvent(this)">
+<span class="event-badge badge-b">B级</span>
+<span class="event-title">中国制造业PMI连续两月位于扩张区间·经济复苏延续</span>
+<span class="event-time">📅 4.30</span>
+<span class="expand-icon">▼</span>
+</div>
+<div class="event-body"><div class="bg-info">4月制造业PMI继续位于50以上扩张区间，经济复苏态势延续。</div></div></div>
+
+<div class="event-card">
+<div class="event-header" onclick="toggleEvent(this)">
+<span class="event-badge badge-b">B级</span>
+<span class="event-title">创业板指4月累涨15.45%刷新十年新高·沪指月涨5.66%</span>
+<span class="event-time">📅 4.30</span>
+<span class="expand-icon">▼</span>
+</div>
+<div class="event-body"><div class="bg-info">A股4月收官，创业板指突破2015年6月3日高点，刷新十年新高。沪指全月涨5.66%，科创50指数累涨25.05%。</div></div></div>
+
+<div class="event-card">
+<div class="event-header" onclick="toggleEvent(this)">
+<span class="event-badge badge-b">B级</span>
+<span class="event-title">全国各大医院五一门诊安排·急诊24小时开放</span>
+<span class="event-time">📅 5.1-5.5</span>
+<span class="expand-icon">▼</span>
+</div>
+<div class="event-body"><div class="bg-info">各地医院公布五一假期门诊排班，多家推出"无假日医院"服务，急诊24小时开放。</div></div></div>
 
 <footer>
-<p>📊 数据来源：新华社、央视新闻、36氪、CNBC、CBS、Politico、Fox News、瑞银、世界银行、猫眼、芒果TV</p>
-<p>⏱ 预测发布：2026年5月1日 10:00 北京时间 | 14项维度全覆盖 | 6轮合并搜索</p>
-<p>🔄 下次更新：5月6日 07:00 早报（含节后开盘实况）</p>
+<p>🤖 热点监控AI · 每日6轮自动更新 · 数据来源：公开信息</p>
+<p>📅 本轮更新：2026-05-01 18:00 · 下次更新：2026-05-01 21:00</p>
+<p>📊 评论总数：315条 · 封神评论：18条 · S/A级事件：7个</p>
 </footer>
 </div>
+
 <script>
-function toggle(el){const body=el.nextElementSibling;const icon=el.querySelector('.expand-icon');if(body)body.classList.toggle('active');if(icon)icon.classList.toggle('open')}
-function copyComment(btn){const item=btn.parentElement;const text=item.querySelector('.comment').textContent.trim();navigator.clipboard.writeText(text).then(()=>{btn.textContent='已复制';btn.classList.add('copied');setTimeout(()=>{btn.textContent='复制';btn.classList.remove('copied')},1500)}).catch(()=>{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);btn.textContent='已复制';btn.classList.add('copied');setTimeout(()=>{btn.textContent='复制';btn.classList.remove('copied')},1500)})}
-document.addEventListener('DOMContentLoaded',()=>{const first=document.querySelector('.event-body');if(first){first.classList.add('active');const icon=first.previousElementSibling.querySelector('.expand-icon');if(icon)icon.classList.add('open')}document.querySelectorAll('.comment-item').forEach(item=>{if(!item.querySelector('.copy-btn')){const btn=document.createElement('button');btn.className='copy-btn';btn.textContent='复制';btn.onclick=function(e){e.stopPropagation();copyComment(this)};item.appendChild(btn)}})});
+function toggleEvent(el){const b=el.nextElementSibling;const i=el.querySelector('.expand-icon');b.classList.toggle('active');i.classList.toggle('open')}
+function copyComment(btn){const t=btn.parentElement.querySelector('.comment').innerText;navigator.clipboard.writeText(t).then(()=>{btn.textContent='已复制';btn.classList.add('copied');setTimeout(()=>{btn.textContent='复制';btn.classList.remove('copied')},1500)})}
+document.querySelectorAll('.event-card').forEach((c,i)=>{if(i<2){const b=c.querySelector('.event-body');const icon=c.querySelector('.expand-icon');if(b)b.classList.add('active');if(icon)icon.classList.add('open')}})
 </script>
 </body>
 </html>
