@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>🔥 热点夜报 · 5月1日 21:00</title>
+<title>🔥 热点下午报 · 5月2日 15:00</title>
 <style>*{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#0f1117;--card:#1a1d28;--card2:#232635;--accent:#6c5ce7;--accent2:#a29bfe;--s-color:#ff4757;--a-color:#ff9f43;--b-color:#feca57;--text:#e8e8e8;--text2:#a0a0b0;--border:#2d3045;--green:#2ed573;--shadow:0 4px 20px rgba(0,0,0,0.3)}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
@@ -47,335 +47,396 @@ header .meta span{background:var(--card);padding:4px 12px;border-radius:20px;bor
 .rhino-title{font-size:16px;font-weight:700;color:var(--s-color);margin-bottom:12px}
 .rhino-item{font-size:13px;color:var(--text2);padding:8px 12px;margin:6px 0;background:rgba(255,71,87,0.05);border-radius:8px;border-left:3px solid var(--s-color)}
 footer{text-align:center;padding:30px 0;color:var(--text2);font-size:12px}
-@media(max-width:600px){.container{padding:10px}.stats-bar{grid-template-columns:1fr}header h1{font-size:22px}}
-</style>
+@media(max-width:600px){.container{padding:10px}.stats-bar{grid-template-columns:1fr}header h1{font-size:22px}}</style>
 </head>
 <body>
 <div class="container">
 <header>
-<h1>🔥 热点夜报</h1>
+<h1>🔥 热点下午报</h1>
 <div class="meta">
-<span>📅 2026年5月1日</span>
-<span>⏰ 21:00 更新</span>
-<span>🎯 监控事件：10个</span>
+<span>📅 2026年5月2日</span>
+<span>⏰ 15:00 更新</span>
+<span>🎯 监控事件：7个</span>
 </div>
 <a href="https://honeyzheng.github.io/hot-monitor-dashboard/history/" class="history-btn">📚 历史报告</a>
 </header>
 
 <div class="stats-bar">
 <div class="stat-item stat-s"><div class="num">2</div><div class="label">S级 · 现象级</div></div>
-<div class="stat-item stat-a"><div class="num">4</div><div class="label">A级 · 重大</div></div>
-<div class="stat-item stat-b"><div class="num">4</div><div class="label">B级 · 一般</div></div>
+<div class="stat-item stat-a"><div class="num">3</div><div class="label">A级 · 重大</div></div>
+<div class="stat-item stat-b"><div class="num">2</div><div class="label">B级 · 一般</div></div>
 </div>
 
-<!-- S1: UAE退出OPEC -->
+<!-- S1: 美伊冲突+福特号撤离 -->
 <div class="event-card">
 <div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-s">S级</span>
-<span class="event-title">UAE宣布退出OPEC·5月1日正式生效·近60年来首次·全球油市格局重塑</span>
+<span class="event-title">美伊冲突第63天·白宫称战争"已结束"·福特号航母撤离中东</span>
+<span class="event-time">📅 5.1-2</span>
+<span class="expand-icon">▼</span>
+</div>
+<div class="event-body">
+<div class="section">
+<div class="section-title">📋 事件背景</div>
+<div class="bg-info">5月1日美伊战争进入第63天，触及《战争权力法》60天期限。白宫致信国会称与伊朗敌对行动"已结束"，但美军最大航母福特号（部署309天创现代航母纪录）5月1日撤离中东引发火力真空担忧。CENTCOM司令库珀将向特朗普汇报新军事打击方案。布伦特原油5月1日报110美元/桶（7月合约），4月30日曾突破126美元。</div>
+</div>
+
+<div class="direction-block">
+<div class="direction-header">走向A：战事名义结束但封锁持续·油价高位震荡（概率45%）</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1 · 白宫"结束战争"声明解读</div>
+<div class="comment-item"><div class="comment">① 说战争结束了但封锁还在？这是什么薛定谔的和平</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 白宫这封信就一个目的——规避国会授权，打仗不想走流程而已</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 63天了才说"结束"？60天法律红线刚好踩着过的，律师团好活儿👏</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 翻译一下白宫原话：仗打完了但制裁不取消、军舰不走、你也别想好过</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 "用宣布战争结束的方式逃避战争授权——美式'战后和平'"</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2 · 福特号撤离影响</div>
+<div class="comment-item"><div class="comment">① 309天海上漂，4500个水兵终于能回家了…战争最苦的永远是普通人</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 福特号走了还剩林肯和布什两艘，够用？不够就再派呗反正不差钱</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 美军航母说撤就撤，是真收兵还是回去修好了再来一波？😏</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 现代航母最长部署纪录309天…美国海军估计在吐血维修费了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 这艘船走了=美国对伊施压能力打七折，伊朗这会儿松口气了吧</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3 · 油价与全球经济</div>
+<div class="comment-item"><div class="comment">① 布伦特126→110→现在多少了？坐过山车也没这刺激</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 油价每涨10美元我的生活成本就多一千块，打仗的人知道吗</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 加油站的数字跳得比我心率还快，真·心跳加速</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 全球滞胀预警拉满！工资不涨物价涨，打工人被两头夹击</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 新能源车车主：你们继续打，我继续充电，4毛钱一度美滋滋</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+</div>
+
+<div class="direction-block">
+<div class="direction-header">走向B：CENTCOM新打击方案落地·冲突再升级（概率30%）</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1 · 军事升级风险</div>
+<div class="comment-item"><div class="comment">① CENTCOM给特朗普汇报新方案…这是"结束战争"还是"换个打法"？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 刚说完战争结束就讨论新打击计划，剧本是不是拿反了😅</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 霍尔木兹海峡目标方案出来了…如果真打那就是掐全球脖子</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 美军的逻辑：航母撤走=省着用，无人机+导弹=继续干，效率更高</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 五角大楼从来不缺方案缺的是借口，而伊朗每天都在提供新借口</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2 · 伊朗的应对</div>
+<div class="comment-item"><div class="comment">① 伊朗提出的14点方案被美国冷处理了，谈不下去就继续扛呗</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 伊朗：我愿意开海峡换和平。美国：不行得连核计划一起谈。死循环了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 佩泽什基扬说美军封锁就是战争行为——人家说得也没错啊</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 伊朗储油罐快满了都没地方放了，这制裁是真的掐到脖子了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 以现在的局面伊朗不可能主动投降但也打不过，最后还是得谈</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3 · 国际社会反应</div>
+<div class="comment-item"><div class="comment">① 巴基斯坦当调停人也是没想到的操作，居然还真约上了两边</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 联合国秘书长喊停，美国装聋。安理会开会，美国一票否决。经典操作</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 欧洲头疼了：跟美国站一起被中东断油，不跟又得罪大哥</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 中俄态度微妙——不直接帮伊朗但暗戳戳递水递粮</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 "航母撤了战争结束了方案继续出——撤的是船留的是刀"</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+</div>
+
+<div class="direction-block">
+<div class="direction-header">走向C：美伊正式达成停火协议·油价大幅回落（概率25%）</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1 · 协议可能性</div>
+<div class="comment-item"><div class="comment">① 如果真停火了我开一瓶82年的可乐庆祝…但我不信😑</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 4月初停了两周又打回来了，这回还信停火的请举手🙋</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 伊朗要求：别打了让我卖油。美国要求：先交核材料。鸡同鸭讲</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 真停火的话油价能跌30%吧？做空原油的朋友准备好了没</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 停火≠和平，签字≠执行。看过太多中东剧本了不抱希望</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2 · 市场反应预判</div>
+<div class="comment-item"><div class="comment">① 如果签了停火协议第一件事：看原油期货跌停不跌停</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 油价回落→航空股起飞→物流成本降→万物降价链条激活</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 之前追高买能源基金的朋友们瑟瑟发抖中…</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 真停火的话A股五一后开盘中石油要跌、新能源要涨，对冲操作安排</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 市场最怕不确定性，真打真停都行，就这种半死不活的最折磨人</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3 · 战后格局重塑</div>
+<div class="comment-item"><div class="comment">① 就算停了伊朗核问题还在，以色列的安全顾虑还在，迟早再爆</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 这场战争唯一确定的结果：全球加速能源去中东化</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 战后重建谁来买单？伊朗人民。有人问过他们的意见吗</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ OPEC已经碎了一块（阿联酋），再碎几块它就是历史名词了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 "63天打出了OPEC60年打不碎的裂缝——战争的副产品比战争本身更致命"</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- S2: 阿联酋退出OPEC -->
+<div class="event-card">
+<div class="event-header" onclick="toggleEvent(this)">
+<span class="event-badge badge-s">S级</span>
+<span class="event-title">阿联酋5月1日正式退出OPEC·60年石油联盟破裂·全球能源格局剧变</span>
 <span class="event-time">📅 5.1 生效</span>
 <span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="section">
 <div class="section-title">📋 事件背景</div>
-<div class="bg-info">阿联酋正式退出OPEC及OPEC+联盟，自1967年加入以来近60年首次。此举源于阿联酋对OPEC产量配额的不满，叠加美伊战争背景下全球能源格局剧变。阿联酋为OPEC第三大产油国，退出后将自主增产。CNN/BBC/CNBC/Bloomberg/Gulf News全球头条。</div>
+<div class="bg-info">阿联酋4月28日宣布自5月1日起正式退出OPEC及OPEC+机制（近60年成员资格终结）。原因：①产能480万桶/日但配额仅340万桶 ②霍尔木兹封锁后产量暴跌44%至190万桶/日 ③不再服从沙特领导。退出后将逐步增产不受配额约束。这是继2019年卡塔尔、2024年安哥拉后又一重大"退群"，OPEC面临瓦解危机。</div>
 </div>
 
 <div class="direction-block">
-<div class="direction-header">走向A：油价短期剧烈波动，中期承压下行</div>
+<div class="direction-header">走向A：OPEC加速瓦解·更多成员跟进退出（概率40%）</div>
 <div class="angle-group">
-<div class="angle-title">💬 角度1 · 能源从业者/分析师</div>
-<div class="comment-item"><div class="comment">① UAE日产400万桶的能力一旦释放，OPEC减产协议就是废纸一张，油价100以下指日可待</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② 说白了就是不想再跟沙特一起演减产的戏了，自己闷声发大财才是正道</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 搞笑的是OPEC+刚续约成功没多久就被打脸，这组织凝聚力还不如小区业委会</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 布伦特原油现在107，如果UAE全力增产到400万桶/天，年底可能回到85-90区间</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">⑤ 退OPEC容易回来难，这步棋走出去就没有后悔的余地——退出的是组织，要回来的是脸</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="angle-title">💬 角度1 · 联盟崩塌连锁反应</div>
+<div class="comment-item"><div class="comment">① 卡塔尔走了安哥拉走了阿联酋走了…OPEC这是在搞退群接力赛吗</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 60年的组织说散就散，感觉像看一个大家族分家产</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 下一个退群的赌科威特还是尼日利亚？我押科威特一包辣条</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 沙特现在的心情：我还坐在群主位子上呢人都走光了😭</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 "加入OPEC是为了一起涨价，退出OPEC是为了自己涨产——联盟的尽头是利益"</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
 <div class="angle-group">
-<div class="angle-title">💬 角度2 · 普通消费者/车主</div>
-<div class="comment-item"><div class="comment">① 退就退呗，啥时候油价降到6块钱一升我就谢天谢地了😭</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② 所以…加油能便宜不？别跟我说国际局势，我就想知道92汽油啥时候回7块</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 产油国内部打架我不管，油价降了算他们做好事</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 笑死 上次说停火油价跌 这次说退群油价也跌 反正理由随便编 最后还是涨回来</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">⑤ 每次看到"油价有望下降"我就知道：准备涨了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="angle-title">💬 角度2 · 沙特与阿联酋关系</div>
+<div class="comment-item"><div class="comment">① "多年来留在OPEC是出于对沙特的尊重"这句话信息量好大…</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 沙特和阿联酋这对中东好基友终于也撕了，石油的利润面前没有兄弟</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 这不就是合伙开公司大股东压小股东配额，小股东忍够了单飞的故事吗</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 阿联酋能单飞是因为经济多元化搞得好，沙特慌了因为它还没转型完</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ MBS打电话给阿联酋：哥们你是认真的吗？ 阿联酋：认真得跟油价一样</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
 <div class="angle-group">
-<div class="angle-title">💬 角度3 · 地缘政治观察者</div>
-<div class="comment-item"><div class="comment">① 在美伊打仗的节骨眼上退OPEC，UAE这是在赌桌上直接掀桌子——赢了通吃，输了也不亏</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment god-comment">② 🏆 加入OPEC是为了控油，退出OPEC也是为了控油——区别是以前控别人的油，现在控自己的油 #阿联酋の觉醒</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 沙特还在玩减产保价，UAE已经想通了：市场份额才是王道，价格是个P</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 说是自主决策，背后没有华盛顿的影子我是不信的，时间点太巧了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">⑤ OPEC从13个变12个，看看还有几个想退群的🤭</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-</div>
-</div>
-
-<div class="direction-block">
-<div class="direction-header">走向B：OPEC组织凝聚力崩塌，多国酝酿退出</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度1 · 国际关系专家</div>
-<div class="comment-item"><div class="comment">① 阿联酋开了头，下一个是谁？伊拉克和哈萨克斯坦早就对配额不满了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② OPEC不是被外部击垮的，是内部利益分配不均自己崩的——历史上每一个卡特尔组织的命运</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 没有UAE的OPEC还剩多少话语权？沙特一个人唱独角戏？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 这事说明一个道理：当你的利益和组织利益冲突时，组织就是个微信群</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment god-comment">⑤ 🏆 OPEC解体不需要敌人——只需要每个成员都想当"例外" #联盟の悖论</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2 · 投资者/交易员</div>
-<div class="comment-item"><div class="comment">① 今晚做空原油的都赚翻了吧，这波消息面简直是印钞机</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② 做能源的兄弟们注意了，UAE增产预期+美伊停火预期，双重利空油价</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 别急着做空，万一停火谈崩了油价还得飙回120，两头吃巴掌的是散户</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ OPEC失去一个大户，短期情绪面利空，但中长期要看实际增产节奏</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">⑤ 我已经清仓原油多单了 这局面太混乱 先看着吧</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度3 · 中东局势观察者</div>
-<div class="comment-item"><div class="comment">① UAE这是在跟沙特划清界限——"你打你的减产，我搞我的增产，各走各的"</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② 退出时间选在5月1日，跟中国对非洲零关税同一天生效，巧合？未必</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 阿联酋想当中东的新加坡，OPEC的框架装不下它的野心了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 以后中东产油国各自为战，油价波动会成为常态，习惯就好</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">⑤ 本质上是：阿联酋觉得自己的油多卖一桶，比OPEC多开一次会有用</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="angle-title">💬 角度3 · 油价定价权重构</div>
+<div class="comment-item"><div class="comment">① OPEC以后还能控制油价吗？少了阿联酋10%的产量份额就是少了一条腿</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 以后油价归谁定？美国页岩油？俄罗斯？还是市场自由定价？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 短期看阿联酋退出利空油价（增产预期），长期看联盟碎了更不稳定</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 对中国来说是好事——供应来源更分散、谈判对手更多、议价空间更大</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 2026年能源格局关键词：OPEC解体+美伊战争+新能源替代。三重暴击</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
 </div>
 
 <div class="direction-block">
-<div class="direction-header">走向C：加速全球能源转型和去石油化进程</div>
+<div class="direction-header">走向B：OPEC重新协商配额·稳定联盟（概率35%）</div>
 <div class="angle-group">
-<div class="angle-title">💬 角度1 · 新能源从业者</div>
-<div class="comment-item"><div class="comment">① OPEC自己人都不玩了，还在纠结买油车还是电车的醒醒吧</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② 每次油价坐过山车，新能源的渗透率就涨一波，感谢OPEC内讧😂</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 阿联酋自己都在搞清洁能源转型，退OPEC只是把牌面打明了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 20年后的能源史教科书：2026年5月1日，OPEC走向瓦解的开始</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">⑤ 石油时代不是因为没石油而结束，是因为不再需要组队卖石油而结束——改编自谢赫亚马尼</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-</div>
-<div class="angle-group">
-<div class="angle-title">💬 角度2 · 经济学者/智库</div>
-<div class="comment-item"><div class="comment">① 全球能源定价权正在从产油国联盟转向市场本身，这是好事</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② 油价长期下行对制造业是利好，对新兴市场也是利好，但对中东财政是灾难</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment god-comment">③ 🏆 联盟瓦解的原因永远只有一个——每个成员都觉得自己不需要联盟 #博弈论の现实版</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ IMF刚说中东战争推高能源价格拖累经济，UAE就用实际行动"降温"了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">⑤ 这事的本质是：当石油武器化成为常态，产油国也想去武器化</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="angle-title">💬 角度1 · 沙特妥协可能</div>
+<div class="comment-item"><div class="comment">① 沙特要是聪明就该让步给阿联酋更多配额，但它不会——面子大于利益</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 联盟想活下去只有一个办法：承认配额机制已经过时，大改</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 如果阿联酋退出后发现增产卖不出去（海峡封着呢），会不会后悔？😂</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ OPEC开个紧急峰会吧，再不救就真散伙了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 有意思的是阿联酋选在霍尔木兹被封的时候退——你封了我也出不了油，那我还守什么规矩</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
 <div class="angle-group">
-<div class="angle-title">💬 角度3 · 吃瓜群众</div>
-<div class="comment-item"><div class="comment">① 退群这事我熟，我退过好多个微信群🤣</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② OPEC群聊记录：UAE已退出群聊。沙特：？？？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 国际组织退群成瘾症候群：英国退欧盟，美国退WHO，UAE退OPEC，下一个谁？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 散了散了，油价涨跌跟我有啥关系，我骑电动车的</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">⑤ 阿联酋：不是我不合群，是这个群配不上我的产量</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="angle-title">💬 角度2 · 市场短期影响</div>
+<div class="comment-item"><div class="comment">① 瑞银说短期无波澜？那为啥布伦特当天就跌了1%又拉回来了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 现在油价的主导因素是战争不是OPEC，退不退出短期影响有限</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 等战争结束后阿联酋退出OPEC的影响才会真正显现——供应过剩预期</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 做原油期货的兄弟们：消息面太多太杂了，稳住别乱动😰</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 现在的油价：战争溢价+供应危机+OPEC裂痕=三重buff叠满</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3 · 全球能源转型</div>
+<div class="comment-item"><div class="comment">① 每一次石油危机都是新能源产业最好的广告，这次也不例外</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 中国光伏+风电+核电+电动车产业链此刻集体加班</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 比亚迪和宁德时代股价接下来有看头了，这就是利好新能源的大环境</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 十年后回头看2026：就是石油时代终结的起点，历史在我们眼前发生</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 "OPEC用配额锁住了产能，战争炸开了海峡，阿联酋推倒了围墙——三把钥匙开了同一扇门：石油的自由市场"</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
-</div>
-</div>
-
-<!-- S2: 中国对非洲零关税 -->
-<div class="event-card">
-<div class="event-header" onclick="toggleEvent(this)">
-<span class="event-badge badge-s">S级</span>
-<span class="event-title">中国对53个非洲建交国全面实施零关税·5月1日起·全球首个主要经济体</span>
-<span class="event-time">📅 5.1 生效</span>
-<span class="expand-icon">▼</span>
-</div>
-<div class="event-body">
-<div class="section">
-<div class="section-title">📋 事件背景</div>
-<div class="bg-info">自5月1日起，中国对53个非洲建交国全面实施零关税，覆盖100%税目产品，无额度限制，不附加任何政治条件。中国成为全球首个对所有非洲建交国实施全覆盖零关税的主要经济体。习近平主席2月14日致非盟峰会贺电宣布。商务部世贸司专门回应，称这将推动中非服务贸易、数字贸易、绿色产业合作。</div>
 </div>
 
 <div class="direction-block">
-<div class="direction-header">走向A：中非贸易大幅增长，非洲对华出口升级</div>
-<div class="angle-group"><div class="angle-title">💬 角度1 · 经贸分析师</div>
-<div class="comment-item"><div class="comment">① 100%税目零关税无额度限制，这力度在WTO框架下几乎找不到先例</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② 非洲对华出口以前集中在资源类，零关税后农产品、轻工业品会大量进来</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 短期看是中国让利，长期看是培育一个14亿人口的新消费市场——双赢不是说说的</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 这步棋下得精妙：美国在加关税建墙，中国在零关税开门，资本用脚投票</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">⑤ 津巴布韦的咖啡、肯尼亚的鲜花、南非的红酒…以后都能平价买到了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="direction-header">走向C：阿联酋增产受阻·退出象征意义大于实质（概率25%）</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1 · 现实困境</div>
+<div class="comment-item"><div class="comment">① 退了又怎样？海峡封着你连油都运不出去，退了个寂寞</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 产能480万但现在只出190万，不是配额限制你是海峡限制你哥们</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 阿联酋这波属于：虽然我也出不了油了但我就是不想听你指挥了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 等霍尔木兹通了再说增产的事吧，现在退出更多是姿态</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 有管道绕过霍尔木兹的富查伊拉港还能出口一部分，但远不够满产</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
-<div class="angle-group"><div class="angle-title">💬 角度2 · 非洲视角</div>
-<div class="comment-item"><div class="comment">① "零关税意味着更大的机遇"——不是我说的，是津巴布韦农业部长说的</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② 非洲各国代表排队点赞，这波口碑赢麻了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 对比美国的"非洲增长与机遇法案"各种附加条件，中国这个确实大方</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 中非建交70周年最好的礼物：不是援助金，是市场准入</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment god-comment">⑤ 🏆 有的国给关税，有的国给壁垒，中国给的是零——零关税、零门槛、零条件 #三零外交</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2 · 国际博弈</div>
+<div class="comment-item"><div class="comment">① 阿联酋退出的时机太巧了——是不是跟美国做了什么交易？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 美国打伊朗→油价涨→OPEC成员想增产赚钱→退出OPEC。美国一石二鸟</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 从沙特的角度看：这是背叛。从阿联酋的角度看：这是独立</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 中东现在的局面：打的打退的退跑的跑，就剩伊朗在硬扛</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 这件事的本质：阿联酋在赌战后重建期谁能最快抢占石油市场</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
-<div class="angle-group"><div class="angle-title">💬 角度3 · 吃瓜群众</div>
-<div class="comment-item"><div class="comment">① 以后淘宝能买到正宗非洲手鼓了吗？我要学非洲鼓🥁</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② 说真的 这条新闻在国外比在国内火 我朋友圈都没人转</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 五一当天生效是认真的，放假都不耽误做大事</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 53个国家零关税，地理题又多了新考点</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">⑤ 这种新闻看完心情就很好 虽然跟我没啥关系但就是觉得牛</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-</div></div>
-
-<div class="direction-block">
-<div class="direction-header">走向B：倒逼西方调整对非贸易政策，引发规则博弈</div>
-<div class="angle-group"><div class="angle-title">💬 角度1 · 国际关系视角</div>
-<div class="comment-item"><div class="comment">① 欧盟的EPA谈了十几年还在扯皮，中国直接一步到位，高下立判</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② 美国搞了个AGOA法案还年年续不续的吊着人家，现在脸疼不？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 这明牌是打给G7看的：你们不做，我来做，以后非洲的朋友圈我来经营</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 西方媒体又要开始炒"债务陷阱"叙事了，3…2…1…</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment god-comment">⑤ 🏆 西方用条件换市场，中国用市场换朋友——同样是零，一个是零信任，一个是零关税 #外交の算术题</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3 · 对中国能源安全</div>
+<div class="comment-item"><div class="comment">① 中国进口石油主要来源里阿联酋不算大头，但OPEC散了影响全球定价</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 利好中俄石油管道！管道又不走海峡，战争打不到</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 中国战略石油储备这时候就是底气——虽然油贵但不慌</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 这波局势下人民币结算石油的需求肯定上涨，去美元化加速</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 "阿联酋退OPEC+霍尔木兹封锁+油价破百=中国新能源产业的最强招生广告"</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
-<div class="angle-group"><div class="angle-title">💬 角度2 · 经济学者</div>
-<div class="comment-item"><div class="comment">① 零关税对中国国内部分农产品可能造成冲击，配套保护措施要跟上</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② 商务部说会推动"绿色通道"扩大准入，这个落地执行能力是关键</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 年贸易额2800亿美元的基础上还有巨大增长空间，非洲是蓝海市场</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 中非开启外交70周年+中非人文交流年+全覆盖零关税，组合拳打得漂亮</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">⑤ 长远来看这是在构建以中国为核心节点的南南贸易网络</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
-<div class="angle-group"><div class="angle-title">💬 角度3 · 普通消费者</div>
-<div class="comment-item"><div class="comment">① 非洲进口的东西便宜了我也能受益吧？比如巧克力可可粉啥的</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② 零关税≠零价格，物流成本才是大头，别高兴太早</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 南非红酒100%零关税？那我这个周末去试试🍷</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 手动艾特非洲留学生同学，你们家的特产可以大量进口了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">⑤ 这种大格局新闻多来点 比看明星八卦有营养多了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-</div></div>
-
-<div class="direction-block">
-<div class="direction-header">走向C：推动人民币国际化和中非产业链深度对接</div>
-<div class="angle-group"><div class="angle-title">💬 角度1 · 金融视角</div>
-<div class="comment-item"><div class="comment">① 零关税后贸易量暴增，用人民币结算就更方便了——这才是大棋</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② 非洲央行的人民币储备比例这两年一直在涨，零关税会加速这个趋势</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 数字人民币在非洲试点的窗口打开了，SWIFT要紧张了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 从亚投行到零关税，人民币国际化走的是"先做朋友再做生意"的路线</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">⑤ 华尔街的分析师估计还没反应过来：这不只是贸易新闻，这是货币战争的布局</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬 角度2 · 产业链视角</div>
-<div class="comment-item"><div class="comment">① 非洲有资源、有人口红利，缺的是产业配套——中国正好能补上这块</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② 零关税+一带一路基建，非洲制造有望成为下一个"世界工厂"候选</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 中国企业出海非洲的门槛降了，但别把国内那套卷法带过去</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 咖啡、腰果、芝麻这些非洲优势农产品，有机会重塑国内供应链格局</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment god-comment">⑤ 🏆 给关税的建了墙，给零关税的建了路——路和墙的区别，就是格局和短视的区别 #大国博弈</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-</div>
-<div class="angle-group"><div class="angle-title">💬 角度3 · 段子手</div>
-<div class="comment-item"><div class="comment">① 非洲：终于不用被说"穷"了，我们是"零关税贸易伙伴" 😎</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">② 以后买非洲鳄鱼包是不是可以平价了？（做梦中）</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">③ 中国海关5月1日：欢迎非洲朋友！美国海关5月1日：加税！——同一天，两个世界</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">④ 评论区一群人问什么时候对自己零关税…你是非洲国家吗朋友😂</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-<div class="comment-item"><div class="comment">⑤ 53个国家的好感度+100，这波拉满了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
-</div></div>
 </div>
 </div>
 
-<!-- A1: 五一档电影 -->
+<!-- A1: DeepSeek V4 + GPT-5.5 -->
 <div class="event-card">
 <div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">五一档多片撤档冲上热搜第一·首日票房1.31亿·《寒战1994》领跑</span>
-<span class="event-time">📅 5.1 18:30</span>
+<span class="event-title">DeepSeek V4 vs GPT-5.5同日发布一周·AI产业格局重塑</span>
+<span class="event-time">📅 4.24起</span>
 <span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="section">
 <div class="section-title">📋 事件背景</div>
-<div class="bg-info">2026年五一档"史上最拥挤"，19部影片扎堆。《三心两意》《森中有林》《千金不换》3部接连撤档，"多部电影撤档五一"冲上微博热搜第一。截至18:30首日票房1.31亿元，《寒战1994》《消失的人》《穿普拉达的女王2》列前三，新片总票房含点映突破2亿，年度总票房突破130亿。</div>
+<div class="bg-info">4月24日OpenAI发布GPT-5.5（API价格涨3倍至$30/百万token输出），同日DeepSeek发布V4系列（1.6万亿参数MoE模型并开源）。一周后两大模型的实测对比铺天盖地，"开源vs闭源""中国vs美国""便宜vs昂贵"三大叙事交织，已成2026年AI行业最重大事件。</div>
 </div>
-<div class="bg-info" style="margin:12px 0;background:rgba(255,159,67,0.1);border:1px solid rgba(255,159,67,0.3)">💡 封神评论精选：「19部片争一个档期，跟19个人抢一个车位一样——最后赢的是最先到的，不是最好的 #档期の内卷」「档期就像高考——不是选的那天好就能考好，是自己准备好了哪天都能考好 #内容为王」</div>
-</div></div>
+<div class="direction-block">
+<div class="direction-header">走向A：DeepSeek V4在多数场景追平GPT-5.5·开源路线胜利（概率40%）</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1 · 技术对比</div>
+<div class="comment-item"><div class="comment">① 1.6万亿参数开源！DeepSeek这是要把OpenAI的商业模式直接掀翻？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② GPT-5.5涨价到$30…这不是在卖智能是在卖信仰吧</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ DeepSeek V4自己都说不如GPT-5.4（注意不是5.5），这实诚劲儿绝了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 评测跑分DeepSeek V4在代码和数学上已经持平了，但创意写作还差点</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 同样的活一个收费$30一个几乎免费，你选哪个？选贵的是信仰充值</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2 · 产业影响</div>
+<div class="comment-item"><div class="comment">① A股AI概念股节后开盘稳了！算力芯片继续干💰</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 用DeepSeek的企业：省钱。用GPT-5.5的企业：买安心。各取所需</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 中小创业公司的福音来了——DeepSeek V4开源意味着AI门槛再降一个量级</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 这一天会被写进AI编年史：闭源垄断与开源民主的分水岭</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 "GPT-5.5用价格证明自己稀缺，DeepSeek V4用开源证明它不稀缺——同一天的两种宣言"</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3 · 用户体验</div>
+<div class="comment-item"><div class="comment">① 身为一个普通开发者我只关心一件事：哪个写代码更靠谱。答案是都行</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 我司已经把内部系统从GPT-4o切到DeepSeek V4了，成本省了80%老板笑疯</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 作为一个写文案的人，GPT-5.5的创意确实好那么一丢丢，但30块太贵了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 普通人用AI就两个需求：免费+好用。DeepSeek两个都满足了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 等等党永远赢！半年前GPT-4o还是顶流，现在已经是上上代了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+</div>
+</div>
+</div>
 
-<!-- A2: 寒武纪 -->
+<!-- A2: 泡泡玛特LABUBU冰箱 -->
 <div class="event-card">
 <div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">寒武纪20CM涨停登顶A股"股王"·市值突破7100亿·科创50暴涨5%</span>
-<span class="event-time">📅 4.30 收盘</span>
+<span class="event-title">泡泡玛特LABUBU冰箱1分钟售罄·5999元炒至9.99万·消费泡沫争议</span>
+<span class="event-time">📅 4.30-5.2</span>
 <span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="section">
 <div class="section-title">📋 事件背景</div>
-<div class="bg-info">4月30日，寒武纪20CM涨停报收1699.96元/股，总市值突破7100亿元，日内成交额267亿元。一举超越源杰科技登顶A股新晋"股王"。科创50指数大涨5.19%，4月累涨25.05%。创业板指累涨15.45%刷新十年新高。全市场成交2.76万亿元。</div>
+<div class="bg-info">泡泡玛特首款家电——THE MONSTERS生活家系列冷藏箱（LABUBU冰箱）4月30日22:00发售，全球限量1998台（两款各999台），定价5999元，1分钟售罄。得物报价已达20999元（溢价250%），闲鱼最高9.99万元（溢价1567%）。京东预约量超4万台引发"IP泡沫""智商税"热议。</div>
 </div>
-<div class="bg-info" style="margin:12px 0;background:rgba(255,159,67,0.1);border:1px solid rgba(255,159,67,0.3)">💡 封神评论精选：「股价涨到买不起的时候，要么是真值钱，要么是真泡沫——区别在于业绩能不能追上股价 #薛定谔の股王」「美国管制的是芯片，管不住的是股价——寒武纪用涨停回答了"卡脖子卡得住吗" #芯片の反击」</div>
-</div></div>
+<div class="direction-block">
+<div class="direction-header">走向A：IP潮玩继续疯涨·泡泡玛特跨界加速（概率45%）</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1 · 消费疯狂</div>
+<div class="comment-item"><div class="comment">① 5999的冰箱炒到9万…它能制冷还能制暖还能给你做饭啊？？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 4万人预约抢999台，中签率2.5%…比摇号买房还难</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 问：买LABUBU冰箱的人真的用来放食物吗？答：不，用来供着</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 1分钟售罄说明了什么？说明有钱人的世界我不理解也不想理解</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 潮玩圈的规律：限量→稀缺→炒价→割韭菜→下一个限量。循环♻️</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2 · 商业模式分析</div>
+<div class="comment-item"><div class="comment">① 泡泡玛特真是商业鬼才——把IP贴家电上就能溢价16倍，学到了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 下一步是不是LABUBU洗衣机、LABUBU空调、LABUBU马桶？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 泡泡玛特的天花板不是潮玩是IP授权，这冰箱就是证明</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 港股泡泡玛特涨了4%…买不起冰箱的可以买股票啊哈哈</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 "买得起冰箱的人不需要冰箱，需要冰箱的人买不起这冰箱——限量款经济学"</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3 · 社会情绪</div>
+<div class="comment-item"><div class="comment">① 有人花9万买玩具冰箱，有人加班一年存不到9万。魔幻2026</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 到底谁在买？黄牛？收藏家？还是单纯的冤大头？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 我用美的的冰箱也能冷藏也能保鲜也就2000块你跟我说啥？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 不是我买不起LABUBU是我觉得2000块的冰箱更有性价比.jpg</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 泡泡玛特赚的不是产品的钱是情绪价值的钱，你买的是快乐不是冰箱</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+</div>
+</div>
+</div>
 
-<!-- A3: 中美通话 -->
+<!-- A3: 跳水世界杯 -->
 <div class="event-card">
 <div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-a">A级</span>
-<span class="event-title">何立峰与贝森特/格里尔视频通话·中美经贸磋商持续推进</span>
-<span class="event-time">📅 4.30 晚</span>
+<span class="event-title">跳水世界杯总决赛中国队首日包揽5金·陈芋汐5连冠创历史</span>
+<span class="event-time">📅 5.1 下午</span>
 <span class="expand-icon">▼</span>
 </div>
 <div class="event-body">
 <div class="section">
 <div class="section-title">📋 事件背景</div>
-<div class="bg-info">4月30日晚，中美经贸中方牵头人何立峰与美方财长贝森特和贸易代表格里尔举行视频通话。双方围绕釜山会晤共识进行坦诚、深入、建设性交流。中方就美对华经贸限制措施表达严正关切，双方同意继续发挥磋商机制作用。</div>
+<div class="bg-info">2026世界泳联跳水世界杯总决赛5月1日在北京水立方开赛。中国队首日包揽5金！陈芋汐/卢为以366.12分夺女双10米台金牌（赛前48小时临时换搭档），陈芋汐实现该项目个人5连冠。王宗源/郑九源夺男双3米板、陈艺文/陈佳夺女双3米板。这是陈芋汐全运会后首次国际赛场亮相。</div>
 </div>
-<div class="bg-info" style="margin:12px 0;background:rgba(255,159,67,0.1);border:1px solid rgba(255,159,67,0.3)">💡 封神评论精选：「中美谈判就像两个人吵架后点外卖——各退一步，但谁付钱还在讨论 #世纪饭局」「对非洲零关税，对美国打电话——同一天的中国外交，一个给实惠，一个给面子 #大国の双面操作」</div>
-</div></div>
-
-<!-- A4: 美伊停火 -->
-<div class="event-card">
-<div class="event-header" onclick="toggleEvent(this)">
-<span class="event-badge badge-a">A级</span>
-<span class="event-title">美伊停火僵局持续·油价创4年新高·特朗普筹划新一轮打击</span>
-<span class="event-time">📅 5.1 持续</span>
-<span class="expand-icon">▼</span>
+<div class="direction-block">
+<div class="direction-header">走向A：中国队包揽全部金牌·统治力延续（概率55%）</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度1 · 统治力</div>
+<div class="comment-item"><div class="comment">① 首日5金全拿了…其他国家选手：我来旅游的吧？</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 中国跳水队的恐怖之处：换个搭档照样碾压，随便组合都是冠军</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 陈芋汐5连冠！20岁的年纪已经写入历史了🏆</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 48小时临时换搭档366分夺冠…这水平随机配对都能赢，太离谱了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 对手看到中国跳水队报名的那一刻心情：又是银牌起步的一天</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
-<div class="event-body">
-<div class="section">
-<div class="section-title">📋 事件背景</div>
-<div class="bg-info">美伊战争进入第62天，停火协议反复拉锯。CBS报道特朗普正在评估新一轮打击选项。油价创4年新高。伊朗4月27日提出条件开放海峡。UAE退出OPEC叠加冲击，全球能源市场极度动荡。UAE表示伊朗"不可信"（Irish Times 5.1）。普京警告特朗普不要恢复军事行动。</div>
+<div class="angle-group">
+<div class="angle-title">💬 角度2 · 陈芋汐个人故事</div>
+<div class="comment-item"><div class="comment">① "休息后发现自己真的热爱跳水"——这就是热爱的力量啊😭</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 全运会后消失大半年，回来第一战就是世界冠军。别人的实力恐怖如斯</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 20岁5连冠+奥运金牌+世锦赛金牌，这份简历要是搁职场早财富自由了</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 最牛的不是赢了而是换了搭档还赢了——说明她一个人就值一块金牌</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment god-comment">⑤ 🏆 "别人48小时组队做项目能交差就不错了，她48小时换搭档直接世界冠军——工位人含泪点赞"</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
 </div>
-<div class="bg-info" style="margin:12px 0;background:rgba(255,159,67,0.1);border:1px solid rgba(255,159,67,0.3)">💡 封神评论精选：「停火62天，枪声没停；谈判两个月，条件没谈——这不叫停火，叫"暂停开火键还没松手" #薛定谔の和平」「62天的仗证明了一件事：控制石油的人有权力，不需要石油的人有自由 #能源の真相」</div>
-</div></div>
+<div class="angle-group">
+<div class="angle-title">💬 角度3 · 体育与民族自豪</div>
+<div class="comment-item"><div class="comment">① 五一假期最爽的事：打开电视看中国队升国旗！比出去旅游还开心</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">② 水立方从08年奥运到现在一直在见证中国跳水的巅峰，浪漫</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">③ 中国跳水的统治力堪比乒乓球——别的国家选手来参赛是来学习的</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">④ 朝鲜组合拿了银牌也很厉害了，能跟中国队站同一个领奖台就是实力</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+<div class="comment-item"><div class="comment">⑤ 期待名古屋亚运会！按这个状态中国跳水队全拿金也不意外</div><button class="copy-btn" onclick="copyComment(this)">复制</button></div>
+</div>
+</div>
+</div>
+</div>
 
 <!-- B级事件 -->
 <div class="event-card">
 <div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-b">B级</span>
-<span class="event-title">5月1日起一批重磅新规实施·商业短信未经同意不得发送最受关注</span>
-<span class="event-time">📅 5.1 生效</span>
+<span class="event-title">5月新规密集实施：商业短信禁发/外卖安全新规/殡葬明码标价/无人机实名</span>
+<span class="event-time">📅 5.1 起</span>
 <span class="expand-icon">▼</span>
 </div>
-<div class="event-body"><div class="bg-info">新修订《通信短信息服务管理规定》实施——未经用户明示同意不得发送商业短信。同时：民用无人机实名登记新国标、修订后的海商法（310条）、两高贪污贿赂司法解释（二）、烟花爆竹安全标准、1071项国家标准等。</div></div></div>
+<div class="event-body"><div class="bg-info">5月1日起一批新规施行：①新修订《通信短信息服务管理规定》——未经用户明示同意不得发送商业短信 ②市场监管总局《网络食品销售经营者落实食品安全主体责任监督管理规定》5月20日起施行——整治"幽灵外卖" ③殡葬服务收费明码标价 ④民用无人机须实名登记 ⑤长三角政务服务"一网通办"规定施行。</div></div>
+</div>
 
 <div class="event-card">
 <div class="event-header" onclick="toggleEvent(this)">
 <span class="event-badge badge-b">B级</span>
-<span class="event-title">五一出行首日迎最大高峰·铁路2480万人次·高速7000万辆次</span>
-<span class="event-time">📅 5.1</span>
+<span class="event-title">2026北京车展火热进行中·181款首发·物理AI时代开启</span>
+<span class="event-time">📅 4.24-5.3</span>
 <span class="expand-icon">▼</span>
 </div>
-<div class="event-body"><div class="bg-info">5月1日铁路预计发送旅客2480万人次，加开列车2070列。高速车流峰值达7000万辆次创历史新高。全社会跨区域人员流动15.2亿人次，日均3.04亿。公路出行占比91.6%。</div></div></div>
-
-<div class="event-card">
-<div class="event-header" onclick="toggleEvent(this)">
-<span class="event-badge badge-b">B级</span>
-<span class="event-title">中国制造业PMI连续位于扩张区间·经济复苏延续</span>
-<span class="event-time">📅 4.30</span>
-<span class="expand-icon">▼</span>
+<div class="event-body"><div class="bg-info">2026北京国际车展4月24日-5月3日举行，38万平方米总展面积刷新全球车展规模纪录。21个国家和地区超2000家企业参展，1451辆展车含181款全球首发。"物理AI"成核心关键词：小鹏展出人形机器人IRON+飞行汽车，比亚迪大唐旗舰SUV、智界V9 MPV等重磅新车亮相。外媒评价："中国正主导全球电动汽车产业"。</div></div>
 </div>
-<div class="event-body"><div class="bg-info">4月制造业PMI继续位于50以上扩张区间，经济复苏态势延续。</div></div></div>
-
-<div class="event-card">
-<div class="event-header" onclick="toggleEvent(this)">
-<span class="event-badge badge-b">B级</span>
-<span class="event-title">创业板指4月累涨15.45%刷新十年新高·沪指月涨5.66%</span>
-<span class="event-time">📅 4.30</span>
-<span class="expand-icon">▼</span>
-</div>
-<div class="event-body"><div class="bg-info">A股4月收官，创业板指突破2015年6月3日高点，刷新十年新高。沪指全月涨5.66%，科创50指数累涨25.05%。</div></div></div>
 
 <!-- 灰犀牛 -->
 <div class="rhino-card">
-<div class="rhino-title">🦏 灰犀牛预警</div>
-<div class="rhino-item">① 特朗普对伊新打击方案：CBS报道特朗普将听取新一轮打击选项，若停火崩溃中东局势急剧恶化</div>
-<div class="rhino-item">② OPEC进一步瓦解风险：UAE退出后伊拉克、哈萨克斯坦等配额不满国家可能跟进</div>
-<div class="rhino-item">③ 7国联合军演（菲美澳日加法新）：今日头条报道目标指向台海/南海</div>
+<div class="rhino-title">🦏 灰犀牛事件预警</div>
+<div class="rhino-item">⚠️ CENTCOM司令将向特朗普汇报新伊朗打击方案——停火名义下酝酿对霍尔木兹海峡新一轮军事行动</div>
+<div class="rhino-item">⚠️ 美国筹备"延长封锁伊朗"计划——特朗普倾向经济绞杀而非重新空袭</div>
+<div class="rhino-item">⚠️ 五角大楼古巴军事应急计划曝光——美军同时酝酿对古巴可能行动</div>
+<div class="rhino-item">⚠️ 更多OPEC成员国观望退出——阿联酋退出后科威特/尼日利亚态度松动</div>
+<div class="rhino-item">⚠️ DeepSeek V4+GPT-5.5引发全球"算力荒"——智能体成为算力需求新风口</div>
 </div>
 
 <footer>
-<p>🤖 热点监控AI · 每日6轮自动更新 · 数据来源：公开信息</p>
-<p>📅 本轮更新：2026-05-01 21:00 · 下次更新：2026-05-02 07:00</p>
-<p>📊 评论总数：270条 · 封神评论：14条 · S/A级事件：6个</p>
+<p>🔥 热点下午报 · 2026年5月2日 15:00 | 12大垂类+热榜全量扫描+灰犀牛预警</p>
+<p style="margin-top:8px">下一轮监控：18:00 晚报 | 数据来源：微博/百度/抖音/知乎/Reuters/AP/CNN/BBC</p>
 </footer>
 </div>
 
 <script>
-function toggleEvent(el){const b=el.nextElementSibling;const i=el.querySelector('.expand-icon');b.classList.toggle('active');i.classList.toggle('open')}
-function copyComment(btn){const t=btn.parentElement.querySelector('.comment').innerText;navigator.clipboard.writeText(t).then(()=>{btn.textContent='已复制';btn.classList.add('copied');setTimeout(()=>{btn.textContent='复制';btn.classList.remove('copied')},1500)})}
-document.querySelectorAll('.event-card').forEach((c,i)=>{if(i<2){const b=c.querySelector('.event-body');const icon=c.querySelector('.expand-icon');if(b)b.classList.add('active');if(icon)icon.classList.add('open')}})
+function toggleEvent(header){const body=header.nextElementSibling;const icon=header.querySelector('.expand-icon');body.classList.toggle('active');icon.classList.toggle('open')}
+function copyComment(btn){const text=btn.previousElementSibling.textContent.trim();navigator.clipboard.writeText(text).then(()=>{btn.textContent='已复制';btn.classList.add('copied');setTimeout(()=>{btn.textContent='复制';btn.classList.remove('copied')},1500)})}
+document.querySelectorAll('.event-card').forEach((card,i)=>{if(i<2){const body=card.querySelector('.event-body');const icon=card.querySelector('.expand-icon');body.classList.add('active');icon.classList.add('open')}});
 </script>
 </body>
 </html>
